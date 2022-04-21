@@ -22,7 +22,13 @@ jobs:
       uses: Swatinem/rust-cache@v1
 
     - name: Clone Google FHIR Protobufs
-      run: git clone https://github.com/google/fhir
+      uses: actions/checkout@v3
+      with:
+        repository: 'google/fhir'
+        path: 'fhir'
+
+    - name: Install Protoc
+      uses: arduino/setup-protoc@v1
 
     - name: Rust Build
       run: cargo build
