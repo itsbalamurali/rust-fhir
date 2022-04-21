@@ -1,8 +1,8 @@
 use std::io::Result;
 fn main() -> Result<()> {
     prost_build::compile_protos(
-        &["fhir/proto/google/fhir/proto/annotations.proto"],
-        &["fhir/proto/google/fhir/proto/"],
+        &["src/proto/google/fhir/proto/annotations.proto"],
+        &["src/"],
     )?;
     // prost_build::compile_protos(
     //     &["fhir/proto/google/fhir/proto/profile_config.proto"],
