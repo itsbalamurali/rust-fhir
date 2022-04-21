@@ -1,0 +1,29 @@
+name: Generate
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    name: Generate Package
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    
+    - name: Setup Rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+
+    - name: Rust Cache
+      uses: Swatinem/rust-cache@v1
+
+    - name: Clone Google FHIR Protobufs
+      run: git clone https://github.com/google/fhir
+
+    - name: Rust Build
+      run: cargo build
+      

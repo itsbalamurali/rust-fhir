@@ -1,0 +1,12 @@
+[package]
+name = "fhir"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+bytes = "1.1.0"
+prost = "0.10.1"
+
+[build-dependencies]
+prost-build = { version = "0.10.1" }
