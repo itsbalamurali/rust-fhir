@@ -38,9 +38,6 @@ jobs:
       env:
         CARGO_INCREMENTAL: 1
 
-    - name: Cleanup Repository
-      run: rm -rf src/proto
-
     - name: Cargo fmt
       run: cargo fmt
 
@@ -57,5 +54,6 @@ jobs:
       run: cargo publish
       env:
         CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        CARGO_INCREMENTAL: 1
       
     
