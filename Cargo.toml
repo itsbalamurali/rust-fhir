@@ -1,6 +1,6 @@
 [package]
 name = "fhir"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
 
 
@@ -12,6 +12,7 @@ prost-wkt = "0.3.1"
 prost-wkt-types = "0.3.1"
 serde = { version = "1.0", features = ["derive"] }
 serde_derive = "1.0"
+
 [build-dependencies]
 prost-build = { version = "0.10.1" }
 prost-wkt-build = "0.3.1"
