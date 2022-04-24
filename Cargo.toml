@@ -1,8 +1,14 @@
 [package]
 name = "fhir"
+description = "HL7 FHIR data models"
 version = "0.0.1"
 edition = "2021"
-
+authors = ["Balamurali Pandranki <balamurali@live.com>"]
+documentation = "https://docs.rs/fhir"
+readme = "README.md"
+repository = "https://github.com/itsbalamurali/rust-fhir"
+license = "Apache License 2.0"
+license-file = "LICENSE"
 
 [dependencies]
 bytes = "1.1.0"
