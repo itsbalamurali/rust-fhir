@@ -7,7 +7,6 @@ authors = ["Balamurali Pandranki <balamurali@live.com>"]
 documentation = "https://docs.rs/fhir"
 readme = "README.md"
 repository = "https://github.com/itsbalamurali/rust-fhir"
-license = "Apache License 2.0"
 license-file = "LICENSE"
 
 [dependencies]
