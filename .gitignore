@@ -10,5 +10,6 @@ Cargo.lock
 **/*.rs.bk
 
 fhir/
-BUILD
-src/proto
+*BUILD
+#src/proto
+**/BUILD
