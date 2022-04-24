@@ -6,7 +6,8 @@ edition = "2021"
 
 [dependencies]
 bytes = "1.1.0"
-prost = "0.10.1"
+prost = { version = "0.10.1", features = ["prost-derive"] }
+prost-types = "0.10"
 
 [build-dependencies]
 prost-build = { version = "0.10.1" }
