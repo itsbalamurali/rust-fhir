@@ -13,12 +13,14 @@
 ///  Code Set
 ///  Version 1.0](<https://www.cdc.gov/phin/resources/vocabulary/documents/cdc-race--ethnicity-background-and-purpose.pdf>).
 /// See urn:oid:2.16.840.1.113883.6.238
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct RaceAndEthnicityCdcCode {
 }
 /// Nested message and enum types in `RaceAndEthnicityCDCCode`.
 pub mod race_and_ethnicity_cdc_code {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -994,12 +996,14 @@ pub mod race_and_ethnicity_cdc_code {
 /// These codes are used as extensions to the FHIR and US Core value sets.
 ///
 /// See <http://hl7.org/fhir/us/core/CodeSystem/careplan-category>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreCarePlanCategoryExtensionCode {
 }
 /// Nested message and enum types in `USCoreCarePlanCategoryExtensionCode`.
 pub mod us_core_care_plan_category_extension_code {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -1010,12 +1014,14 @@ pub mod us_core_care_plan_category_extension_code {
 /// These codes are used as extensions to the FHIR and US Core value sets.
 ///
 /// See <http://hl7.org/fhir/us/core/CodeSystem/condition-category>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreConditionCategoryExtensionCode {
 }
 /// Nested message and enum types in `USCoreConditionCategoryExtensionCode`.
 pub mod us_core_condition_category_extension_code {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -1026,12 +1032,14 @@ pub mod us_core_condition_category_extension_code {
 /// The US Core DocumentReferences Type Code System is a 'starter set' of
 /// categories supported for fetching and storing DocumentReference Resources.
 /// See <http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreDocumentReferencesCategoryCode {
 }
 /// Nested message and enum types in `USCoreDocumentReferencesCategoryCode`.
 pub mod us_core_document_references_category_code {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -1043,12 +1051,14 @@ pub mod us_core_document_references_category_code {
 ///
 /// See
 /// <http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreProvenancePaticipantTypeExtensionCode {
 }
 /// Nested message and enum types in `USCoreProvenancePaticipantTypeExtensionCode`.
 pub mod us_core_provenance_paticipant_type_extension_code {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -1058,12 +1068,14 @@ pub mod us_core_provenance_paticipant_type_extension_code {
 /// Codes for assigning sex at birth as specified by the [Office of the National
 /// Coordinator for Health IT (ONC)](<https://www.healthit.gov/newsroom/about-onc>)
 /// See <http://hl7.org/fhir/us/core/ValueSet/birthsex>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct BirthSexValueSet {
 }
 /// Nested message and enum types in `BirthSexValueSet`.
 pub mod birth_sex_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -1076,12 +1088,14 @@ pub mod birth_sex_value_set {
 /// codes](<http://www.cdc.gov/phin/resources/vocabulary/index.html>) that are
 /// grouped under one of the 2 OMB ethnicity category codes. See
 /// <http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct DetailedEthnicityValueSet {
 }
 /// Nested message and enum types in `DetailedEthnicityValueSet`.
 pub mod detailed_ethnicity_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -1133,12 +1147,14 @@ pub mod detailed_ethnicity_value_set {
 /// codes](<http://www.cdc.gov/phin/resources/vocabulary/index.html>) that are
 /// grouped under one of the 5 OMB race category codes. See
 /// <http://hl7.org/fhir/us/core/ValueSet/detailed-race>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct DetailedRaceValueSet {
 }
 /// Nested message and enum types in `DetailedRaceValueSet`.
 pub mod detailed_race_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -2064,12 +2080,14 @@ pub mod detailed_race_value_set {
 /// The US Core Narrative Status Value Set limits the text status for the
 /// resource narrative. See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct NarrativeStatusValueSet {
 }
 /// Nested message and enum types in `NarrativeStatusValueSet`.
 pub mod narrative_status_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -2083,12 +2101,14 @@ pub mod narrative_status_value_set {
 /// Policy Directive No. 15, as revised, October 30,
 /// 1997](<https://www.whitehouse.gov/omb/fedreg_1997standards>). See
 /// <http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct OmbEthnicityCategoriesValueSet {
 }
 /// Nested message and enum types in `OmbEthnicityCategoriesValueSet`.
 pub mod omb_ethnicity_categories_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -2104,12 +2124,14 @@ pub mod omb_ethnicity_categories_value_set {
 /// Policy Directive No. 15, as revised, October 30,
 /// 1997](<https://www.whitehouse.gov/omb/fedreg_1997standards>) . See
 /// <http://hl7.org/fhir/us/core/ValueSet/omb-race-category>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct OmbRaceCategoriesValueSet {
 }
 /// Nested message and enum types in `OmbRaceCategoriesValueSet`.
 pub mod omb_race_categories_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -2135,12 +2157,14 @@ pub mod omb_race_categories_value_set {
 /// (SNOMEDCT)  **Exclusion Criteria:** actual conditions caused by exposure
 /// (reactions, allergies) See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-allergy-substance>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreAllergySubstanceValueSet {
 }
 /// Nested message and enum types in `USCoreAllergySubstanceValueSet`.
 pub mod us_core_allergy_substance_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -2914,12 +2938,14 @@ pub mod us_core_allergy_substance_value_set {
 /// The US Core Clinical Note Type Value Set is a 'starter set' of types
 /// supported for fetching and storing clinical notes. See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-note-type>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreClinicalNoteTypeValueSet {
 }
 /// Nested message and enum types in `USCoreClinicalNoteTypeValueSet`.
 pub mod us_core_clinical_note_type_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -2935,12 +2961,14 @@ pub mod us_core_clinical_note_type_value_set {
 /// to be able to separate health concerns and problems. However this is not
 /// mandatory for 2015 certification See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreConditionCategoryCodesValueSet {
 }
 /// Nested message and enum types in `USCoreConditionCategoryCodesValueSet`.
 pub mod us_core_condition_category_codes_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -2955,12 +2983,14 @@ pub mod us_core_condition_category_codes_value_set {
 /// that patient's healthcare (e.g., signs, symptoms, and defined conditions).
 /// ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical
 /// information. See <http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreConditionCodeValueSet {
 }
 /// Nested message and enum types in `USCoreConditionCodeValueSet`.
 pub mod us_core_condition_code_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -2970,12 +3000,14 @@ pub mod us_core_condition_code_value_set {
 /// The US Core Diagnostic Report Category Value Set is a 'starter set' of
 /// categories supported for fetching and Diagnostic Reports and notes. See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreDiagnosticReportCategoryValueSet {
 }
 /// Nested message and enum types in `USCoreDiagnosticReportCategoryValueSet`.
 pub mod us_core_diagnostic_report_category_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -2988,12 +3020,14 @@ pub mod us_core_diagnostic_report_category_value_set {
 /// SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor
 /// concept 'unknown' See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreDocumentReferenceTypeValueSet {
 }
 /// Nested message and enum types in `USCoreDocumentReferenceTypeValueSet`.
 pub mod us_core_document_reference_type_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -3003,12 +3037,14 @@ pub mod us_core_document_reference_type_value_set {
 /// Codes providing the status of an observation for smoking status. Constrained
 /// to `final`and `entered-in-error`. See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreObservationSmokingStatusStatusValueSet {
 }
 /// Nested message and enum types in `USCoreObservationSmokingStatusStatusValueSet`.
 pub mod us_core_observation_smoking_status_status_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -3018,12 +3054,14 @@ pub mod us_core_observation_smoking_status_status_value_set {
 }
 /// The type of participation a provenance agent played for a given target.
 /// See <http://hl7.org/fhir/us/core/ValueSet/us-core-provenance-participant-type>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreProvenancePaticipantTypeCodesValueSet {
 }
 /// Nested message and enum types in `USCoreProvenancePaticipantTypeCodesValueSet`.
 pub mod us_core_provenance_paticipant_type_codes_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -3044,12 +3082,14 @@ pub mod us_core_provenance_paticipant_type_codes_value_set {
 /// Taxonomy Code Set classification codes for providers. Only concepts with a
 /// classification and no specialization are included. See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreProviderRoleNuccValueSet {
 }
 /// Nested message and enum types in `USCoreProviderRoleNuccValueSet`.
 pub mod us_core_provider_role_nucc_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -3295,12 +3335,14 @@ pub mod us_core_provider_role_nucc_value_set {
 /// The US Core Smoking Status Observation Codes Value Set is a 'starter set' of
 /// concepts to capture smoking status. See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-smoking-status-observation-codes>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreSmokingStatusObservationCodesValueSet {
 }
 /// Nested message and enum types in `USCoreSmokingStatusObservationCodesValueSet`.
 pub mod us_core_smoking_status_observation_codes_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -3309,12 +3351,14 @@ pub mod us_core_smoking_status_observation_codes_value_set {
 }
 /// This value set indicates the current smoking status of a patient.
 /// See <http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreSmokingStatusValueSet {
 }
 /// Nested message and enum types in `USCoreSmokingStatusValueSet`.
 pub mod us_core_smoking_status_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -3336,12 +3380,14 @@ pub mod us_core_smoking_status_value_set {
 /// Available at
 /// <http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx> See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-vaccines-cvx>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreVaccineAdministeredValueSetCvxValueSet {
 }
 /// Nested message and enum types in `USCoreVaccineAdministeredValueSetCvxValueSet`.
 pub mod us_core_vaccine_administered_value_set_cvx_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -3523,12 +3569,14 @@ pub mod us_core_vaccine_administered_value_set_cvx_value_set {
 /// source of this data is provided by the
 /// \[CDC\](<https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp>) See
 /// <http://hl7.org/fhir/us/core/ValueSet/us-core-ndc-vaccine-codes>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreVaccineNationalDrugCodeValueSet {
 }
 /// Nested message and enum types in `USCoreVaccineNationalDrugCodeValueSet`.
 pub mod us_core_vaccine_national_drug_code_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -3851,12 +3899,14 @@ pub mod us_core_vaccine_national_drug_code_value_set {
 }
 /// This value set defines two letter USPS alphabetic codes.
 /// See <http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UspsTwoLetterAlphabeticCodesValueSet {
 }
 /// Nested message and enum types in `UspsTwoLetterAlphabeticCodesValueSet`.
 pub mod usps_two_letter_alphabetic_codes_value_set {
-    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, prost::Enumeration)]
     #[repr(i32)]
     pub enum Value {
         InvalidUninitialized = 0,
@@ -3925,7 +3975,8 @@ pub mod usps_two_letter_alphabetic_codes_value_set {
 /// Auto-generated from StructureDefinition for USCoreProcedureProfile.
 /// An action that is being or was performed on a patient.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreProcedureProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -3944,28 +3995,28 @@ pub struct UsCoreProcedureProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// External Identifiers for this procedure
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Instantiates FHIR protocol or definition
     #[prost(message, repeated, tag="11")]
-    pub instantiates_canonical: ::prost::alloc::vec::Vec<super::core::Canonical>,
+    pub instantiates_canonical: prost::alloc::vec::Vec<super::core::Canonical>,
     /// Instantiates external protocol or definition
     #[prost(message, repeated, tag="12")]
-    pub instantiates_uri: ::prost::alloc::vec::Vec<super::core::Uri>,
+    pub instantiates_uri: prost::alloc::vec::Vec<super::core::Uri>,
     /// A request for this procedure
     #[prost(message, repeated, tag="13")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     /// Part of referenced event
     #[prost(message, repeated, tag="14")]
-    pub part_of: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub part_of: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="15")]
     pub status: ::core::option::Option<us_core_procedure_profile::StatusCode>,
     /// Reason for current status
@@ -3992,68 +4043,71 @@ pub struct UsCoreProcedureProfile {
     #[prost(message, optional, tag="23")]
     pub asserter: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="24")]
-    pub performer: ::prost::alloc::vec::Vec<us_core_procedure_profile::Performer>,
+    pub performer: prost::alloc::vec::Vec<us_core_procedure_profile::Performer>,
     /// Where the procedure happened
     #[prost(message, optional, tag="25")]
     pub location: ::core::option::Option<super::core::Reference>,
     /// Coded reason procedure performed
     #[prost(message, repeated, tag="26")]
-    pub reason_code: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub reason_code: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// The justification that the procedure was performed
     #[prost(message, repeated, tag="27")]
-    pub reason_reference: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub reason_reference: prost::alloc::vec::Vec<super::core::Reference>,
     /// Target body sites
     #[prost(message, repeated, tag="28")]
-    pub body_site: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub body_site: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// The result of procedure
     #[prost(message, optional, tag="29")]
     pub outcome: ::core::option::Option<super::core::CodeableConcept>,
     /// Any report resulting from the procedure
     #[prost(message, repeated, tag="30")]
-    pub report: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub report: prost::alloc::vec::Vec<super::core::Reference>,
     /// Complication following the procedure
     #[prost(message, repeated, tag="31")]
-    pub complication: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub complication: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// A condition that is a result of the procedure
     #[prost(message, repeated, tag="32")]
-    pub complication_detail: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub complication_detail: prost::alloc::vec::Vec<super::core::Reference>,
     /// Instructions for follow up
     #[prost(message, repeated, tag="33")]
-    pub follow_up: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub follow_up: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Additional information about the procedure
     #[prost(message, repeated, tag="34")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     #[prost(message, repeated, tag="35")]
-    pub focal_device: ::prost::alloc::vec::Vec<us_core_procedure_profile::FocalDevice>,
+    pub focal_device: prost::alloc::vec::Vec<us_core_procedure_profile::FocalDevice>,
     /// Items used during procedure
     #[prost(message, repeated, tag="36")]
-    pub used_reference: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub used_reference: prost::alloc::vec::Vec<super::core::Reference>,
     /// Coded items used during the procedure
     #[prost(message, repeated, tag="37")]
-    pub used_code: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub used_code: prost::alloc::vec::Vec<super::core::CodeableConcept>,
 }
 /// Nested message and enum types in `USCoreProcedureProfile`.
 pub mod us_core_procedure_profile {
     /// preparation | in-progress | not-done | on-hold | stopped | completed |
     /// entered-in-error | unknown
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::event_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// When the procedure was performed
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct PerformedX {
         #[prost(oneof="performed_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<performed_x::Choice>,
     }
     /// Nested message and enum types in `PerformedX`.
     pub mod performed_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -4062,17 +4116,18 @@ pub mod us_core_procedure_profile {
         }
     }
     /// The people who performed the procedure
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Performer {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Type of performance
         #[prost(message, optional, tag="4")]
         pub function: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -4084,17 +4139,18 @@ pub mod us_core_procedure_profile {
         pub on_behalf_of: ::core::option::Option<super::super::core::Reference>,
     }
     /// Manipulated, implanted, or removed device
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct FocalDevice {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Kind of change to device
         #[prost(message, optional, tag="4")]
         pub action: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -4107,7 +4163,8 @@ pub mod us_core_procedure_profile {
 /// A person with a  formal responsibility in the provisioning of healthcare or
 /// related services. See
 /// <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCorePractitionerProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -4126,29 +4183,29 @@ pub struct UsCorePractitionerProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// An identifier for the person as this agent
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Whether this practitioner's record is in active use
     #[prost(message, optional, tag="11")]
     pub active: ::core::option::Option<super::core::Boolean>,
     /// The name(s) associated with the practitioner
     #[prost(message, repeated, tag="12")]
-    pub name: ::prost::alloc::vec::Vec<super::core::HumanName>,
+    pub name: prost::alloc::vec::Vec<super::core::HumanName>,
     /// A contact detail for the practitioner (that apply to all roles)
     #[prost(message, repeated, tag="13")]
-    pub telecom: ::prost::alloc::vec::Vec<super::core::ContactPoint>,
+    pub telecom: prost::alloc::vec::Vec<super::core::ContactPoint>,
     /// Address(es) of the practitioner that are not role specific (typically home
     /// address)
     #[prost(message, repeated, tag="14")]
-    pub address: ::prost::alloc::vec::Vec<super::core::Address>,
+    pub address: prost::alloc::vec::Vec<super::core::Address>,
     #[prost(message, optional, tag="15")]
     pub gender: ::core::option::Option<us_core_practitioner_profile::GenderCode>,
     /// The date  on which the practitioner was born
@@ -4156,40 +4213,42 @@ pub struct UsCorePractitionerProfile {
     pub birth_date: ::core::option::Option<super::core::Date>,
     /// Image of the person
     #[prost(message, repeated, tag="17")]
-    pub photo: ::prost::alloc::vec::Vec<super::core::Attachment>,
+    pub photo: prost::alloc::vec::Vec<super::core::Attachment>,
     #[prost(message, repeated, tag="18")]
-    pub qualification: ::prost::alloc::vec::Vec<us_core_practitioner_profile::Qualification>,
+    pub qualification: prost::alloc::vec::Vec<us_core_practitioner_profile::Qualification>,
     /// A language the practitioner can use in patient communication
     #[prost(message, repeated, tag="19")]
-    pub communication: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub communication: prost::alloc::vec::Vec<super::core::CodeableConcept>,
 }
 /// Nested message and enum types in `USCorePractitionerProfile`.
 pub mod us_core_practitioner_profile {
     /// male | female | other | unknown
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct GenderCode {
         #[prost(enumeration="super::super::core::administrative_gender_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Certification, licenses, or training pertaining to the provision of care
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Qualification {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// An identifier for this qualification for the practitioner
         #[prost(message, repeated, tag="4")]
-        pub identifier: ::prost::alloc::vec::Vec<super::super::core::Identifier>,
+        pub identifier: prost::alloc::vec::Vec<super::super::core::Identifier>,
         /// Coded representation of the qualification
         #[prost(message, optional, tag="5")]
         pub code: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -4206,7 +4265,8 @@ pub mod us_core_practitioner_profile {
 /// combination of request information, atomic results, images, interpretation,
 /// as well as formatted reports. See
 /// <http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreDiagnosticReportProfileLaboratoryReporting {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -4225,24 +4285,24 @@ pub struct UsCoreDiagnosticReportProfileLaboratoryReporting {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Business identifier for report
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// What was requested
     #[prost(message, repeated, tag="11")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="12")]
     pub status: ::core::option::Option<us_core_diagnostic_report_profile_laboratory_reporting::StatusCode>,
     /// Service category
     #[prost(message, repeated, tag="13")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// US Core Laboratory Report Order Code
     #[prost(message, optional, tag="14")]
     pub code: ::core::option::Option<super::core::CodeableConcept>,
@@ -4259,52 +4319,55 @@ pub struct UsCoreDiagnosticReportProfileLaboratoryReporting {
     pub issued: ::core::option::Option<super::core::Instant>,
     /// Responsible Diagnostic Service
     #[prost(message, repeated, tag="19")]
-    pub performer: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub performer: prost::alloc::vec::Vec<super::core::Reference>,
     /// Primary result interpreter
     #[prost(message, repeated, tag="20")]
-    pub results_interpreter: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub results_interpreter: prost::alloc::vec::Vec<super::core::Reference>,
     /// Specimens this report is based on
     #[prost(message, repeated, tag="21")]
-    pub specimen: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub specimen: prost::alloc::vec::Vec<super::core::Reference>,
     /// Observations
     #[prost(message, repeated, tag="22")]
-    pub result: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub result: prost::alloc::vec::Vec<super::core::Reference>,
     /// Reference to full details of imaging associated with the diagnostic report
     #[prost(message, repeated, tag="23")]
-    pub imaging_study: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub imaging_study: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, repeated, tag="24")]
-    pub media: ::prost::alloc::vec::Vec<us_core_diagnostic_report_profile_laboratory_reporting::Media>,
+    pub media: prost::alloc::vec::Vec<us_core_diagnostic_report_profile_laboratory_reporting::Media>,
     /// Clinical conclusion (interpretation) of test results
     #[prost(message, optional, tag="25")]
     pub conclusion: ::core::option::Option<super::core::String>,
     /// Codes for the clinical conclusion of test results
     #[prost(message, repeated, tag="26")]
-    pub conclusion_code: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub conclusion_code: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Entire report as issued
     #[prost(message, repeated, tag="27")]
-    pub presented_form: ::prost::alloc::vec::Vec<super::core::Attachment>,
+    pub presented_form: prost::alloc::vec::Vec<super::core::Attachment>,
 }
 /// Nested message and enum types in `USCoreDiagnosticReportProfileLaboratoryReporting`.
 pub mod us_core_diagnostic_report_profile_laboratory_reporting {
     /// registered | partial | preliminary | final +
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::diagnostic_report_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Specimen Collection Datetime or Period
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct EffectiveX {
         #[prost(oneof="effective_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<effective_x::Choice>,
     }
     /// Nested message and enum types in `EffectiveX`.
     pub mod effective_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -4313,17 +4376,18 @@ pub mod us_core_diagnostic_report_profile_laboratory_reporting {
         }
     }
     /// Key images associated with this report
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Media {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Comment about the image (e.g. explanation)
         #[prost(message, optional, tag="4")]
         pub comment: ::core::option::Option<super::super::core::String>,
@@ -4336,7 +4400,8 @@ pub mod us_core_diagnostic_report_profile_laboratory_reporting {
 /// USCorePediatricWeightForHeightObservationProfile. FHIR Vital Signs Profile.
 /// See
 /// <http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCorePediatricWeightForHeightObservationProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -4355,27 +4420,27 @@ pub struct UsCorePediatricWeightForHeightObservationProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Business Identifier for observation
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Fulfills plan, proposal or order
     #[prost(message, repeated, tag="11")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     /// Part of referenced event
     #[prost(message, repeated, tag="12")]
-    pub part_of: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub part_of: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="13")]
     pub status: ::core::option::Option<us_core_pediatric_weight_for_height_observation_profile::StatusCode>,
     /// Classification of  type of observation
     #[prost(message, repeated, tag="14")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Weight-for-length per age and gender
     #[prost(message, optional, tag="15")]
     pub code: ::core::option::Option<super::core::CodeableConcept>,
@@ -4384,7 +4449,7 @@ pub struct UsCorePediatricWeightForHeightObservationProfile {
     pub subject: ::core::option::Option<super::core::Reference>,
     /// What the observation is about, when it is not about the subject of record
     #[prost(message, repeated, tag="17")]
-    pub focus: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub focus: prost::alloc::vec::Vec<super::core::Reference>,
     /// Healthcare event during which this observation is made
     #[prost(message, optional, tag="18")]
     pub encounter: ::core::option::Option<super::core::Reference>,
@@ -4395,7 +4460,7 @@ pub struct UsCorePediatricWeightForHeightObservationProfile {
     pub issued: ::core::option::Option<super::core::Instant>,
     /// Who is responsible for the observation
     #[prost(message, repeated, tag="21")]
-    pub performer: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub performer: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="22")]
     pub value: ::core::option::Option<us_core_pediatric_weight_for_height_observation_profile::ValueX>,
     /// Why the result is missing
@@ -4403,10 +4468,10 @@ pub struct UsCorePediatricWeightForHeightObservationProfile {
     pub data_absent_reason: ::core::option::Option<super::core::CodeableConcept>,
     /// High, low, normal, etc.
     #[prost(message, repeated, tag="24")]
-    pub interpretation: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub interpretation: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Comments about the observation
     #[prost(message, repeated, tag="25")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     /// Observed body part
     #[prost(message, optional, tag="26")]
     pub body_site: ::core::option::Option<super::core::CodeableConcept>,
@@ -4420,37 +4485,40 @@ pub struct UsCorePediatricWeightForHeightObservationProfile {
     #[prost(message, optional, tag="29")]
     pub device: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="30")]
-    pub reference_range: ::prost::alloc::vec::Vec<us_core_pediatric_weight_for_height_observation_profile::ReferenceRange>,
+    pub reference_range: prost::alloc::vec::Vec<us_core_pediatric_weight_for_height_observation_profile::ReferenceRange>,
     /// Used when reporting vital signs panel components
     #[prost(message, repeated, tag="31")]
-    pub has_member: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub has_member: prost::alloc::vec::Vec<super::core::Reference>,
     /// Related measurements the observation is made from
     #[prost(message, repeated, tag="32")]
-    pub derived_from: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub derived_from: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, repeated, tag="33")]
-    pub component: ::prost::alloc::vec::Vec<us_core_pediatric_weight_for_height_observation_profile::Component>,
+    pub component: prost::alloc::vec::Vec<us_core_pediatric_weight_for_height_observation_profile::Component>,
 }
 /// Nested message and enum types in `USCorePediatricWeightForHeightObservationProfile`.
 pub mod us_core_pediatric_weight_for_height_observation_profile {
     /// registered | preliminary | final | amended +
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::observation_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Often just a dateTime for Vital Signs
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct EffectiveX {
         #[prost(oneof="effective_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<effective_x::Choice>,
     }
     /// Nested message and enum types in `EffectiveX`.
     pub mod effective_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -4461,31 +4529,34 @@ pub mod us_core_pediatric_weight_for_height_observation_profile {
     /// Vital Signs value are recorded using the Quantity data type. For supporting
     /// observations such as Cuff size could use other datatypes such as
     /// CodeableConcept.
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ValueX {
         #[prost(oneof="value_x::Choice", tags="1")]
         pub choice: ::core::option::Option<value_x::Choice>,
     }
     /// Nested message and enum types in `ValueX`.
     pub mod value_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             Quantity(super::super::super::core::Quantity),
         }
     }
     /// Provides guide for interpretation
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ReferenceRange {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Low Range, if relevant
         #[prost(message, optional, tag="4")]
         pub low: ::core::option::Option<super::super::core::SimpleQuantity>,
@@ -4497,7 +4568,7 @@ pub mod us_core_pediatric_weight_for_height_observation_profile {
         pub r#type: ::core::option::Option<super::super::core::CodeableConcept>,
         /// Reference range population
         #[prost(message, repeated, tag="7")]
-        pub applies_to: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub applies_to: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Applicable age range, if relevant
         #[prost(message, optional, tag="8")]
         pub age: ::core::option::Option<super::super::core::Range>,
@@ -4506,17 +4577,18 @@ pub mod us_core_pediatric_weight_for_height_observation_profile {
         pub text: ::core::option::Option<super::super::core::String>,
     }
     /// Used when reporting systolic and diastolic blood pressure.
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Component {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Type of component observation (code / type)
         #[prost(message, optional, tag="4")]
         pub code: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -4527,22 +4599,24 @@ pub mod us_core_pediatric_weight_for_height_observation_profile {
         pub data_absent_reason: ::core::option::Option<super::super::core::CodeableConcept>,
         /// High, low, normal, etc.
         #[prost(message, repeated, tag="7")]
-        pub interpretation: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub interpretation: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Provides guide for interpretation of component result
         #[prost(message, repeated, tag="8")]
-        pub reference_range: ::prost::alloc::vec::Vec<ReferenceRange>,
+        pub reference_range: prost::alloc::vec::Vec<ReferenceRange>,
     }
     /// Nested message and enum types in `Component`.
     pub mod component {
         /// Vital Sign Value recorded with UCUM
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct ValueX {
             #[prost(oneof="value_x::Choice", tags="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11")]
             pub choice: ::core::option::Option<value_x::Choice>,
         }
         /// Nested message and enum types in `ValueX`.
         pub mod value_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 Quantity(super::super::super::super::core::Quantity),
@@ -4573,7 +4647,8 @@ pub mod us_core_pediatric_weight_for_height_observation_profile {
 /// Auto-generated from StructureDefinition for USCoreEncounterProfile.
 /// An interaction during which services are provided to the patient.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreEncounterProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -4592,28 +4667,28 @@ pub struct UsCoreEncounterProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Identifier(s) by which this encounter is known
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     #[prost(message, optional, tag="11")]
     pub status: ::core::option::Option<us_core_encounter_profile::StatusCode>,
     #[prost(message, repeated, tag="12")]
-    pub status_history: ::prost::alloc::vec::Vec<us_core_encounter_profile::StatusHistory>,
+    pub status_history: prost::alloc::vec::Vec<us_core_encounter_profile::StatusHistory>,
     /// Classification of patient encounter
     #[prost(message, optional, tag="13")]
     pub class_value: ::core::option::Option<super::core::Coding>,
     #[prost(message, repeated, tag="14")]
-    pub class_history: ::prost::alloc::vec::Vec<us_core_encounter_profile::ClassHistory>,
+    pub class_history: prost::alloc::vec::Vec<us_core_encounter_profile::ClassHistory>,
     /// Specific type of encounter
     #[prost(message, repeated, tag="15")]
-    pub r#type: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub r#type: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Specific type of service
     #[prost(message, optional, tag="16")]
     pub service_type: ::core::option::Option<super::core::CodeableConcept>,
@@ -4625,15 +4700,15 @@ pub struct UsCoreEncounterProfile {
     pub subject: ::core::option::Option<super::core::Reference>,
     /// Episode(s) of care that this encounter should be recorded against
     #[prost(message, repeated, tag="19")]
-    pub episode_of_care: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub episode_of_care: prost::alloc::vec::Vec<super::core::Reference>,
     /// The ServiceRequest that initiated this encounter
     #[prost(message, repeated, tag="20")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, repeated, tag="21")]
-    pub participant: ::prost::alloc::vec::Vec<us_core_encounter_profile::Participant>,
+    pub participant: prost::alloc::vec::Vec<us_core_encounter_profile::Participant>,
     /// The appointment that scheduled this encounter
     #[prost(message, repeated, tag="22")]
-    pub appointment: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub appointment: prost::alloc::vec::Vec<super::core::Reference>,
     /// The start and end time of the encounter
     #[prost(message, optional, tag="23")]
     pub period: ::core::option::Option<super::core::Period>,
@@ -4642,19 +4717,19 @@ pub struct UsCoreEncounterProfile {
     pub length: ::core::option::Option<super::core::Duration>,
     /// Coded reason the encounter takes place
     #[prost(message, repeated, tag="25")]
-    pub reason_code: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub reason_code: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Reason the encounter takes place (reference)
     #[prost(message, repeated, tag="26")]
-    pub reason_reference: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub reason_reference: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, repeated, tag="27")]
-    pub diagnosis: ::prost::alloc::vec::Vec<us_core_encounter_profile::Diagnosis>,
+    pub diagnosis: prost::alloc::vec::Vec<us_core_encounter_profile::Diagnosis>,
     /// The set of accounts that may be used for billing for this Encounter
     #[prost(message, repeated, tag="28")]
-    pub account: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub account: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="29")]
     pub hospitalization: ::core::option::Option<us_core_encounter_profile::Hospitalization>,
     #[prost(message, repeated, tag="30")]
-    pub location: ::prost::alloc::vec::Vec<us_core_encounter_profile::Location>,
+    pub location: prost::alloc::vec::Vec<us_core_encounter_profile::Location>,
     /// The organization (facility) responsible for this encounter
     #[prost(message, optional, tag="31")]
     pub service_provider: ::core::option::Option<super::core::Reference>,
@@ -4666,27 +4741,29 @@ pub struct UsCoreEncounterProfile {
 pub mod us_core_encounter_profile {
     /// planned | arrived | triaged | in-progress | onleave | finished | cancelled
     /// +
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::encounter_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// List of past encounter statuses
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusHistory {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, optional, tag="4")]
         pub status: ::core::option::Option<status_history::StatusCode>,
         /// The time that the episode was in the specified status
@@ -4697,28 +4774,30 @@ pub mod us_core_encounter_profile {
     pub mod status_history {
         /// planned | arrived | triaged | in-progress | onleave | finished |
         /// cancelled +
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct StatusCode {
             #[prost(enumeration="super::super::super::core::encounter_status_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
     /// List of past encounter classes
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ClassHistory {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// inpatient | outpatient | ambulatory | emergency +
         #[prost(message, optional, tag="4")]
         pub class_value: ::core::option::Option<super::super::core::Coding>,
@@ -4727,20 +4806,21 @@ pub mod us_core_encounter_profile {
         pub period: ::core::option::Option<super::super::core::Period>,
     }
     /// List of participants involved in the encounter
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Participant {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Role of participant in encounter
         #[prost(message, repeated, tag="4")]
-        pub r#type: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub r#type: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Period of time during the encounter that the participant participated
         #[prost(message, optional, tag="5")]
         pub period: ::core::option::Option<super::super::core::Period>,
@@ -4749,17 +4829,18 @@ pub mod us_core_encounter_profile {
         pub individual: ::core::option::Option<super::super::core::Reference>,
     }
     /// The list of diagnosis relevant to this encounter
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Diagnosis {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// The diagnosis or procedure relevant to the encounter
         #[prost(message, optional, tag="4")]
         pub condition: ::core::option::Option<super::super::core::Reference>,
@@ -4772,17 +4853,18 @@ pub mod us_core_encounter_profile {
         pub rank: ::core::option::Option<super::super::core::PositiveInt>,
     }
     /// Details about the admission to a healthcare service
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Hospitalization {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Pre-admission identifier
         #[prost(message, optional, tag="4")]
         pub pre_admission_identifier: ::core::option::Option<super::super::core::Identifier>,
@@ -4798,13 +4880,13 @@ pub mod us_core_encounter_profile {
         pub re_admission: ::core::option::Option<super::super::core::CodeableConcept>,
         /// Diet preferences reported by the patient
         #[prost(message, repeated, tag="8")]
-        pub diet_preference: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub diet_preference: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Special courtesies (VIP, board member)
         #[prost(message, repeated, tag="9")]
-        pub special_courtesy: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub special_courtesy: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Wheelchair, translator, stretcher, etc.
         #[prost(message, repeated, tag="10")]
-        pub special_arrangement: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub special_arrangement: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Location/organization to which the patient is discharged
         #[prost(message, optional, tag="11")]
         pub destination: ::core::option::Option<super::super::core::Reference>,
@@ -4813,17 +4895,18 @@ pub mod us_core_encounter_profile {
         pub discharge_disposition: ::core::option::Option<super::super::core::CodeableConcept>,
     }
     /// List of locations where the patient has been
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Location {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Location the encounter takes place
         #[prost(message, optional, tag="4")]
         pub location: ::core::option::Option<super::super::core::Reference>,
@@ -4840,21 +4923,23 @@ pub mod us_core_encounter_profile {
     /// Nested message and enum types in `Location`.
     pub mod location {
         /// planned | active | reserved | completed
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct StatusCode {
             #[prost(enumeration="super::super::super::core::encounter_location_status_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
 }
 /// Auto-generated from StructureDefinition for USCoreDocumentReferenceProfile.
 /// A reference to a document.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreDocumentReferenceProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -4873,19 +4958,19 @@ pub struct UsCoreDocumentReferenceProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Master Version Specific Identifier
     #[prost(message, optional, tag="10")]
     pub master_identifier: ::core::option::Option<super::core::Identifier>,
     /// Other identifiers for the document
     #[prost(message, repeated, tag="11")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     #[prost(message, optional, tag="12")]
     pub status: ::core::option::Option<us_core_document_reference_profile::StatusCode>,
     #[prost(message, optional, tag="13")]
@@ -4895,7 +4980,7 @@ pub struct UsCoreDocumentReferenceProfile {
     pub r#type: ::core::option::Option<super::core::CodeableConcept>,
     /// Categorization of document
     #[prost(message, repeated, tag="15")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Who/what is the subject of the document
     #[prost(message, optional, tag="16")]
     pub subject: ::core::option::Option<super::core::Reference>,
@@ -4904,7 +4989,7 @@ pub struct UsCoreDocumentReferenceProfile {
     pub date: ::core::option::Option<super::core::Instant>,
     /// Who and/or what authored the document
     #[prost(message, repeated, tag="18")]
-    pub author: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub author: prost::alloc::vec::Vec<super::core::Reference>,
     /// Who/what authenticated the document
     #[prost(message, optional, tag="19")]
     pub authenticator: ::core::option::Option<super::core::Reference>,
@@ -4912,13 +4997,13 @@ pub struct UsCoreDocumentReferenceProfile {
     #[prost(message, optional, tag="20")]
     pub custodian: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="21")]
-    pub relates_to: ::prost::alloc::vec::Vec<us_core_document_reference_profile::RelatesTo>,
+    pub relates_to: prost::alloc::vec::Vec<us_core_document_reference_profile::RelatesTo>,
     /// Human-readable description
     #[prost(message, optional, tag="22")]
     pub description: ::core::option::Option<super::core::String>,
     /// Document security-tags
     #[prost(message, repeated, tag="23")]
-    pub security_label: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub security_label: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     #[prost(message, optional, tag="24")]
     pub content: ::core::option::Option<us_core_document_reference_profile::Content>,
     #[prost(message, optional, tag="25")]
@@ -4927,37 +5012,40 @@ pub struct UsCoreDocumentReferenceProfile {
 /// Nested message and enum types in `USCoreDocumentReferenceProfile`.
 pub mod us_core_document_reference_profile {
     /// current | superseded | entered-in-error
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::document_reference_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// preliminary | final | amended | entered-in-error
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct DocStatusCode {
         #[prost(enumeration="super::super::core::composition_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Relationships to other documents
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct RelatesTo {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, optional, tag="4")]
         pub code: ::core::option::Option<relates_to::CodeType>,
         /// Target of the relationship
@@ -4967,28 +5055,30 @@ pub mod us_core_document_reference_profile {
     /// Nested message and enum types in `RelatesTo`.
     pub mod relates_to {
         /// replaces | transforms | signs | appends
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct CodeType {
             #[prost(enumeration="super::super::super::core::document_relationship_type_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
     /// Document referenced
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Content {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Where to access the document
         #[prost(message, optional, tag="4")]
         pub attachment: ::core::option::Option<super::super::core::Attachment>,
@@ -4997,23 +5087,24 @@ pub mod us_core_document_reference_profile {
         pub format: ::core::option::Option<super::super::core::Coding>,
     }
     /// Clinical context of document
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Context {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Context of the document  content
         #[prost(message, optional, tag="4")]
         pub encounter: ::core::option::Option<super::super::core::Reference>,
         /// Main clinical acts documented
         #[prost(message, repeated, tag="5")]
-        pub event: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub event: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Time of service that is being documented
         #[prost(message, optional, tag="6")]
         pub period: ::core::option::Option<super::super::core::Period>,
@@ -5029,14 +5120,15 @@ pub mod us_core_document_reference_profile {
         pub source_patient_info: ::core::option::Option<super::super::core::Reference>,
         /// Related identifiers or resources
         #[prost(message, repeated, tag="10")]
-        pub related: ::prost::alloc::vec::Vec<super::super::core::Reference>,
+        pub related: prost::alloc::vec::Vec<super::super::core::Reference>,
     }
 }
 /// Auto-generated from StructureDefinition for USCoreCareTeam.
 /// Planned participants in the coordination and delivery of care for a patient
 /// or group. See
 /// <http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreCareTeam {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -5055,21 +5147,21 @@ pub struct UsCoreCareTeam {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// External Ids for this team
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     #[prost(message, optional, tag="11")]
     pub status: ::core::option::Option<us_core_care_team::StatusCode>,
     /// Type of team
     #[prost(message, repeated, tag="12")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Name of the team, such as crisis assessment team
     #[prost(message, optional, tag="13")]
     pub name: ::core::option::Option<super::core::String>,
@@ -5083,47 +5175,49 @@ pub struct UsCoreCareTeam {
     #[prost(message, optional, tag="16")]
     pub period: ::core::option::Option<super::core::Period>,
     #[prost(message, repeated, tag="17")]
-    pub participant: ::prost::alloc::vec::Vec<us_core_care_team::Participant>,
+    pub participant: prost::alloc::vec::Vec<us_core_care_team::Participant>,
     /// Why the care team exists
     #[prost(message, repeated, tag="18")]
-    pub reason_code: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub reason_code: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Why the care team exists
     #[prost(message, repeated, tag="19")]
-    pub reason_reference: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub reason_reference: prost::alloc::vec::Vec<super::core::Reference>,
     /// Organization responsible for the care team
     #[prost(message, repeated, tag="20")]
-    pub managing_organization: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub managing_organization: prost::alloc::vec::Vec<super::core::Reference>,
     /// A contact detail for the care team (that applies to all members)
     #[prost(message, repeated, tag="21")]
-    pub telecom: ::prost::alloc::vec::Vec<super::core::ContactPoint>,
+    pub telecom: prost::alloc::vec::Vec<super::core::ContactPoint>,
     /// Comments made about the CareTeam
     #[prost(message, repeated, tag="22")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
 }
 /// Nested message and enum types in `USCoreCareTeam`.
 pub mod us_core_care_team {
     /// proposed | active | suspended | inactive | entered-in-error
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::care_team_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Members of the team
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Participant {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Type of involvement
         #[prost(message, optional, tag="4")]
         pub role: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -5141,7 +5235,8 @@ pub mod us_core_care_team {
 /// Auto-generated from StructureDefinition for USCoreProvenance.
 /// US Core Provenance.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreProvenance {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -5160,16 +5255,16 @@ pub struct UsCoreProvenance {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// The Resource this Provenance record supports
     #[prost(message, repeated, tag="10")]
-    pub target: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub target: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="11")]
     pub occurred: ::core::option::Option<us_core_provenance::OccurredX>,
     /// Timestamp when the activity was recorded / updated
@@ -5177,35 +5272,37 @@ pub struct UsCoreProvenance {
     pub recorded: ::core::option::Option<super::core::Instant>,
     /// Policy or plan the activity was defined by
     #[prost(message, repeated, tag="13")]
-    pub policy: ::prost::alloc::vec::Vec<super::core::Uri>,
+    pub policy: prost::alloc::vec::Vec<super::core::Uri>,
     /// Where the activity occurred, if relevant
     #[prost(message, optional, tag="14")]
     pub location: ::core::option::Option<super::core::Reference>,
     /// Reason the activity is occurring
     #[prost(message, repeated, tag="15")]
-    pub reason: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub reason: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Activity that occurred
     #[prost(message, optional, tag="16")]
     pub activity: ::core::option::Option<super::core::CodeableConcept>,
     #[prost(message, repeated, tag="17")]
-    pub agent: ::prost::alloc::vec::Vec<us_core_provenance::Agent>,
+    pub agent: prost::alloc::vec::Vec<us_core_provenance::Agent>,
     #[prost(message, repeated, tag="18")]
-    pub entity: ::prost::alloc::vec::Vec<us_core_provenance::Entity>,
+    pub entity: prost::alloc::vec::Vec<us_core_provenance::Entity>,
     /// Signature on target
     #[prost(message, repeated, tag="19")]
-    pub signature: ::prost::alloc::vec::Vec<super::core::Signature>,
+    pub signature: prost::alloc::vec::Vec<super::core::Signature>,
 }
 /// Nested message and enum types in `USCoreProvenance`.
 pub mod us_core_provenance {
     /// When the activity occurred
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct OccurredX {
         #[prost(oneof="occurred_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<occurred_x::Choice>,
     }
     /// Nested message and enum types in `OccurredX`.
     pub mod occurred_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             Period(super::super::super::core::Period),
@@ -5214,23 +5311,24 @@ pub mod us_core_provenance {
         }
     }
     /// Actor involved
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Agent {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// How the agent participated
         #[prost(message, optional, tag="4")]
         pub r#type: ::core::option::Option<super::super::core::CodeableConcept>,
         /// What the agents role was
         #[prost(message, repeated, tag="5")]
-        pub role: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub role: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Who participated
         #[prost(message, optional, tag="6")]
         pub who: ::core::option::Option<super::super::core::Reference>,
@@ -5239,17 +5337,18 @@ pub mod us_core_provenance {
         pub on_behalf_of: ::core::option::Option<super::super::core::Reference>,
     }
     /// An entity used in this activity
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Entity {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, optional, tag="4")]
         pub role: ::core::option::Option<entity::RoleCode>,
         /// Identity of entity
@@ -5257,26 +5356,28 @@ pub mod us_core_provenance {
         pub what: ::core::option::Option<super::super::core::Reference>,
         /// Entity is attributed to this agent
         #[prost(message, repeated, tag="6")]
-        pub agent: ::prost::alloc::vec::Vec<Agent>,
+        pub agent: prost::alloc::vec::Vec<Agent>,
     }
     /// Nested message and enum types in `Entity`.
     pub mod entity {
         /// derivation | revision | quotation | source | removal
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct RoleCode {
             #[prost(enumeration="super::super::super::core::provenance_entity_role_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
 }
 /// Auto-generated from StructureDefinition for USCoreImmunizationProfile.
 /// Immunization event information.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreImmunizationProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -5295,16 +5396,16 @@ pub struct UsCoreImmunizationProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Business identifier
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     #[prost(message, optional, tag="11")]
     pub status: ::core::option::Option<us_core_immunization_profile::StatusCode>,
     /// Reason not done
@@ -5352,56 +5453,59 @@ pub struct UsCoreImmunizationProfile {
     #[prost(message, optional, tag="26")]
     pub dose_quantity: ::core::option::Option<super::core::SimpleQuantity>,
     #[prost(message, repeated, tag="27")]
-    pub performer: ::prost::alloc::vec::Vec<us_core_immunization_profile::Performer>,
+    pub performer: prost::alloc::vec::Vec<us_core_immunization_profile::Performer>,
     /// Additional immunization notes
     #[prost(message, repeated, tag="28")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     /// Why immunization occurred
     #[prost(message, repeated, tag="29")]
-    pub reason_code: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub reason_code: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Why immunization occurred
     #[prost(message, repeated, tag="30")]
-    pub reason_reference: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub reason_reference: prost::alloc::vec::Vec<super::core::Reference>,
     /// Dose potency
     #[prost(message, optional, tag="31")]
     pub is_subpotent: ::core::option::Option<super::core::Boolean>,
     /// Reason for being subpotent
     #[prost(message, repeated, tag="32")]
-    pub subpotent_reason: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub subpotent_reason: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     #[prost(message, repeated, tag="33")]
-    pub education: ::prost::alloc::vec::Vec<us_core_immunization_profile::Education>,
+    pub education: prost::alloc::vec::Vec<us_core_immunization_profile::Education>,
     /// Patient eligibility for a vaccination program
     #[prost(message, repeated, tag="34")]
-    pub program_eligibility: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub program_eligibility: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Funding source for the vaccine
     #[prost(message, optional, tag="35")]
     pub funding_source: ::core::option::Option<super::core::CodeableConcept>,
     #[prost(message, repeated, tag="36")]
-    pub reaction: ::prost::alloc::vec::Vec<us_core_immunization_profile::Reaction>,
+    pub reaction: prost::alloc::vec::Vec<us_core_immunization_profile::Reaction>,
     #[prost(message, repeated, tag="37")]
-    pub protocol_applied: ::prost::alloc::vec::Vec<us_core_immunization_profile::ProtocolApplied>,
+    pub protocol_applied: prost::alloc::vec::Vec<us_core_immunization_profile::ProtocolApplied>,
 }
 /// Nested message and enum types in `USCoreImmunizationProfile`.
 pub mod us_core_immunization_profile {
     /// completed | entered-in-error | not-done
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::immunization_status_codes_value_set::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Vaccine administration date
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct OccurrenceX {
         #[prost(oneof="occurrence_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<occurrence_x::Choice>,
     }
     /// Nested message and enum types in `OccurrenceX`.
     pub mod occurrence_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -5410,17 +5514,18 @@ pub mod us_core_immunization_profile {
         }
     }
     /// Who performed event
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Performer {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// What type of performance was done
         #[prost(message, optional, tag="4")]
         pub function: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -5429,17 +5534,18 @@ pub mod us_core_immunization_profile {
         pub actor: ::core::option::Option<super::super::core::Reference>,
     }
     /// Educational material presented to patient
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Education {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Educational material document identifier
         #[prost(message, optional, tag="4")]
         pub document_type: ::core::option::Option<super::super::core::String>,
@@ -5454,17 +5560,18 @@ pub mod us_core_immunization_profile {
         pub presentation_date: ::core::option::Option<super::super::core::DateTime>,
     }
     /// Details of a reaction that follows immunization
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Reaction {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// When reaction started
         #[prost(message, optional, tag="4")]
         pub date: ::core::option::Option<super::super::core::DateTime>,
@@ -5476,17 +5583,18 @@ pub mod us_core_immunization_profile {
         pub reported: ::core::option::Option<super::super::core::Boolean>,
     }
     /// Protocol followed by the provider
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ProtocolApplied {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Name of vaccine series
         #[prost(message, optional, tag="4")]
         pub series: ::core::option::Option<super::super::core::String>,
@@ -5495,7 +5603,7 @@ pub mod us_core_immunization_profile {
         pub authority: ::core::option::Option<super::super::core::Reference>,
         /// Vaccine preventatable disease being targetted
         #[prost(message, repeated, tag="6")]
-        pub target_disease: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub target_disease: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         #[prost(message, optional, tag="7")]
         pub dose_number: ::core::option::Option<protocol_applied::DoseNumberX>,
         #[prost(message, optional, tag="8")]
@@ -5504,14 +5612,16 @@ pub mod us_core_immunization_profile {
     /// Nested message and enum types in `ProtocolApplied`.
     pub mod protocol_applied {
         /// Dose number within series
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct DoseNumberX {
             #[prost(oneof="dose_number_x::Choice", tags="1, 2")]
             pub choice: ::core::option::Option<dose_number_x::Choice>,
         }
         /// Nested message and enum types in `DoseNumberX`.
         pub mod dose_number_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 PositiveInt(super::super::super::super::core::PositiveInt),
@@ -5520,14 +5630,16 @@ pub mod us_core_immunization_profile {
             }
         }
         /// Recommended number of doses for immunity
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct SeriesDosesX {
             #[prost(oneof="series_doses_x::Choice", tags="1, 2")]
             pub choice: ::core::option::Option<series_doses_x::Choice>,
         }
         /// Nested message and enum types in `SeriesDosesX`.
         pub mod series_doses_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 PositiveInt(super::super::super::super::core::PositiveInt),
@@ -5540,35 +5652,38 @@ pub mod us_core_immunization_profile {
 /// Auto-generated from StructureDefinition for USCoreBirthSexExtension.
 /// Extension.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct PatientUsCoreBirthSexExtension {
     /// Unique id for inter-element referencing
     #[prost(message, optional, tag="1")]
     pub id: ::core::option::Option<super::core::String>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="2")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     #[prost(message, optional, tag="3")]
     pub value_code: ::core::option::Option<patient_us_core_birth_sex_extension::ValueCode>,
 }
 /// Nested message and enum types in `PatientUSCoreBirthSexExtension`.
 pub mod patient_us_core_birth_sex_extension {
     /// Value of extension
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ValueCode {
         #[prost(enumeration="super::birth_sex_value_set::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
 }
 /// Auto-generated from StructureDefinition for
 /// USCoreDiagnosticReportProfileNoteExchange. US Core Diagnostic Report Profile
 /// for Report and Note exchange. See
 /// <http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreDiagnosticReportProfileNoteExchange {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -5587,24 +5702,24 @@ pub struct UsCoreDiagnosticReportProfileNoteExchange {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Business identifier for report
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// What was requested
     #[prost(message, repeated, tag="11")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="12")]
     pub status: ::core::option::Option<us_core_diagnostic_report_profile_note_exchange::StatusCode>,
     /// Service category
     #[prost(message, repeated, tag="13")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// US Core Report Code
     #[prost(message, optional, tag="14")]
     pub code: ::core::option::Option<super::core::CodeableConcept>,
@@ -5621,52 +5736,55 @@ pub struct UsCoreDiagnosticReportProfileNoteExchange {
     pub issued: ::core::option::Option<super::core::Instant>,
     /// Responsible Diagnostic Service
     #[prost(message, repeated, tag="19")]
-    pub performer: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub performer: prost::alloc::vec::Vec<super::core::Reference>,
     /// Primary result interpreter
     #[prost(message, repeated, tag="20")]
-    pub results_interpreter: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub results_interpreter: prost::alloc::vec::Vec<super::core::Reference>,
     /// Specimens this report is based on
     #[prost(message, repeated, tag="21")]
-    pub specimen: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub specimen: prost::alloc::vec::Vec<super::core::Reference>,
     /// Observations
     #[prost(message, repeated, tag="22")]
-    pub result: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub result: prost::alloc::vec::Vec<super::core::Reference>,
     /// Reference to full details of imaging associated with the diagnostic report
     #[prost(message, repeated, tag="23")]
-    pub imaging_study: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub imaging_study: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, repeated, tag="24")]
-    pub media: ::prost::alloc::vec::Vec<us_core_diagnostic_report_profile_note_exchange::Media>,
+    pub media: prost::alloc::vec::Vec<us_core_diagnostic_report_profile_note_exchange::Media>,
     /// Clinical conclusion (interpretation) of test results
     #[prost(message, optional, tag="25")]
     pub conclusion: ::core::option::Option<super::core::String>,
     /// Codes for the clinical conclusion of test results
     #[prost(message, repeated, tag="26")]
-    pub conclusion_code: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub conclusion_code: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Entire report as issued
     #[prost(message, repeated, tag="27")]
-    pub presented_form: ::prost::alloc::vec::Vec<super::core::Attachment>,
+    pub presented_form: prost::alloc::vec::Vec<super::core::Attachment>,
 }
 /// Nested message and enum types in `USCoreDiagnosticReportProfileNoteExchange`.
 pub mod us_core_diagnostic_report_profile_note_exchange {
     /// registered | partial | preliminary | final +
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::diagnostic_report_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Time of the report or note
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct EffectiveX {
         #[prost(oneof="effective_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<effective_x::Choice>,
     }
     /// Nested message and enum types in `EffectiveX`.
     pub mod effective_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -5675,17 +5793,18 @@ pub mod us_core_diagnostic_report_profile_note_exchange {
         }
     }
     /// Key images associated with this report
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Media {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Comment about the image (e.g. explanation)
         #[prost(message, optional, tag="4")]
         pub comment: ::core::option::Option<super::super::core::String>,
@@ -5697,7 +5816,8 @@ pub mod us_core_diagnostic_report_profile_note_exchange {
 /// Auto-generated from StructureDefinition for
 /// USCoreLaboratoryResultObservationProfile. Measurements and simple assertions.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreLaboratoryResultObservationProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -5716,27 +5836,27 @@ pub struct UsCoreLaboratoryResultObservationProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Business Identifier for observation
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Fulfills plan, proposal or order
     #[prost(message, repeated, tag="11")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     /// Part of referenced event
     #[prost(message, repeated, tag="12")]
-    pub part_of: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub part_of: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="13")]
     pub status: ::core::option::Option<us_core_laboratory_result_observation_profile::StatusCode>,
     /// Classification of  type of observation
     #[prost(message, repeated, tag="14")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Laboratory Test Name
     #[prost(message, optional, tag="15")]
     pub code: ::core::option::Option<super::core::CodeableConcept>,
@@ -5745,7 +5865,7 @@ pub struct UsCoreLaboratoryResultObservationProfile {
     pub subject: ::core::option::Option<super::core::Reference>,
     /// What the observation is about, when it is not about the subject of record
     #[prost(message, repeated, tag="17")]
-    pub focus: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub focus: prost::alloc::vec::Vec<super::core::Reference>,
     /// Healthcare event during which this observation is made
     #[prost(message, optional, tag="18")]
     pub encounter: ::core::option::Option<super::core::Reference>,
@@ -5756,7 +5876,7 @@ pub struct UsCoreLaboratoryResultObservationProfile {
     pub issued: ::core::option::Option<super::core::Instant>,
     /// Who is responsible for the observation
     #[prost(message, repeated, tag="21")]
-    pub performer: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub performer: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="22")]
     pub value: ::core::option::Option<us_core_laboratory_result_observation_profile::ValueX>,
     /// Why the result is missing
@@ -5764,10 +5884,10 @@ pub struct UsCoreLaboratoryResultObservationProfile {
     pub data_absent_reason: ::core::option::Option<super::core::CodeableConcept>,
     /// High, low, normal, etc.
     #[prost(message, repeated, tag="24")]
-    pub interpretation: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub interpretation: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Comments about the observation
     #[prost(message, repeated, tag="25")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     /// Observed body part
     #[prost(message, optional, tag="26")]
     pub body_site: ::core::option::Option<super::core::CodeableConcept>,
@@ -5781,37 +5901,40 @@ pub struct UsCoreLaboratoryResultObservationProfile {
     #[prost(message, optional, tag="29")]
     pub device: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="30")]
-    pub reference_range: ::prost::alloc::vec::Vec<us_core_laboratory_result_observation_profile::ReferenceRange>,
+    pub reference_range: prost::alloc::vec::Vec<us_core_laboratory_result_observation_profile::ReferenceRange>,
     /// Related resource that belongs to the Observation group
     #[prost(message, repeated, tag="31")]
-    pub has_member: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub has_member: prost::alloc::vec::Vec<super::core::Reference>,
     /// Related measurements the observation is made from
     #[prost(message, repeated, tag="32")]
-    pub derived_from: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub derived_from: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, repeated, tag="33")]
-    pub component: ::prost::alloc::vec::Vec<us_core_laboratory_result_observation_profile::Component>,
+    pub component: prost::alloc::vec::Vec<us_core_laboratory_result_observation_profile::Component>,
 }
 /// Nested message and enum types in `USCoreLaboratoryResultObservationProfile`.
 pub mod us_core_laboratory_result_observation_profile {
     /// registered | preliminary | final | amended +
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::observation_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Clinically relevant time/time-period for observation
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct EffectiveX {
         #[prost(oneof="effective_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<effective_x::Choice>,
     }
     /// Nested message and enum types in `EffectiveX`.
     pub mod effective_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -5820,14 +5943,16 @@ pub mod us_core_laboratory_result_observation_profile {
         }
     }
     /// Result Value
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ValueX {
         #[prost(oneof="value_x::Choice", tags="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11")]
         pub choice: ::core::option::Option<value_x::Choice>,
     }
     /// Nested message and enum types in `ValueX`.
     pub mod value_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             Quantity(super::super::super::core::Quantity),
@@ -5854,17 +5979,18 @@ pub mod us_core_laboratory_result_observation_profile {
         }
     }
     /// Provides guide for interpretation
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ReferenceRange {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Low Range, if relevant
         #[prost(message, optional, tag="4")]
         pub low: ::core::option::Option<super::super::core::SimpleQuantity>,
@@ -5876,7 +6002,7 @@ pub mod us_core_laboratory_result_observation_profile {
         pub r#type: ::core::option::Option<super::super::core::CodeableConcept>,
         /// Reference range population
         #[prost(message, repeated, tag="7")]
-        pub applies_to: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub applies_to: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Applicable age range, if relevant
         #[prost(message, optional, tag="8")]
         pub age: ::core::option::Option<super::super::core::Range>,
@@ -5885,17 +6011,18 @@ pub mod us_core_laboratory_result_observation_profile {
         pub text: ::core::option::Option<super::super::core::String>,
     }
     /// Component results
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Component {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Type of component observation (code / type)
         #[prost(message, optional, tag="4")]
         pub code: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -5906,22 +6033,24 @@ pub mod us_core_laboratory_result_observation_profile {
         pub data_absent_reason: ::core::option::Option<super::super::core::CodeableConcept>,
         /// High, low, normal, etc.
         #[prost(message, repeated, tag="7")]
-        pub interpretation: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub interpretation: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Provides guide for interpretation of component result
         #[prost(message, repeated, tag="8")]
-        pub reference_range: ::prost::alloc::vec::Vec<ReferenceRange>,
+        pub reference_range: prost::alloc::vec::Vec<ReferenceRange>,
     }
     /// Nested message and enum types in `Component`.
     pub mod component {
         /// Actual component result
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct ValueX {
             #[prost(oneof="value_x::Choice", tags="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11")]
             pub choice: ::core::option::Option<value_x::Choice>,
         }
         /// Nested message and enum types in `ValueX`.
         pub mod value_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 Quantity(super::super::super::super::core::Quantity),
@@ -5952,7 +6081,8 @@ pub mod us_core_laboratory_result_observation_profile {
 /// Auto-generated from StructureDefinition for USCoreLocation.
 /// Details and position information for a physical place.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-location>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreLocation {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -5971,16 +6101,16 @@ pub struct UsCoreLocation {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Unique code or number identifying the location to its users
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     #[prost(message, optional, tag="11")]
     pub status: ::core::option::Option<us_core_location::StatusCode>,
     /// The operational status of the location (typically only for a bed/room)
@@ -5992,7 +6122,7 @@ pub struct UsCoreLocation {
     /// A list of alternate names that the location is known as, or was known as,
     /// in the past
     #[prost(message, repeated, tag="14")]
-    pub alias: ::prost::alloc::vec::Vec<super::core::String>,
+    pub alias: prost::alloc::vec::Vec<super::core::String>,
     /// Additional details about the location that could be displayed as further
     /// information to identify the location beyond its name
     #[prost(message, optional, tag="15")]
@@ -6001,10 +6131,10 @@ pub struct UsCoreLocation {
     pub mode: ::core::option::Option<us_core_location::ModeCode>,
     /// Type of function performed
     #[prost(message, repeated, tag="17")]
-    pub r#type: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub r#type: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Contact details of the location
     #[prost(message, repeated, tag="18")]
-    pub telecom: ::prost::alloc::vec::Vec<super::core::ContactPoint>,
+    pub telecom: prost::alloc::vec::Vec<super::core::ContactPoint>,
     /// Physical location
     #[prost(message, optional, tag="19")]
     pub address: ::core::option::Option<super::core::Address>,
@@ -6020,48 +6150,51 @@ pub struct UsCoreLocation {
     #[prost(message, optional, tag="23")]
     pub part_of: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="24")]
-    pub hours_of_operation: ::prost::alloc::vec::Vec<us_core_location::HoursOfOperation>,
+    pub hours_of_operation: prost::alloc::vec::Vec<us_core_location::HoursOfOperation>,
     /// Description of availability exceptions
     #[prost(message, optional, tag="25")]
     pub availability_exceptions: ::core::option::Option<super::core::String>,
     /// Technical endpoints providing access to services operated for the location
     #[prost(message, repeated, tag="26")]
-    pub endpoint: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub endpoint: prost::alloc::vec::Vec<super::core::Reference>,
 }
 /// Nested message and enum types in `USCoreLocation`.
 pub mod us_core_location {
     /// active | suspended | inactive
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::location_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// instance | kind
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ModeCode {
         #[prost(enumeration="super::super::core::location_mode_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// The absolute geographic location
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Position {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Longitude with WGS84 datum
         #[prost(message, optional, tag="4")]
         pub longitude: ::core::option::Option<super::super::core::Decimal>,
@@ -6073,19 +6206,20 @@ pub mod us_core_location {
         pub altitude: ::core::option::Option<super::super::core::Decimal>,
     }
     /// What days/times during a week is this location usually open
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct HoursOfOperation {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, repeated, tag="4")]
-        pub days_of_week: ::prost::alloc::vec::Vec<hours_of_operation::DaysOfWeekCode>,
+        pub days_of_week: prost::alloc::vec::Vec<hours_of_operation::DaysOfWeekCode>,
         /// The Location is open all day
         #[prost(message, optional, tag="5")]
         pub all_day: ::core::option::Option<super::super::core::Boolean>,
@@ -6099,21 +6233,23 @@ pub mod us_core_location {
     /// Nested message and enum types in `HoursOfOperation`.
     pub mod hours_of_operation {
         /// mon | tue | wed | thu | fri | sat | sun
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct DaysOfWeekCode {
             #[prost(enumeration="super::super::super::core::days_of_week_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
 }
 /// Auto-generated from StructureDefinition for USCoreCondition.
 /// Detailed information about conditions, problems or diagnoses.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreCondition {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -6132,16 +6268,16 @@ pub struct UsCoreCondition {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// External Ids for this condition
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// active | recurrence | relapse | inactive | remission | resolved
     #[prost(message, optional, tag="11")]
     pub clinical_status: ::core::option::Option<super::core::CodeableConcept>,
@@ -6151,7 +6287,7 @@ pub struct UsCoreCondition {
     pub verification_status: ::core::option::Option<super::core::CodeableConcept>,
     /// problem-list-item | encounter-diagnosis | health-concern
     #[prost(message, repeated, tag="13")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Subjective severity of condition
     #[prost(message, optional, tag="14")]
     pub severity: ::core::option::Option<super::core::CodeableConcept>,
@@ -6160,7 +6296,7 @@ pub struct UsCoreCondition {
     pub code: ::core::option::Option<super::core::CodeableConcept>,
     /// Anatomical location, if relevant
     #[prost(message, repeated, tag="16")]
-    pub body_site: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub body_site: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Who has the condition?
     #[prost(message, optional, tag="17")]
     pub subject: ::core::option::Option<super::core::Reference>,
@@ -6181,24 +6317,26 @@ pub struct UsCoreCondition {
     #[prost(message, optional, tag="23")]
     pub asserter: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="24")]
-    pub stage: ::prost::alloc::vec::Vec<us_core_condition::Stage>,
+    pub stage: prost::alloc::vec::Vec<us_core_condition::Stage>,
     #[prost(message, repeated, tag="25")]
-    pub evidence: ::prost::alloc::vec::Vec<us_core_condition::Evidence>,
+    pub evidence: prost::alloc::vec::Vec<us_core_condition::Evidence>,
     /// Additional information about the Condition
     #[prost(message, repeated, tag="26")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
 }
 /// Nested message and enum types in `UsCoreCondition`.
 pub mod us_core_condition {
     /// Estimated or actual date,  date-time, or age
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct OnsetX {
         #[prost(oneof="onset_x::Choice", tags="1, 2, 3, 4, 5")]
         pub choice: ::core::option::Option<onset_x::Choice>,
     }
     /// Nested message and enum types in `OnsetX`.
     pub mod onset_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -6213,14 +6351,16 @@ pub mod us_core_condition {
         }
     }
     /// When in resolution/remission
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct AbatementX {
         #[prost(oneof="abatement_x::Choice", tags="1, 2, 3, 4, 5")]
         pub choice: ::core::option::Option<abatement_x::Choice>,
     }
     /// Nested message and enum types in `AbatementX`.
     pub mod abatement_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -6235,51 +6375,54 @@ pub mod us_core_condition {
         }
     }
     /// Stage/grade, usually assessed formally
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Stage {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Simple summary (disease specific)
         #[prost(message, optional, tag="4")]
         pub summary: ::core::option::Option<super::super::core::CodeableConcept>,
         /// Formal record of assessment
         #[prost(message, repeated, tag="5")]
-        pub assessment: ::prost::alloc::vec::Vec<super::super::core::Reference>,
+        pub assessment: prost::alloc::vec::Vec<super::super::core::Reference>,
         /// Kind of staging
         #[prost(message, optional, tag="6")]
         pub r#type: ::core::option::Option<super::super::core::CodeableConcept>,
     }
     /// Supporting evidence
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Evidence {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Manifestation/symptom
         #[prost(message, repeated, tag="4")]
-        pub code: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub code: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Supporting information found elsewhere
         #[prost(message, repeated, tag="5")]
-        pub detail: ::prost::alloc::vec::Vec<super::super::core::Reference>,
+        pub detail: prost::alloc::vec::Vec<super::super::core::Reference>,
     }
 }
 /// Auto-generated from StructureDefinition for USCorePulseOximetryProfile.
 /// FHIR Oxygen Saturation Profile.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCorePulseOximetryProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -6298,27 +6441,27 @@ pub struct UsCorePulseOximetryProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Business Identifier for observation
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Fulfills plan, proposal or order
     #[prost(message, repeated, tag="11")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     /// Part of referenced event
     #[prost(message, repeated, tag="12")]
-    pub part_of: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub part_of: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="13")]
     pub status: ::core::option::Option<us_core_pulse_oximetry_profile::StatusCode>,
     /// Classification of  type of observation
     #[prost(message, repeated, tag="14")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     #[prost(message, optional, tag="15")]
     pub code: ::core::option::Option<us_core_pulse_oximetry_profile::CodeableConceptForCode>,
     /// Who and/or what the observation is about
@@ -6326,7 +6469,7 @@ pub struct UsCorePulseOximetryProfile {
     pub subject: ::core::option::Option<super::core::Reference>,
     /// What the observation is about, when it is not about the subject of record
     #[prost(message, repeated, tag="17")]
-    pub focus: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub focus: prost::alloc::vec::Vec<super::core::Reference>,
     /// Healthcare event during which this observation is made
     #[prost(message, optional, tag="18")]
     pub encounter: ::core::option::Option<super::core::Reference>,
@@ -6337,7 +6480,7 @@ pub struct UsCorePulseOximetryProfile {
     pub issued: ::core::option::Option<super::core::Instant>,
     /// Who is responsible for the observation
     #[prost(message, repeated, tag="21")]
-    pub performer: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub performer: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="22")]
     pub value: ::core::option::Option<us_core_pulse_oximetry_profile::ValueX>,
     /// Why the result is missing
@@ -6345,10 +6488,10 @@ pub struct UsCorePulseOximetryProfile {
     pub data_absent_reason: ::core::option::Option<super::core::CodeableConcept>,
     /// High, low, normal, etc.
     #[prost(message, repeated, tag="24")]
-    pub interpretation: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub interpretation: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Comments about the observation
     #[prost(message, repeated, tag="25")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     /// Observed body part
     #[prost(message, optional, tag="26")]
     pub body_site: ::core::option::Option<super::core::CodeableConcept>,
@@ -6362,40 +6505,42 @@ pub struct UsCorePulseOximetryProfile {
     #[prost(message, optional, tag="29")]
     pub device: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="30")]
-    pub reference_range: ::prost::alloc::vec::Vec<us_core_pulse_oximetry_profile::ReferenceRange>,
+    pub reference_range: prost::alloc::vec::Vec<us_core_pulse_oximetry_profile::ReferenceRange>,
     /// Used when reporting vital signs panel components
     #[prost(message, repeated, tag="31")]
-    pub has_member: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub has_member: prost::alloc::vec::Vec<super::core::Reference>,
     /// Related measurements the observation is made from
     #[prost(message, repeated, tag="32")]
-    pub derived_from: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub derived_from: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, repeated, tag="33")]
-    pub component: ::prost::alloc::vec::Vec<us_core_pulse_oximetry_profile::Component>,
+    pub component: prost::alloc::vec::Vec<us_core_pulse_oximetry_profile::Component>,
 }
 /// Nested message and enum types in `USCorePulseOximetryProfile`.
 pub mod us_core_pulse_oximetry_profile {
     /// registered | preliminary | final | amended +
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::observation_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Oxygen Saturation by Pulse Oximetry
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct CodeableConceptForCode {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Code defined by a terminology system
         #[prost(message, repeated, tag="3")]
-        pub coding: ::prost::alloc::vec::Vec<super::super::core::Coding>,
+        pub coding: prost::alloc::vec::Vec<super::super::core::Coding>,
         /// Plain text representation of the concept
         #[prost(message, optional, tag="4")]
         pub text: ::core::option::Option<super::super::core::String>,
@@ -6405,14 +6550,16 @@ pub mod us_core_pulse_oximetry_profile {
         pub pulse_ox: ::core::option::Option<super::super::core::CodingWithFixedCode>,
     }
     /// Often just a dateTime for Vital Signs
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct EffectiveX {
         #[prost(oneof="effective_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<effective_x::Choice>,
     }
     /// Nested message and enum types in `EffectiveX`.
     pub mod effective_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -6423,31 +6570,34 @@ pub mod us_core_pulse_oximetry_profile {
     /// Vital Signs value are recorded using the Quantity data type. For supporting
     /// observations such as Cuff size could use other datatypes such as
     /// CodeableConcept.
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ValueX {
         #[prost(oneof="value_x::Choice", tags="1")]
         pub choice: ::core::option::Option<value_x::Choice>,
     }
     /// Nested message and enum types in `ValueX`.
     pub mod value_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             Quantity(super::super::super::core::Quantity),
         }
     }
     /// Provides guide for interpretation
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ReferenceRange {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Low Range, if relevant
         #[prost(message, optional, tag="4")]
         pub low: ::core::option::Option<super::super::core::SimpleQuantity>,
@@ -6459,7 +6609,7 @@ pub mod us_core_pulse_oximetry_profile {
         pub r#type: ::core::option::Option<super::super::core::CodeableConcept>,
         /// Reference range population
         #[prost(message, repeated, tag="7")]
-        pub applies_to: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub applies_to: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Applicable age range, if relevant
         #[prost(message, optional, tag="8")]
         pub age: ::core::option::Option<super::super::core::Range>,
@@ -6468,17 +6618,18 @@ pub mod us_core_pulse_oximetry_profile {
         pub text: ::core::option::Option<super::super::core::String>,
     }
     /// Used when reporting systolic and diastolic blood pressure.
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Component {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Type of component observation (code / type)
         #[prost(message, optional, tag="4")]
         pub code: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -6489,22 +6640,24 @@ pub mod us_core_pulse_oximetry_profile {
         pub data_absent_reason: ::core::option::Option<super::super::core::CodeableConcept>,
         /// High, low, normal, etc.
         #[prost(message, repeated, tag="7")]
-        pub interpretation: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub interpretation: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Provides guide for interpretation of component result
         #[prost(message, repeated, tag="8")]
-        pub reference_range: ::prost::alloc::vec::Vec<ReferenceRange>,
+        pub reference_range: prost::alloc::vec::Vec<ReferenceRange>,
     }
     /// Nested message and enum types in `Component`.
     pub mod component {
         /// Vital Sign Value recorded with UCUM
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct ValueX {
             #[prost(oneof="value_x::Choice", tags="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11")]
             pub choice: ::core::option::Option<value_x::Choice>,
         }
         /// Nested message and enum types in `ValueX`.
         pub mod value_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 Quantity(super::super::super::super::core::Quantity),
@@ -6536,7 +6689,8 @@ pub mod us_core_pulse_oximetry_profile {
 /// Item used in healthcare.
 /// See
 /// <http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreImplantableDeviceProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -6555,16 +6709,16 @@ pub struct UsCoreImplantableDeviceProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Instance identifier
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// The reference to the definition for the device
     #[prost(message, optional, tag="11")]
     pub definition: ::core::option::Option<super::core::Reference>,
@@ -6575,7 +6729,7 @@ pub struct UsCoreImplantableDeviceProfile {
     /// online | paused | standby | offline | not-ready | transduc-discon |
     /// hw-discon | off
     #[prost(message, repeated, tag="14")]
-    pub status_reason: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub status_reason: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// The distinct identification string
     #[prost(message, optional, tag="15")]
     pub distinct_identifier: ::core::option::Option<super::core::String>,
@@ -6595,7 +6749,7 @@ pub struct UsCoreImplantableDeviceProfile {
     #[prost(message, optional, tag="20")]
     pub serial_number: ::core::option::Option<super::core::String>,
     #[prost(message, repeated, tag="21")]
-    pub device_name: ::prost::alloc::vec::Vec<us_core_implantable_device_profile::DeviceName>,
+    pub device_name: prost::alloc::vec::Vec<us_core_implantable_device_profile::DeviceName>,
     /// The model number for the device
     #[prost(message, optional, tag="22")]
     pub model_number: ::core::option::Option<super::core::String>,
@@ -6606,11 +6760,11 @@ pub struct UsCoreImplantableDeviceProfile {
     #[prost(message, optional, tag="24")]
     pub r#type: ::core::option::Option<super::core::CodeableConcept>,
     #[prost(message, repeated, tag="25")]
-    pub specialization: ::prost::alloc::vec::Vec<us_core_implantable_device_profile::Specialization>,
+    pub specialization: prost::alloc::vec::Vec<us_core_implantable_device_profile::Specialization>,
     #[prost(message, repeated, tag="26")]
-    pub version: ::prost::alloc::vec::Vec<us_core_implantable_device_profile::Version>,
+    pub version: prost::alloc::vec::Vec<us_core_implantable_device_profile::Version>,
     #[prost(message, repeated, tag="27")]
-    pub property: ::prost::alloc::vec::Vec<us_core_implantable_device_profile::Property>,
+    pub property: prost::alloc::vec::Vec<us_core_implantable_device_profile::Property>,
     /// Patient to whom Device is affixed
     #[prost(message, optional, tag="28")]
     pub patient: ::core::option::Option<super::core::Reference>,
@@ -6619,7 +6773,7 @@ pub struct UsCoreImplantableDeviceProfile {
     pub owner: ::core::option::Option<super::core::Reference>,
     /// Details for human/organization for support
     #[prost(message, repeated, tag="30")]
-    pub contact: ::prost::alloc::vec::Vec<super::core::ContactPoint>,
+    pub contact: prost::alloc::vec::Vec<super::core::ContactPoint>,
     /// Where the device is found
     #[prost(message, optional, tag="31")]
     pub location: ::core::option::Option<super::core::Reference>,
@@ -6628,10 +6782,10 @@ pub struct UsCoreImplantableDeviceProfile {
     pub url: ::core::option::Option<super::core::Uri>,
     /// Device notes and comments
     #[prost(message, repeated, tag="33")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     /// Safety Characteristics of Device
     #[prost(message, repeated, tag="34")]
-    pub safety: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub safety: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// The parent device
     #[prost(message, optional, tag="35")]
     pub parent: ::core::option::Option<super::core::Reference>,
@@ -6639,17 +6793,18 @@ pub struct UsCoreImplantableDeviceProfile {
 /// Nested message and enum types in `USCoreImplantableDeviceProfile`.
 pub mod us_core_implantable_device_profile {
     /// Unique Device Identifier (UDI) Barcode string
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct UdiCarrier {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Mandatory fixed portion of UDI
         #[prost(message, optional, tag="4")]
         pub device_identifier: ::core::option::Option<super::super::core::String>,
@@ -6671,38 +6826,41 @@ pub mod us_core_implantable_device_profile {
     /// Nested message and enum types in `UdiCarrier`.
     pub mod udi_carrier {
         /// barcode | rfid | manual +
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct EntryTypeCode {
             #[prost(enumeration="super::super::super::core::udi_entry_type_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
     /// active | inactive | entered-in-error | unknown
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::fhir_device_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// The name of the device as given by the manufacturer
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct DeviceName {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// The name of the device
         #[prost(message, optional, tag="4")]
         pub name: ::core::option::Option<super::super::core::String>,
@@ -6713,29 +6871,31 @@ pub mod us_core_implantable_device_profile {
     pub mod device_name {
         /// udi-label-name | user-friendly-name | patient-reported-name |
         /// manufacturer-name | model-name | other
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct TypeCode {
             #[prost(enumeration="super::super::super::core::device_name_type_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
     /// The capabilities supported on a  device, the standards to which the device
     /// conforms for a particular purpose, and used for the communication
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Specialization {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// The standard that is used to operate and communicate
         #[prost(message, optional, tag="4")]
         pub system_type: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -6744,17 +6904,18 @@ pub mod us_core_implantable_device_profile {
         pub version: ::core::option::Option<super::super::core::String>,
     }
     /// The actual design of the device or software version running on the device
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Version {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// The type of the device version
         #[prost(message, optional, tag="4")]
         pub r#type: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -6767,32 +6928,34 @@ pub mod us_core_implantable_device_profile {
     }
     /// The actual configuration settings of a device as it actually operates,
     /// e.g., regulation status, time properties
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Property {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Code that specifies the property DeviceDefinitionPropetyCode (Extensible)
         #[prost(message, optional, tag="4")]
         pub r#type: ::core::option::Option<super::super::core::CodeableConcept>,
         /// Property value as a quantity
         #[prost(message, repeated, tag="5")]
-        pub value_quantity: ::prost::alloc::vec::Vec<super::super::core::Quantity>,
+        pub value_quantity: prost::alloc::vec::Vec<super::super::core::Quantity>,
         /// Property value as a code, e.g., NTP4 (synced to NTP)
         #[prost(message, repeated, tag="6")]
-        pub value_code: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub value_code: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
     }
 }
 /// Auto-generated from StructureDefinition for USCoreMedicationRequestProfile.
 /// Ordering of medication for patient or group.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreMedicationRequestProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -6811,16 +6974,16 @@ pub struct UsCoreMedicationRequestProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// External ids for this request
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     #[prost(message, optional, tag="11")]
     pub status: ::core::option::Option<us_core_medication_request_profile::StatusCode>,
     /// Reason for current status
@@ -6830,7 +6993,7 @@ pub struct UsCoreMedicationRequestProfile {
     pub intent: ::core::option::Option<us_core_medication_request_profile::IntentCode>,
     /// Type of medication usage
     #[prost(message, repeated, tag="14")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     #[prost(message, optional, tag="15")]
     pub priority: ::core::option::Option<us_core_medication_request_profile::PriorityCode>,
     /// True if request is prohibiting action
@@ -6848,7 +7011,7 @@ pub struct UsCoreMedicationRequestProfile {
     pub encounter: ::core::option::Option<super::core::Reference>,
     /// Information to support ordering of the medication
     #[prost(message, repeated, tag="21")]
-    pub supporting_information: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub supporting_information: prost::alloc::vec::Vec<super::core::Reference>,
     /// When request was initially authored
     #[prost(message, optional, tag="22")]
     pub authored_on: ::core::option::Option<super::core::DateTime>,
@@ -6866,20 +7029,20 @@ pub struct UsCoreMedicationRequestProfile {
     pub recorder: ::core::option::Option<super::core::Reference>,
     /// Reason or indication for ordering or not ordering the medication
     #[prost(message, repeated, tag="27")]
-    pub reason_code: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub reason_code: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Condition or observation that supports why the prescription is being
     /// written
     #[prost(message, repeated, tag="28")]
-    pub reason_reference: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub reason_reference: prost::alloc::vec::Vec<super::core::Reference>,
     /// Instantiates FHIR protocol or definition
     #[prost(message, repeated, tag="29")]
-    pub instantiates_canonical: ::prost::alloc::vec::Vec<super::core::Canonical>,
+    pub instantiates_canonical: prost::alloc::vec::Vec<super::core::Canonical>,
     /// Instantiates external protocol or definition
     #[prost(message, repeated, tag="30")]
-    pub instantiates_uri: ::prost::alloc::vec::Vec<super::core::Uri>,
+    pub instantiates_uri: prost::alloc::vec::Vec<super::core::Uri>,
     /// What request fulfills
     #[prost(message, repeated, tag="31")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     /// Composite request this is part of
     #[prost(message, optional, tag="32")]
     pub group_identifier: ::core::option::Option<super::core::Identifier>,
@@ -6888,13 +7051,13 @@ pub struct UsCoreMedicationRequestProfile {
     pub course_of_therapy_type: ::core::option::Option<super::core::CodeableConcept>,
     /// Associated insurance coverage
     #[prost(message, repeated, tag="34")]
-    pub insurance: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub insurance: prost::alloc::vec::Vec<super::core::Reference>,
     /// Information about the prescription
     #[prost(message, repeated, tag="35")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     /// How the medication should be taken
     #[prost(message, repeated, tag="36")]
-    pub dosage_instruction: ::prost::alloc::vec::Vec<super::core::Dosage>,
+    pub dosage_instruction: prost::alloc::vec::Vec<super::core::Dosage>,
     #[prost(message, optional, tag="37")]
     pub dispense_request: ::core::option::Option<us_core_medication_request_profile::DispenseRequest>,
     #[prost(message, optional, tag="38")]
@@ -6904,54 +7067,59 @@ pub struct UsCoreMedicationRequestProfile {
     pub prior_prescription: ::core::option::Option<super::core::Reference>,
     /// Clinical Issue with action
     #[prost(message, repeated, tag="40")]
-    pub detected_issue: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub detected_issue: prost::alloc::vec::Vec<super::core::Reference>,
     /// A list of events of interest in the lifecycle
     #[prost(message, repeated, tag="41")]
-    pub event_history: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub event_history: prost::alloc::vec::Vec<super::core::Reference>,
 }
 /// Nested message and enum types in `USCoreMedicationRequestProfile`.
 pub mod us_core_medication_request_profile {
     /// active | on-hold | cancelled | completed | entered-in-error | stopped |
     /// draft | unknown
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::medicationrequest_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// proposal | plan | order | original-order | reflex-order | filler-order |
     /// instance-order | option
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct IntentCode {
         #[prost(enumeration="super::super::core::medication_request_intent_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// routine | urgent | asap | stat
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct PriorityCode {
         #[prost(enumeration="super::super::core::request_priority_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Reported rather than primary record
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ReportedX {
         #[prost(oneof="reported_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<reported_x::Choice>,
     }
     /// Nested message and enum types in `ReportedX`.
     pub mod reported_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             Boolean(super::super::super::core::Boolean),
@@ -6960,14 +7128,16 @@ pub mod us_core_medication_request_profile {
         }
     }
     /// Medication to be taken
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct MedicationX {
         #[prost(oneof="medication_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<medication_x::Choice>,
     }
     /// Nested message and enum types in `MedicationX`.
     pub mod medication_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             CodeableConcept(super::super::super::core::CodeableConcept),
@@ -6976,17 +7146,18 @@ pub mod us_core_medication_request_profile {
         }
     }
     /// Medication supply authorization
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct DispenseRequest {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, optional, tag="4")]
         pub initial_fill: ::core::option::Option<dispense_request::InitialFill>,
         /// Minimum period of time between dispenses
@@ -7011,17 +7182,18 @@ pub mod us_core_medication_request_profile {
     /// Nested message and enum types in `DispenseRequest`.
     pub mod dispense_request {
         /// First fill details
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct InitialFill {
             /// Unique id for inter-element referencing
             #[prost(message, optional, tag="1")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             /// Additional content defined by implementations
             #[prost(message, repeated, tag="2")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
             /// Extensions that cannot be ignored even if unrecognized
             #[prost(message, repeated, tag="3")]
-            pub modifier_extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub modifier_extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
             /// First fill quantity
             #[prost(message, optional, tag="4")]
             pub quantity: ::core::option::Option<super::super::super::core::SimpleQuantity>,
@@ -7031,17 +7203,18 @@ pub mod us_core_medication_request_profile {
         }
     }
     /// Any restrictions on medication substitution
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Substitution {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, optional, tag="4")]
         pub allowed: ::core::option::Option<substitution::AllowedX>,
         /// Why should (not) substitution be made
@@ -7051,14 +7224,16 @@ pub mod us_core_medication_request_profile {
     /// Nested message and enum types in `Substitution`.
     pub mod substitution {
         /// Whether substitution is allowed or not
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct AllowedX {
             #[prost(oneof="allowed_x::Choice", tags="1, 2")]
             pub choice: ::core::option::Option<allowed_x::Choice>,
         }
         /// Nested message and enum types in `AllowedX`.
         pub mod allowed_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 Boolean(super::super::super::super::core::Boolean),
@@ -7071,7 +7246,8 @@ pub mod us_core_medication_request_profile {
 /// Auto-generated from StructureDefinition for USCoreMedicationProfile.
 /// Definition of a Medication.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreMedicationProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -7090,16 +7266,16 @@ pub struct UsCoreMedicationProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Business identifier for this medication
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Codes that identify this medication
     #[prost(message, optional, tag="11")]
     pub code: ::core::option::Option<super::core::CodeableConcept>,
@@ -7115,34 +7291,36 @@ pub struct UsCoreMedicationProfile {
     #[prost(message, optional, tag="15")]
     pub amount: ::core::option::Option<super::core::Ratio>,
     #[prost(message, repeated, tag="16")]
-    pub ingredient: ::prost::alloc::vec::Vec<us_core_medication_profile::Ingredient>,
+    pub ingredient: prost::alloc::vec::Vec<us_core_medication_profile::Ingredient>,
     #[prost(message, optional, tag="17")]
     pub batch: ::core::option::Option<us_core_medication_profile::Batch>,
 }
 /// Nested message and enum types in `USCoreMedicationProfile`.
 pub mod us_core_medication_profile {
     /// active | inactive | entered-in-error
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::medication_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Active or inactive ingredient
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Ingredient {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, optional, tag="4")]
         pub item: ::core::option::Option<ingredient::ItemX>,
         /// Active ingredient indicator
@@ -7155,14 +7333,16 @@ pub mod us_core_medication_profile {
     /// Nested message and enum types in `Ingredient`.
     pub mod ingredient {
         /// The actual ingredient or content
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct ItemX {
             #[prost(oneof="item_x::Choice", tags="1, 2")]
             pub choice: ::core::option::Option<item_x::Choice>,
         }
         /// Nested message and enum types in `ItemX`.
         pub mod item_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 CodeableConcept(super::super::super::super::core::CodeableConcept),
@@ -7172,17 +7352,18 @@ pub mod us_core_medication_profile {
         }
     }
     /// Details about packaged medications
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Batch {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Identifier assigned to batch
         #[prost(message, optional, tag="4")]
         pub lot_number: ::core::option::Option<super::super::core::String>,
@@ -7194,7 +7375,8 @@ pub mod us_core_medication_profile {
 /// Auto-generated from StructureDefinition for USCoreGoalProfile.
 /// Describes the intended objective(s) for a patient, group or organization.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreGoalProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -7213,16 +7395,16 @@ pub struct UsCoreGoalProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// External Ids for this goal
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     #[prost(message, optional, tag="11")]
     pub lifecycle_status: ::core::option::Option<us_core_goal_profile::LifecycleStatusCode>,
     /// in-progress | improving | worsening | no-change | achieved | sustaining |
@@ -7231,7 +7413,7 @@ pub struct UsCoreGoalProfile {
     pub achievement_status: ::core::option::Option<super::core::CodeableConcept>,
     /// E.g. Treatment, dietary, behavioral, etc.
     #[prost(message, repeated, tag="13")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// high-priority | medium-priority | low-priority
     #[prost(message, optional, tag="14")]
     pub priority: ::core::option::Option<super::core::CodeableConcept>,
@@ -7244,7 +7426,7 @@ pub struct UsCoreGoalProfile {
     #[prost(message, optional, tag="17")]
     pub start: ::core::option::Option<us_core_goal_profile::StartX>,
     #[prost(message, repeated, tag="18")]
-    pub target: ::prost::alloc::vec::Vec<us_core_goal_profile::Target>,
+    pub target: prost::alloc::vec::Vec<us_core_goal_profile::Target>,
     /// When goal status took effect
     #[prost(message, optional, tag="19")]
     pub status_date: ::core::option::Option<super::core::Date>,
@@ -7256,39 +7438,42 @@ pub struct UsCoreGoalProfile {
     pub expressed_by: ::core::option::Option<super::core::Reference>,
     /// Issues addressed by this goal
     #[prost(message, repeated, tag="22")]
-    pub addresses: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub addresses: prost::alloc::vec::Vec<super::core::Reference>,
     /// Comments about the goal
     #[prost(message, repeated, tag="23")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     /// What result was achieved regarding the goal?
     #[prost(message, repeated, tag="24")]
-    pub outcome_code: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub outcome_code: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Observation that resulted from goal
     #[prost(message, repeated, tag="25")]
-    pub outcome_reference: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub outcome_reference: prost::alloc::vec::Vec<super::core::Reference>,
 }
 /// Nested message and enum types in `USCoreGoalProfile`.
 pub mod us_core_goal_profile {
     /// proposed | planned | accepted | active | on-hold | completed | cancelled |
     /// entered-in-error | rejected
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct LifecycleStatusCode {
         #[prost(enumeration="super::super::core::goal_lifecycle_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// When goal pursuit begins
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StartX {
         #[prost(oneof="start_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<start_x::Choice>,
     }
     /// Nested message and enum types in `StartX`.
     pub mod start_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             Date(super::super::super::core::Date),
@@ -7297,17 +7482,18 @@ pub mod us_core_goal_profile {
         }
     }
     /// Target outcome for the goal
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Target {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// The parameter whose value is being tracked
         #[prost(message, optional, tag="4")]
         pub measure: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -7319,14 +7505,16 @@ pub mod us_core_goal_profile {
     /// Nested message and enum types in `Target`.
     pub mod target {
         /// The target value to be achieved
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct DetailX {
             #[prost(oneof="detail_x::Choice", tags="1, 2, 3, 4, 5, 6, 7")]
             pub choice: ::core::option::Option<detail_x::Choice>,
         }
         /// Nested message and enum types in `DetailX`.
         pub mod detail_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 Quantity(super::super::super::super::core::Quantity),
@@ -7345,14 +7533,16 @@ pub mod us_core_goal_profile {
             }
         }
         /// Reach goal on or before
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct DueX {
             #[prost(oneof="due_x::Choice", tags="1")]
             pub choice: ::core::option::Option<due_x::Choice>,
         }
         /// Nested message and enum types in `DueX`.
         pub mod due_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 Date(super::super::super::super::core::Date),
@@ -7363,18 +7553,19 @@ pub mod us_core_goal_profile {
 /// Auto-generated from StructureDefinition for USCoreRaceExtension.
 /// US Core Race Extension.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-race>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct PatientUsCoreRaceExtension {
     /// Unique id for inter-element referencing
     #[prost(message, optional, tag="1")]
     pub id: ::core::option::Option<super::core::String>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="2")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     #[prost(message, repeated, tag="4")]
-    pub omb_category: ::prost::alloc::vec::Vec<patient_us_core_race_extension::OmbCategoryCoding>,
+    pub omb_category: prost::alloc::vec::Vec<patient_us_core_race_extension::OmbCategoryCoding>,
     #[prost(message, repeated, tag="5")]
-    pub detailed: ::prost::alloc::vec::Vec<patient_us_core_race_extension::DetailedCoding>,
+    pub detailed: prost::alloc::vec::Vec<patient_us_core_race_extension::DetailedCoding>,
     /// Race Text
     #[prost(message, optional, tag="6")]
     pub text: ::core::option::Option<super::core::String>,
@@ -7383,12 +7574,13 @@ pub struct PatientUsCoreRaceExtension {
 pub mod patient_us_core_race_extension {
     /// American Indian or Alaska Native|Asian|Black or African American|Native
     /// Hawaiian or Other Pacific Islander|White
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct OmbCategoryCoding {
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, optional, tag="4")]
         pub version: ::core::option::Option<super::super::core::String>,
         #[prost(message, optional, tag="5")]
@@ -7400,23 +7592,25 @@ pub mod patient_us_core_race_extension {
     }
     /// Nested message and enum types in `OmbCategoryCoding`.
     pub mod omb_category_coding {
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct BoundCode {
             #[prost(enumeration="super::super::omb_race_categories_value_set::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
     /// Extended race codes
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct DetailedCoding {
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, optional, tag="4")]
         pub version: ::core::option::Option<super::super::core::String>,
         #[prost(message, optional, tag="5")]
@@ -7428,21 +7622,23 @@ pub mod patient_us_core_race_extension {
     }
     /// Nested message and enum types in `DetailedCoding`.
     pub mod detailed_coding {
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct BoundCode {
             #[prost(enumeration="super::super::detailed_race_value_set::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
 }
 /// Auto-generated from StructureDefinition for USCorePractitionerRoleProfile.
 /// Roles/organizations the practitioner is associated with.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCorePractitionerRoleProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -7461,16 +7657,16 @@ pub struct UsCorePractitionerRoleProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Business Identifiers that are specific to a role/location
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Whether this practitioner role record is in active use
     #[prost(message, optional, tag="11")]
     pub active: ::core::option::Option<super::core::Boolean>,
@@ -7487,48 +7683,49 @@ pub struct UsCorePractitionerRoleProfile {
     pub organization: ::core::option::Option<super::core::Reference>,
     /// Roles which this practitioner may perform
     #[prost(message, repeated, tag="15")]
-    pub code: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub code: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Specific specialty of the practitioner
     #[prost(message, repeated, tag="16")]
-    pub specialty: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub specialty: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// The location(s) at which this practitioner provides care
     #[prost(message, repeated, tag="17")]
-    pub location: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub location: prost::alloc::vec::Vec<super::core::Reference>,
     /// The list of healthcare services that this worker provides for this role's
     /// Organization/Location(s)
     #[prost(message, repeated, tag="18")]
-    pub healthcare_service: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub healthcare_service: prost::alloc::vec::Vec<super::core::Reference>,
     /// Contact details that are specific to the role/location/service
     #[prost(message, repeated, tag="19")]
-    pub telecom: ::prost::alloc::vec::Vec<super::core::ContactPoint>,
+    pub telecom: prost::alloc::vec::Vec<super::core::ContactPoint>,
     #[prost(message, repeated, tag="20")]
-    pub available_time: ::prost::alloc::vec::Vec<us_core_practitioner_role_profile::AvailableTime>,
+    pub available_time: prost::alloc::vec::Vec<us_core_practitioner_role_profile::AvailableTime>,
     #[prost(message, repeated, tag="21")]
-    pub not_available: ::prost::alloc::vec::Vec<us_core_practitioner_role_profile::NotAvailable>,
+    pub not_available: prost::alloc::vec::Vec<us_core_practitioner_role_profile::NotAvailable>,
     /// Description of availability exceptions
     #[prost(message, optional, tag="22")]
     pub availability_exceptions: ::core::option::Option<super::core::String>,
     /// Technical endpoints providing access to services operated for the
     /// practitioner with this role
     #[prost(message, repeated, tag="23")]
-    pub endpoint: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub endpoint: prost::alloc::vec::Vec<super::core::Reference>,
 }
 /// Nested message and enum types in `USCorePractitionerRoleProfile`.
 pub mod us_core_practitioner_role_profile {
     /// Times the Service Site is available
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct AvailableTime {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, repeated, tag="4")]
-        pub days_of_week: ::prost::alloc::vec::Vec<available_time::DaysOfWeekCode>,
+        pub days_of_week: prost::alloc::vec::Vec<available_time::DaysOfWeekCode>,
         /// Always available? e.g. 24 hour service
         #[prost(message, optional, tag="5")]
         pub all_day: ::core::option::Option<super::super::core::Boolean>,
@@ -7542,28 +7739,30 @@ pub mod us_core_practitioner_role_profile {
     /// Nested message and enum types in `AvailableTime`.
     pub mod available_time {
         /// mon | tue | wed | thu | fri | sat | sun
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct DaysOfWeekCode {
             #[prost(enumeration="super::super::super::core::days_of_week_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
     /// Not available during this time due to provided reason
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct NotAvailable {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Reason presented to the user explaining why time not available
         #[prost(message, optional, tag="4")]
         pub description: ::core::option::Option<super::super::core::String>,
@@ -7576,7 +7775,8 @@ pub mod us_core_practitioner_role_profile {
 /// Allergy or Intolerance (generally: Risk of adverse reaction to a substance).
 /// See
 /// <http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreAllergyIntolerance {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -7595,16 +7795,16 @@ pub struct UsCoreAllergyIntolerance {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// External ids for this item
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// active | inactive | resolved
     #[prost(message, optional, tag="11")]
     pub clinical_status: ::core::option::Option<super::core::CodeableConcept>,
@@ -7614,7 +7814,7 @@ pub struct UsCoreAllergyIntolerance {
     #[prost(message, optional, tag="13")]
     pub r#type: ::core::option::Option<us_core_allergy_intolerance::TypeCode>,
     #[prost(message, repeated, tag="14")]
-    pub category: ::prost::alloc::vec::Vec<us_core_allergy_intolerance::CategoryCode>,
+    pub category: prost::alloc::vec::Vec<us_core_allergy_intolerance::CategoryCode>,
     #[prost(message, optional, tag="15")]
     pub criticality: ::core::option::Option<us_core_allergy_intolerance::CriticalityCode>,
     /// Code that identifies the allergy or intolerance
@@ -7642,51 +7842,56 @@ pub struct UsCoreAllergyIntolerance {
     pub last_occurrence: ::core::option::Option<super::core::DateTime>,
     /// Additional text not captured in other fields
     #[prost(message, repeated, tag="24")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     #[prost(message, repeated, tag="25")]
-    pub reaction: ::prost::alloc::vec::Vec<us_core_allergy_intolerance::Reaction>,
+    pub reaction: prost::alloc::vec::Vec<us_core_allergy_intolerance::Reaction>,
 }
 /// Nested message and enum types in `USCoreAllergyIntolerance`.
 pub mod us_core_allergy_intolerance {
     /// allergy | intolerance - Underlying mechanism (if known)
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct TypeCode {
         #[prost(enumeration="super::super::core::allergy_intolerance_type_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// food | medication | environment | biologic
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct CategoryCode {
         #[prost(enumeration="super::super::core::allergy_intolerance_category_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// low | high | unable-to-assess
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct CriticalityCode {
         #[prost(enumeration="super::super::core::allergy_intolerance_criticality_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// When allergy or intolerance was identified
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct OnsetX {
         #[prost(oneof="onset_x::Choice", tags="1, 2, 3, 4, 5")]
         pub choice: ::core::option::Option<onset_x::Choice>,
     }
     /// Nested message and enum types in `OnsetX`.
     pub mod onset_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -7701,24 +7906,25 @@ pub mod us_core_allergy_intolerance {
         }
     }
     /// Adverse Reaction Events linked to exposure to substance
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Reaction {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Specific substance or pharmaceutical product considered to be responsible
         /// for event
         #[prost(message, optional, tag="4")]
         pub substance: ::core::option::Option<super::super::core::CodeableConcept>,
         /// Clinical symptoms/signs associated with the Event
         #[prost(message, repeated, tag="5")]
-        pub manifestation: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub manifestation: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Description of the event as a whole
         #[prost(message, optional, tag="6")]
         pub description: ::core::option::Option<super::super::core::String>,
@@ -7732,26 +7938,28 @@ pub mod us_core_allergy_intolerance {
         pub exposure_route: ::core::option::Option<super::super::core::CodeableConcept>,
         /// Text about event not captured in other fields
         #[prost(message, repeated, tag="10")]
-        pub note: ::prost::alloc::vec::Vec<super::super::core::Annotation>,
+        pub note: prost::alloc::vec::Vec<super::super::core::Annotation>,
     }
     /// Nested message and enum types in `Reaction`.
     pub mod reaction {
         /// mild | moderate | severe (of event as a whole)
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct SeverityCode {
             #[prost(enumeration="super::super::super::core::allergy_intolerance_severity_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
 }
 /// Auto-generated from StructureDefinition for USCoreCarePlanProfile.
 /// Healthcare plan for patient or group.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreCarePlanProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -7770,38 +7978,38 @@ pub struct UsCoreCarePlanProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// External Ids for this plan
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Instantiates FHIR protocol or definition
     #[prost(message, repeated, tag="11")]
-    pub instantiates_canonical: ::prost::alloc::vec::Vec<super::core::Canonical>,
+    pub instantiates_canonical: prost::alloc::vec::Vec<super::core::Canonical>,
     /// Instantiates external protocol or definition
     #[prost(message, repeated, tag="12")]
-    pub instantiates_uri: ::prost::alloc::vec::Vec<super::core::Uri>,
+    pub instantiates_uri: prost::alloc::vec::Vec<super::core::Uri>,
     /// Fulfills CarePlan
     #[prost(message, repeated, tag="13")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     /// CarePlan replaced by this CarePlan
     #[prost(message, repeated, tag="14")]
-    pub replaces: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub replaces: prost::alloc::vec::Vec<super::core::Reference>,
     /// Part of referenced CarePlan
     #[prost(message, repeated, tag="15")]
-    pub part_of: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub part_of: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="16")]
     pub status: ::core::option::Option<us_core_care_plan_profile::StatusCode>,
     #[prost(message, optional, tag="17")]
     pub intent: ::core::option::Option<us_core_care_plan_profile::IntentCode>,
     /// Type of plan
     #[prost(message, repeated, tag="18")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Human-friendly name for the care plan
     #[prost(message, optional, tag="19")]
     pub title: ::core::option::Option<super::core::String>,
@@ -7825,68 +8033,71 @@ pub struct UsCoreCarePlanProfile {
     pub author: ::core::option::Option<super::core::Reference>,
     /// Who provided the content of the care plan
     #[prost(message, repeated, tag="26")]
-    pub contributor: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub contributor: prost::alloc::vec::Vec<super::core::Reference>,
     /// Who's involved in plan?
     #[prost(message, repeated, tag="27")]
-    pub care_team: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub care_team: prost::alloc::vec::Vec<super::core::Reference>,
     /// Health issues this plan addresses
     #[prost(message, repeated, tag="28")]
-    pub addresses: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub addresses: prost::alloc::vec::Vec<super::core::Reference>,
     /// Information considered as part of plan
     #[prost(message, repeated, tag="29")]
-    pub supporting_info: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub supporting_info: prost::alloc::vec::Vec<super::core::Reference>,
     /// Desired outcome of plan
     #[prost(message, repeated, tag="30")]
-    pub goal: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub goal: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, repeated, tag="31")]
-    pub activity: ::prost::alloc::vec::Vec<us_core_care_plan_profile::Activity>,
+    pub activity: prost::alloc::vec::Vec<us_core_care_plan_profile::Activity>,
     /// Comments about the plan
     #[prost(message, repeated, tag="32")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
 }
 /// Nested message and enum types in `USCoreCarePlanProfile`.
 pub mod us_core_care_plan_profile {
     /// draft | active | on-hold | revoked | completed | entered-in-error | unknown
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::request_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// proposal | plan | order | option
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct IntentCode {
         #[prost(enumeration="super::super::core::care_plan_intent_value_set::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Action to occur as part of plan
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Activity {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Results of the activity
         #[prost(message, repeated, tag="4")]
-        pub outcome_codeable_concept: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub outcome_codeable_concept: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Appointment, Encounter, Procedure, etc.
         #[prost(message, repeated, tag="5")]
-        pub outcome_reference: ::prost::alloc::vec::Vec<super::super::core::Reference>,
+        pub outcome_reference: prost::alloc::vec::Vec<super::super::core::Reference>,
         /// Comments about the activity status/progress
         #[prost(message, repeated, tag="6")]
-        pub progress: ::prost::alloc::vec::Vec<super::super::core::Annotation>,
+        pub progress: prost::alloc::vec::Vec<super::super::core::Annotation>,
         /// Activity details defined in specific resource
         #[prost(message, optional, tag="7")]
         pub reference: ::core::option::Option<super::super::core::Reference>,
@@ -7896,37 +8107,38 @@ pub mod us_core_care_plan_profile {
     /// Nested message and enum types in `Activity`.
     pub mod activity {
         /// In-line definition of activity
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct Detail {
             /// Unique id for inter-element referencing
             #[prost(message, optional, tag="1")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             /// Additional content defined by implementations
             #[prost(message, repeated, tag="2")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
             /// Extensions that cannot be ignored even if unrecognized
             #[prost(message, repeated, tag="3")]
-            pub modifier_extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub modifier_extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
             #[prost(message, optional, tag="4")]
             pub kind: ::core::option::Option<detail::KindCode>,
             /// Instantiates FHIR protocol or definition
             #[prost(message, repeated, tag="5")]
-            pub instantiates_canonical: ::prost::alloc::vec::Vec<super::super::super::core::Canonical>,
+            pub instantiates_canonical: prost::alloc::vec::Vec<super::super::super::core::Canonical>,
             /// Instantiates external protocol or definition
             #[prost(message, repeated, tag="6")]
-            pub instantiates_uri: ::prost::alloc::vec::Vec<super::super::super::core::Uri>,
+            pub instantiates_uri: prost::alloc::vec::Vec<super::super::super::core::Uri>,
             /// Detail type of activity
             #[prost(message, optional, tag="7")]
             pub code: ::core::option::Option<super::super::super::core::CodeableConcept>,
             /// Why activity should be done or why activity was prohibited
             #[prost(message, repeated, tag="8")]
-            pub reason_code: ::prost::alloc::vec::Vec<super::super::super::core::CodeableConcept>,
+            pub reason_code: prost::alloc::vec::Vec<super::super::super::core::CodeableConcept>,
             /// Why activity is needed
             #[prost(message, repeated, tag="9")]
-            pub reason_reference: ::prost::alloc::vec::Vec<super::super::super::core::Reference>,
+            pub reason_reference: prost::alloc::vec::Vec<super::super::super::core::Reference>,
             /// Goals this activity relates to
             #[prost(message, repeated, tag="10")]
-            pub goal: ::prost::alloc::vec::Vec<super::super::super::core::Reference>,
+            pub goal: prost::alloc::vec::Vec<super::super::super::core::Reference>,
             #[prost(message, optional, tag="11")]
             pub status: ::core::option::Option<detail::StatusCode>,
             /// Reason for current status
@@ -7942,7 +8154,7 @@ pub mod us_core_care_plan_profile {
             pub location: ::core::option::Option<super::super::super::core::Reference>,
             /// Who will be responsible?
             #[prost(message, repeated, tag="16")]
-            pub performer: ::prost::alloc::vec::Vec<super::super::super::core::Reference>,
+            pub performer: prost::alloc::vec::Vec<super::super::super::core::Reference>,
             #[prost(message, optional, tag="17")]
             pub product: ::core::option::Option<detail::ProductX>,
             /// How to consume/day?
@@ -7959,35 +8171,39 @@ pub mod us_core_care_plan_profile {
         pub mod detail {
             /// Appointment | CommunicationRequest | DeviceRequest | MedicationRequest
             /// | NutritionOrder | Task | ServiceRequest | VisionPrescription
-            #[derive(Clone, PartialEq, ::prost::Message)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Message)]
             pub struct KindCode {
                 #[prost(enumeration="super::super::super::super::core::care_plan_activity_kind_value_set::Value", tag="1")]
                 pub value: i32,
                 #[prost(message, optional, tag="2")]
                 pub id: ::core::option::Option<super::super::super::super::core::String>,
                 #[prost(message, repeated, tag="3")]
-                pub extension: ::prost::alloc::vec::Vec<super::super::super::super::core::Extension>,
+                pub extension: prost::alloc::vec::Vec<super::super::super::super::core::Extension>,
             }
             /// not-started | scheduled | in-progress | on-hold | completed | cancelled
             /// | stopped | unknown | entered-in-error
-            #[derive(Clone, PartialEq, ::prost::Message)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Message)]
             pub struct StatusCode {
                 #[prost(enumeration="super::super::super::super::core::care_plan_activity_status_code::Value", tag="1")]
                 pub value: i32,
                 #[prost(message, optional, tag="2")]
                 pub id: ::core::option::Option<super::super::super::super::core::String>,
                 #[prost(message, repeated, tag="3")]
-                pub extension: ::prost::alloc::vec::Vec<super::super::super::super::core::Extension>,
+                pub extension: prost::alloc::vec::Vec<super::super::super::super::core::Extension>,
             }
             /// When activity is to occur
-            #[derive(Clone, PartialEq, ::prost::Message)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Message)]
             pub struct ScheduledX {
                 #[prost(oneof="scheduled_x::Choice", tags="1, 2, 3")]
                 pub choice: ::core::option::Option<scheduled_x::Choice>,
             }
             /// Nested message and enum types in `ScheduledX`.
             pub mod scheduled_x {
-                #[derive(Clone, PartialEq, ::prost::Oneof)]
+                #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+                #[derive(Clone, PartialEq, prost::Oneof)]
                 pub enum Choice {
                     #[prost(message, tag="1")]
                     Timing(super::super::super::super::super::core::Timing),
@@ -7998,14 +8214,16 @@ pub mod us_core_care_plan_profile {
                 }
             }
             /// What is to be administered/supplied
-            #[derive(Clone, PartialEq, ::prost::Message)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Message)]
             pub struct ProductX {
                 #[prost(oneof="product_x::Choice", tags="1, 2")]
                 pub choice: ::core::option::Option<product_x::Choice>,
             }
             /// Nested message and enum types in `ProductX`.
             pub mod product_x {
-                #[derive(Clone, PartialEq, ::prost::Oneof)]
+                #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+                #[derive(Clone, PartialEq, prost::Oneof)]
                 pub enum Choice {
                     #[prost(message, tag="1")]
                     CodeableConcept(super::super::super::super::super::core::CodeableConcept),
@@ -8019,7 +8237,8 @@ pub mod us_core_care_plan_profile {
 /// Auto-generated from StructureDefinition for USCorePatientProfile.
 /// Information about an individual or animal receiving health care services.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCorePatientProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -8038,25 +8257,25 @@ pub struct UsCorePatientProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Extension
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// An identifier for this patient
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Whether this patient's record is in active use
     #[prost(message, optional, tag="11")]
     pub active: ::core::option::Option<super::core::Boolean>,
     /// A name associated with the patient
     #[prost(message, repeated, tag="12")]
-    pub name: ::prost::alloc::vec::Vec<super::core::HumanName>,
+    pub name: prost::alloc::vec::Vec<super::core::HumanName>,
     /// A contact detail for the individual
     #[prost(message, repeated, tag="13")]
-    pub telecom: ::prost::alloc::vec::Vec<super::core::ContactPoint>,
+    pub telecom: prost::alloc::vec::Vec<super::core::ContactPoint>,
     #[prost(message, optional, tag="14")]
     pub gender: ::core::option::Option<us_core_patient_profile::GenderCode>,
     /// The date of birth for the individual
@@ -8066,7 +8285,7 @@ pub struct UsCorePatientProfile {
     pub deceased: ::core::option::Option<us_core_patient_profile::DeceasedX>,
     /// An address for the individual
     #[prost(message, repeated, tag="17")]
-    pub address: ::prost::alloc::vec::Vec<super::core::Address>,
+    pub address: prost::alloc::vec::Vec<super::core::Address>,
     /// Marital (civil) status of a patient
     #[prost(message, optional, tag="18")]
     pub marital_status: ::core::option::Option<super::core::CodeableConcept>,
@@ -8074,19 +8293,19 @@ pub struct UsCorePatientProfile {
     pub multiple_birth: ::core::option::Option<us_core_patient_profile::MultipleBirthX>,
     /// Image of the patient
     #[prost(message, repeated, tag="20")]
-    pub photo: ::prost::alloc::vec::Vec<super::core::Attachment>,
+    pub photo: prost::alloc::vec::Vec<super::core::Attachment>,
     #[prost(message, repeated, tag="21")]
-    pub contact: ::prost::alloc::vec::Vec<us_core_patient_profile::Contact>,
+    pub contact: prost::alloc::vec::Vec<us_core_patient_profile::Contact>,
     #[prost(message, repeated, tag="22")]
-    pub communication: ::prost::alloc::vec::Vec<us_core_patient_profile::Communication>,
+    pub communication: prost::alloc::vec::Vec<us_core_patient_profile::Communication>,
     /// Patient's nominated primary care provider
     #[prost(message, repeated, tag="23")]
-    pub general_practitioner: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub general_practitioner: prost::alloc::vec::Vec<super::core::Reference>,
     /// Organization that is the custodian of the patient record
     #[prost(message, optional, tag="24")]
     pub managing_organization: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="25")]
-    pub link: ::prost::alloc::vec::Vec<us_core_patient_profile::Link>,
+    pub link: prost::alloc::vec::Vec<us_core_patient_profile::Link>,
     /// US Core Race Extension
     #[prost(message, optional, tag="26")]
     pub race: ::core::option::Option<PatientUsCoreRaceExtension>,
@@ -8100,24 +8319,27 @@ pub struct UsCorePatientProfile {
 /// Nested message and enum types in `USCorePatientProfile`.
 pub mod us_core_patient_profile {
     /// male | female | other | unknown
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct GenderCode {
         #[prost(enumeration="super::super::core::administrative_gender_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Indicates if the individual is deceased or not
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct DeceasedX {
         #[prost(oneof="deceased_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<deceased_x::Choice>,
     }
     /// Nested message and enum types in `DeceasedX`.
     pub mod deceased_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             Boolean(super::super::super::core::Boolean),
@@ -8126,14 +8348,16 @@ pub mod us_core_patient_profile {
         }
     }
     /// Whether patient is part of a multiple birth
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct MultipleBirthX {
         #[prost(oneof="multiple_birth_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<multiple_birth_x::Choice>,
     }
     /// Nested message and enum types in `MultipleBirthX`.
     pub mod multiple_birth_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             Boolean(super::super::super::core::Boolean),
@@ -8142,26 +8366,27 @@ pub mod us_core_patient_profile {
         }
     }
     /// A contact party (e.g. guardian, partner, friend) for the patient
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Contact {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// The kind of relationship
         #[prost(message, repeated, tag="4")]
-        pub relationship: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub relationship: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// A name associated with the contact person
         #[prost(message, optional, tag="5")]
         pub name: ::core::option::Option<super::super::core::HumanName>,
         /// A contact detail for the person
         #[prost(message, repeated, tag="6")]
-        pub telecom: ::prost::alloc::vec::Vec<super::super::core::ContactPoint>,
+        pub telecom: prost::alloc::vec::Vec<super::super::core::ContactPoint>,
         /// Address for the contact person
         #[prost(message, optional, tag="7")]
         pub address: ::core::option::Option<super::super::core::Address>,
@@ -8178,29 +8403,31 @@ pub mod us_core_patient_profile {
     /// Nested message and enum types in `Contact`.
     pub mod contact {
         /// male | female | other | unknown
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct GenderCode {
             #[prost(enumeration="super::super::super::core::administrative_gender_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
     /// A language which may be used to communicate with the patient about his or
     /// her health
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Communication {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// The language which can be used to communicate with the patient about his
         /// or her health
         #[prost(message, optional, tag="4")]
@@ -8210,17 +8437,18 @@ pub mod us_core_patient_profile {
         pub preferred: ::core::option::Option<super::super::core::Boolean>,
     }
     /// Link to another patient resource that concerns the same actual person
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Link {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// The other patient or related person resource that the link refers to
         #[prost(message, optional, tag="4")]
         pub other: ::core::option::Option<super::super::core::Reference>,
@@ -8230,32 +8458,34 @@ pub mod us_core_patient_profile {
     /// Nested message and enum types in `Link`.
     pub mod link {
         /// replaced-by | replaces | refer | seealso
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct TypeCode {
             #[prost(enumeration="super::super::super::core::link_type_code::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
 }
 /// Auto-generated from StructureDefinition for USCoreEthnicityExtension.
 /// US Core ethnicity Extension.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct PatientUsCoreEthnicityExtension {
     /// Unique id for inter-element referencing
     #[prost(message, optional, tag="1")]
     pub id: ::core::option::Option<super::core::String>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="2")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     #[prost(message, optional, tag="4")]
     pub omb_category: ::core::option::Option<patient_us_core_ethnicity_extension::OmbCategoryCoding>,
     #[prost(message, repeated, tag="5")]
-    pub detailed: ::prost::alloc::vec::Vec<patient_us_core_ethnicity_extension::DetailedCoding>,
+    pub detailed: prost::alloc::vec::Vec<patient_us_core_ethnicity_extension::DetailedCoding>,
     /// ethnicity Text
     #[prost(message, optional, tag="6")]
     pub text: ::core::option::Option<super::core::String>,
@@ -8263,12 +8493,13 @@ pub struct PatientUsCoreEthnicityExtension {
 /// Nested message and enum types in `PatientUSCoreEthnicityExtension`.
 pub mod patient_us_core_ethnicity_extension {
     /// Hispanic or Latino|Not Hispanic or Latino
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct OmbCategoryCoding {
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, optional, tag="4")]
         pub version: ::core::option::Option<super::super::core::String>,
         #[prost(message, optional, tag="5")]
@@ -8280,23 +8511,25 @@ pub mod patient_us_core_ethnicity_extension {
     }
     /// Nested message and enum types in `OmbCategoryCoding`.
     pub mod omb_category_coding {
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct BoundCode {
             #[prost(enumeration="super::super::omb_ethnicity_categories_value_set::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
     /// Extended ethnicity codes
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct DetailedCoding {
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         #[prost(message, optional, tag="4")]
         pub version: ::core::option::Option<super::super::core::String>,
         #[prost(message, optional, tag="5")]
@@ -8308,28 +8541,30 @@ pub mod patient_us_core_ethnicity_extension {
     }
     /// Nested message and enum types in `DetailedCoding`.
     pub mod detailed_coding {
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct BoundCode {
             #[prost(enumeration="super::super::detailed_ethnicity_value_set::Value", tag="1")]
             pub value: i32,
             #[prost(message, optional, tag="2")]
             pub id: ::core::option::Option<super::super::super::core::String>,
             #[prost(message, repeated, tag="3")]
-            pub extension: ::prost::alloc::vec::Vec<super::super::super::core::Extension>,
+            pub extension: prost::alloc::vec::Vec<super::super::super::core::Extension>,
         }
     }
 }
 /// Auto-generated from StructureDefinition for USCoreDirectEmailExtension.
 /// Email is a "direct" email.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreDirectEmail {
     /// Unique id for inter-element referencing
     #[prost(message, optional, tag="1")]
     pub id: ::core::option::Option<super::core::String>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="2")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Value of extension
     #[prost(message, optional, tag="3")]
     pub value_boolean: ::core::option::Option<super::core::Boolean>,
@@ -8337,7 +8572,8 @@ pub struct UsCoreDirectEmail {
 /// Auto-generated from StructureDefinition for USCoreSmokingStatusProfile.
 /// Measurements and simple assertions.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreSmokingStatusProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -8356,27 +8592,27 @@ pub struct UsCoreSmokingStatusProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Business Identifier for observation
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Fulfills plan, proposal or order
     #[prost(message, repeated, tag="11")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     /// Part of referenced event
     #[prost(message, repeated, tag="12")]
-    pub part_of: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub part_of: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="13")]
     pub status: ::core::option::Option<us_core_smoking_status_profile::StatusCode>,
     /// Classification of  type of observation
     #[prost(message, repeated, tag="14")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Smoking Status
     #[prost(message, optional, tag="15")]
     pub code: ::core::option::Option<super::core::CodeableConcept>,
@@ -8385,7 +8621,7 @@ pub struct UsCoreSmokingStatusProfile {
     pub subject: ::core::option::Option<super::core::Reference>,
     /// What the observation is about, when it is not about the subject of record
     #[prost(message, repeated, tag="17")]
-    pub focus: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub focus: prost::alloc::vec::Vec<super::core::Reference>,
     /// Healthcare event during which this observation is made
     #[prost(message, optional, tag="18")]
     pub encounter: ::core::option::Option<super::core::Reference>,
@@ -8396,7 +8632,7 @@ pub struct UsCoreSmokingStatusProfile {
     pub issued: ::core::option::Option<super::core::Instant>,
     /// Who is responsible for the observation
     #[prost(message, repeated, tag="21")]
-    pub performer: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub performer: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="22")]
     pub value: ::core::option::Option<us_core_smoking_status_profile::ValueX>,
     /// Why the result is missing
@@ -8404,10 +8640,10 @@ pub struct UsCoreSmokingStatusProfile {
     pub data_absent_reason: ::core::option::Option<super::core::CodeableConcept>,
     /// High, low, normal, etc.
     #[prost(message, repeated, tag="24")]
-    pub interpretation: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub interpretation: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Comments about the observation
     #[prost(message, repeated, tag="25")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     /// Observed body part
     #[prost(message, optional, tag="26")]
     pub body_site: ::core::option::Option<super::core::CodeableConcept>,
@@ -8421,37 +8657,40 @@ pub struct UsCoreSmokingStatusProfile {
     #[prost(message, optional, tag="29")]
     pub device: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="30")]
-    pub reference_range: ::prost::alloc::vec::Vec<us_core_smoking_status_profile::ReferenceRange>,
+    pub reference_range: prost::alloc::vec::Vec<us_core_smoking_status_profile::ReferenceRange>,
     /// Related resource that belongs to the Observation group
     #[prost(message, repeated, tag="31")]
-    pub has_member: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub has_member: prost::alloc::vec::Vec<super::core::Reference>,
     /// Related measurements the observation is made from
     #[prost(message, repeated, tag="32")]
-    pub derived_from: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub derived_from: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, repeated, tag="33")]
-    pub component: ::prost::alloc::vec::Vec<us_core_smoking_status_profile::Component>,
+    pub component: prost::alloc::vec::Vec<us_core_smoking_status_profile::Component>,
 }
 /// Nested message and enum types in `USCoreSmokingStatusProfile`.
 pub mod us_core_smoking_status_profile {
     /// registered | preliminary | final | amended +
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::us_core_observation_smoking_status_status_value_set::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Clinically relevant time/time-period for observation
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct EffectiveX {
         #[prost(oneof="effective_x::Choice", tags="1, 2, 3, 4")]
         pub choice: ::core::option::Option<effective_x::Choice>,
     }
     /// Nested message and enum types in `EffectiveX`.
     pub mod effective_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -8464,31 +8703,34 @@ pub mod us_core_smoking_status_profile {
         }
     }
     /// Actual result
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ValueX {
         #[prost(oneof="value_x::Choice", tags="2")]
         pub choice: ::core::option::Option<value_x::Choice>,
     }
     /// Nested message and enum types in `ValueX`.
     pub mod value_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="2")]
             CodeableConcept(super::super::super::core::CodeableConcept),
         }
     }
     /// Provides guide for interpretation
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ReferenceRange {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Low Range, if relevant
         #[prost(message, optional, tag="4")]
         pub low: ::core::option::Option<super::super::core::SimpleQuantity>,
@@ -8500,7 +8742,7 @@ pub mod us_core_smoking_status_profile {
         pub r#type: ::core::option::Option<super::super::core::CodeableConcept>,
         /// Reference range population
         #[prost(message, repeated, tag="7")]
-        pub applies_to: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub applies_to: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Applicable age range, if relevant
         #[prost(message, optional, tag="8")]
         pub age: ::core::option::Option<super::super::core::Range>,
@@ -8509,17 +8751,18 @@ pub mod us_core_smoking_status_profile {
         pub text: ::core::option::Option<super::super::core::String>,
     }
     /// Component results
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Component {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Type of component observation (code / type)
         #[prost(message, optional, tag="4")]
         pub code: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -8530,22 +8773,24 @@ pub mod us_core_smoking_status_profile {
         pub data_absent_reason: ::core::option::Option<super::super::core::CodeableConcept>,
         /// High, low, normal, etc.
         #[prost(message, repeated, tag="7")]
-        pub interpretation: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub interpretation: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Provides guide for interpretation of component result
         #[prost(message, repeated, tag="8")]
-        pub reference_range: ::prost::alloc::vec::Vec<ReferenceRange>,
+        pub reference_range: prost::alloc::vec::Vec<ReferenceRange>,
     }
     /// Nested message and enum types in `Component`.
     pub mod component {
         /// Actual component result
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct ValueX {
             #[prost(oneof="value_x::Choice", tags="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11")]
             pub choice: ::core::option::Option<value_x::Choice>,
         }
         /// Nested message and enum types in `ValueX`.
         pub mod value_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 Quantity(super::super::super::super::core::Quantity),
@@ -8576,7 +8821,8 @@ pub mod us_core_smoking_status_profile {
 /// Auto-generated from StructureDefinition for USCoreOrganizationProfile.
 /// A grouping of people or organizations with a common purpose.
 /// See <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCoreOrganizationProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -8595,59 +8841,60 @@ pub struct UsCoreOrganizationProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Identifies this organization  across multiple systems
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Whether the organization's record is still in active use
     #[prost(message, optional, tag="11")]
     pub active: ::core::option::Option<super::core::Boolean>,
     /// Kind of organization
     #[prost(message, repeated, tag="12")]
-    pub r#type: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub r#type: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Name used for the organization
     #[prost(message, optional, tag="13")]
     pub name: ::core::option::Option<super::core::String>,
     /// A list of alternate names that the organization is known as, or was known
     /// as in the past
     #[prost(message, repeated, tag="14")]
-    pub alias: ::prost::alloc::vec::Vec<super::core::String>,
+    pub alias: prost::alloc::vec::Vec<super::core::String>,
     /// A contact detail for the organization
     #[prost(message, repeated, tag="15")]
-    pub telecom: ::prost::alloc::vec::Vec<super::core::ContactPoint>,
+    pub telecom: prost::alloc::vec::Vec<super::core::ContactPoint>,
     /// An address for the organization
     #[prost(message, repeated, tag="16")]
-    pub address: ::prost::alloc::vec::Vec<super::core::Address>,
+    pub address: prost::alloc::vec::Vec<super::core::Address>,
     /// The organization of which this organization forms a part
     #[prost(message, optional, tag="17")]
     pub part_of: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="18")]
-    pub contact: ::prost::alloc::vec::Vec<us_core_organization_profile::Contact>,
+    pub contact: prost::alloc::vec::Vec<us_core_organization_profile::Contact>,
     /// Technical endpoints providing access to services operated for the
     /// organization
     #[prost(message, repeated, tag="19")]
-    pub endpoint: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub endpoint: prost::alloc::vec::Vec<super::core::Reference>,
 }
 /// Nested message and enum types in `USCoreOrganizationProfile`.
 pub mod us_core_organization_profile {
     /// Contact for the organization for a certain purpose
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Contact {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// The type of contact
         #[prost(message, optional, tag="4")]
         pub purpose: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -8656,7 +8903,7 @@ pub mod us_core_organization_profile {
         pub name: ::core::option::Option<super::super::core::HumanName>,
         /// Contact details (telephone, email, etc.)  for a contact
         #[prost(message, repeated, tag="6")]
-        pub telecom: ::prost::alloc::vec::Vec<super::super::core::ContactPoint>,
+        pub telecom: prost::alloc::vec::Vec<super::super::core::ContactPoint>,
         /// Visiting or postal addresses for the contact
         #[prost(message, optional, tag="7")]
         pub address: ::core::option::Option<super::super::core::Address>,
@@ -8665,7 +8912,8 @@ pub mod us_core_organization_profile {
 /// Auto-generated from StructureDefinition for
 /// USCorePediatricBMIforAgeObservationProfile. FHIR Vital Signs Profile. See
 /// <http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct UsCorePediatricBmIforAgeObservationProfile {
     /// Logical id of this artifact
     #[prost(message, optional, tag="1")]
@@ -8684,27 +8932,27 @@ pub struct UsCorePediatricBmIforAgeObservationProfile {
     pub text: ::core::option::Option<super::core::Narrative>,
     /// Contained, inline Resources
     #[prost(message, repeated, tag="6")]
-    pub contained: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub contained: prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="8")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Extensions that cannot be ignored
     #[prost(message, repeated, tag="9")]
-    pub modifier_extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub modifier_extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// Business Identifier for observation
     #[prost(message, repeated, tag="10")]
-    pub identifier: ::prost::alloc::vec::Vec<super::core::Identifier>,
+    pub identifier: prost::alloc::vec::Vec<super::core::Identifier>,
     /// Fulfills plan, proposal or order
     #[prost(message, repeated, tag="11")]
-    pub based_on: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub based_on: prost::alloc::vec::Vec<super::core::Reference>,
     /// Part of referenced event
     #[prost(message, repeated, tag="12")]
-    pub part_of: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub part_of: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="13")]
     pub status: ::core::option::Option<us_core_pediatric_bm_ifor_age_observation_profile::StatusCode>,
     /// Classification of  type of observation
     #[prost(message, repeated, tag="14")]
-    pub category: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub category: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// BMI percentile per age and sex for youth 2-20
     #[prost(message, optional, tag="15")]
     pub code: ::core::option::Option<super::core::CodeableConcept>,
@@ -8713,7 +8961,7 @@ pub struct UsCorePediatricBmIforAgeObservationProfile {
     pub subject: ::core::option::Option<super::core::Reference>,
     /// What the observation is about, when it is not about the subject of record
     #[prost(message, repeated, tag="17")]
-    pub focus: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub focus: prost::alloc::vec::Vec<super::core::Reference>,
     /// Healthcare event during which this observation is made
     #[prost(message, optional, tag="18")]
     pub encounter: ::core::option::Option<super::core::Reference>,
@@ -8724,7 +8972,7 @@ pub struct UsCorePediatricBmIforAgeObservationProfile {
     pub issued: ::core::option::Option<super::core::Instant>,
     /// Who is responsible for the observation
     #[prost(message, repeated, tag="21")]
-    pub performer: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub performer: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, optional, tag="22")]
     pub value: ::core::option::Option<us_core_pediatric_bm_ifor_age_observation_profile::ValueX>,
     /// Why the result is missing
@@ -8732,10 +8980,10 @@ pub struct UsCorePediatricBmIforAgeObservationProfile {
     pub data_absent_reason: ::core::option::Option<super::core::CodeableConcept>,
     /// High, low, normal, etc.
     #[prost(message, repeated, tag="24")]
-    pub interpretation: ::prost::alloc::vec::Vec<super::core::CodeableConcept>,
+    pub interpretation: prost::alloc::vec::Vec<super::core::CodeableConcept>,
     /// Comments about the observation
     #[prost(message, repeated, tag="25")]
-    pub note: ::prost::alloc::vec::Vec<super::core::Annotation>,
+    pub note: prost::alloc::vec::Vec<super::core::Annotation>,
     /// Observed body part
     #[prost(message, optional, tag="26")]
     pub body_site: ::core::option::Option<super::core::CodeableConcept>,
@@ -8749,37 +8997,40 @@ pub struct UsCorePediatricBmIforAgeObservationProfile {
     #[prost(message, optional, tag="29")]
     pub device: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="30")]
-    pub reference_range: ::prost::alloc::vec::Vec<us_core_pediatric_bm_ifor_age_observation_profile::ReferenceRange>,
+    pub reference_range: prost::alloc::vec::Vec<us_core_pediatric_bm_ifor_age_observation_profile::ReferenceRange>,
     /// Used when reporting vital signs panel components
     #[prost(message, repeated, tag="31")]
-    pub has_member: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub has_member: prost::alloc::vec::Vec<super::core::Reference>,
     /// Related measurements the observation is made from
     #[prost(message, repeated, tag="32")]
-    pub derived_from: ::prost::alloc::vec::Vec<super::core::Reference>,
+    pub derived_from: prost::alloc::vec::Vec<super::core::Reference>,
     #[prost(message, repeated, tag="33")]
-    pub component: ::prost::alloc::vec::Vec<us_core_pediatric_bm_ifor_age_observation_profile::Component>,
+    pub component: prost::alloc::vec::Vec<us_core_pediatric_bm_ifor_age_observation_profile::Component>,
 }
 /// Nested message and enum types in `USCorePediatricBMIforAgeObservationProfile`.
 pub mod us_core_pediatric_bm_ifor_age_observation_profile {
     /// registered | preliminary | final | amended +
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct StatusCode {
         #[prost(enumeration="super::super::core::observation_status_code::Value", tag="1")]
         pub value: i32,
         #[prost(message, optional, tag="2")]
         pub id: ::core::option::Option<super::super::core::String>,
         #[prost(message, repeated, tag="3")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
     }
     /// Often just a dateTime for Vital Signs
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct EffectiveX {
         #[prost(oneof="effective_x::Choice", tags="1, 2")]
         pub choice: ::core::option::Option<effective_x::Choice>,
     }
     /// Nested message and enum types in `EffectiveX`.
     pub mod effective_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             DateTime(super::super::super::core::DateTime),
@@ -8790,31 +9041,34 @@ pub mod us_core_pediatric_bm_ifor_age_observation_profile {
     /// Vital Signs value are recorded using the Quantity data type. For supporting
     /// observations such as Cuff size could use other datatypes such as
     /// CodeableConcept.
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ValueX {
         #[prost(oneof="value_x::Choice", tags="1")]
         pub choice: ::core::option::Option<value_x::Choice>,
     }
     /// Nested message and enum types in `ValueX`.
     pub mod value_x {
-        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Oneof)]
         pub enum Choice {
             #[prost(message, tag="1")]
             Quantity(super::super::super::core::Quantity),
         }
     }
     /// Provides guide for interpretation
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct ReferenceRange {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Low Range, if relevant
         #[prost(message, optional, tag="4")]
         pub low: ::core::option::Option<super::super::core::SimpleQuantity>,
@@ -8826,7 +9080,7 @@ pub mod us_core_pediatric_bm_ifor_age_observation_profile {
         pub r#type: ::core::option::Option<super::super::core::CodeableConcept>,
         /// Reference range population
         #[prost(message, repeated, tag="7")]
-        pub applies_to: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub applies_to: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Applicable age range, if relevant
         #[prost(message, optional, tag="8")]
         pub age: ::core::option::Option<super::super::core::Range>,
@@ -8835,17 +9089,18 @@ pub mod us_core_pediatric_bm_ifor_age_observation_profile {
         pub text: ::core::option::Option<super::super::core::String>,
     }
     /// Used when reporting systolic and diastolic blood pressure.
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Component {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
         pub id: ::core::option::Option<super::super::core::String>,
         /// Additional content defined by implementations
         #[prost(message, repeated, tag="2")]
-        pub extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Extensions that cannot be ignored even if unrecognized
         #[prost(message, repeated, tag="3")]
-        pub modifier_extension: ::prost::alloc::vec::Vec<super::super::core::Extension>,
+        pub modifier_extension: prost::alloc::vec::Vec<super::super::core::Extension>,
         /// Type of component observation (code / type)
         #[prost(message, optional, tag="4")]
         pub code: ::core::option::Option<super::super::core::CodeableConcept>,
@@ -8856,22 +9111,24 @@ pub mod us_core_pediatric_bm_ifor_age_observation_profile {
         pub data_absent_reason: ::core::option::Option<super::super::core::CodeableConcept>,
         /// High, low, normal, etc.
         #[prost(message, repeated, tag="7")]
-        pub interpretation: ::prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
+        pub interpretation: prost::alloc::vec::Vec<super::super::core::CodeableConcept>,
         /// Provides guide for interpretation of component result
         #[prost(message, repeated, tag="8")]
-        pub reference_range: ::prost::alloc::vec::Vec<ReferenceRange>,
+        pub reference_range: prost::alloc::vec::Vec<ReferenceRange>,
     }
     /// Nested message and enum types in `Component`.
     pub mod component {
         /// Vital Sign Value recorded with UCUM
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct ValueX {
             #[prost(oneof="value_x::Choice", tags="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11")]
             pub choice: ::core::option::Option<value_x::Choice>,
         }
         /// Nested message and enum types in `ValueX`.
         pub mod value_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 Quantity(super::super::super::super::core::Quantity),

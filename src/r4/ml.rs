@@ -1,14 +1,15 @@
 /// Auto-generated from StructureDefinition for EventLabel.
 /// EventLabels define labels used for TensorFlow model training and evaluation.
 /// See <https://g.co/fhir/StructureDefinition/eventLabel>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct EventLabel {
     /// Unique id for inter-element referencing
     #[prost(message, optional, tag="1")]
     pub id: ::core::option::Option<super::core::String>,
     /// Additional content defined by implementations
     #[prost(message, repeated, tag="2")]
-    pub extension: ::prost::alloc::vec::Vec<super::core::Extension>,
+    pub extension: prost::alloc::vec::Vec<super::core::Extension>,
     /// The patient associated with this label
     #[prost(message, optional, tag="4")]
     pub patient: ::core::option::Option<super::core::Reference>,
@@ -22,12 +23,13 @@ pub struct EventLabel {
     #[prost(message, optional, tag="7")]
     pub source: ::core::option::Option<super::core::Reference>,
     #[prost(message, repeated, tag="8")]
-    pub label: ::prost::alloc::vec::Vec<event_label::Label>,
+    pub label: prost::alloc::vec::Vec<event_label::Label>,
 }
 /// Nested message and enum types in `EventLabel`.
 pub mod event_label {
     /// List of labels associated with this event
-    #[derive(Clone, PartialEq, ::prost::Message)]
+    #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+    #[derive(Clone, PartialEq, prost::Message)]
     pub struct Label {
         /// Unique id for inter-element referencing
         #[prost(message, optional, tag="1")]
@@ -41,14 +43,16 @@ pub mod event_label {
     /// Nested message and enum types in `Label`.
     pub mod label {
         /// The value of the label
-        #[derive(Clone, PartialEq, ::prost::Message)]
+        #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+        #[derive(Clone, PartialEq, prost::Message)]
         pub struct ClassValueX {
             #[prost(oneof="class_value_x::Choice", tags="1, 2, 3, 4, 5")]
             pub choice: ::core::option::Option<class_value_x::Choice>,
         }
         /// Nested message and enum types in `ClassValueX`.
         pub mod class_value_x {
-            #[derive(Clone, PartialEq, ::prost::Oneof)]
+            #[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+            #[derive(Clone, PartialEq, prost::Oneof)]
             pub enum Choice {
                 #[prost(message, tag="1")]
                 Boolean(super::super::super::super::core::Boolean),
@@ -67,7 +71,8 @@ pub mod event_label {
 /// Auto-generated from StructureDefinition for EventTrigger.
 /// EventTriggers specify cutoff times for generated TensorFlow examples.
 /// See <https://g.co/fhir/StructureDefinition/eventTrigger>
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Serialize,Deserialize)] #[serde(rename_all = "camelCase")]
+#[derive(Clone, PartialEq, prost::Message)]
 pub struct EventTrigger {
     /// Unique id for inter-element referencing
     #[prost(message, optional, tag="1")]

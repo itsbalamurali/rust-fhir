@@ -1,3 +1,4 @@
+use prost_wkt_build::*;
 use std::{
     env,
     ffi::OsStr,
@@ -14,6 +15,8 @@ fn main() -> Result<()> {
             process::exit(1)
         }
     };
+    let descriptor_file = outdir.as_os_str().to_str().unwrap().to_string() + "descriptors.bin";
+
     let source_dir = match env::var_os("CARGO_MANIFEST_DIR") {
         Some(srcdir) => {
             let mut s = srcdir.to_str().unwrap().to_string();
@@ -27,7 +30,18 @@ fn main() -> Result<()> {
     };
     fs::create_dir_all(&outdir).unwrap();
 
-    prost_build::compile_protos(
+    let mut config = prost_build::Config::new();
+    config
+        .type_attribute(
+            ".",
+            "#[derive(Serialize,Deserialize)] #[serde(rename_all = \"camelCase\")]",
+        )
+        .extern_path(".google.protobuf.Any", "::prost_wkt_types::Any")
+        .extern_path(".google.protobuf.Timestamp", "::prost_wkt_types::Timestamp")
+        .extern_path(".google.protobuf.Value", "::prost_wkt_types::Value")
+        .file_descriptor_set_path(&descriptor_file);
+
+    config.compile_protos(
         &[
             "src/proto/google/fhir/proto/annotations.proto",
             "src/proto/google/fhir/proto/profile_config.proto",
@@ -85,10 +99,17 @@ fn main() -> Result<()> {
                             if target_file_name == "stu3.rs" {
                                 target_file_name = "stu3/core.rs".to_string()
                             }
+
+                            let mut file_content =
+                                fs::read_to_string(file_path.to_owned()).unwrap();
+                            file_content = file_content
+                                .replace("::prost::", "prost::")
+                                .replace("::proto::", "::core::");
+
                             // Copy over file
-                            fs::copy(
-                                file_path.to_owned(),
+                            fs::write(
                                 target_path.join(PathBuf::from(target_file_name)),
+                                file_content,
                             )?;
                             // Remove file
                             fs::remove_file(file_path)?;
@@ -103,5 +124,10 @@ fn main() -> Result<()> {
             }
         };
     }
+
+    let descriptor_bytes = std::fs::read(descriptor_file).unwrap();
+    let descriptor = FileDescriptorSet::decode(&descriptor_bytes[..]).unwrap();
+
+    prost_wkt_build::add_serde(PathBuf::from(outdir), descriptor);
     Ok(())
 }
