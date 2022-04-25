@@ -1,12 +1,5 @@
 use prost_wkt_build::*;
-use std::{
-    env,
-    ffi::OsStr,
-    fs,
-    io::Result,
-    path::{Path, PathBuf},
-    process,
-};
+use std::{env, fs, io::Result, path::PathBuf, process};
 fn main() -> Result<()> {
     let outdir = match env::var_os("OUT_DIR") {
         Some(outdir) => outdir,
@@ -16,18 +9,6 @@ fn main() -> Result<()> {
         }
     };
     let descriptor_file = outdir.as_os_str().to_str().unwrap().to_string() + "descriptors.bin";
-
-    let source_dir = match env::var_os("CARGO_MANIFEST_DIR") {
-        Some(srcdir) => {
-            let mut s = srcdir.to_str().unwrap().to_string();
-            s.push_str("/src");
-            s
-        }
-        None => {
-            eprintln!("CARGO_MANIFEST_DIR environment variable not defined.");
-            process::exit(1)
-        }
-    };
     fs::create_dir_all(&outdir).unwrap();
 
     let mut config = prost_build::Config::new();
@@ -61,7 +42,6 @@ fn main() -> Result<()> {
     )?;
 
     let generated_files = fs::read_dir(&outdir).unwrap();
-    let target_path = Path::new(OsStr::new(&source_dir));
     for file_entry in generated_files {
         match file_entry {
             Ok(fp) => {
@@ -70,49 +50,18 @@ fn main() -> Result<()> {
                 match file_path.extension() {
                     Some(ex) => {
                         if ex == "rs" {
-                            println!("Name: {:?}", file_path);
-                            let mut target_file_name_vec: Vec<&str> =
-                                file_name.to_str().unwrap().split(".").collect();
-                            target_file_name_vec.remove(0);
-                            target_file_name_vec.remove(0);
-                            target_file_name_vec.pop(); // remove .rs
-                            target_file_name_vec.pop(); // remove last folder
-
-                            let mut target_file_name = file_name
-                                .to_str()
-                                .unwrap()
-                                .replace("google.fhir.", "")
-                                .replace(".proto", "")
-                                .replace(".rs", "")
-                                .replace(".", "/");
-
-                            let target_file_path =
-                                target_path.join(PathBuf::from(target_file_name_vec.join("/")));
-                            fs::create_dir_all(&target_file_path).unwrap();
-
-                            target_file_name.push_str(".rs");
-
-                            if target_file_name == "proto.rs" {
-                                target_file_name = "mod.rs".to_string()
-                            }
-
-                            if target_file_name == "stu3.rs" {
-                                target_file_name = "stu3/core.rs".to_string()
-                            }
-
                             let mut file_content =
                                 fs::read_to_string(file_path.to_owned()).unwrap();
-                            file_content = file_content
-                                .replace("::prost::", "prost::")
-                                .replace("::proto::", "::core::");
-
-                            // Copy over file
-                            fs::write(
-                                target_path.join(PathBuf::from(target_file_name)),
-                                file_content,
-                            )?;
-                            // Remove file
-                            fs::remove_file(file_path)?;
+                            file_content = file_content.replace("::prost::", "prost::");
+                            if file_name.to_str().unwrap().contains("r4") {
+                                file_content = file_content
+                                    .replace("super::super::super::core::", "super::super::core::")
+                                    .replace("super::super::core::", "crate::r4::core::")
+                                    .replace("super::crate::r4", "crate::r4")
+                                    .replace("super::core", "crate::r4::core");
+                            }
+                            // Write file
+                            fs::write(file_path.to_owned(), file_content)?;
                         }
                     }
                     None => {}
