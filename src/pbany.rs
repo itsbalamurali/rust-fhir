@@ -2,7 +2,7 @@ use crate::MessageSerde;
 use serde::de::{Deserialize, Deserializer};
 use serde::ser::{Serialize, SerializeStruct, Serializer};
 
-include!(concat!(env!("OUT_DIR"), "/google.protobuf.rs"));
+include!(concat!(env!("OUT_DIR"), "/pbany/google.protobuf.rs"));
 
 use prost::{DecodeError, Message};
 use serde_json::json;

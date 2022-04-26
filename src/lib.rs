@@ -12,6 +12,7 @@ pub use crate::pbstruct::*;
 mod pbany;
 pub use crate::pbany::*;
 
+use mopa::mopafy;
 pub use typetag;
 
 pub mod r4 {
@@ -40,6 +41,8 @@ pub mod stu3 {
     // include!(concat!(env!("OUT_DIR"), "/google.fhir.stu3.uscore.rs"));
 }
 
+
+
 /// Trait to support serialization and deserialization of `prost` messages.
 #[typetag::serde(tag = "@type")]
 pub trait MessageSerde: prost::Message + mopa::Any {
@@ -64,7 +67,9 @@ mopafy!(MessageSerde);
 mod tests {
     #[test]
     fn test_patient_resource() {
-        let patient = crate::r4::core::Patient {};
+        let patient = crate::r4::core::Patient {
+            ..Default::default()
+        };
         let patient_json = serde_json::to_string(&patient);
         println!("{}", patient_json);
     }

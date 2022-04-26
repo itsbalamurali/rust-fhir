@@ -5,7 +5,7 @@ use std::borrow::Cow;
 use std::convert::TryFrom;
 use std::fmt;
 
-include!(concat!(env!("OUT_DIR"), "/google.protobuf.rs"));
+include!(concat!(env!("OUT_DIR"), "/pbstruct/google.protobuf.rs"));
 
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct ValueError {

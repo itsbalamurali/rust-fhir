@@ -5,6 +5,7 @@ use prost_types::FileDescriptorSet;
 use quote::{format_ident, quote};
 use std::{
     env,
+    ffi::OsString,
     fs::{self, File, OpenOptions},
     io::{Result, Write},
     path::PathBuf,
@@ -22,6 +23,10 @@ fn main() -> Result<()> {
     let descriptor_file = outdir.as_os_str().to_str().unwrap().to_string() + "descriptors.bin";
     fs::create_dir_all(&outdir).unwrap();
 
+    build(&outdir, "pbtime");
+    build(&outdir, "pbstruct");
+    build(&outdir, "pbany");
+
     let mut config = prost_build::Config::new();
     config
         .compile_well_known_types()
@@ -29,16 +34,13 @@ fn main() -> Result<()> {
             ".",
             "#[derive(Serialize,Deserialize)] #[serde(rename_all = \"camelCase\")]",
         )
-        .extern_path(".google.protobuf.Any", "crate::Any")
-        .extern_path(".google.protobuf.Timestamp", "crate::Timestamp")
-        .extern_path(".google.protobuf.Value", "crate::Value")
+        .extern_path(".google.protobuf.Any", "crate::pbany::Any")
+        .extern_path(".google.protobuf.Timestamp", "crate::pbtime::Timestamp")
+        .extern_path(".google.protobuf.Value", "crate::pbstruct::Value")
         .file_descriptor_set_path(&descriptor_file);
 
     config.compile_protos(
         &[
-            "src/proto/pbany.proto",
-            "src/proto/pbstruct.proto",
-            "src/proto/pbtime.proto",
             "src/proto/google/fhir/proto/annotations.proto",
             "src/proto/google/fhir/proto/profile_config.proto",
             "src/proto/google/fhir/proto/protogenerator_annotations.proto",
@@ -96,6 +98,33 @@ fn main() -> Result<()> {
 
     add_serde(PathBuf::from(outdir), descriptor);
     Ok(())
+}
+
+fn build(outdir: &OsString, proto: &str) {
+    let dir = PathBuf::from(outdir);
+    let out = dir.join(proto);
+    fs::create_dir_all(&out).unwrap();
+    let source = format!("src/proto/{}.proto", proto);
+    let descriptor_file = out.join("descriptors.bin");
+    let mut prost_build = prost_build::Config::new();
+    prost_build
+        .compile_well_known_types()
+        .type_attribute("google.protobuf.Struct","#[derive(serde_derive::Serialize, serde_derive::Deserialize)] #[serde(default, rename_all=\"camelCase\")]")
+        .type_attribute("google.protobuf.ListValue","#[derive(serde_derive::Serialize, serde_derive::Deserialize)] #[serde(default, rename_all=\"camelCase\")]")
+        .type_attribute("google.protobuf.Duration","#[derive(serde_derive::Serialize, serde_derive::Deserialize)] #[serde(default, rename_all=\"camelCase\")]")
+        .file_descriptor_set_path(&descriptor_file)
+        .out_dir(&out)
+        .compile_protos(
+            &[
+                source
+            ],
+            &["src/proto/".to_string()],
+        )
+        .unwrap();
+
+    let descriptor_bytes = std::fs::read(descriptor_file).unwrap();
+    let descriptor = FileDescriptorSet::decode(&descriptor_bytes[..]).unwrap();
+    add_serde(out, descriptor);
 }
 
 fn add_serde(out: PathBuf, descriptor: FileDescriptorSet) {
