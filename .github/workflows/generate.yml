@@ -28,7 +28,7 @@ jobs:
         path: 'fhir'
 
     - name: Move Protobufs to src
-      run: mv fhir/proto src/proto
+      run: mv fhir/proto/google src/proto/google
 
     - name: Install Protoc
       uses: arduino/setup-protoc@v1
