@@ -2,7 +2,6 @@ use convert_case::{Case, Casing};
 use prost::Message;
 use prost_build::Module;
 use prost_types::FileDescriptorSet;
-use prost_types::*;
 use quote::{format_ident, quote};
 use std::{
     env,
@@ -30,9 +29,9 @@ fn main() -> Result<()> {
             ".",
             "#[derive(Serialize,Deserialize)] #[serde(rename_all = \"camelCase\")]",
         )
-        .extern_path(".google.protobuf.Any", "::prost_wkt_types::Any")
-        .extern_path(".google.protobuf.Timestamp", "::prost_wkt_types::Timestamp")
-        .extern_path(".google.protobuf.Value", "::prost_wkt_types::Value")
+        // .extern_path(".google.protobuf.Any", "crate::Any")
+        // .extern_path(".google.protobuf.Timestamp", "crate::Timestamp")
+        // .extern_path(".google.protobuf.Value", "crate::Value")
         .file_descriptor_set_path(&descriptor_file);
 
     config.compile_protos(
@@ -142,9 +141,9 @@ fn gen_trait_impl(rust_file: &mut File, package_name: &str, message_name: &str, 
     let tokens = quote! {
         #[allow(dead_code)]
         const #dummy_const: () = {
-            use prost_wkt::typetag;
+            use crate::typetag;
             #[typetag::serde(name=#type_url)]
-            impl prost_wkt::MessageSerde for #type_name {
+            impl crate::MessageSerde for #type_name {
                 fn package_name(&self) -> &'static str {
                     #package_name
                 }

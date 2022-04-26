@@ -13,10 +13,12 @@ license-file = "LICENSE"
 bytes = "1.1.0"
 prost = { version = "0.10.1", features = ["prost-derive"] }
 prost-types = "0.10"
-prost-wkt = "0.3.1"
 serde = { version = "1.0", features = ["derive"] }
 serde_derive = "1.0"
 serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+mopa = "0.2.2"
+typetag = "0.1"
 
 [build-dependencies]
 prost-build = { version = "0.10.1" }
