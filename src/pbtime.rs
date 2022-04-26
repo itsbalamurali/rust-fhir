@@ -111,7 +111,6 @@ impl Timestamp {
     /// Based on [`google::protobuf::util::CreateNormalized`][1].
     ///
     /// [1]: https://github.com/google/protobuf/blob/v3.3.2/src/google/protobuf/util/time_util.cc#L59-L77
-    #[cfg(feature = "std")]
     pub fn normalize(&mut self) {
         // Make sure nanos is in the range.
         if self.nanos <= -NANOS_PER_SECOND || self.nanos >= NANOS_PER_SECOND {
@@ -152,10 +151,8 @@ impl Timestamp {
 
 /// Implements the unstable/naive version of `Eq`: a basic equality check on the internal fields of the `Timestamp`.
 /// This implies that `normalized_ts != non_normalized_ts` even if `normalized_ts == non_normalized_ts.normalized()`.
-#[cfg(feature = "std")]
 impl Eq for Timestamp {}
 
-#[cfg(feature = "std")]
 #[allow(clippy::derive_hash_xor_eq)] // Derived logic is correct: comparing the 2 fields for equality
 impl std::hash::Hash for Timestamp {
     fn hash<H: std::hash::Hasher>(&self, state: &mut H) {
@@ -164,7 +161,6 @@ impl std::hash::Hash for Timestamp {
     }
 }
 
-#[cfg(feature = "std")]
 impl From<std::time::SystemTime> for Timestamp {
     fn from(system_time: std::time::SystemTime) -> Timestamp {
         let (seconds, nanos) = match system_time.duration_since(std::time::UNIX_EPOCH) {
@@ -194,14 +190,12 @@ impl From<std::time::SystemTime> for Timestamp {
 /// All `Timestamp`s are likely representable on 64-bit Unix-like platforms, but
 /// other platforms, such as Windows and 32-bit Linux, may not be able to represent
 /// the full range of `Timestamp`s.
-#[cfg(feature = "std")]
 #[derive(Debug)]
 #[non_exhaustive]
 pub struct TimestampOutOfSystemRangeError {
     pub timestamp: Timestamp,
 }
 
-#[cfg(feature = "std")]
 impl core::fmt::Display for TimestampOutOfSystemRangeError {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(
@@ -212,10 +206,8 @@ impl core::fmt::Display for TimestampOutOfSystemRangeError {
     }
 }
 
-#[cfg(feature = "std")]
 impl std::error::Error for TimestampOutOfSystemRangeError {}
 
-#[cfg(feature = "std")]
 impl TryFrom<Timestamp> for std::time::SystemTime {
     type Error = TimestampOutOfSystemRangeError;
 
