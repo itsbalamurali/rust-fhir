@@ -1,0 +1,19 @@
+version: 2.1
+
+orbs: 
+  rust: circleci/rust@1.6.0
+
+jobs:
+  build:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - rust/install
+      - rust/build:
+          release: true
+
+workflows:
+  build:
+    jobs:
+      - build
