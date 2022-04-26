@@ -153,10 +153,10 @@ fn gen_trait_impl(rust_file: &mut File, package_name: &str, message_name: &str, 
                 fn type_url(&self) -> &'static str {
                     #type_url
                 }
-                fn new_instance(&self, data: Vec<u8>) -> Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError> {
+                fn new_instance(&self, data: Vec<u8>) -> Result<Box<dyn crate::MessageSerde>, ::prost::DecodeError> {
                     let mut target = Self::default();
                     prost::Message::merge(&mut target, data.as_slice())?;
-                    let erased: Box<dyn prost_wkt::MessageSerde> = Box::new(target);
+                    let erased: Box<dyn crate::MessageSerde> = Box::new(target);
                     Ok(erased)
                 }
                 fn encoded(&self) -> Vec<u8> {

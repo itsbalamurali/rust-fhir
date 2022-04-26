@@ -1,4 +1,4 @@
-use prost_wkt::MessageSerde;
+use crate::MessageSerde;
 use serde::de::{Deserialize, Deserializer};
 use serde::ser::{Serialize, SerializeStruct, Serializer};
 
@@ -100,7 +100,7 @@ impl Any {
     }
 
     #[deprecated(since = "0.3.0", note = "Method renamed to `try_unpack`")]
-    pub fn unpack(self) -> Result<Box<dyn prost_wkt::MessageSerde>, AnyError> {
+    pub fn unpack(self) -> Result<Box<dyn crate::MessageSerde>, AnyError> {
         self.try_unpack()
     }
 
@@ -110,13 +110,13 @@ impl Any {
     /// ```ignore
     /// let back: Box<dyn MessageSerde> = any.try_unpack()?;
     /// ```
-    pub fn try_unpack(self) -> Result<Box<dyn prost_wkt::MessageSerde>, AnyError> {
+    pub fn try_unpack(self) -> Result<Box<dyn crate::MessageSerde>, AnyError> {
         let type_url = self.type_url.clone();
         let empty = json!({
             "@type": &type_url,
             "value": {}
         });
-        let template: Box<dyn prost_wkt::MessageSerde> = serde_json::from_value(empty)
+        let template: Box<dyn crate::MessageSerde> = serde_json::from_value(empty)
             .map_err(|error| {
                 let description = format!(
                     "Failed to deserialize {}. Make sure it implements Serialize and Deserialize. Error reported: {}",
@@ -152,7 +152,7 @@ impl<'de> Deserialize<'de> for Any {
     where
         D: Deserializer<'de>,
     {
-        let erased: Box<dyn prost_wkt::MessageSerde> =
+        let erased: Box<dyn crate::MessageSerde> =
             serde::de::Deserialize::deserialize(deserializer)?;
         let type_url = erased.type_url().to_string();
         let value = erased.try_encoded().map_err(|err| {
@@ -165,8 +165,8 @@ impl<'de> Deserialize<'de> for Any {
 #[cfg(test)]
 mod tests {
     use crate::pbany::*;
+    use crate::*;
     use prost::{DecodeError, EncodeError, Message};
-    use prost_wkt::*;
     use serde::*;
     use serde_json::json;
 
@@ -178,7 +178,7 @@ mod tests {
     }
 
     #[typetag::serde(name = "type.googleapis.com/any.test.Foo")]
-    impl prost_wkt::MessageSerde for Foo {
+    impl crate::MessageSerde for Foo {
         fn message_name(&self) -> &'static str {
             "Foo"
         }
