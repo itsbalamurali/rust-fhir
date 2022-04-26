@@ -29,9 +29,9 @@ fn main() -> Result<()> {
             ".",
             "#[derive(Serialize,Deserialize)] #[serde(rename_all = \"camelCase\")]",
         )
-        // .extern_path(".google.protobuf.Any", "crate::Any")
-        // .extern_path(".google.protobuf.Timestamp", "crate::Timestamp")
-        // .extern_path(".google.protobuf.Value", "crate::Value")
+        .extern_path(".google.protobuf.Any", "crate::Any")
+        .extern_path(".google.protobuf.Timestamp", "crate::Timestamp")
+        .extern_path(".google.protobuf.Value", "crate::Value")
         .file_descriptor_set_path(&descriptor_file);
 
     config.compile_protos(
