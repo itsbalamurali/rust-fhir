@@ -37,11 +37,13 @@ pub mod stu3 {
     pub mod core {
         include!(concat!(env!("OUT_DIR"), "/google.fhir.stu3.proto.rs"));
     }
-    // include!(concat!(env!("OUT_DIR"), "/google.fhir.stu3.fhirproto.rs"));
-    // include!(concat!(env!("OUT_DIR"), "/google.fhir.stu3.uscore.rs"));
+
+    include!(concat!(env!("OUT_DIR"), "/google.fhir.stu3.fhirproto.rs"));
+
+    pub mod uscore {
+        include!(concat!(env!("OUT_DIR"), "/google.fhir.stu3.uscore.rs"));
+    }
 }
-
-
 
 /// Trait to support serialization and deserialization of `prost` messages.
 #[typetag::serde(tag = "@type")]

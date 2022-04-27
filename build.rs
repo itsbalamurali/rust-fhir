@@ -63,20 +63,31 @@ fn main() -> Result<()> {
         match file_entry {
             Ok(fp) => {
                 let file_path = fp.path();
-                let file_name = fp.file_name();
+                let file_name = fp.file_name().to_str().unwrap().to_owned();
                 match file_path.extension() {
                     Some(ex) => {
                         if ex == "rs" {
                             let mut file_content =
                                 fs::read_to_string(file_path.to_owned()).unwrap();
                             file_content = file_content.replace("::prost::", "prost::");
-                            if file_name.to_str().unwrap().contains("r4") {
+                            if file_name.to_owned().contains("r4") {
                                 file_content = file_content
                                     .replace("super::super::super::core::", "super::super::core::")
                                     .replace("super::super::core::", "crate::r4::core::")
                                     .replace("super::crate::r4", "crate::r4")
                                     .replace("super::core", "crate::r4::core")
                                     .replace("super::uscore", "crate::r4::uscore")
+                                    .replace("super::crate", "crate");
+                            }
+                            if file_name.contains("stu3") {
+                                file_content = file_content
+                                    .replace(
+                                        "super::super::super::super::proto::",
+                                        "crate::stu3::core::",
+                                    )
+                                    .replace("super::super::super::proto::", "crate::stu3::core::")
+                                    .replace("super::super::proto::", "crate::stu3::core::")
+                                    .replace("super::proto::", "crate::stu3::core::")
                                     .replace("super::crate", "crate");
                             }
                             // Write file
