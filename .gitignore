@@ -13,3 +13,4 @@ fhir/
 *BUILD
 #src/proto
 **/BUILD
+.vscode/
