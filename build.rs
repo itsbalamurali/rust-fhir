@@ -3,6 +3,7 @@ use prost::Message;
 use prost_build::Module;
 use prost_types::FileDescriptorSet;
 use quote::{format_ident, quote};
+use std::io::prelude::*;
 use std::{
     env,
     ffi::OsString,
@@ -67,8 +68,11 @@ fn main() -> Result<()> {
                 match file_path.extension() {
                     Some(ex) => {
                         if ex == "rs" {
-                            let mut file_content =
-                                fs::read_to_string(file_path.to_owned()).unwrap();
+                            let mut source_file = File::open(file_path.to_owned())?;
+                            let mut file_content = String::new();
+                            source_file.read_to_string(&mut file_content)?;
+                            drop(source_file);
+                            fs::remove_file(file_path.to_owned())?;
                             file_content = file_content.replace("::prost::", "prost::");
                             if file_name.to_owned().contains("r4") {
                                 file_content = file_content
