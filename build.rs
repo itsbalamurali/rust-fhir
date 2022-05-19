@@ -3,14 +3,13 @@ use prost::Message;
 use prost_build::Module;
 use prost_types::FileDescriptorSet;
 use quote::{format_ident, quote};
-use std::io::prelude::*;
 use std::{
     env,
     ffi::OsString,
     fs::{self, File, OpenOptions},
     io::{Result, Write},
     path::PathBuf,
-    process,
+    process::{self,Command},
 };
 
 fn main() -> Result<()> {
@@ -68,34 +67,25 @@ fn main() -> Result<()> {
                 match file_path.extension() {
                     Some(ex) => {
                         if ex == "rs" {
-                            let mut source_file = File::open(file_path.to_owned())?;
-                            let mut file_content = String::new();
-                            source_file.read_to_string(&mut file_content)?;
-                            drop(source_file);
-                            fs::remove_file(file_path.to_owned())?;
-                            file_content = file_content.replace("::prost::", "prost::");
+                            let file_with_path = file_path.to_str().unwrap().to_owned();
+                            
+                            Command::new("sed").arg("-i").arg("s/::prost::/prost::/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
                             if file_name.to_owned().contains("r4") {
-                                file_content = file_content
-                                    .replace("super::super::super::core::", "super::super::core::")
-                                    .replace("super::super::core::", "crate::r4::core::")
-                                    .replace("super::crate::r4", "crate::r4")
-                                    .replace("super::core", "crate::r4::core")
-                                    .replace("super::uscore", "crate::r4::uscore")
-                                    .replace("super::crate", "crate");
+                                Command::new("sed").arg("-i").arg("s/super::super::super::core::/super::super::core::/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
+                                Command::new("sed").arg("-i").arg("s/super::super::core::/crate::r4::core::/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
+                                Command::new("sed").arg("-i").arg("s/super::crate::r4/crate::r4/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
+                                Command::new("sed").arg("-i").arg("s/super::core/crate::r4::core/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
+                                Command::new("sed").arg("-i").arg("s/super::uscore/crate::r4::uscore/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
+                                Command::new("sed").arg("-i").arg("s/super::crate/crate/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
                             }
+
                             if file_name.contains("stu3") {
-                                file_content = file_content
-                                    .replace(
-                                        "super::super::super::super::proto::",
-                                        "crate::stu3::core::",
-                                    )
-                                    .replace("super::super::super::proto::", "crate::stu3::core::")
-                                    .replace("super::super::proto::", "crate::stu3::core::")
-                                    .replace("super::proto::", "crate::stu3::core::")
-                                    .replace("super::crate", "crate");
+                                Command::new("sed").arg("-i").arg("s/super::super::super::super::proto::/crate::stu3::core::/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
+                                Command::new("sed").arg("-i").arg("s/super::super::super::proto::/crate::stu3::core::/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
+                                Command::new("sed").arg("-i").arg("s/super::super::proto::/crate::stu3::core::/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
+                                Command::new("sed").arg("-i").arg("s/super::proto::/crate::stu3::core::/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
+                                Command::new("sed").arg("-i").arg("s/super::crate/crate/g").arg(file_with_path.to_owned()).spawn().expect("sed command failed to start");
                             }
-                            // Write file
-                            fs::write(file_path.to_owned(), file_content)?;
                         }
                     }
                     None => {}
