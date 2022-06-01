@@ -21,7 +21,7 @@ mopa = "0.2.2"
 typetag = "0.1"
 
 [build-dependencies]
-prost-build = { version = "0.10.3" }
+prost-build = { version = "0.10.4" }
 quote = "1.0"
 convert_case = "0.5"
 prost = "0.10.4"
