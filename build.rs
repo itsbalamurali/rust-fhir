@@ -15,7 +15,7 @@ fn main() {
             process::exit(1)
         }
     };
-    let descriptor_file = outdir.as_os_str().to_str().unwrap().to_string() + "descriptors.bin";
+    //let descriptor_file = outdir.as_os_str().to_str().unwrap().to_string() + "descriptors.bin";
     fs::create_dir_all(&outdir).unwrap();
     let mut config = prost_build::Config::new();
     config
@@ -26,7 +26,7 @@ fn main() {
         .extern_path(".google.protobuf.Any", "::prost_wkt_types::Any")
         .extern_path(".google.protobuf.Timestamp", "::prost_wkt_types::Timestamp")
         .extern_path(".google.protobuf.Value", "::prost_wkt_types::Value")
-        .file_descriptor_set_path(&descriptor_file)
+        //.file_descriptor_set_path(&descriptor_file)
         .compile_protos(
             &[
                 "src/proto/google/fhir/proto/annotations.proto",
@@ -96,7 +96,7 @@ fn main() {
         };
     }
 
-    let descriptor_bytes = std::fs::read(descriptor_file).unwrap();
-    let descriptor = FileDescriptorSet::decode(&descriptor_bytes[..]).unwrap();
-    prost_wkt_build::add_serde(PathBuf::from(outdir), descriptor);
+    // let descriptor_bytes = std::fs::read(descriptor_file).unwrap();
+    // let descriptor = FileDescriptorSet::decode(&descriptor_bytes[..]).unwrap();
+    // prost_wkt_build::add_serde(PathBuf::from(outdir), descriptor);
 }

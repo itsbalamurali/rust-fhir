@@ -31,6 +31,7 @@ pub mod stu3 {
         include!(concat!(env!("OUT_DIR"), "/google.fhir.stu3.uscore.rs"));
     }
 }
+
 #[cfg(test)]
 mod tests {
     #[test]
