@@ -6,7 +6,4 @@
 **/*.rs.bk
 
 fhir/
-*BUILD
-#src/proto
-**/BUILD
 .vscode/
