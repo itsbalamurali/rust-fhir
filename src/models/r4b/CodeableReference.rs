@@ -26,8 +26,8 @@ impl CodeableReference<'_> {
         (*self.value).clone()
     }
 
-    /// A reference to a concept - e.g. the information is identified by its general
-    /// class to the degree of precision found in the terminology.
+    /// A reference to a concept - e.g. the information is identified by its general class
+    /// to the degree of precision found in the terminology.
     pub fn concept(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("concept") {
             return Some(CodeableConcept {
@@ -55,8 +55,8 @@ impl CodeableReference<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);

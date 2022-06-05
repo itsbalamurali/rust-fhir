@@ -7,8 +7,8 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// A series of measurements taken by a device, with upper and lower limits. There
-/// may be more than one dimension in the data.
+/// A series of measurements taken by a device, with upper and lower limits. There may
+/// be more than one dimension in the data.
 
 #[derive(Debug)]
 pub struct SampledData<'a> {
@@ -96,9 +96,9 @@ impl SampledData<'_> {
         return None;
     }
 
-    /// The number of sample points at each time point. If this value is greater than
-    /// one, then the dimensions will be interlaced - all the sample points for a point
-    /// in time will be recorded at once.
+    /// The number of sample points at each time point. If this value is greater than one,
+    /// then the dimensions will be interlaced - all the sample points for a point in time
+    /// will be recorded at once.
     pub fn dimensions(&self) -> Option<i64> {
         if let Some(val) = self.value.get("dimensions") {
             return Some(val.as_i64().unwrap());
@@ -133,8 +133,8 @@ impl SampledData<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -142,8 +142,8 @@ impl SampledData<'_> {
         return None;
     }
 
-    /// The lower limit of detection of the measured points. This is needed if any of
-    /// the data points have the value "L" (lower than detection limit).
+    /// The lower limit of detection of the measured points. This is needed if any of the
+    /// data points have the value "L" (lower than detection limit).
     pub fn lower_limit(&self) -> Option<f64> {
         if let Some(val) = self.value.get("lowerLimit") {
             return Some(val.as_f64().unwrap());
@@ -167,8 +167,8 @@ impl SampledData<'_> {
         return None;
     }
 
-    /// The upper limit of detection of the measured points. This is needed if any of
-    /// the data points have the value "U" (higher than detection limit).
+    /// The upper limit of detection of the measured points. This is needed if any of the
+    /// data points have the value "U" (higher than detection limit).
     pub fn upper_limit(&self) -> Option<f64> {
         if let Some(val) = self.value.get("upperLimit") {
             return Some(val.as_f64().unwrap());

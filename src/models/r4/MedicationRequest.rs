@@ -16,11 +16,11 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// An order or request for both supply of the medication and the instructions for
-/// administration of the medication to a patient. The resource is called
+/// An order or request for both supply of the medication and the instructions
+/// for administration of the medication to a patient. The resource is called
 /// "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to
-/// generalize the use across inpatient and outpatient settings, including care
-/// plans, etc., and to harmonize with workflow patterns.
+/// generalize the use across inpatient and outpatient settings, including care plans,
+/// etc., and to harmonize with workflow patterns.
 
 #[derive(Debug)]
 pub struct MedicationRequest<'a> {
@@ -185,9 +185,9 @@ impl MedicationRequest<'_> {
         return None;
     }
 
-    /// These resources do not have an independent existence apart from the resource
-    /// that contains them - they cannot be identified independently, and nor can they
-    /// have their own independent transaction scope.
+    /// These resources do not have an independent existence apart from the resource that
+    /// contains them - they cannot be identified independently, and nor can they have
+    /// their own independent transaction scope.
     pub fn contained(&self) -> Option<Vec<ResourceList>> {
         if let Some(Value::Array(val)) = self.value.get("contained") {
             return Some(
@@ -201,8 +201,8 @@ impl MedicationRequest<'_> {
         return None;
     }
 
-    /// The description of the overall patte3rn of the administration of the medication
-    /// to the patient.
+    /// The description of the overall patte3rn of the administration of the medication to
+    /// the patient.
     pub fn course_of_therapy_type(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("courseOfTherapyType") {
             return Some(CodeableConcept {
@@ -212,9 +212,9 @@ impl MedicationRequest<'_> {
         return None;
     }
 
-    /// Indicates an actual or potential clinical issue with or between one or more
-    /// active or proposed clinical actions for a patient; e.g. Drug-drug interaction,
-    /// duplicate therapy, dosage alert etc.
+    /// Indicates an actual or potential clinical issue with or between one or more active
+    /// or proposed clinical actions for a patient; e.g. Drug-drug interaction, duplicate
+    /// therapy, dosage alert etc.
     pub fn detected_issue(&self) -> Option<Vec<Reference>> {
         if let Some(Value::Array(val)) = self.value.get("detectedIssue") {
             return Some(
@@ -229,10 +229,10 @@ impl MedicationRequest<'_> {
     }
 
     /// Indicates the specific details for the dispense or medication supply part of a
-    /// medication request (also known as a Medication Prescription or Medication
-    /// Order).  Note that this information is not always sent with the order.  There
-    /// may be in some settings (e.g. hospitals) institutional or system support for
-    /// completing the dispense details in the pharmacy department.
+    /// medication request (also known as a Medication Prescription or Medication Order).
+    /// Note that this information is not always sent with the order.  There may be in
+    /// some settings (e.g. hospitals) institutional or system support for completing the
+    /// dispense details in the pharmacy department.
     pub fn dispense_request(&self) -> Option<MedicationRequest_DispenseRequest> {
         if let Some(val) = self.value.get("dispenseRequest") {
             return Some(MedicationRequest_DispenseRequest {
@@ -277,9 +277,8 @@ impl MedicationRequest<'_> {
     }
 
     /// Links to Provenance records for past versions of this resource or fulfilling
-    /// request or event resources that identify key state transitions or updates that
-    /// are likely to be relevant to a user looking at the current version of the
-    /// resource.
+    /// request or event resources that identify key state transitions or updates that are
+    /// likely to be relevant to a user looking at the current version of the resource.
     pub fn event_history(&self) -> Option<Vec<Reference>> {
         if let Some(Value::Array(val)) = self.value.get("eventHistory") {
             return Some(
@@ -312,8 +311,8 @@ impl MedicationRequest<'_> {
     }
 
     /// A shared identifier common to all requests that were authorized more or less
-    /// simultaneously by a single author, representing the identifier of the
-    /// requisition or prescription.
+    /// simultaneously by a single author, representing the identifier of the requisition
+    /// or prescription.
     pub fn group_identifier(&self) -> Option<Identifier> {
         if let Some(val) = self.value.get("groupIdentifier") {
             return Some(Identifier {
@@ -334,9 +333,9 @@ impl MedicationRequest<'_> {
 
     /// Identifiers associated with this medication request that are defined by business
     /// processes and/or used to refer to it when a direct URL reference to the resource
-    /// itself is not appropriate. They are business identifiers assigned to this
-    /// resource by the performer or other systems and remain constant as the resource
-    /// is updated and propagates from server to server.
+    /// itself is not appropriate. They are business identifiers assigned to this resource
+    /// by the performer or other systems and remain constant as the resource is updated
+    /// and propagates from server to server.
     pub fn identifier(&self) -> Option<Vec<Identifier>> {
         if let Some(Value::Array(val)) = self.value.get("identifier") {
             return Some(
@@ -351,9 +350,9 @@ impl MedicationRequest<'_> {
     }
 
     /// A reference to a set of rules that were followed when the resource was
-    /// constructed, and which must be understood when processing the content. Often,
-    /// this is a reference to an implementation guide that defines the special rules
-    /// along with other profiles etc.
+    /// constructed, and which must be understood when processing the content. Often, this
+    /// is a reference to an implementation guide that defines the special rules along
+    /// with other profiles etc.
     pub fn implicit_rules(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("implicitRules") {
             return Some(string);
@@ -375,8 +374,7 @@ impl MedicationRequest<'_> {
     }
 
     /// The URL pointing to an externally maintained protocol, guideline, orderset or
-    /// other definition that is adhered to in whole or in part by this
-    /// MedicationRequest.
+    /// other definition that is adhered to in whole or in part by this MedicationRequest.
     pub fn instantiates_uri(&self) -> Option<Vec<&str>> {
         if let Some(Value::Array(val)) = self.value.get("instantiatesUri") {
             return Some(
@@ -388,8 +386,8 @@ impl MedicationRequest<'_> {
         return None;
     }
 
-    /// Insurance plans, coverage extensions, pre-authorizations and/or pre-
-    /// determinations that may be required for delivering the requested service.
+    /// Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations
+    /// that may be required for delivering the requested service.
     pub fn insurance(&self) -> Option<Vec<Reference>> {
         if let Some(Value::Array(val)) = self.value.get("insurance") {
             return Some(
@@ -421,8 +419,8 @@ impl MedicationRequest<'_> {
 
     /// Identifies the medication being requested. This is a link to a resource that
     /// represents the medication which may be the details of the medication or simply
-    /// an attribute carrying a code that identifies the medication from a known list of
-    /// medications.
+    /// an attribute carrying a code that identifies the medication from a known list
+    /// of medications.
     pub fn medication_codeable_concept(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("medicationCodeableConcept") {
             return Some(CodeableConcept {
@@ -434,8 +432,8 @@ impl MedicationRequest<'_> {
 
     /// Identifies the medication being requested. This is a link to a resource that
     /// represents the medication which may be the details of the medication or simply
-    /// an attribute carrying a code that identifies the medication from a known list of
-    /// medications.
+    /// an attribute carrying a code that identifies the medication from a known list
+    /// of medications.
     pub fn medication_reference(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("medicationReference") {
             return Some(Reference {
@@ -446,8 +444,8 @@ impl MedicationRequest<'_> {
     }
 
     /// The metadata about the resource. This is content that is maintained by the
-    /// infrastructure. Changes to the content might not always be associated with
-    /// version changes to the resource.
+    /// infrastructure. Changes to the content might not always be associated with version
+    /// changes to the resource.
     pub fn meta(&self) -> Option<Meta> {
         if let Some(val) = self.value.get("meta") {
             return Some(Meta {
@@ -459,16 +457,15 @@ impl MedicationRequest<'_> {
 
     /// May be used to represent additional information that is not part of the basic
     /// definition of the resource and that modifies the understanding of the element
-    /// that contains it and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer is allowed to define an extension, there is a set of requirements
-    /// that SHALL be met as part of the definition of the extension. Applications
-    /// processing a resource are required to check for modifier extensions.    Modifier
-    /// extensions SHALL NOT change the meaning of any elements on Resource or
-    /// DomainResource (including cannot change the meaning of modifierExtension
-    /// itself).
+    /// that contains it and/or the understanding of the containing element's descendants.
+    /// Usually modifier elements provide negation or qualification. To make the use of
+    /// extensions safe and manageable, there is a strict set of governance applied to
+    /// the definition and use of extensions. Though any implementer is allowed to define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -497,8 +494,8 @@ impl MedicationRequest<'_> {
         return None;
     }
 
-    /// The specified desired performer of the medication treatment (e.g. the performer
-    /// of the medication administration).
+    /// The specified desired performer of the medication treatment (e.g. the performer of
+    /// the medication administration).
     pub fn performer(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("performer") {
             return Some(Reference {
@@ -518,8 +515,7 @@ impl MedicationRequest<'_> {
         return None;
     }
 
-    /// A link to a resource representing an earlier order related order or
-    /// prescription.
+    /// A link to a resource representing an earlier order related order or prescription.
     pub fn prior_prescription(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("priorPrescription") {
             return Some(Reference {
@@ -577,9 +573,9 @@ impl MedicationRequest<'_> {
         return None;
     }
 
-    /// Indicates if this record was captured as a secondary 'reported' record rather
-    /// than as an original primary source-of-truth record.  It may also indicate the
-    /// source of the report.
+    /// Indicates if this record was captured as a secondary 'reported' record rather than
+    /// as an original primary source-of-truth record.  It may also indicate the source of
+    /// the report.
     pub fn reported_boolean(&self) -> Option<bool> {
         if let Some(val) = self.value.get("reportedBoolean") {
             return Some(val.as_bool().unwrap());
@@ -587,9 +583,9 @@ impl MedicationRequest<'_> {
         return None;
     }
 
-    /// Indicates if this record was captured as a secondary 'reported' record rather
-    /// than as an original primary source-of-truth record.  It may also indicate the
-    /// source of the report.
+    /// Indicates if this record was captured as a secondary 'reported' record rather than
+    /// as an original primary source-of-truth record.  It may also indicate the source of
+    /// the report.
     pub fn reported_reference(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("reportedReference") {
             return Some(Reference {
@@ -610,8 +606,8 @@ impl MedicationRequest<'_> {
         return None;
     }
 
-    /// A code specifying the current state of the order.  Generally, this will be
-    /// active or completed state.
+    /// A code specifying the current state of the order.  Generally, this will be active
+    /// or completed state.
     pub fn status(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("status") {
             return Some(string);
@@ -638,9 +634,9 @@ impl MedicationRequest<'_> {
     }
 
     /// Indicates whether or not substitution can or should be part of the dispense. In
-    /// some cases, substitution must happen, in other cases substitution must not
-    /// happen. This block explains the prescriber's intent. If nothing is specified
-    /// substitution may be done.
+    /// some cases, substitution must happen, in other cases substitution must not happen.
+    /// This block explains the prescriber's intent. If nothing is specified substitution
+    /// may be done.
     pub fn substitution(&self) -> Option<MedicationRequest_Substitution> {
         if let Some(val) = self.value.get("substitution") {
             return Some(MedicationRequest_Substitution {
@@ -665,12 +661,12 @@ impl MedicationRequest<'_> {
         return None;
     }
 
-    /// A human-readable narrative that contains a summary of the resource and can be
-    /// used to represent the content of the resource to a human. The narrative need not
-    /// encode all the structured data, but is required to contain sufficient detail to
-    /// make it "clinically safe" for a human to just read the narrative. Resource
-    /// definitions may define what content should be represented in the narrative to
-    /// ensure clinical safety.
+    /// A human-readable narrative that contains a summary of the resource and can be used
+    /// to represent the content of the resource to a human. The narrative need not encode
+    /// all the structured data, but is required to contain sufficient detail to make it
+    /// "clinically safe" for a human to just read the narrative. Resource definitions
+    /// may define what content should be represented in the narrative to ensure clinical
+    /// safety.
     pub fn text(&self) -> Option<Narrative> {
         if let Some(val) = self.value.get("text") {
             return Some(Narrative {

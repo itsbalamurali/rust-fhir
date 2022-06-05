@@ -7,11 +7,11 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// An address expressed using postal conventions (as opposed to GPS or other
-/// location definition formats).  This data type may be used to convey addresses
-/// for use in delivering mail as well as for visiting locations which might not be
-/// valid for mail delivery.  There are a variety of postal address formats defined
-/// around the world.
+/// An address expressed using postal conventions (as opposed to GPS or other location
+/// definition formats).  This data type may be used to convey addresses for use in
+/// delivering mail as well as for visiting locations which might not be valid for
+/// mail delivery.  There are a variety of postal address formats defined around the
+/// world.
 
 #[derive(Debug)]
 pub struct Address<'a> {
@@ -123,8 +123,7 @@ impl Address<'_> {
         return None;
     }
 
-    /// The name of the city, town, suburb, village or other community or delivery
-    /// center.
+    /// The name of the city, town, suburb, village or other community or delivery center.
     pub fn city(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("city") {
             return Some(string);
@@ -166,8 +165,8 @@ impl Address<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -206,8 +205,8 @@ impl Address<'_> {
         return None;
     }
 
-    /// Sub-unit of a country with limited sovereignty in a federally organized country.
-    /// A code may be used if codes are in common use (e.g. US 2 letter state codes).
+    /// Sub-unit of a country with limited sovereignty in a federally organized country. A
+    /// code may be used if codes are in common use (e.g. US 2 letter state codes).
     pub fn state(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("state") {
             return Some(string);

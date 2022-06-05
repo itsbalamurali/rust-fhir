@@ -127,8 +127,8 @@ impl Contract_Answer<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -137,16 +137,16 @@ impl Contract_Answer<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -161,8 +161,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_attachment(&self) -> Option<Attachment> {
         if let Some(val) = self.value.get("valueAttachment") {
@@ -174,8 +174,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_boolean(&self) -> Option<bool> {
         if let Some(val) = self.value.get("valueBoolean") {
@@ -185,8 +185,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_coding(&self) -> Option<Coding> {
         if let Some(val) = self.value.get("valueCoding") {
@@ -198,8 +198,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_date(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueDate") {
@@ -209,8 +209,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_date_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueDateTime") {
@@ -220,8 +220,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_decimal(&self) -> Option<f64> {
         if let Some(val) = self.value.get("valueDecimal") {
@@ -231,8 +231,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_integer(&self) -> Option<f64> {
         if let Some(val) = self.value.get("valueInteger") {
@@ -242,8 +242,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_quantity(&self) -> Option<Quantity> {
         if let Some(val) = self.value.get("valueQuantity") {
@@ -255,8 +255,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_reference(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("valueReference") {
@@ -268,8 +268,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_string(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueString") {
@@ -279,8 +279,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueTime") {
@@ -290,8 +290,8 @@ impl Contract_Answer<'_> {
     }
 
     /// Response to an offer clause or question text,  which enables selection of values
-    /// to be agreed to, e.g., the period of participation, the date of occupancy of a
-    /// rental, warrently duration, or whether biospecimen may be used for further
+    /// to be agreed to, e.g., the period of participation, the date of occupancy of
+    /// a rental, warrently duration, or whether biospecimen may be used for further
     /// research.
     pub fn value_uri(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueUri") {

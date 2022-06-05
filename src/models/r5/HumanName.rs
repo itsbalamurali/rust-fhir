@@ -136,8 +136,8 @@ impl HumanName<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -155,8 +155,8 @@ impl HumanName<'_> {
         return None;
     }
 
-    /// Part of the name that is acquired as a title due to academic, legal, employment
-    /// or nobility status, etc. and that appears at the start of the name.
+    /// Part of the name that is acquired as a title due to academic, legal, employment or
+    /// nobility status, etc. and that appears at the start of the name.
     pub fn prefix(&self) -> Option<Vec<&str>> {
         if let Some(Value::Array(val)) = self.value.get("prefix") {
             return Some(
@@ -168,8 +168,8 @@ impl HumanName<'_> {
         return None;
     }
 
-    /// Part of the name that is acquired as a title due to academic, legal, employment
-    /// or nobility status, etc. and that appears at the end of the name.
+    /// Part of the name that is acquired as a title due to academic, legal, employment or
+    /// nobility status, etc. and that appears at the end of the name.
     pub fn suffix(&self) -> Option<Vec<&str>> {
         if let Some(Value::Array(val)) = self.value.get("suffix") {
             return Some(

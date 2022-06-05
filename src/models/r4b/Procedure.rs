@@ -112,8 +112,7 @@ impl Procedure<'_> {
         return None;
     }
 
-    /// A reference to a resource that contains details of the request for this
-    /// procedure.
+    /// A reference to a resource that contains details of the request for this procedure.
     pub fn based_on(&self) -> Option<Vec<Reference>> {
         if let Some(Value::Array(val)) = self.value.get("basedOn") {
             return Some(
@@ -165,9 +164,9 @@ impl Procedure<'_> {
     }
 
     /// Any complications that occurred during the procedure, or in the immediate post-
-    /// performance period. These are generally tracked separately from the notes,
-    /// which will typically describe the procedure itself rather than any 'post
-    /// procedure' issues.
+    /// performance period. These are generally tracked separately from the notes, which
+    /// will typically describe the procedure itself rather than any 'post procedure'
+    /// issues.
     pub fn complication(&self) -> Option<Vec<CodeableConcept>> {
         if let Some(Value::Array(val)) = self.value.get("complication") {
             return Some(
@@ -196,9 +195,9 @@ impl Procedure<'_> {
         return None;
     }
 
-    /// These resources do not have an independent existence apart from the resource
-    /// that contains them - they cannot be identified independently, and nor can they
-    /// have their own independent transaction scope.
+    /// These resources do not have an independent existence apart from the resource that
+    /// contains them - they cannot be identified independently, and nor can they have
+    /// their own independent transaction scope.
     pub fn contained(&self) -> Option<Vec<ResourceList>> {
         if let Some(Value::Array(val)) = self.value.get("contained") {
             return Some(
@@ -212,8 +211,8 @@ impl Procedure<'_> {
         return None;
     }
 
-    /// The Encounter during which this Procedure was created or performed or to which
-    /// the creation of this record is tightly associated.
+    /// The Encounter during which this Procedure was created or performed or to which the
+    /// creation of this record is tightly associated.
     pub fn encounter(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("encounter") {
             return Some(Reference {
@@ -241,9 +240,9 @@ impl Procedure<'_> {
         return None;
     }
 
-    /// A device that is implanted, removed or otherwise manipulated (calibration,
-    /// battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a
-    /// focal portion of the Procedure.
+    /// A device that is implanted, removed or otherwise manipulated (calibration, battery
+    /// replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion
+    /// of the Procedure.
     pub fn focal_device(&self) -> Option<Vec<Procedure_FocalDevice>> {
         if let Some(Value::Array(val)) = self.value.get("focalDevice") {
             return Some(
@@ -257,9 +256,9 @@ impl Procedure<'_> {
         return None;
     }
 
-    /// If the procedure required specific follow up - e.g. removal of sutures. The
-    /// follow up may be represented as a simple note or could potentially be more
-    /// complex, in which case the CarePlan resource can be used.
+    /// If the procedure required specific follow up - e.g. removal of sutures. The follow
+    /// up may be represented as a simple note or could potentially be more complex, in
+    /// which case the CarePlan resource can be used.
     pub fn follow_up(&self) -> Option<Vec<CodeableConcept>> {
         if let Some(Value::Array(val)) = self.value.get("followUp") {
             return Some(
@@ -282,9 +281,9 @@ impl Procedure<'_> {
         return None;
     }
 
-    /// Business identifiers assigned to this procedure by the performer or other
-    /// systems which remain constant as the resource is updated and is propagated from
-    /// server to server.
+    /// Business identifiers assigned to this procedure by the performer or other systems
+    /// which remain constant as the resource is updated and is propagated from server
+    /// to server.
     pub fn identifier(&self) -> Option<Vec<Identifier>> {
         if let Some(Value::Array(val)) = self.value.get("identifier") {
             return Some(
@@ -299,9 +298,9 @@ impl Procedure<'_> {
     }
 
     /// A reference to a set of rules that were followed when the resource was
-    /// constructed, and which must be understood when processing the content. Often,
-    /// this is a reference to an implementation guide that defines the special rules
-    /// along with other profiles etc.
+    /// constructed, and which must be understood when processing the content. Often, this
+    /// is a reference to an implementation guide that defines the special rules along
+    /// with other profiles etc.
     pub fn implicit_rules(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("implicitRules") {
             return Some(string);
@@ -355,8 +354,8 @@ impl Procedure<'_> {
     }
 
     /// The metadata about the resource. This is content that is maintained by the
-    /// infrastructure. Changes to the content might not always be associated with
-    /// version changes to the resource.
+    /// infrastructure. Changes to the content might not always be associated with version
+    /// changes to the resource.
     pub fn meta(&self) -> Option<Meta> {
         if let Some(val) = self.value.get("meta") {
             return Some(Meta {
@@ -368,16 +367,15 @@ impl Procedure<'_> {
 
     /// May be used to represent additional information that is not part of the basic
     /// definition of the resource and that modifies the understanding of the element
-    /// that contains it and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer is allowed to define an extension, there is a set of requirements
-    /// that SHALL be met as part of the definition of the extension. Applications
-    /// processing a resource are required to check for modifier extensions.    Modifier
-    /// extensions SHALL NOT change the meaning of any elements on Resource or
-    /// DomainResource (including cannot change the meaning of modifierExtension
-    /// itself).
+    /// that contains it and/or the understanding of the containing element's descendants.
+    /// Usually modifier elements provide negation or qualification. To make the use of
+    /// extensions safe and manageable, there is a strict set of governance applied to
+    /// the definition and use of extensions. Though any implementer is allowed to define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -405,8 +403,8 @@ impl Procedure<'_> {
         return None;
     }
 
-    /// The outcome of the procedure - did it resolve the reasons for the procedure
-    /// being performed?
+    /// The outcome of the procedure - did it resolve the reasons for the procedure being
+    /// performed?
     pub fn outcome(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("outcome") {
             return Some(CodeableConcept {
@@ -431,8 +429,8 @@ impl Procedure<'_> {
     }
 
     /// Estimated or actual date, date-time, period, or age when the procedure was
-    /// performed.  Allows a period to support complex procedures that span more than
-    /// one date, and also allows for the length of the procedure to be captured.
+    /// performed.  Allows a period to support complex procedures that span more than one
+    /// date, and also allows for the length of the procedure to be captured.
     pub fn performed_age(&self) -> Option<Age> {
         if let Some(val) = self.value.get("performedAge") {
             return Some(Age {
@@ -443,8 +441,8 @@ impl Procedure<'_> {
     }
 
     /// Estimated or actual date, date-time, period, or age when the procedure was
-    /// performed.  Allows a period to support complex procedures that span more than
-    /// one date, and also allows for the length of the procedure to be captured.
+    /// performed.  Allows a period to support complex procedures that span more than one
+    /// date, and also allows for the length of the procedure to be captured.
     pub fn performed_date_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("performedDateTime") {
             return Some(string);
@@ -453,8 +451,8 @@ impl Procedure<'_> {
     }
 
     /// Estimated or actual date, date-time, period, or age when the procedure was
-    /// performed.  Allows a period to support complex procedures that span more than
-    /// one date, and also allows for the length of the procedure to be captured.
+    /// performed.  Allows a period to support complex procedures that span more than one
+    /// date, and also allows for the length of the procedure to be captured.
     pub fn performed_period(&self) -> Option<Period> {
         if let Some(val) = self.value.get("performedPeriod") {
             return Some(Period {
@@ -465,8 +463,8 @@ impl Procedure<'_> {
     }
 
     /// Estimated or actual date, date-time, period, or age when the procedure was
-    /// performed.  Allows a period to support complex procedures that span more than
-    /// one date, and also allows for the length of the procedure to be captured.
+    /// performed.  Allows a period to support complex procedures that span more than one
+    /// date, and also allows for the length of the procedure to be captured.
     pub fn performed_range(&self) -> Option<Range> {
         if let Some(val) = self.value.get("performedRange") {
             return Some(Range {
@@ -477,8 +475,8 @@ impl Procedure<'_> {
     }
 
     /// Estimated or actual date, date-time, period, or age when the procedure was
-    /// performed.  Allows a period to support complex procedures that span more than
-    /// one date, and also allows for the length of the procedure to be captured.
+    /// performed.  Allows a period to support complex procedures that span more than one
+    /// date, and also allows for the length of the procedure to be captured.
     pub fn performed_string(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("performedString") {
             return Some(string);
@@ -579,12 +577,12 @@ impl Procedure<'_> {
         }
     }
 
-    /// A human-readable narrative that contains a summary of the resource and can be
-    /// used to represent the content of the resource to a human. The narrative need not
-    /// encode all the structured data, but is required to contain sufficient detail to
-    /// make it "clinically safe" for a human to just read the narrative. Resource
-    /// definitions may define what content should be represented in the narrative to
-    /// ensure clinical safety.
+    /// A human-readable narrative that contains a summary of the resource and can be used
+    /// to represent the content of the resource to a human. The narrative need not encode
+    /// all the structured data, but is required to contain sufficient detail to make it
+    /// "clinically safe" for a human to just read the narrative. Resource definitions
+    /// may define what content should be represented in the narrative to ensure clinical
+    /// safety.
     pub fn text(&self) -> Option<Narrative> {
         if let Some(val) = self.value.get("text") {
             return Some(Narrative {

@@ -11,11 +11,10 @@ use std::borrow::Cow;
 /// A SubstanceProtein is defined as a single unit of a linear amino acid sequence,
 /// or a combination of subunits that are either covalently linked or have a defined
 /// invariant stoichiometric relationship. This includes all synthetic, recombinant
-/// and purified SubstanceProteins of defined sequence, whether the use is
-/// therapeutic or prophylactic. This set of elements will be used to describe
-/// albumins, coagulation factors, cytokines, growth factors,
-/// peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant
-/// vaccines, and immunomodulators.
+/// and purified SubstanceProteins of defined sequence, whether the use is therapeutic
+/// or prophylactic. This set of elements will be used to describe albumins,
+/// coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones,
+/// enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.
 
 #[derive(Debug)]
 pub struct SubstanceProtein_Subunit<'a> {
@@ -120,8 +119,8 @@ impl SubstanceProtein_Subunit<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -138,16 +137,16 @@ impl SubstanceProtein_Subunit<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -161,8 +160,8 @@ impl SubstanceProtein_Subunit<'_> {
         return None;
     }
 
-    /// The name of the fragment modified at the N-terminal of the SubstanceProtein
-    /// shall be specified.
+    /// The name of the fragment modified at the N-terminal of the SubstanceProtein shall
+    /// be specified.
     pub fn n_terminal_modification(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("nTerminalModification") {
             return Some(string);
@@ -181,13 +180,13 @@ impl SubstanceProtein_Subunit<'_> {
         return None;
     }
 
-    /// The sequence information shall be provided enumerating the amino acids from N-
-    /// to C-terminal end using standard single-letter amino acid codes. Uppercase shall
-    /// be used for L-amino acids and lowercase for D-amino acids. Transcribed
+    /// The sequence information shall be provided enumerating the amino acids from
+    /// N- to C-terminal end using standard single-letter amino acid codes. Uppercase
+    /// shall be used for L-amino acids and lowercase for D-amino acids. Transcribed
     /// SubstanceProteins will always be described using the translated sequence; for
     /// synthetic peptide containing amino acids that are not represented with a single
-    /// letter code an X should be used within the sequence. The modified amino acids
-    /// will be distinguished by their position in the sequence.
+    /// letter code an X should be used within the sequence. The modified amino acids will
+    /// be distinguished by their position in the sequence.
     pub fn sequence(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("sequence") {
             return Some(string);
@@ -195,13 +194,13 @@ impl SubstanceProtein_Subunit<'_> {
         return None;
     }
 
-    /// The sequence information shall be provided enumerating the amino acids from N-
-    /// to C-terminal end using standard single-letter amino acid codes. Uppercase shall
-    /// be used for L-amino acids and lowercase for D-amino acids. Transcribed
+    /// The sequence information shall be provided enumerating the amino acids from
+    /// N- to C-terminal end using standard single-letter amino acid codes. Uppercase
+    /// shall be used for L-amino acids and lowercase for D-amino acids. Transcribed
     /// SubstanceProteins will always be described using the translated sequence; for
     /// synthetic peptide containing amino acids that are not represented with a single
-    /// letter code an X should be used within the sequence. The modified amino acids
-    /// will be distinguished by their position in the sequence.
+    /// letter code an X should be used within the sequence. The modified amino acids will
+    /// be distinguished by their position in the sequence.
     pub fn sequence_attachment(&self) -> Option<Attachment> {
         if let Some(val) = self.value.get("sequenceAttachment") {
             return Some(Attachment {

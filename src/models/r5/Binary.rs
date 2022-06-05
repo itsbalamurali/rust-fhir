@@ -93,9 +93,9 @@ impl Binary<'_> {
     }
 
     /// A reference to a set of rules that were followed when the resource was
-    /// constructed, and which must be understood when processing the content. Often,
-    /// this is a reference to an implementation guide that defines the special rules
-    /// along with other profiles etc.
+    /// constructed, and which must be understood when processing the content. Often, this
+    /// is a reference to an implementation guide that defines the special rules along
+    /// with other profiles etc.
     pub fn implicit_rules(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("implicitRules") {
             return Some(string);
@@ -112,8 +112,8 @@ impl Binary<'_> {
     }
 
     /// The metadata about the resource. This is content that is maintained by the
-    /// infrastructure. Changes to the content might not always be associated with
-    /// version changes to the resource.
+    /// infrastructure. Changes to the content might not always be associated with version
+    /// changes to the resource.
     pub fn meta(&self) -> Option<Meta> {
         if let Some(val) = self.value.get("meta") {
             return Some(Meta {
@@ -126,12 +126,12 @@ impl Binary<'_> {
     /// This element identifies another resource that can be used as a proxy of the
     /// security sensitivity to use when deciding and enforcing access control rules for
     /// the Binary resource. Given that the Binary resource contains very few elements
-    /// that can be used to determine the sensitivity of the data and relationships to
-    /// individuals, the referenced resource stands in as a proxy equivalent for this
-    /// purpose. This referenced resource may be related to the Binary (e.g.
+    /// that can be used to determine the sensitivity of the data and relationships
+    /// to individuals, the referenced resource stands in as a proxy equivalent for
+    /// this purpose. This referenced resource may be related to the Binary (e.g.
     /// DocumentReference), or may be some non-related Resource purely as a security
-    /// proxy. E.g. to identify that the binary resource relates to a patient, and
-    /// access should only be granted to applications that have access to the patient.
+    /// proxy. E.g. to identify that the binary resource relates to a patient, and access
+    /// should only be granted to applications that have access to the patient.
     pub fn security_context(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("securityContext") {
             return Some(Reference {

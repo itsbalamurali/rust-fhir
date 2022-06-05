@@ -10,10 +10,10 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// Specifies clinical/business/etc. metadata that can be used to retrieve, index
-/// and/or categorize an artifact. This metadata can either be specific to the
-/// applicable population (e.g., age category, DRG) or the specific context of care
-/// (e.g., venue, care setting, provider of care).
+/// Specifies clinical/business/etc. metadata that can be used to retrieve, index and/
+/// or categorize an artifact. This metadata can either be specific to the applicable
+/// population (e.g., age category, DRG) or the specific context of care (e.g., venue,
+/// care setting, provider of care).
 
 #[derive(Debug)]
 pub struct UsageContext<'a> {
@@ -31,8 +31,7 @@ impl UsageContext<'_> {
         (*self.value).clone()
     }
 
-    /// A code that identifies the type of context being specified by this usage
-    /// context.
+    /// A code that identifies the type of context being specified by this usage context.
     pub fn code(&self) -> Coding {
         Coding {
             value: Cow::Borrowed(&self.value["code"]),
@@ -57,8 +56,8 @@ impl UsageContext<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);

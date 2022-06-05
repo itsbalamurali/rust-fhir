@@ -169,16 +169,15 @@ impl Questionnaire_Item<'_> {
     }
 
     /// This element is a URI that refers to an [[[ElementDefinition]]] that provides
-    /// information about this item, including information that might otherwise be
-    /// included in the instance of the Questionnaire resource. A detailed description
-    /// of the construction of the URI is shown in Comments, below. If this element is
-    /// present then the following element values MAY be derived from the Element
-    /// Definition if the corresponding elements of this Questionnaire resource instance
-    /// have no value:    * code (ElementDefinition.code)   * type
+    /// information about this item, including information that might otherwise
+    /// be included in the instance of the Questionnaire resource. A detailed
+    /// description of the construction of the URI is shown in Comments, below. If
+    /// this element is present then the following element values MAY be derived from
+    /// the Element Definition if the corresponding elements of this Questionnaire
+    /// resource instance have no value:    * code (ElementDefinition.code)   * type
     /// (ElementDefinition.type)   * required (ElementDefinition.min)   * repeats
     /// (ElementDefinition.max)   * maxLength (ElementDefinition.maxLength)   *
-    /// answerValueSet (ElementDefinition.binding)  * options
-    /// (ElementDefinition.binding).
+    /// answerValueSet (ElementDefinition.binding)  * options (ElementDefinition.binding).
     pub fn definition(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("definition") {
             return Some(string);
@@ -186,8 +185,8 @@ impl Questionnaire_Item<'_> {
         return None;
     }
 
-    /// Controls how multiple enableWhen values are interpreted -  whether all or any
-    /// must be true.
+    /// Controls how multiple enableWhen values are interpreted -  whether all or any must
+    /// be true.
     pub fn enable_behavior(&self) -> Option<Questionnaire_ItemEnableBehavior> {
         if let Some(Value::String(val)) = self.value.get("enableBehavior") {
             return Some(Questionnaire_ItemEnableBehavior::from_string(&val).unwrap());
@@ -228,8 +227,8 @@ impl Questionnaire_Item<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -275,8 +274,8 @@ impl Questionnaire_Item<'_> {
         return None;
     }
 
-    /// The maximum number of characters that are permitted in the answer to be
-    /// considered a "valid" QuestionnaireResponse.
+    /// The maximum number of characters that are permitted in the answer to be considered
+    /// a "valid" QuestionnaireResponse.
     pub fn max_length(&self) -> Option<i64> {
         if let Some(val) = self.value.get("maxLength") {
             return Some(val.as_i64().unwrap());
@@ -285,16 +284,16 @@ impl Questionnaire_Item<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -327,8 +326,7 @@ impl Questionnaire_Item<'_> {
     }
 
     /// An indication, if true, that the item may occur multiple times in the response,
-    /// collecting multiple answers for questions or multiple sets of answers for
-    /// groups.
+    /// collecting multiple answers for questions or multiple sets of answers for groups.
     pub fn repeats(&self) -> Option<bool> {
         if let Some(val) = self.value.get("repeats") {
             return Some(val.as_bool().unwrap());
@@ -346,8 +344,7 @@ impl Questionnaire_Item<'_> {
         return None;
     }
 
-    /// The name of a section, the text of a question or text content for a display
-    /// item.
+    /// The name of a section, the text of a question or text content for a display item.
     pub fn text(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("text") {
             return Some(string);

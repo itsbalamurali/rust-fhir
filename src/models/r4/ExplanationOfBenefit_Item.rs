@@ -135,8 +135,8 @@ impl ExplanationOfBenefit_Item<'_> {
     }
 
     /// If this item is a group then the values here are a summary of the adjudication
-    /// of the detail items. If this item is a simple product or service then this is
-    /// the result of the adjudication of this item.
+    /// of the detail items. If this item is a simple product or service then this is the
+    /// result of the adjudication of this item.
     pub fn adjudication(&self) -> Option<Vec<ExplanationOfBenefit_Adjudication>> {
         if let Some(Value::Array(val)) = self.value.get("adjudication") {
             return Some(
@@ -242,8 +242,8 @@ impl ExplanationOfBenefit_Item<'_> {
     }
 
     /// A real number that represents a multiplier used in determining the overall value
-    /// of services delivered and/or goods received. The concept of a Factor allows for
-    /// a discount or surcharge multiplier to be applied to a monetary amount.
+    /// of services delivered and/or goods received. The concept of a Factor allows for a
+    /// discount or surcharge multiplier to be applied to a monetary amount.
     pub fn factor(&self) -> Option<f64> {
         if let Some(val) = self.value.get("factor") {
             return Some(val.as_f64().unwrap());
@@ -251,8 +251,8 @@ impl ExplanationOfBenefit_Item<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -303,8 +303,8 @@ impl ExplanationOfBenefit_Item<'_> {
         return None;
     }
 
-    /// Item typification or modifiers codes to convey additional context for the
-    /// product or service.
+    /// Item typification or modifiers codes to convey additional context for the product
+    /// or service.
     pub fn modifier(&self) -> Option<Vec<CodeableConcept>> {
         if let Some(Value::Array(val)) = self.value.get("modifier") {
             return Some(
@@ -319,16 +319,16 @@ impl ExplanationOfBenefit_Item<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -342,8 +342,7 @@ impl ExplanationOfBenefit_Item<'_> {
         return None;
     }
 
-    /// The quantity times the unit price for an additional service or product or
-    /// charge.
+    /// The quantity times the unit price for an additional service or product or charge.
     pub fn net(&self) -> Option<Money> {
         if let Some(val) = self.value.get("net") {
             return Some(Money {
@@ -379,8 +378,8 @@ impl ExplanationOfBenefit_Item<'_> {
     }
 
     /// When the value is a group code then this item collects a set of related claim
-    /// details, otherwise this contains the product, service, drug or other billing
-    /// code for the item.
+    /// details, otherwise this contains the product, service, drug or other billing code
+    /// for the item.
     pub fn product_or_service(&self) -> CodeableConcept {
         CodeableConcept {
             value: Cow::Borrowed(&self.value["productOrService"]),

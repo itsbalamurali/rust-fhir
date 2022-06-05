@@ -65,7 +65,7 @@ impl Extension<'_> {
     }
 
     /// Extensions for valueBase64Binary
-    pub fn _value_base_6_4_binary(&self) -> Option<Element> {
+    pub fn _value_base_64_binary(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_valueBase64Binary") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -272,8 +272,8 @@ impl Extension<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -335,7 +335,7 @@ impl Extension<'_> {
 
     /// Value of extension - must be one of a constrained set of the data types (see
     /// [Extensibility](extensibility.html) for a list).
-    pub fn value_base_6_4_binary(&self) -> Option<&str> {
+    pub fn value_base_64_binary(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueBase64Binary") {
             return Some(string);
         }
@@ -807,7 +807,7 @@ impl Extension<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._value_base_6_4_binary() {
+        if let Some(_val) = self._value_base_64_binary() {
             if !_val.validate() {
                 return false;
             }
@@ -929,7 +929,7 @@ impl Extension<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self.value_base_6_4_binary() {}
+        if let Some(_val) = self.value_base_64_binary() {}
         if let Some(_val) = self.value_boolean() {}
         if let Some(_val) = self.value_canonical() {}
         if let Some(_val) = self.value_code() {}
@@ -1115,7 +1115,7 @@ impl ExtensionBuilder {
         return self;
     }
 
-    pub fn _value_base_6_4_binary<'a>(&'a mut self, val: Element) -> &'a mut ExtensionBuilder {
+    pub fn _value_base_64_binary<'a>(&'a mut self, val: Element) -> &'a mut ExtensionBuilder {
         self.value["_valueBase64Binary"] = json!(val.value);
         return self;
     }
@@ -1245,7 +1245,7 @@ impl ExtensionBuilder {
         return self;
     }
 
-    pub fn value_base_6_4_binary<'a>(&'a mut self, val: &str) -> &'a mut ExtensionBuilder {
+    pub fn value_base_64_binary<'a>(&'a mut self, val: &str) -> &'a mut ExtensionBuilder {
         self.value["valueBase64Binary"] = json!(val);
         return self;
     }

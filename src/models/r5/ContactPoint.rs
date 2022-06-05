@@ -84,8 +84,8 @@ impl ContactPoint<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -103,8 +103,8 @@ impl ContactPoint<'_> {
         return None;
     }
 
-    /// Specifies a preferred order in which to use a set of contacts. ContactPoints
-    /// with lower rank values are more preferred than those with higher rank values.
+    /// Specifies a preferred order in which to use a set of contacts. ContactPoints with
+    /// lower rank values are more preferred than those with higher rank values.
     pub fn rank(&self) -> Option<i64> {
         if let Some(val) = self.value.get("rank") {
             return Some(val.as_i64().unwrap());
@@ -112,8 +112,8 @@ impl ContactPoint<'_> {
         return None;
     }
 
-    /// Telecommunications form for contact point - what communications system is
-    /// required to make use of the contact.
+    /// Telecommunications form for contact point - what communications system is required
+    /// to make use of the contact.
     pub fn system(&self) -> Option<ContactPointSystem> {
         if let Some(Value::String(val)) = self.value.get("system") {
             return Some(ContactPointSystem::from_string(&val).unwrap());

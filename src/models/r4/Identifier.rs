@@ -9,8 +9,8 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// An identifier - identifies some entity uniquely and unambiguously. Typically
-/// this is used for business identifiers.
+/// An identifier - identifies some entity uniquely and unambiguously. Typically this
+/// is used for business identifiers.
 
 #[derive(Debug)]
 pub struct Identifier<'a> {
@@ -86,8 +86,8 @@ impl Identifier<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -114,8 +114,8 @@ impl Identifier<'_> {
         return None;
     }
 
-    /// A coded type for the identifier that can be used to determine which identifier
-    /// to use for a specific purpose.
+    /// A coded type for the identifier that can be used to determine which identifier to
+    /// use for a specific purpose.
     pub fn fhir_type(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("type") {
             return Some(CodeableConcept {

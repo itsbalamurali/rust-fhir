@@ -10,11 +10,11 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// Representation of the content produced in a DICOM imaging study. A study
-/// comprises a set of series, each of which includes a set of Service-Object Pair
-/// Instances (SOP Instances - images or other data) acquired or produced in a
-/// common context.  A series is of only one modality (e.g. X-ray, CT, MR,
-/// ultrasound), but a study may have multiple series of different modalities.
+/// Representation of the content produced in a DICOM imaging study. A study comprises
+/// a set of series, each of which includes a set of Service-Object Pair Instances
+/// (SOP Instances - images or other data) acquired or produced in a common context.
+/// A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may
+/// have multiple series of different modalities.
 
 #[derive(Debug)]
 pub struct ImagingStudy_Series<'a> {
@@ -82,10 +82,10 @@ impl ImagingStudy_Series<'_> {
         return None;
     }
 
-    /// The anatomic structures examined. See DICOM Part 16 Annex L
-    /// (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html)
-    /// for DICOM to SNOMED-CT mappings. The bodySite may indicate the laterality of
-    /// body part imaged; if so, it shall be consistent with any content of
+    /// The anatomic structures examined. See DICOM Part 16 Annex L (http://
+    /// dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html)
+    /// for DICOM to SNOMED-CT mappings. The bodySite may indicate the laterality
+    /// of body part imaged; if so, it shall be consistent with any content of
     /// ImagingStudy.series.laterality.
     pub fn body_site(&self) -> Option<Coding> {
         if let Some(val) = self.value.get("bodySite") {
@@ -106,8 +106,8 @@ impl ImagingStudy_Series<'_> {
 
     /// The network service providing access (e.g., query, view, or retrieval) for this
     /// series. See implementation notes for information about using DICOM endpoints. A
-    /// series-level endpoint, if present, has precedence over a study-level endpoint
-    /// with the same Endpoint.connectionType.
+    /// series-level endpoint, if present, has precedence over a study-level endpoint with
+    /// the same Endpoint.connectionType.
     pub fn endpoint(&self) -> Option<Vec<Reference>> {
         if let Some(Value::Array(val)) = self.value.get("endpoint") {
             return Some(
@@ -139,8 +139,8 @@ impl ImagingStudy_Series<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -174,8 +174,8 @@ impl ImagingStudy_Series<'_> {
         return None;
     }
 
-    /// The distinct modality for this series. This may include both acquisition and
-    /// non-acquisition modalities.
+    /// The distinct modality for this series. This may include both acquisition and non-
+    /// acquisition modalities.
     pub fn modality(&self) -> Coding {
         Coding {
             value: Cow::Borrowed(&self.value["modality"]),
@@ -183,16 +183,16 @@ impl ImagingStudy_Series<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(

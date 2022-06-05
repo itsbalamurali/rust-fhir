@@ -1,4 +1,3 @@
-use inflector::Inflector;
 use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, HashMap, HashSet};
 use std::io::prelude::*;
@@ -11,6 +10,7 @@ use std::{
     fs::{self, File},
     process,
 };
+use convert_case::{Case, Casing};
 use textwrap::{fill, indent};
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -298,7 +298,7 @@ fn generate_trait(
 
         impl_string.push_str("  pub fn to_json(&self) -> Value { (*self.value).clone() }\n\n");
 
-        impl_string.push_str("  pub fn resource(&self) -> Option<");
+        impl_string.push_str("\n  pub fn resource(&self) -> Option<");
         impl_string.push_str(name);
         impl_string.push_str("Enum> {\n");
         impl_string
@@ -306,7 +306,7 @@ fn generate_trait(
         impl_string.push_str("    match fhir_type {\n");
 
         let mut validation_string = String::new();
-        validation_string.push_str("  pub fn validate(&self) -> bool {\n");
+        validation_string.push_str("\n  pub fn validate(&self) -> bool {\n");
         validation_string.push_str("    if let Some(resource) = self.resource() {\n");
         validation_string.push_str("      match resource {\n");
 
@@ -362,7 +362,8 @@ fn generate_trait(
         inner_string.push_str("\n\n");
 
         if let Some(description) = &definition.description {
-            inner_string.push_str(&indent(&fill(&description, 80), "/// "));
+            inner_string.push_str(&indent(&fill(&description, 82), "/// "));
+            inner_string.push_str("\n");
         }
         inner_string.push_str("\n#[derive(Debug)]\n");
         inner_string.push_str("pub struct ");
@@ -532,7 +533,7 @@ fn generate_trait(
                         );
                     } else if let Some(Item::Enum(item_enum)) = items.get("$ref") {
                         let type_definition = TypeDefinition {
-                            name: format!("{}{}", name, property_name.to_class_case()),
+                            name: format!("{}{}", name, property_name.to_case(Case::Pascal)),
                             builtin: false,
                             string_enum: true,
                             import: None,
@@ -591,7 +592,7 @@ fn generate_trait(
                     fhir_enum,
                 } => {
                     let type_definition = TypeDefinition {
-                        name: format!("{}{}", name, property_name.to_class_case()),
+                        name: format!("{}{}", name, property_name.to_case(Case::Pascal)),
                         builtin: false,
                         string_enum: true,
                         import: None,
@@ -655,7 +656,7 @@ fn generate_trait(
         enum_serialization_string.push_str("    match self {\n");
 
         for value in values {
-            let sanitized_name = sanitize_name(value, property_replacement_map).to_class_case();
+            let sanitized_name = sanitize_name(value, property_replacement_map).to_case(Case::Pascal);
             inner_string.push_str("  ");
             inner_string.push_str(&sanitized_name);
             inner_string.push_str(",\n");
@@ -849,14 +850,14 @@ fn write_property(
 
     let mut getter = String::new();
     // getter
-    getter.push_str("  pub fn ");
+    getter.push_str("\n  pub fn ");
     getter.push_str(&sanitized_name);
     getter.push_str("(&self) -> ");
     getter.push_str(&type_name);
 
     // generated impl
     inner_string.push_str(&indent(
-        &fill(&sanitize_description(description), 80),
+        &fill(&sanitize_description(description), 82),
         &format!("{}{}", indentation_level, "/// "),
     ));
     inner_string.push_str(&getter);
@@ -1051,9 +1052,9 @@ fn snake_case_string(string: &str) -> String {
     // with a leading _, so we manually strip it, and snakecase the rest.
     if string.chars().next().unwrap() == '_' {
         let substr = &string[1..];
-        return format!("_{}", substr.to_snake_case());
+        return format!("_{}", substr.to_case(Case::Snake));
     }
-    return string.to_snake_case();
+    return string.to_case(Case::Snake);
 }
 
 fn sanitize_name(name: &str, property_replacement_map: &HashMap<&str, &str>) -> String {

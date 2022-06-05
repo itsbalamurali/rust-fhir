@@ -104,9 +104,9 @@ impl Attachment<'_> {
         return None;
     }
 
-    /// Identifies the type of the data in the attachment and allows a method to be
-    /// chosen to interpret or render the data. Includes mime type parameters such as
-    /// charset where appropriate.
+    /// Identifies the type of the data in the attachment and allows a method to be chosen
+    /// to interpret or render the data. Includes mime type parameters such as charset
+    /// where appropriate.
     pub fn content_type(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("contentType") {
             return Some(string);
@@ -156,8 +156,8 @@ impl Attachment<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -174,8 +174,8 @@ impl Attachment<'_> {
         return None;
     }
 
-    /// The number of bytes of data that make up this attachment (before base64
-    /// encoding, if that is done).
+    /// The number of bytes of data that make up this attachment (before base64 encoding,
+    /// if that is done).
     pub fn size(&self) -> Option<u64> {
         if let Some(val) = self.value.get("size") {
             return Some(val.as_u64().unwrap());

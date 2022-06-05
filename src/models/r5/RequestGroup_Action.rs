@@ -194,8 +194,8 @@ impl RequestGroup_Action<'_> {
         return None;
     }
 
-    /// An expression that describes applicability criteria, or start/stop conditions
-    /// for the action.
+    /// An expression that describes applicability criteria, or start/stop conditions for
+    /// the action.
     pub fn condition(&self) -> Option<Vec<RequestGroup_Condition>> {
         if let Some(Value::Array(val)) = self.value.get("condition") {
             return Some(
@@ -218,8 +218,8 @@ impl RequestGroup_Action<'_> {
         return None;
     }
 
-    /// Didactic or other informational resources associated with the action that can be
-    /// provided to the CDS recipient. Information resources can include inline text
+    /// Didactic or other informational resources associated with the action that can
+    /// be provided to the CDS recipient. Information resources can include inline text
     /// commentary and links to web resources.
     pub fn documentation(&self) -> Option<Vec<RelatedArtifact>> {
         if let Some(Value::Array(val)) = self.value.get("documentation") {
@@ -274,8 +274,8 @@ impl RequestGroup_Action<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -292,8 +292,8 @@ impl RequestGroup_Action<'_> {
         return None;
     }
 
-    /// Identifies the facility where the action will occur; e.g. home, hospital,
-    /// specific clinic, etc.
+    /// Identifies the facility where the action will occur; e.g. home, hospital, specific
+    /// clinic, etc.
     pub fn location(&self) -> Option<CodeableReference> {
         if let Some(val) = self.value.get("location") {
             return Some(CodeableReference {
@@ -304,16 +304,16 @@ impl RequestGroup_Action<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -349,8 +349,8 @@ impl RequestGroup_Action<'_> {
         return None;
     }
 
-    /// A user-visible prefix for the action. For example a section or item numbering
-    /// such as 1. or A.
+    /// A user-visible prefix for the action. For example a section or item numbering such
+    /// as 1. or A.
     pub fn prefix(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("prefix") {
             return Some(string);
@@ -409,8 +409,8 @@ impl RequestGroup_Action<'_> {
     }
 
     /// A text equivalent of the action to be performed. This provides a human-
-    /// interpretable description of the action when the definition is consumed by
-    /// a system that might not be capable of interpreting it dynamically.
+    /// interpretable description of the action when the definition is consumed by a
+    /// system that might not be capable of interpreting it dynamically.
     pub fn text_equivalent(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("textEquivalent") {
             return Some(string);

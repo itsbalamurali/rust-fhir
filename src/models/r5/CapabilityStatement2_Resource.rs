@@ -11,9 +11,8 @@ use serde_json::value::Value;
 use std::borrow::Cow;
 
 /// A Capability Statement documents a set of capabilities (behaviors) of a FHIR
-/// Server for a particular version of FHIR that may be used as a statement of
-/// actual server functionality or a statement of required or desired server
-/// implementation.
+/// Server for a particular version of FHIR that may be used as a statement of actual
+/// server functionality or a statement of required or desired server implementation.
 
 #[derive(Debug)]
 pub struct CapabilityStatement2_Resource<'a> {
@@ -91,8 +90,8 @@ impl CapabilityStatement2_Resource<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -115,16 +114,16 @@ impl CapabilityStatement2_Resource<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -138,9 +137,9 @@ impl CapabilityStatement2_Resource<'_> {
         return None;
     }
 
-    /// Definition of an operation or a named query together with its parameters and
-    /// their meaning and type. Consult the definition of the operation for details
-    /// about how to invoke the operation, and the parameters.
+    /// Definition of an operation or a named query together with its parameters and their
+    /// meaning and type. Consult the definition of the operation for details about how to
+    /// invoke the operation, and the parameters.
     pub fn operation(&self) -> Option<Vec<CapabilityStatement2_Operation>> {
         if let Some(Value::Array(val)) = self.value.get("operation") {
             return Some(
@@ -155,9 +154,9 @@ impl CapabilityStatement2_Resource<'_> {
     }
 
     /// A specification of the profile that describes the solution's overall support for
-    /// the resource, including any constraints on cardinality, bindings, lengths or
-    /// other limitations. See further discussion in [Using
-    /// Profiles](profiling.html#profile-uses).
+    /// the resource, including any constraints on cardinality, bindings, lengths or other
+    /// limitations. See further discussion in [Using Profiles](profiling.html#profile-
+    /// uses).
     pub fn profile(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("profile") {
             return Some(string);
@@ -166,8 +165,8 @@ impl CapabilityStatement2_Resource<'_> {
     }
 
     /// Search parameters for implementations to support and/or make use of - either
-    /// references to ones defined in the specification, or additional ones defined
-    /// for/by the implementation.
+    /// references to ones defined in the specification, or additional ones defined for/by
+    /// the implementation.
     pub fn search_param(&self) -> Option<Vec<CapabilityStatement2_SearchParam>> {
         if let Some(Value::Array(val)) = self.value.get("searchParam") {
             return Some(
@@ -184,10 +183,10 @@ impl CapabilityStatement2_Resource<'_> {
     /// A list of profiles that represent different use cases supported by the system.
     /// For a server, "supported by the system" means the system hosts/produces a set of
     /// resources that are conformant to a particular profile, and allows clients that
-    /// use its services to search using this profile and to find appropriate data. For
-    /// a client, it means the system will search by this profile and process data
-    /// according to the guidance implicit in the profile. See further discussion in
-    /// [Using Profiles](profiling.html#profile-uses).
+    /// use its services to search using this profile and to find appropriate data. For a
+    /// client, it means the system will search by this profile and process data according
+    /// to the guidance implicit in the profile. See further discussion in [Using
+    /// Profiles](profiling.html#profile-uses).
     pub fn supported_profile(&self) -> Option<Vec<&str>> {
         if let Some(Value::Array(val)) = self.value.get("supportedProfile") {
             return Some(

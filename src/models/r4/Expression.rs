@@ -7,8 +7,8 @@ use serde_json::value::Value;
 use std::borrow::Cow;
 
 /// A expression that is evaluated in a specified context and returns a value. The
-/// context of use of the expression must specify the context in which the
-/// expression is evaluated, and how the result of the expression is used.
+/// context of use of the expression must specify the context in which the expression
+/// is evaluated, and how the result of the expression is used.
 
 #[derive(Debug)]
 pub struct Expression<'a> {
@@ -111,8 +111,8 @@ impl Expression<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);

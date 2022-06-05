@@ -83,8 +83,8 @@ impl Coding<'_> {
         return None;
     }
 
-    /// A representation of the meaning of the code in the system, following the rules
-    /// of the system.
+    /// A representation of the meaning of the code in the system, following the rules of
+    /// the system.
     pub fn display(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("display") {
             return Some(string);
@@ -110,8 +110,8 @@ impl Coding<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -128,8 +128,8 @@ impl Coding<'_> {
         return None;
     }
 
-    /// Indicates that this coding was chosen by a user directly - e.g. off a pick list
-    /// of available items (codes or displays).
+    /// Indicates that this coding was chosen by a user directly - e.g. off a pick list of
+    /// available items (codes or displays).
     pub fn user_selected(&self) -> Option<bool> {
         if let Some(val) = self.value.get("userSelected") {
             return Some(val.as_bool().unwrap());

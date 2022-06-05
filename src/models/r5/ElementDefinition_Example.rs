@@ -68,7 +68,7 @@ impl ElementDefinition_Example<'_> {
     }
 
     /// Extensions for valueBase64Binary
-    pub fn _value_base_6_4_binary(&self) -> Option<Element> {
+    pub fn _value_base_64_binary(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_valueBase64Binary") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -168,7 +168,7 @@ impl ElementDefinition_Example<'_> {
     }
 
     /// Extensions for valueInteger64
-    pub fn _value_integer_6_4(&self) -> Option<Element> {
+    pub fn _value_integer_64(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_valueInteger64") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -285,8 +285,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -303,16 +303,16 @@ impl ElementDefinition_Example<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -326,8 +326,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_address(&self) -> Option<Address> {
         if let Some(val) = self.value.get("valueAddress") {
             return Some(Address {
@@ -337,8 +337,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_age(&self) -> Option<Age> {
         if let Some(val) = self.value.get("valueAge") {
             return Some(Age {
@@ -348,8 +348,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_annotation(&self) -> Option<Annotation> {
         if let Some(val) = self.value.get("valueAnnotation") {
             return Some(Annotation {
@@ -359,8 +359,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_attachment(&self) -> Option<Attachment> {
         if let Some(val) = self.value.get("valueAttachment") {
             return Some(Attachment {
@@ -370,17 +370,17 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
-    pub fn value_base_6_4_binary(&self) -> Option<&str> {
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
+    pub fn value_base_64_binary(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueBase64Binary") {
             return Some(string);
         }
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_boolean(&self) -> Option<bool> {
         if let Some(val) = self.value.get("valueBoolean") {
             return Some(val.as_bool().unwrap());
@@ -388,8 +388,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_canonical(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueCanonical") {
             return Some(string);
@@ -397,8 +397,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_code(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueCode") {
             return Some(string);
@@ -406,8 +406,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_codeable_concept(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("valueCodeableConcept") {
             return Some(CodeableConcept {
@@ -417,8 +417,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_codeable_reference(&self) -> Option<CodeableReference> {
         if let Some(val) = self.value.get("valueCodeableReference") {
             return Some(CodeableReference {
@@ -428,8 +428,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_coding(&self) -> Option<Coding> {
         if let Some(val) = self.value.get("valueCoding") {
             return Some(Coding {
@@ -439,8 +439,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_contact_detail(&self) -> Option<ContactDetail> {
         if let Some(val) = self.value.get("valueContactDetail") {
             return Some(ContactDetail {
@@ -450,8 +450,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_contact_point(&self) -> Option<ContactPoint> {
         if let Some(val) = self.value.get("valueContactPoint") {
             return Some(ContactPoint {
@@ -461,8 +461,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_contributor(&self) -> Option<Contributor> {
         if let Some(val) = self.value.get("valueContributor") {
             return Some(Contributor {
@@ -472,8 +472,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_count(&self) -> Option<Count> {
         if let Some(val) = self.value.get("valueCount") {
             return Some(Count {
@@ -483,8 +483,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_data_requirement(&self) -> Option<DataRequirement> {
         if let Some(val) = self.value.get("valueDataRequirement") {
             return Some(DataRequirement {
@@ -494,8 +494,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_date(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueDate") {
             return Some(string);
@@ -503,8 +503,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_date_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueDateTime") {
             return Some(string);
@@ -512,8 +512,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_decimal(&self) -> Option<f64> {
         if let Some(val) = self.value.get("valueDecimal") {
             return Some(val.as_f64().unwrap());
@@ -521,8 +521,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_distance(&self) -> Option<Distance> {
         if let Some(val) = self.value.get("valueDistance") {
             return Some(Distance {
@@ -532,8 +532,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_dosage(&self) -> Option<Dosage> {
         if let Some(val) = self.value.get("valueDosage") {
             return Some(Dosage {
@@ -543,8 +543,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_duration(&self) -> Option<Duration> {
         if let Some(val) = self.value.get("valueDuration") {
             return Some(Duration {
@@ -554,8 +554,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_expression(&self) -> Option<Expression> {
         if let Some(val) = self.value.get("valueExpression") {
             return Some(Expression {
@@ -565,8 +565,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_human_name(&self) -> Option<HumanName> {
         if let Some(val) = self.value.get("valueHumanName") {
             return Some(HumanName {
@@ -576,8 +576,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueId") {
             return Some(string);
@@ -585,8 +585,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_identifier(&self) -> Option<Identifier> {
         if let Some(val) = self.value.get("valueIdentifier") {
             return Some(Identifier {
@@ -596,8 +596,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_instant(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueInstant") {
             return Some(string);
@@ -605,8 +605,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_integer(&self) -> Option<f64> {
         if let Some(val) = self.value.get("valueInteger") {
             return Some(val.as_f64().unwrap());
@@ -614,17 +614,17 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
-    pub fn value_integer_6_4(&self) -> Option<&str> {
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
+    pub fn value_integer_64(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueInteger64") {
             return Some(string);
         }
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_markdown(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueMarkdown") {
             return Some(string);
@@ -632,8 +632,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_meta(&self) -> Option<Meta> {
         if let Some(val) = self.value.get("valueMeta") {
             return Some(Meta {
@@ -643,8 +643,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_money(&self) -> Option<Money> {
         if let Some(val) = self.value.get("valueMoney") {
             return Some(Money {
@@ -654,8 +654,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_oid(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueOid") {
             return Some(string);
@@ -663,8 +663,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_parameter_definition(&self) -> Option<ParameterDefinition> {
         if let Some(val) = self.value.get("valueParameterDefinition") {
             return Some(ParameterDefinition {
@@ -674,8 +674,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_period(&self) -> Option<Period> {
         if let Some(val) = self.value.get("valuePeriod") {
             return Some(Period {
@@ -685,8 +685,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_positive_int(&self) -> Option<f64> {
         if let Some(val) = self.value.get("valuePositiveInt") {
             return Some(val.as_f64().unwrap());
@@ -694,8 +694,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_quantity(&self) -> Option<Quantity> {
         if let Some(val) = self.value.get("valueQuantity") {
             return Some(Quantity {
@@ -705,8 +705,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_range(&self) -> Option<Range> {
         if let Some(val) = self.value.get("valueRange") {
             return Some(Range {
@@ -716,8 +716,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_ratio(&self) -> Option<Ratio> {
         if let Some(val) = self.value.get("valueRatio") {
             return Some(Ratio {
@@ -727,8 +727,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_ratio_range(&self) -> Option<RatioRange> {
         if let Some(val) = self.value.get("valueRatioRange") {
             return Some(RatioRange {
@@ -738,8 +738,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_reference(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("valueReference") {
             return Some(Reference {
@@ -749,8 +749,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_related_artifact(&self) -> Option<RelatedArtifact> {
         if let Some(val) = self.value.get("valueRelatedArtifact") {
             return Some(RelatedArtifact {
@@ -760,8 +760,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_sampled_data(&self) -> Option<SampledData> {
         if let Some(val) = self.value.get("valueSampledData") {
             return Some(SampledData {
@@ -771,8 +771,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_signature(&self) -> Option<Signature> {
         if let Some(val) = self.value.get("valueSignature") {
             return Some(Signature {
@@ -782,8 +782,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_string(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueString") {
             return Some(string);
@@ -791,8 +791,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueTime") {
             return Some(string);
@@ -800,8 +800,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_timing(&self) -> Option<Timing> {
         if let Some(val) = self.value.get("valueTiming") {
             return Some(Timing {
@@ -811,8 +811,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_trigger_definition(&self) -> Option<TriggerDefinition> {
         if let Some(val) = self.value.get("valueTriggerDefinition") {
             return Some(TriggerDefinition {
@@ -822,8 +822,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_unsigned_int(&self) -> Option<f64> {
         if let Some(val) = self.value.get("valueUnsignedInt") {
             return Some(val.as_f64().unwrap());
@@ -831,8 +831,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_uri(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueUri") {
             return Some(string);
@@ -840,8 +840,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_url(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueUrl") {
             return Some(string);
@@ -849,8 +849,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_usage_context(&self) -> Option<UsageContext> {
         if let Some(val) = self.value.get("valueUsageContext") {
             return Some(UsageContext {
@@ -860,8 +860,8 @@ impl ElementDefinition_Example<'_> {
         return None;
     }
 
-    /// The actual value for the element, which must be one of the types allowed for
-    /// this element.
+    /// The actual value for the element, which must be one of the types allowed for this
+    /// element.
     pub fn value_uuid(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("valueUuid") {
             return Some(string);
@@ -875,7 +875,7 @@ impl ElementDefinition_Example<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._value_base_6_4_binary() {
+        if let Some(_val) = self._value_base_64_binary() {
             if !_val.validate() {
                 return false;
             }
@@ -925,7 +925,7 @@ impl ElementDefinition_Example<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._value_integer_6_4() {
+        if let Some(_val) = self._value_integer_64() {
             if !_val.validate() {
                 return false;
             }
@@ -1007,7 +1007,7 @@ impl ElementDefinition_Example<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self.value_base_6_4_binary() {}
+        if let Some(_val) = self.value_base_64_binary() {}
         if let Some(_val) = self.value_boolean() {}
         if let Some(_val) = self.value_canonical() {}
         if let Some(_val) = self.value_code() {}
@@ -1087,7 +1087,7 @@ impl ElementDefinition_Example<'_> {
         }
         if let Some(_val) = self.value_instant() {}
         if let Some(_val) = self.value_integer() {}
-        if let Some(_val) = self.value_integer_6_4() {}
+        if let Some(_val) = self.value_integer_64() {}
         if let Some(_val) = self.value_markdown() {}
         if let Some(_val) = self.value_meta() {
             if !_val.validate() {
@@ -1204,7 +1204,7 @@ impl ElementDefinition_ExampleBuilder {
         return self;
     }
 
-    pub fn _value_base_6_4_binary<'a>(
+    pub fn _value_base_64_binary<'a>(
         &'a mut self,
         val: Element,
     ) -> &'a mut ElementDefinition_ExampleBuilder {
@@ -1275,7 +1275,7 @@ impl ElementDefinition_ExampleBuilder {
         return self;
     }
 
-    pub fn _value_integer_6_4<'a>(
+    pub fn _value_integer_64<'a>(
         &'a mut self,
         val: Element,
     ) -> &'a mut ElementDefinition_ExampleBuilder {
@@ -1396,7 +1396,7 @@ impl ElementDefinition_ExampleBuilder {
         return self;
     }
 
-    pub fn value_base_6_4_binary<'a>(
+    pub fn value_base_64_binary<'a>(
         &'a mut self,
         val: &str,
     ) -> &'a mut ElementDefinition_ExampleBuilder {
@@ -1558,7 +1558,7 @@ impl ElementDefinition_ExampleBuilder {
         return self;
     }
 
-    pub fn value_integer_6_4<'a>(
+    pub fn value_integer_64<'a>(
         &'a mut self,
         val: &str,
     ) -> &'a mut ElementDefinition_ExampleBuilder {

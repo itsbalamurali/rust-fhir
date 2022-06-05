@@ -7,9 +7,9 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// The metadata about a resource. This is content in the resource that is
-/// maintained by the infrastructure. Changes to the content might not always be
-/// associated with version changes to the resource.
+/// The metadata about a resource. This is content in the resource that is maintained
+/// by the infrastructure. Changes to the content might not always be associated with
+/// version changes to the resource.
 
 #[derive(Debug)]
 pub struct Meta<'a> {
@@ -75,8 +75,8 @@ impl Meta<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -92,8 +92,8 @@ impl Meta<'_> {
         return None;
     }
 
-    /// A list of profiles (references to [[[StructureDefinition]]] resources) that this
-    /// resource claims to conform to. The URL is a reference to
+    /// A list of profiles (references to [[[StructureDefinition]]] resources)
+    /// that this resource claims to conform to. The URL is a reference to
     /// [[[StructureDefinition.url]]].
     pub fn profile(&self) -> Option<Vec<&str>> {
         if let Some(Value::Array(val)) = self.value.get("profile") {
@@ -106,8 +106,8 @@ impl Meta<'_> {
         return None;
     }
 
-    /// Security labels applied to this resource. These tags connect specific resources
-    /// to the overall security policy and infrastructure.
+    /// Security labels applied to this resource. These tags connect specific resources to
+    /// the overall security policy and infrastructure.
     pub fn security(&self) -> Option<Vec<Coding>> {
         if let Some(Value::Array(val)) = self.value.get("security") {
             return Some(
@@ -122,9 +122,9 @@ impl Meta<'_> {
     }
 
     /// A uri that identifies the source system of the resource. This provides a minimal
-    /// amount of [[[Provenance]]] information that can be used to track or
-    /// differentiate the source of information in the resource. The source may identify
-    /// another FHIR server, document, message, database, etc.
+    /// amount of [[[Provenance]]] information that can be used to track or differentiate
+    /// the source of information in the resource. The source may identify another FHIR
+    /// server, document, message, database, etc.
     pub fn source(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("source") {
             return Some(string);
@@ -132,9 +132,9 @@ impl Meta<'_> {
         return None;
     }
 
-    /// Tags applied to this resource. Tags are intended to be used to identify and
-    /// relate resources to process and workflow, and applications are not required to
-    /// consider the tags when interpreting the meaning of a resource.
+    /// Tags applied to this resource. Tags are intended to be used to identify and relate
+    /// resources to process and workflow, and applications are not required to consider
+    /// the tags when interpreting the meaning of a resource.
     pub fn tag(&self) -> Option<Vec<Coding>> {
         if let Some(Value::Array(val)) = self.value.get("tag") {
             return Some(
@@ -148,8 +148,8 @@ impl Meta<'_> {
         return None;
     }
 
-    /// The version specific identifier, as it appears in the version portion of the
-    /// URL. This value changes when the resource is created, updated, or deleted.
+    /// The version specific identifier, as it appears in the version portion of the URL.
+    /// This value changes when the resource is created, updated, or deleted.
     pub fn version_id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("versionId") {
             return Some(string);

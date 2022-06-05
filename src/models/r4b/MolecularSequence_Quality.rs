@@ -48,7 +48,7 @@ impl MolecularSequence_Quality<'_> {
     }
 
     /// Extensions for gtFP
-    pub fn _gt_f_p(&self) -> Option<Element> {
+    pub fn _gt_fp(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_gtFP") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -68,7 +68,7 @@ impl MolecularSequence_Quality<'_> {
     }
 
     /// Extensions for queryFP
-    pub fn _query_f_p(&self) -> Option<Element> {
+    pub fn _query_fp(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_queryFP") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -78,7 +78,7 @@ impl MolecularSequence_Quality<'_> {
     }
 
     /// Extensions for queryTP
-    pub fn _query_t_p(&self) -> Option<Element> {
+    pub fn _query_tp(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_queryTP") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -108,7 +108,7 @@ impl MolecularSequence_Quality<'_> {
     }
 
     /// Extensions for truthFN
-    pub fn _truth_f_n(&self) -> Option<Element> {
+    pub fn _truth_fn(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_truthFN") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -118,7 +118,7 @@ impl MolecularSequence_Quality<'_> {
     }
 
     /// Extensions for truthTP
-    pub fn _truth_t_p(&self) -> Option<Element> {
+    pub fn _truth_tp(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_truthTP") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -177,15 +177,15 @@ impl MolecularSequence_Quality<'_> {
     /// The number of false positives where the non-REF alleles in the Truth and Query
     /// Call Sets match (i.e. cases where the truth is 1/1 and the query is 0/1 or
     /// similar).
-    pub fn gt_f_p(&self) -> Option<f64> {
+    pub fn gt_fp(&self) -> Option<f64> {
         if let Some(val) = self.value.get("gtFP") {
             return Some(val.as_f64().unwrap());
         }
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -204,16 +204,16 @@ impl MolecularSequence_Quality<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -235,10 +235,10 @@ impl MolecularSequence_Quality<'_> {
         return None;
     }
 
-    /// False positives, i.e. the number of sites in the Query Call Set for which there
-    /// is no path through the Truth Call Set that is consistent with this site. Sites
-    /// with correct variant but incorrect genotype are counted here.
-    pub fn query_f_p(&self) -> Option<f64> {
+    /// False positives, i.e. the number of sites in the Query Call Set for which there is
+    /// no path through the Truth Call Set that is consistent with this site. Sites with
+    /// correct variant but incorrect genotype are counted here.
+    pub fn query_fp(&self) -> Option<f64> {
         if let Some(val) = self.value.get("queryFP") {
             return Some(val.as_f64().unwrap());
         }
@@ -249,7 +249,7 @@ impl MolecularSequence_Quality<'_> {
     /// in the Query Call Set for which there are paths through the Truth Call Set that
     /// are consistent with all of the alleles at this site, and for which there is an
     /// accurate genotype call for the event.
-    pub fn query_t_p(&self) -> Option<f64> {
+    pub fn query_tp(&self) -> Option<f64> {
         if let Some(val) = self.value.get("queryTP") {
             return Some(val.as_f64().unwrap());
         }
@@ -275,9 +275,8 @@ impl MolecularSequence_Quality<'_> {
         return None;
     }
 
-    /// The score of an experimentally derived feature such as a p-value
-    /// ([SO:0001685](http://www.sequenceontology.org/browser/current_svn/term/SO:000168
-    /// 5)).
+    /// The score of an experimentally derived feature such as a p-value ([SO:0001685]
+    /// (http://www.sequenceontology.org/browser/current_svn/term/SO:0001685)).
     pub fn score(&self) -> Option<Quantity> {
         if let Some(val) = self.value.get("score") {
             return Some(Quantity {
@@ -306,11 +305,11 @@ impl MolecularSequence_Quality<'_> {
         return None;
     }
 
-    /// False negatives, i.e. the number of sites in the Truth Call Set for which there
-    /// is no path through the Query Call Set that is consistent with all of the alleles
-    /// at this site, or sites for which there is an inaccurate genotype call for the
-    /// event. Sites with correct variant but incorrect genotype are counted here.
-    pub fn truth_f_n(&self) -> Option<f64> {
+    /// False negatives, i.e. the number of sites in the Truth Call Set for which there is
+    /// no path through the Query Call Set that is consistent with all of the alleles at
+    /// this site, or sites for which there is an inaccurate genotype call for the event.
+    /// Sites with correct variant but incorrect genotype are counted here.
+    pub fn truth_fn(&self) -> Option<f64> {
         if let Some(val) = self.value.get("truthFN") {
             return Some(val.as_f64().unwrap());
         }
@@ -321,7 +320,7 @@ impl MolecularSequence_Quality<'_> {
     /// in the Truth Call Set for which there are paths through the Query Call Set that
     /// are consistent with all of the alleles at this site, and for which there is an
     /// accurate genotype call for the event.
-    pub fn truth_t_p(&self) -> Option<f64> {
+    pub fn truth_tp(&self) -> Option<f64> {
         if let Some(val) = self.value.get("truthTP") {
             return Some(val.as_f64().unwrap());
         }
@@ -347,7 +346,7 @@ impl MolecularSequence_Quality<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._gt_f_p() {
+        if let Some(_val) = self._gt_fp() {
             if !_val.validate() {
                 return false;
             }
@@ -357,12 +356,12 @@ impl MolecularSequence_Quality<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._query_f_p() {
+        if let Some(_val) = self._query_fp() {
             if !_val.validate() {
                 return false;
             }
         }
-        if let Some(_val) = self._query_t_p() {
+        if let Some(_val) = self._query_tp() {
             if !_val.validate() {
                 return false;
             }
@@ -377,12 +376,12 @@ impl MolecularSequence_Quality<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._truth_f_n() {
+        if let Some(_val) = self._truth_fn() {
             if !_val.validate() {
                 return false;
             }
         }
-        if let Some(_val) = self._truth_t_p() {
+        if let Some(_val) = self._truth_tp() {
             if !_val.validate() {
                 return false;
             }
@@ -399,7 +398,7 @@ impl MolecularSequence_Quality<'_> {
             }
         }
         if let Some(_val) = self.f_score() {}
-        if let Some(_val) = self.gt_f_p() {}
+        if let Some(_val) = self.gt_fp() {}
         if let Some(_val) = self.id() {}
         if let Some(_val) = self.method() {
             if !_val.validate() {
@@ -412,8 +411,8 @@ impl MolecularSequence_Quality<'_> {
             }
         }
         if let Some(_val) = self.precision() {}
-        if let Some(_val) = self.query_f_p() {}
-        if let Some(_val) = self.query_t_p() {}
+        if let Some(_val) = self.query_fp() {}
+        if let Some(_val) = self.query_tp() {}
         if let Some(_val) = self.recall() {}
         if let Some(_val) = self.roc() {
             if !_val.validate() {
@@ -431,8 +430,8 @@ impl MolecularSequence_Quality<'_> {
             }
         }
         if let Some(_val) = self.start() {}
-        if let Some(_val) = self.truth_f_n() {}
-        if let Some(_val) = self.truth_t_p() {}
+        if let Some(_val) = self.truth_fn() {}
+        if let Some(_val) = self.truth_tp() {}
         if let Some(_val) = self.fhir_type() {}
         return true;
     }
@@ -471,7 +470,7 @@ impl MolecularSequence_QualityBuilder {
         return self;
     }
 
-    pub fn _gt_f_p<'a>(&'a mut self, val: Element) -> &'a mut MolecularSequence_QualityBuilder {
+    pub fn _gt_fp<'a>(&'a mut self, val: Element) -> &'a mut MolecularSequence_QualityBuilder {
         self.value["_gtFP"] = json!(val.value);
         return self;
     }
@@ -481,12 +480,12 @@ impl MolecularSequence_QualityBuilder {
         return self;
     }
 
-    pub fn _query_f_p<'a>(&'a mut self, val: Element) -> &'a mut MolecularSequence_QualityBuilder {
+    pub fn _query_fp<'a>(&'a mut self, val: Element) -> &'a mut MolecularSequence_QualityBuilder {
         self.value["_queryFP"] = json!(val.value);
         return self;
     }
 
-    pub fn _query_t_p<'a>(&'a mut self, val: Element) -> &'a mut MolecularSequence_QualityBuilder {
+    pub fn _query_tp<'a>(&'a mut self, val: Element) -> &'a mut MolecularSequence_QualityBuilder {
         self.value["_queryTP"] = json!(val.value);
         return self;
     }
@@ -501,12 +500,12 @@ impl MolecularSequence_QualityBuilder {
         return self;
     }
 
-    pub fn _truth_f_n<'a>(&'a mut self, val: Element) -> &'a mut MolecularSequence_QualityBuilder {
+    pub fn _truth_fn<'a>(&'a mut self, val: Element) -> &'a mut MolecularSequence_QualityBuilder {
         self.value["_truthFN"] = json!(val.value);
         return self;
     }
 
-    pub fn _truth_t_p<'a>(&'a mut self, val: Element) -> &'a mut MolecularSequence_QualityBuilder {
+    pub fn _truth_tp<'a>(&'a mut self, val: Element) -> &'a mut MolecularSequence_QualityBuilder {
         self.value["_truthTP"] = json!(val.value);
         return self;
     }
@@ -534,7 +533,7 @@ impl MolecularSequence_QualityBuilder {
         return self;
     }
 
-    pub fn gt_f_p<'a>(&'a mut self, val: f64) -> &'a mut MolecularSequence_QualityBuilder {
+    pub fn gt_fp<'a>(&'a mut self, val: f64) -> &'a mut MolecularSequence_QualityBuilder {
         self.value["gtFP"] = json!(val);
         return self;
     }
@@ -566,12 +565,12 @@ impl MolecularSequence_QualityBuilder {
         return self;
     }
 
-    pub fn query_f_p<'a>(&'a mut self, val: f64) -> &'a mut MolecularSequence_QualityBuilder {
+    pub fn query_fp<'a>(&'a mut self, val: f64) -> &'a mut MolecularSequence_QualityBuilder {
         self.value["queryFP"] = json!(val);
         return self;
     }
 
-    pub fn query_t_p<'a>(&'a mut self, val: f64) -> &'a mut MolecularSequence_QualityBuilder {
+    pub fn query_tp<'a>(&'a mut self, val: f64) -> &'a mut MolecularSequence_QualityBuilder {
         self.value["queryTP"] = json!(val);
         return self;
     }
@@ -607,12 +606,12 @@ impl MolecularSequence_QualityBuilder {
         return self;
     }
 
-    pub fn truth_f_n<'a>(&'a mut self, val: f64) -> &'a mut MolecularSequence_QualityBuilder {
+    pub fn truth_fn<'a>(&'a mut self, val: f64) -> &'a mut MolecularSequence_QualityBuilder {
         self.value["truthFN"] = json!(val);
         return self;
     }
 
-    pub fn truth_t_p<'a>(&'a mut self, val: f64) -> &'a mut MolecularSequence_QualityBuilder {
+    pub fn truth_tp<'a>(&'a mut self, val: f64) -> &'a mut MolecularSequence_QualityBuilder {
         self.value["truthTP"] = json!(val);
         return self;
     }

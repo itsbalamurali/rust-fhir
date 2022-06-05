@@ -22,8 +22,8 @@ use std::borrow::Cow;
 
 /// This resource allows for the definition of various types of plans as a sharable,
 /// consumable, and executable artifact. The resource is general enough to support
-/// the description of a broad range of clinical and non-clinical artifacts such as
-/// clinical decision support rules, order sets, protocols, and drug quality
+/// the description of a broad range of clinical and non-clinical artifacts such
+/// as clinical decision support rules, order sets, protocols, and drug quality
 /// specifications.
 
 #[derive(Debug)]
@@ -197,9 +197,9 @@ impl PlanDefinition_Action<'_> {
     }
 
     /// Sub actions that are contained within the action. The behavior of this action
-    /// determines the functionality of the sub-actions. For example, a selection
-    /// behavior of at-most-one indicates that of the sub-actions, at most one may be
-    /// chosen as part of realizing the action definition.
+    /// determines the functionality of the sub-actions. For example, a selection behavior
+    /// of at-most-one indicates that of the sub-actions, at most one may be chosen as
+    /// part of realizing the action definition.
     pub fn action(&self) -> Option<Vec<PlanDefinition_Action>> {
         if let Some(Value::Array(val)) = self.value.get("action") {
             return Some(
@@ -280,8 +280,8 @@ impl PlanDefinition_Action<'_> {
         return None;
     }
 
-    /// Didactic or other informational resources associated with the action that can be
-    /// provided to the CDS recipient. Information resources can include inline text
+    /// Didactic or other informational resources associated with the action that can
+    /// be provided to the CDS recipient. Information resources can include inline text
     /// commentary and links to web resources.
     pub fn documentation(&self) -> Option<Vec<RelatedArtifact>> {
         if let Some(Value::Array(val)) = self.value.get("documentation") {
@@ -298,8 +298,8 @@ impl PlanDefinition_Action<'_> {
 
     /// Customizations that should be applied to the statically defined resource. For
     /// example, if the dosage of a medication must be computed based on the patient's
-    /// weight, a customization would be used to specify an expression that calculated
-    /// the weight, and the path on the resource that would contain the result.
+    /// weight, a customization would be used to specify an expression that calculated the
+    /// weight, and the path on the resource that would contain the result.
     pub fn dynamic_value(&self) -> Option<Vec<PlanDefinition_DynamicValue>> {
         if let Some(Value::Array(val)) = self.value.get("dynamicValue") {
             return Some(
@@ -355,8 +355,8 @@ impl PlanDefinition_Action<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -379,16 +379,16 @@ impl PlanDefinition_Action<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -501,8 +501,8 @@ impl PlanDefinition_Action<'_> {
     }
 
     /// A code, group definition, or canonical reference that describes the intended
-    /// subject of the action and its children, if any. Canonical references are allowed
-    /// to support the definition of protocols for drug and substance quality
+    /// subject of the action and its children, if any. Canonical references are
+    /// allowed to support the definition of protocols for drug and substance quality
     /// specifications, and is allowed to reference a MedicinalProductDefinition,
     /// SubstanceDefinition, AdministrableProductDefinition, ManufacturedItemDefinition,
     /// or PackagedProductDefinition resource.
@@ -514,8 +514,8 @@ impl PlanDefinition_Action<'_> {
     }
 
     /// A code, group definition, or canonical reference that describes the intended
-    /// subject of the action and its children, if any. Canonical references are allowed
-    /// to support the definition of protocols for drug and substance quality
+    /// subject of the action and its children, if any. Canonical references are
+    /// allowed to support the definition of protocols for drug and substance quality
     /// specifications, and is allowed to reference a MedicinalProductDefinition,
     /// SubstanceDefinition, AdministrableProductDefinition, ManufacturedItemDefinition,
     /// or PackagedProductDefinition resource.
@@ -529,8 +529,8 @@ impl PlanDefinition_Action<'_> {
     }
 
     /// A code, group definition, or canonical reference that describes the intended
-    /// subject of the action and its children, if any. Canonical references are allowed
-    /// to support the definition of protocols for drug and substance quality
+    /// subject of the action and its children, if any. Canonical references are
+    /// allowed to support the definition of protocols for drug and substance quality
     /// specifications, and is allowed to reference a MedicinalProductDefinition,
     /// SubstanceDefinition, AdministrableProductDefinition, ManufacturedItemDefinition,
     /// or PackagedProductDefinition resource.
@@ -544,8 +544,8 @@ impl PlanDefinition_Action<'_> {
     }
 
     /// A text equivalent of the action to be performed. This provides a human-
-    /// interpretable description of the action when the definition is consumed by
-    /// a system that might not be capable of interpreting it dynamically.
+    /// interpretable description of the action when the definition is consumed by a
+    /// system that might not be capable of interpreting it dynamically.
     pub fn text_equivalent(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("textEquivalent") {
             return Some(string);
@@ -612,8 +612,8 @@ impl PlanDefinition_Action<'_> {
     }
 
     /// The textual description of the action displayed to a user. For example, when the
-    /// action is a test to be performed, the title would be the title of the test such
-    /// as Assay by HPLC.
+    /// action is a test to be performed, the title would be the title of the test such as
+    /// Assay by HPLC.
     pub fn title(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("title") {
             return Some(string);

@@ -113,8 +113,8 @@ impl TriggerDefinition<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -122,9 +122,9 @@ impl TriggerDefinition<'_> {
         return None;
     }
 
-    /// A formal name for the event. This may be an absolute URI that identifies the
-    /// event formally (e.g. from a trigger registry), or a simple relative URI that
-    /// identifies the event in a local context.
+    /// A formal name for the event. This may be an absolute URI that identifies the event
+    /// formally (e.g. from a trigger registry), or a simple relative URI that identifies
+    /// the event in a local context.
     pub fn name(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("name") {
             return Some(string);

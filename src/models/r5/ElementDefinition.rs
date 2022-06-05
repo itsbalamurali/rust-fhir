@@ -113,7 +113,7 @@ impl ElementDefinition<'_> {
     }
 
     /// Extensions for defaultValueBase64Binary
-    pub fn _default_value_base_6_4_binary(&self) -> Option<Element> {
+    pub fn _default_value_base_64_binary(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_defaultValueBase64Binary") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -213,7 +213,7 @@ impl ElementDefinition<'_> {
     }
 
     /// Extensions for defaultValueInteger64
-    pub fn _default_value_integer_6_4(&self) -> Option<Element> {
+    pub fn _default_value_integer_64(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_defaultValueInteger64") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -323,7 +323,7 @@ impl ElementDefinition<'_> {
     }
 
     /// Extensions for fixedBase64Binary
-    pub fn _fixed_base_6_4_binary(&self) -> Option<Element> {
+    pub fn _fixed_base_64_binary(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_fixedBase64Binary") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -423,7 +423,7 @@ impl ElementDefinition<'_> {
     }
 
     /// Extensions for fixedInteger64
-    pub fn _fixed_integer_6_4(&self) -> Option<Element> {
+    pub fn _fixed_integer_64(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_fixedInteger64") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -633,7 +633,7 @@ impl ElementDefinition<'_> {
     }
 
     /// Extensions for maxValueInteger64
-    pub fn _max_value_integer_6_4(&self) -> Option<Element> {
+    pub fn _max_value_integer_64(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_maxValueInteger64") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -743,7 +743,7 @@ impl ElementDefinition<'_> {
     }
 
     /// Extensions for minValueInteger64
-    pub fn _min_value_integer_6_4(&self) -> Option<Element> {
+    pub fn _min_value_integer_64(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_minValueInteger64") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -813,7 +813,7 @@ impl ElementDefinition<'_> {
     }
 
     /// Extensions for patternBase64Binary
-    pub fn _pattern_base_6_4_binary(&self) -> Option<Element> {
+    pub fn _pattern_base_64_binary(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_patternBase64Binary") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -913,7 +913,7 @@ impl ElementDefinition<'_> {
     }
 
     /// Extensions for patternInteger64
-    pub fn _pattern_integer_6_4(&self) -> Option<Element> {
+    pub fn _pattern_integer_64(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_patternInteger64") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -1081,10 +1081,10 @@ impl ElementDefinition<'_> {
     /// Information about the base definition of the element, provided to make it
     /// unnecessary for tools to trace the deviation of the element through the derived
     /// and related profiles. When the element definition is not the original definition
-    /// of an element - i.g. either in a constraint on another type, or for elements
-    /// from a super type in a snap shot - then the information in provided in the
-    /// element definition may be different to the base definition. On the original
-    /// definition of the element, it will be same.
+    /// of an element - i.g. either in a constraint on another type, or for elements from
+    /// a super type in a snap shot - then the information in provided in the element
+    /// definition may be different to the base definition. On the original definition of
+    /// the element, it will be same.
     pub fn base(&self) -> Option<ElementDefinition_Base> {
         if let Some(val) = self.value.get("base") {
             return Some(ElementDefinition_Base {
@@ -1214,7 +1214,7 @@ impl ElementDefinition<'_> {
 
     /// The value that should be used if there is no value stated in the instance (e.g.
     /// 'if not otherwise specified, the abstract is false').
-    pub fn default_value_base_6_4_binary(&self) -> Option<&str> {
+    pub fn default_value_base_64_binary(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("defaultValueBase64Binary") {
             return Some(string);
         }
@@ -1458,7 +1458,7 @@ impl ElementDefinition<'_> {
 
     /// The value that should be used if there is no value stated in the instance (e.g.
     /// 'if not otherwise specified, the abstract is false').
-    pub fn default_value_integer_6_4(&self) -> Option<&str> {
+    pub fn default_value_integer_64(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("defaultValueInteger64") {
             return Some(string);
         }
@@ -1711,11 +1711,11 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// Provides a complete explanation of the meaning of the data element for human
-    /// readability.  For the case of elements derived from existing elements (e.g.
-    /// constraints), the definition SHALL be consistent with the base definition, but
-    /// convey the meaning of the element in the particular context of use of the
-    /// resource. (Note: The text you are reading is specified in
+    /// Provides a complete explanation of the meaning of the data element for
+    /// human readability.  For the case of elements derived from existing elements
+    /// (e.g. constraints), the definition SHALL be consistent with the base
+    /// definition, but convey the meaning of the element in the particular context
+    /// of use of the resource. (Note: The text you are reading is specified in
     /// ElementDefinition.definition).
     pub fn definition(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("definition") {
@@ -1759,8 +1759,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_address(&self) -> Option<Address> {
         if let Some(val) = self.value.get("fixedAddress") {
             return Some(Address {
@@ -1772,8 +1772,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_age(&self) -> Option<Age> {
         if let Some(val) = self.value.get("fixedAge") {
             return Some(Age {
@@ -1785,8 +1785,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_annotation(&self) -> Option<Annotation> {
         if let Some(val) = self.value.get("fixedAnnotation") {
             return Some(Annotation {
@@ -1798,8 +1798,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_attachment(&self) -> Option<Attachment> {
         if let Some(val) = self.value.get("fixedAttachment") {
             return Some(Attachment {
@@ -1811,9 +1811,9 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
-    pub fn fixed_base_6_4_binary(&self) -> Option<&str> {
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
+    pub fn fixed_base_64_binary(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedBase64Binary") {
             return Some(string);
         }
@@ -1822,8 +1822,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_boolean(&self) -> Option<bool> {
         if let Some(val) = self.value.get("fixedBoolean") {
             return Some(val.as_bool().unwrap());
@@ -1833,8 +1833,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_canonical(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedCanonical") {
             return Some(string);
@@ -1844,8 +1844,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_code(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedCode") {
             return Some(string);
@@ -1855,8 +1855,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_codeable_concept(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("fixedCodeableConcept") {
             return Some(CodeableConcept {
@@ -1868,8 +1868,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_codeable_reference(&self) -> Option<CodeableReference> {
         if let Some(val) = self.value.get("fixedCodeableReference") {
             return Some(CodeableReference {
@@ -1881,8 +1881,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_coding(&self) -> Option<Coding> {
         if let Some(val) = self.value.get("fixedCoding") {
             return Some(Coding {
@@ -1894,8 +1894,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_contact_detail(&self) -> Option<ContactDetail> {
         if let Some(val) = self.value.get("fixedContactDetail") {
             return Some(ContactDetail {
@@ -1907,8 +1907,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_contact_point(&self) -> Option<ContactPoint> {
         if let Some(val) = self.value.get("fixedContactPoint") {
             return Some(ContactPoint {
@@ -1920,8 +1920,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_contributor(&self) -> Option<Contributor> {
         if let Some(val) = self.value.get("fixedContributor") {
             return Some(Contributor {
@@ -1933,8 +1933,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_count(&self) -> Option<Count> {
         if let Some(val) = self.value.get("fixedCount") {
             return Some(Count {
@@ -1946,8 +1946,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_data_requirement(&self) -> Option<DataRequirement> {
         if let Some(val) = self.value.get("fixedDataRequirement") {
             return Some(DataRequirement {
@@ -1959,8 +1959,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_date(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedDate") {
             return Some(string);
@@ -1970,8 +1970,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_date_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedDateTime") {
             return Some(string);
@@ -1981,8 +1981,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_decimal(&self) -> Option<f64> {
         if let Some(val) = self.value.get("fixedDecimal") {
             return Some(val.as_f64().unwrap());
@@ -1992,8 +1992,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_distance(&self) -> Option<Distance> {
         if let Some(val) = self.value.get("fixedDistance") {
             return Some(Distance {
@@ -2005,8 +2005,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_dosage(&self) -> Option<Dosage> {
         if let Some(val) = self.value.get("fixedDosage") {
             return Some(Dosage {
@@ -2018,8 +2018,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_duration(&self) -> Option<Duration> {
         if let Some(val) = self.value.get("fixedDuration") {
             return Some(Duration {
@@ -2031,8 +2031,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_expression(&self) -> Option<Expression> {
         if let Some(val) = self.value.get("fixedExpression") {
             return Some(Expression {
@@ -2044,8 +2044,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_human_name(&self) -> Option<HumanName> {
         if let Some(val) = self.value.get("fixedHumanName") {
             return Some(HumanName {
@@ -2057,8 +2057,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedId") {
             return Some(string);
@@ -2068,8 +2068,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_identifier(&self) -> Option<Identifier> {
         if let Some(val) = self.value.get("fixedIdentifier") {
             return Some(Identifier {
@@ -2081,8 +2081,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_instant(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedInstant") {
             return Some(string);
@@ -2092,8 +2092,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_integer(&self) -> Option<f64> {
         if let Some(val) = self.value.get("fixedInteger") {
             return Some(val.as_f64().unwrap());
@@ -2103,9 +2103,9 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
-    pub fn fixed_integer_6_4(&self) -> Option<&str> {
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
+    pub fn fixed_integer_64(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedInteger64") {
             return Some(string);
         }
@@ -2114,8 +2114,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_markdown(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedMarkdown") {
             return Some(string);
@@ -2125,8 +2125,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_meta(&self) -> Option<Meta> {
         if let Some(val) = self.value.get("fixedMeta") {
             return Some(Meta {
@@ -2138,8 +2138,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_money(&self) -> Option<Money> {
         if let Some(val) = self.value.get("fixedMoney") {
             return Some(Money {
@@ -2151,8 +2151,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_oid(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedOid") {
             return Some(string);
@@ -2162,8 +2162,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_parameter_definition(&self) -> Option<ParameterDefinition> {
         if let Some(val) = self.value.get("fixedParameterDefinition") {
             return Some(ParameterDefinition {
@@ -2175,8 +2175,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_period(&self) -> Option<Period> {
         if let Some(val) = self.value.get("fixedPeriod") {
             return Some(Period {
@@ -2188,8 +2188,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_positive_int(&self) -> Option<f64> {
         if let Some(val) = self.value.get("fixedPositiveInt") {
             return Some(val.as_f64().unwrap());
@@ -2199,8 +2199,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_quantity(&self) -> Option<Quantity> {
         if let Some(val) = self.value.get("fixedQuantity") {
             return Some(Quantity {
@@ -2212,8 +2212,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_range(&self) -> Option<Range> {
         if let Some(val) = self.value.get("fixedRange") {
             return Some(Range {
@@ -2225,8 +2225,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_ratio(&self) -> Option<Ratio> {
         if let Some(val) = self.value.get("fixedRatio") {
             return Some(Ratio {
@@ -2238,8 +2238,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_ratio_range(&self) -> Option<RatioRange> {
         if let Some(val) = self.value.get("fixedRatioRange") {
             return Some(RatioRange {
@@ -2251,8 +2251,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_reference(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("fixedReference") {
             return Some(Reference {
@@ -2264,8 +2264,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_related_artifact(&self) -> Option<RelatedArtifact> {
         if let Some(val) = self.value.get("fixedRelatedArtifact") {
             return Some(RelatedArtifact {
@@ -2277,8 +2277,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_sampled_data(&self) -> Option<SampledData> {
         if let Some(val) = self.value.get("fixedSampledData") {
             return Some(SampledData {
@@ -2290,8 +2290,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_signature(&self) -> Option<Signature> {
         if let Some(val) = self.value.get("fixedSignature") {
             return Some(Signature {
@@ -2303,8 +2303,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_string(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedString") {
             return Some(string);
@@ -2314,8 +2314,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedTime") {
             return Some(string);
@@ -2325,8 +2325,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_timing(&self) -> Option<Timing> {
         if let Some(val) = self.value.get("fixedTiming") {
             return Some(Timing {
@@ -2338,8 +2338,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_trigger_definition(&self) -> Option<TriggerDefinition> {
         if let Some(val) = self.value.get("fixedTriggerDefinition") {
             return Some(TriggerDefinition {
@@ -2351,8 +2351,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_unsigned_int(&self) -> Option<f64> {
         if let Some(val) = self.value.get("fixedUnsignedInt") {
             return Some(val.as_f64().unwrap());
@@ -2362,8 +2362,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_uri(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedUri") {
             return Some(string);
@@ -2373,8 +2373,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_url(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedUrl") {
             return Some(string);
@@ -2384,8 +2384,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_usage_context(&self) -> Option<UsageContext> {
         if let Some(val) = self.value.get("fixedUsageContext") {
             return Some(UsageContext {
@@ -2397,8 +2397,8 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that SHALL be exactly the value  for this element in the
     /// instance. For purposes of comparison, non-significant whitespace is ignored, and
-    /// all values must be an exact match (case and accent sensitive). Missing
-    /// elements/attributes must also be missing.
+    /// all values must be an exact match (case and accent sensitive). Missing elements/
+    /// attributes must also be missing.
     pub fn fixed_uuid(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fixedUuid") {
             return Some(string);
@@ -2406,8 +2406,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -2415,8 +2415,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// If true, the value of this element affects the interpretation of the element or
-    /// resource that contains it, and the value of the element cannot be ignored.
+    /// If true, the value of this element affects the interpretation of the element
+    /// or resource that contains it, and the value of the element cannot be ignored.
     /// Typically, this is used for status, negation and qualification codes. The effect
     /// of this is that the element cannot be ignored by systems: they SHALL either
     /// recognize the element and process it, and/or a pre-determination has been made
@@ -2480,8 +2480,8 @@ impl ElementDefinition<'_> {
     }
 
     /// Indicates the maximum length in characters that is permitted to be present in
-    /// conformant instances and which is expected to be supported by conformant
-    /// consumers that support the element.
+    /// conformant instances and which is expected to be supported by conformant consumers
+    /// that support the element.
     pub fn max_length(&self) -> Option<i64> {
         if let Some(val) = self.value.get("maxLength") {
             return Some(val.as_i64().unwrap());
@@ -2489,9 +2489,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The maximum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The maximum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn max_value_date(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("maxValueDate") {
             return Some(string);
@@ -2499,9 +2498,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The maximum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The maximum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn max_value_date_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("maxValueDateTime") {
             return Some(string);
@@ -2509,9 +2507,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The maximum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The maximum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn max_value_decimal(&self) -> Option<f64> {
         if let Some(val) = self.value.get("maxValueDecimal") {
             return Some(val.as_f64().unwrap());
@@ -2519,9 +2516,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The maximum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The maximum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn max_value_instant(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("maxValueInstant") {
             return Some(string);
@@ -2529,9 +2525,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The maximum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The maximum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn max_value_integer(&self) -> Option<f64> {
         if let Some(val) = self.value.get("maxValueInteger") {
             return Some(val.as_f64().unwrap());
@@ -2539,19 +2534,17 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The maximum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
-    pub fn max_value_integer_6_4(&self) -> Option<&str> {
+    /// The maximum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+    pub fn max_value_integer_64(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("maxValueInteger64") {
             return Some(string);
         }
         return None;
     }
 
-    /// The maximum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The maximum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn max_value_positive_int(&self) -> Option<f64> {
         if let Some(val) = self.value.get("maxValuePositiveInt") {
             return Some(val.as_f64().unwrap());
@@ -2559,9 +2552,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The maximum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The maximum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn max_value_quantity(&self) -> Option<Quantity> {
         if let Some(val) = self.value.get("maxValueQuantity") {
             return Some(Quantity {
@@ -2571,9 +2563,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The maximum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The maximum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn max_value_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("maxValueTime") {
             return Some(string);
@@ -2581,9 +2572,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The maximum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The maximum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn max_value_unsigned_int(&self) -> Option<f64> {
         if let Some(val) = self.value.get("maxValueUnsignedInt") {
             return Some(val.as_f64().unwrap());
@@ -2608,9 +2598,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The minimum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The minimum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn min_value_date(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("minValueDate") {
             return Some(string);
@@ -2618,9 +2607,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The minimum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The minimum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn min_value_date_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("minValueDateTime") {
             return Some(string);
@@ -2628,9 +2616,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The minimum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The minimum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn min_value_decimal(&self) -> Option<f64> {
         if let Some(val) = self.value.get("minValueDecimal") {
             return Some(val.as_f64().unwrap());
@@ -2638,9 +2625,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The minimum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The minimum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn min_value_instant(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("minValueInstant") {
             return Some(string);
@@ -2648,9 +2634,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The minimum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The minimum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn min_value_integer(&self) -> Option<f64> {
         if let Some(val) = self.value.get("minValueInteger") {
             return Some(val.as_f64().unwrap());
@@ -2658,19 +2643,17 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The minimum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
-    pub fn min_value_integer_6_4(&self) -> Option<&str> {
+    /// The minimum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
+    pub fn min_value_integer_64(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("minValueInteger64") {
             return Some(string);
         }
         return None;
     }
 
-    /// The minimum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The minimum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn min_value_positive_int(&self) -> Option<f64> {
         if let Some(val) = self.value.get("minValuePositiveInt") {
             return Some(val.as_f64().unwrap());
@@ -2678,9 +2661,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The minimum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The minimum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn min_value_quantity(&self) -> Option<Quantity> {
         if let Some(val) = self.value.get("minValueQuantity") {
             return Some(Quantity {
@@ -2690,9 +2672,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The minimum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The minimum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn min_value_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("minValueTime") {
             return Some(string);
@@ -2700,9 +2681,8 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The minimum allowed value for the element. The value is inclusive. This is
-    /// allowed for the types date, dateTime, instant, time, decimal, integer, and
-    /// Quantity.
+    /// The minimum allowed value for the element. The value is inclusive. This is allowed
+    /// for the types date, dateTime, instant, time, decimal, integer, and Quantity.
     pub fn min_value_unsigned_int(&self) -> Option<f64> {
         if let Some(val) = self.value.get("minValueUnsignedInt") {
             return Some(val.as_f64().unwrap());
@@ -2711,16 +2691,16 @@ impl ElementDefinition<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -2734,10 +2714,10 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// If true, implementations that produce or consume resources SHALL provide
-    /// "support" for the element in some meaningful way.  If false, the element may be
-    /// ignored and not supported. If false, whether to populate or use the data element
-    /// in any way is at the discretion of the implementation.
+    /// If true, implementations that produce or consume resources SHALL provide "support"
+    /// for the element in some meaningful way.  If false, the element may be ignored and
+    /// not supported. If false, whether to populate or use the data element in any way is
+    /// at the discretion of the implementation.
     pub fn must_support(&self) -> Option<bool> {
         if let Some(val) = self.value.get("mustSupport") {
             return Some(val.as_bool().unwrap());
@@ -2746,8 +2726,8 @@ impl ElementDefinition<'_> {
     }
 
     /// If present, indicates that the order of the repeating element has meaning and
-    /// describes what that meaning is.  If absent, it means that the order of the
-    /// element has no meaning.
+    /// describes what that meaning is.  If absent, it means that the order of the element
+    /// has no meaning.
     pub fn order_meaning(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("orderMeaning") {
             return Some(string);
@@ -2766,16 +2746,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_address(&self) -> Option<Address> {
         if let Some(val) = self.value.get("patternAddress") {
             return Some(Address {
@@ -2787,16 +2767,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_age(&self) -> Option<Age> {
         if let Some(val) = self.value.get("patternAge") {
             return Some(Age {
@@ -2808,16 +2788,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_annotation(&self) -> Option<Annotation> {
         if let Some(val) = self.value.get("patternAnnotation") {
             return Some(Annotation {
@@ -2829,16 +2809,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_attachment(&self) -> Option<Attachment> {
         if let Some(val) = self.value.get("patternAttachment") {
             return Some(Attachment {
@@ -2850,17 +2830,17 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
-    pub fn pattern_base_6_4_binary(&self) -> Option<&str> {
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
+    pub fn pattern_base_64_binary(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternBase64Binary") {
             return Some(string);
         }
@@ -2869,16 +2849,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_boolean(&self) -> Option<bool> {
         if let Some(val) = self.value.get("patternBoolean") {
             return Some(val.as_bool().unwrap());
@@ -2888,16 +2868,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_canonical(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternCanonical") {
             return Some(string);
@@ -2907,16 +2887,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_code(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternCode") {
             return Some(string);
@@ -2926,16 +2906,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_codeable_concept(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("patternCodeableConcept") {
             return Some(CodeableConcept {
@@ -2947,16 +2927,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_codeable_reference(&self) -> Option<CodeableReference> {
         if let Some(val) = self.value.get("patternCodeableReference") {
             return Some(CodeableReference {
@@ -2968,16 +2948,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_coding(&self) -> Option<Coding> {
         if let Some(val) = self.value.get("patternCoding") {
             return Some(Coding {
@@ -2989,16 +2969,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_contact_detail(&self) -> Option<ContactDetail> {
         if let Some(val) = self.value.get("patternContactDetail") {
             return Some(ContactDetail {
@@ -3010,16 +2990,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_contact_point(&self) -> Option<ContactPoint> {
         if let Some(val) = self.value.get("patternContactPoint") {
             return Some(ContactPoint {
@@ -3031,16 +3011,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_contributor(&self) -> Option<Contributor> {
         if let Some(val) = self.value.get("patternContributor") {
             return Some(Contributor {
@@ -3052,16 +3032,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_count(&self) -> Option<Count> {
         if let Some(val) = self.value.get("patternCount") {
             return Some(Count {
@@ -3073,16 +3053,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_data_requirement(&self) -> Option<DataRequirement> {
         if let Some(val) = self.value.get("patternDataRequirement") {
             return Some(DataRequirement {
@@ -3094,16 +3074,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_date(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternDate") {
             return Some(string);
@@ -3113,16 +3093,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_date_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternDateTime") {
             return Some(string);
@@ -3132,16 +3112,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_decimal(&self) -> Option<f64> {
         if let Some(val) = self.value.get("patternDecimal") {
             return Some(val.as_f64().unwrap());
@@ -3151,16 +3131,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_distance(&self) -> Option<Distance> {
         if let Some(val) = self.value.get("patternDistance") {
             return Some(Distance {
@@ -3172,16 +3152,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_dosage(&self) -> Option<Dosage> {
         if let Some(val) = self.value.get("patternDosage") {
             return Some(Dosage {
@@ -3193,16 +3173,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_duration(&self) -> Option<Duration> {
         if let Some(val) = self.value.get("patternDuration") {
             return Some(Duration {
@@ -3214,16 +3194,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_expression(&self) -> Option<Expression> {
         if let Some(val) = self.value.get("patternExpression") {
             return Some(Expression {
@@ -3235,16 +3215,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_human_name(&self) -> Option<HumanName> {
         if let Some(val) = self.value.get("patternHumanName") {
             return Some(HumanName {
@@ -3256,16 +3236,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternId") {
             return Some(string);
@@ -3275,16 +3255,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_identifier(&self) -> Option<Identifier> {
         if let Some(val) = self.value.get("patternIdentifier") {
             return Some(Identifier {
@@ -3296,16 +3276,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_instant(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternInstant") {
             return Some(string);
@@ -3315,16 +3295,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_integer(&self) -> Option<f64> {
         if let Some(val) = self.value.get("patternInteger") {
             return Some(val.as_f64().unwrap());
@@ -3334,17 +3314,17 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
-    pub fn pattern_integer_6_4(&self) -> Option<&str> {
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
+    pub fn pattern_integer_64(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternInteger64") {
             return Some(string);
         }
@@ -3353,16 +3333,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_markdown(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternMarkdown") {
             return Some(string);
@@ -3372,16 +3352,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_meta(&self) -> Option<Meta> {
         if let Some(val) = self.value.get("patternMeta") {
             return Some(Meta {
@@ -3393,16 +3373,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_money(&self) -> Option<Money> {
         if let Some(val) = self.value.get("patternMoney") {
             return Some(Money {
@@ -3414,16 +3394,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_oid(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternOid") {
             return Some(string);
@@ -3433,16 +3413,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_parameter_definition(&self) -> Option<ParameterDefinition> {
         if let Some(val) = self.value.get("patternParameterDefinition") {
             return Some(ParameterDefinition {
@@ -3454,16 +3434,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_period(&self) -> Option<Period> {
         if let Some(val) = self.value.get("patternPeriod") {
             return Some(Period {
@@ -3475,16 +3455,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_positive_int(&self) -> Option<f64> {
         if let Some(val) = self.value.get("patternPositiveInt") {
             return Some(val.as_f64().unwrap());
@@ -3494,16 +3474,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_quantity(&self) -> Option<Quantity> {
         if let Some(val) = self.value.get("patternQuantity") {
             return Some(Quantity {
@@ -3515,16 +3495,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_range(&self) -> Option<Range> {
         if let Some(val) = self.value.get("patternRange") {
             return Some(Range {
@@ -3536,16 +3516,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_ratio(&self) -> Option<Ratio> {
         if let Some(val) = self.value.get("patternRatio") {
             return Some(Ratio {
@@ -3557,16 +3537,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_ratio_range(&self) -> Option<RatioRange> {
         if let Some(val) = self.value.get("patternRatioRange") {
             return Some(RatioRange {
@@ -3578,16 +3558,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_reference(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("patternReference") {
             return Some(Reference {
@@ -3599,16 +3579,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_related_artifact(&self) -> Option<RelatedArtifact> {
         if let Some(val) = self.value.get("patternRelatedArtifact") {
             return Some(RelatedArtifact {
@@ -3620,16 +3600,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_sampled_data(&self) -> Option<SampledData> {
         if let Some(val) = self.value.get("patternSampledData") {
             return Some(SampledData {
@@ -3641,16 +3621,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_signature(&self) -> Option<Signature> {
         if let Some(val) = self.value.get("patternSignature") {
             return Some(Signature {
@@ -3662,16 +3642,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_string(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternString") {
             return Some(string);
@@ -3681,16 +3661,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_time(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternTime") {
             return Some(string);
@@ -3700,16 +3680,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_timing(&self) -> Option<Timing> {
         if let Some(val) = self.value.get("patternTiming") {
             return Some(Timing {
@@ -3721,16 +3701,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_trigger_definition(&self) -> Option<TriggerDefinition> {
         if let Some(val) = self.value.get("patternTriggerDefinition") {
             return Some(TriggerDefinition {
@@ -3742,16 +3722,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_unsigned_int(&self) -> Option<f64> {
         if let Some(val) = self.value.get("patternUnsignedInt") {
             return Some(val.as_f64().unwrap());
@@ -3761,16 +3741,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_uri(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternUri") {
             return Some(string);
@@ -3780,16 +3760,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_url(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternUrl") {
             return Some(string);
@@ -3799,16 +3779,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_usage_context(&self) -> Option<UsageContext> {
         if let Some(val) = self.value.get("patternUsageContext") {
             return Some(UsageContext {
@@ -3820,16 +3800,16 @@ impl ElementDefinition<'_> {
 
     /// Specifies a value that the value in the instance SHALL follow - that is, any
     /// value in the pattern must be found in the instance. Other additional values may
-    /// be found too. This is effectively constraint by example.      When pattern[x] is
-    /// used to constrain a primitive, it means that the value provided in the
+    /// be found too. This is effectively constraint by example.      When pattern[x]
+    /// is used to constrain a primitive, it means that the value provided in the
     /// pattern[x] must match the instance value exactly.    When pattern[x] is used to
     /// constrain an array, it means that each element provided in the pattern[x] array
     /// must (recursively) match at least one element from the instance array.    When
     /// pattern[x] is used to constrain a complex object, it means that each property in
-    /// the pattern must be present in the complex object, and its value must
-    /// recursively match -- i.e.,    1. If primitive: it must match exactly the pattern
-    /// value  2. If a complex object: it must match (recursively) the pattern value  3.
-    /// If an array: it must match (recursively) the pattern value.
+    /// the pattern must be present in the complex object, and its value must recursively
+    /// match -- i.e.,    1. If primitive: it must match exactly the pattern value  2. If
+    /// a complex object: it must match (recursively) the pattern value  3. If an array:
+    /// it must match (recursively) the pattern value.
     pub fn pattern_uuid(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("patternUuid") {
             return Some(string);
@@ -3857,10 +3837,9 @@ impl ElementDefinition<'_> {
     }
 
     /// If true, indicates that this slice definition is constraining a slice definition
-    /// with the same name in an inherited profile. If false, the slice is not
-    /// overriding any slice in an inherited profile. If missing, the slice might or
-    /// might not be overriding a slice in an inherited profile, depending on the
-    /// sliceName.
+    /// with the same name in an inherited profile. If false, the slice is not overriding
+    /// any slice in an inherited profile. If missing, the slice might or might not be
+    /// overriding a slice in an inherited profile, depending on the sliceName.
     pub fn slice_is_constraining(&self) -> Option<bool> {
         if let Some(val) = self.value.get("sliceIsConstraining") {
             return Some(val.as_bool().unwrap());
@@ -3868,10 +3847,10 @@ impl ElementDefinition<'_> {
         return None;
     }
 
-    /// The name of this element definition slice, when slicing is working. The name
-    /// must be a token with no dots or spaces. This is a unique name referring to a
-    /// specific set of constraints applied to this element, used to provide a name to
-    /// different slices of the same element.
+    /// The name of this element definition slice, when slicing is working. The name must
+    /// be a token with no dots or spaces. This is a unique name referring to a specific
+    /// set of constraints applied to this element, used to provide a name to different
+    /// slices of the same element.
     pub fn slice_name(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("sliceName") {
             return Some(string);
@@ -3882,10 +3861,10 @@ impl ElementDefinition<'_> {
     /// Indicates that the element is sliced into a set of alternative definitions (i.e.
     /// in a structure definition, there are multiple different constraints on a single
     /// element in the base resource). Slicing can be used in any resource that has
-    /// cardinality ..* on the base resource, or any resource with a choice of types.
-    /// The set of slices is any elements that come after this in the element sequence
-    /// that have the same path, until a shorter path occurs (the shorter path
-    /// terminates the set).
+    /// cardinality ..* on the base resource, or any resource with a choice of types. The
+    /// set of slices is any elements that come after this in the element sequence that
+    /// have the same path, until a shorter path occurs (the shorter path terminates the
+    /// set).
     pub fn slicing(&self) -> Option<ElementDefinition_Slicing> {
         if let Some(val) = self.value.get("slicing") {
             return Some(ElementDefinition_Slicing {
@@ -3930,7 +3909,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._default_value_base_6_4_binary() {
+        if let Some(_val) = self._default_value_base_64_binary() {
             if !_val.validate() {
                 return false;
             }
@@ -3980,7 +3959,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._default_value_integer_6_4() {
+        if let Some(_val) = self._default_value_integer_64() {
             if !_val.validate() {
                 return false;
             }
@@ -4035,7 +4014,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._fixed_base_6_4_binary() {
+        if let Some(_val) = self._fixed_base_64_binary() {
             if !_val.validate() {
                 return false;
             }
@@ -4085,7 +4064,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._fixed_integer_6_4() {
+        if let Some(_val) = self._fixed_integer_64() {
             if !_val.validate() {
                 return false;
             }
@@ -4190,7 +4169,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._max_value_integer_6_4() {
+        if let Some(_val) = self._max_value_integer_64() {
             if !_val.validate() {
                 return false;
             }
@@ -4245,7 +4224,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._min_value_integer_6_4() {
+        if let Some(_val) = self._min_value_integer_64() {
             if !_val.validate() {
                 return false;
             }
@@ -4280,7 +4259,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._pattern_base_6_4_binary() {
+        if let Some(_val) = self._pattern_base_64_binary() {
             if !_val.validate() {
                 return false;
             }
@@ -4330,7 +4309,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._pattern_integer_6_4() {
+        if let Some(_val) = self._pattern_integer_64() {
             if !_val.validate() {
                 return false;
             }
@@ -4453,7 +4432,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self.default_value_base_6_4_binary() {}
+        if let Some(_val) = self.default_value_base_64_binary() {}
         if let Some(_val) = self.default_value_boolean() {}
         if let Some(_val) = self.default_value_canonical() {}
         if let Some(_val) = self.default_value_code() {}
@@ -4533,7 +4512,7 @@ impl ElementDefinition<'_> {
         }
         if let Some(_val) = self.default_value_instant() {}
         if let Some(_val) = self.default_value_integer() {}
-        if let Some(_val) = self.default_value_integer_6_4() {}
+        if let Some(_val) = self.default_value_integer_64() {}
         if let Some(_val) = self.default_value_markdown() {}
         if let Some(_val) = self.default_value_meta() {
             if !_val.validate() {
@@ -4649,7 +4628,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self.fixed_base_6_4_binary() {}
+        if let Some(_val) = self.fixed_base_64_binary() {}
         if let Some(_val) = self.fixed_boolean() {}
         if let Some(_val) = self.fixed_canonical() {}
         if let Some(_val) = self.fixed_code() {}
@@ -4729,7 +4708,7 @@ impl ElementDefinition<'_> {
         }
         if let Some(_val) = self.fixed_instant() {}
         if let Some(_val) = self.fixed_integer() {}
-        if let Some(_val) = self.fixed_integer_6_4() {}
+        if let Some(_val) = self.fixed_integer_64() {}
         if let Some(_val) = self.fixed_markdown() {}
         if let Some(_val) = self.fixed_meta() {
             if !_val.validate() {
@@ -4831,7 +4810,7 @@ impl ElementDefinition<'_> {
         if let Some(_val) = self.max_value_decimal() {}
         if let Some(_val) = self.max_value_instant() {}
         if let Some(_val) = self.max_value_integer() {}
-        if let Some(_val) = self.max_value_integer_6_4() {}
+        if let Some(_val) = self.max_value_integer_64() {}
         if let Some(_val) = self.max_value_positive_int() {}
         if let Some(_val) = self.max_value_quantity() {
             if !_val.validate() {
@@ -4847,7 +4826,7 @@ impl ElementDefinition<'_> {
         if let Some(_val) = self.min_value_decimal() {}
         if let Some(_val) = self.min_value_instant() {}
         if let Some(_val) = self.min_value_integer() {}
-        if let Some(_val) = self.min_value_integer_6_4() {}
+        if let Some(_val) = self.min_value_integer_64() {}
         if let Some(_val) = self.min_value_positive_int() {}
         if let Some(_val) = self.min_value_quantity() {
             if !_val.validate() {
@@ -4884,7 +4863,7 @@ impl ElementDefinition<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self.pattern_base_6_4_binary() {}
+        if let Some(_val) = self.pattern_base_64_binary() {}
         if let Some(_val) = self.pattern_boolean() {}
         if let Some(_val) = self.pattern_canonical() {}
         if let Some(_val) = self.pattern_code() {}
@@ -4964,7 +4943,7 @@ impl ElementDefinition<'_> {
         }
         if let Some(_val) = self.pattern_instant() {}
         if let Some(_val) = self.pattern_integer() {}
-        if let Some(_val) = self.pattern_integer_6_4() {}
+        if let Some(_val) = self.pattern_integer_64() {}
         if let Some(_val) = self.pattern_markdown() {}
         if let Some(_val) = self.pattern_meta() {
             if !_val.validate() {
@@ -5110,7 +5089,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn _default_value_base_6_4_binary<'a>(
+    pub fn _default_value_base_64_binary<'a>(
         &'a mut self,
         val: Element,
     ) -> &'a mut ElementDefinitionBuilder {
@@ -5181,7 +5160,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn _default_value_integer_6_4<'a>(
+    pub fn _default_value_integer_64<'a>(
         &'a mut self,
         val: Element,
     ) -> &'a mut ElementDefinitionBuilder {
@@ -5251,7 +5230,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn _fixed_base_6_4_binary<'a>(
+    pub fn _fixed_base_64_binary<'a>(
         &'a mut self,
         val: Element,
     ) -> &'a mut ElementDefinitionBuilder {
@@ -5304,7 +5283,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn _fixed_integer_6_4<'a>(&'a mut self, val: Element) -> &'a mut ElementDefinitionBuilder {
+    pub fn _fixed_integer_64<'a>(&'a mut self, val: Element) -> &'a mut ElementDefinitionBuilder {
         self.value["_fixedInteger64"] = json!(val.value);
         return self;
     }
@@ -5412,7 +5391,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn _max_value_integer_6_4<'a>(
+    pub fn _max_value_integer_64<'a>(
         &'a mut self,
         val: Element,
     ) -> &'a mut ElementDefinitionBuilder {
@@ -5482,7 +5461,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn _min_value_integer_6_4<'a>(
+    pub fn _min_value_integer_64<'a>(
         &'a mut self,
         val: Element,
     ) -> &'a mut ElementDefinitionBuilder {
@@ -5526,7 +5505,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn _pattern_base_6_4_binary<'a>(
+    pub fn _pattern_base_64_binary<'a>(
         &'a mut self,
         val: Element,
     ) -> &'a mut ElementDefinitionBuilder {
@@ -5579,10 +5558,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn _pattern_integer_6_4<'a>(
-        &'a mut self,
-        val: Element,
-    ) -> &'a mut ElementDefinitionBuilder {
+    pub fn _pattern_integer_64<'a>(&'a mut self, val: Element) -> &'a mut ElementDefinitionBuilder {
         self.value["_patternInteger64"] = json!(val.value);
         return self;
     }
@@ -5744,7 +5720,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn default_value_base_6_4_binary<'a>(
+    pub fn default_value_base_64_binary<'a>(
         &'a mut self,
         val: &str,
     ) -> &'a mut ElementDefinitionBuilder {
@@ -5906,7 +5882,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn default_value_integer_6_4<'a>(
+    pub fn default_value_integer_64<'a>(
         &'a mut self,
         val: &str,
     ) -> &'a mut ElementDefinitionBuilder {
@@ -6105,7 +6081,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn fixed_base_6_4_binary<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
+    pub fn fixed_base_64_binary<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
         self.value["fixedBase64Binary"] = json!(val);
         return self;
     }
@@ -6243,7 +6219,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn fixed_integer_6_4<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
+    pub fn fixed_integer_64<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
         self.value["fixedInteger64"] = json!(val);
         return self;
     }
@@ -6454,7 +6430,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn max_value_integer_6_4<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
+    pub fn max_value_integer_64<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
         self.value["maxValueInteger64"] = json!(val);
         return self;
     }
@@ -6514,7 +6490,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn min_value_integer_6_4<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
+    pub fn min_value_integer_64<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
         self.value["minValueInteger64"] = json!(val);
         return self;
     }
@@ -6589,10 +6565,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn pattern_base_6_4_binary<'a>(
-        &'a mut self,
-        val: &str,
-    ) -> &'a mut ElementDefinitionBuilder {
+    pub fn pattern_base_64_binary<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
         self.value["patternBase64Binary"] = json!(val);
         return self;
     }
@@ -6739,7 +6712,7 @@ impl ElementDefinitionBuilder {
         return self;
     }
 
-    pub fn pattern_integer_6_4<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
+    pub fn pattern_integer_64<'a>(&'a mut self, val: &str) -> &'a mut ElementDefinitionBuilder {
         self.value["patternInteger64"] = json!(val);
         return self;
     }

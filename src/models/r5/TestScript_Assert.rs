@@ -166,7 +166,7 @@ impl TestScript_Assert<'_> {
     }
 
     /// Extensions for requestURL
-    pub fn _request_u_r_l(&self) -> Option<Element> {
+    pub fn _request_url(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_requestURL") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -274,8 +274,8 @@ impl TestScript_Assert<'_> {
         return None;
     }
 
-    /// XPath or JSONPath expression to evaluate against the source fixture. When
-    /// compareToSourceId is defined, either compareToSourceExpression or
+    /// XPath or JSONPath expression to evaluate against the source fixture.
+    /// When compareToSourceId is defined, either compareToSourceExpression or
     /// compareToSourcePath must be defined, but not both.
     pub fn compare_to_source_path(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("compareToSourcePath") {
@@ -293,8 +293,7 @@ impl TestScript_Assert<'_> {
         return None;
     }
 
-    /// The description would be used by test engines for tracking and reporting
-    /// purposes.
+    /// The description would be used by test engines for tracking and reporting purposes.
     pub fn description(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("description") {
             return Some(string);
@@ -345,8 +344,8 @@ impl TestScript_Assert<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -362,8 +361,8 @@ impl TestScript_Assert<'_> {
         return None;
     }
 
-    /// The ID of a fixture.  Asserts that the response contains at a minimum the
-    /// fixture specified by minimumId.
+    /// The ID of a fixture.  Asserts that the response contains at a minimum the fixture
+    /// specified by minimumId.
     pub fn minimum_id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("minimumId") {
             return Some(string);
@@ -372,16 +371,16 @@ impl TestScript_Assert<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -404,8 +403,8 @@ impl TestScript_Assert<'_> {
         return None;
     }
 
-    /// The operator type defines the conditional behavior of the assert. If not
-    /// defined, the default is equals.
+    /// The operator type defines the conditional behavior of the assert. If not defined,
+    /// the default is equals.
     pub fn operator(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("operator") {
             return Some(string);
@@ -413,8 +412,8 @@ impl TestScript_Assert<'_> {
         return None;
     }
 
-    /// The XPath or JSONPath expression to be evaluated against the fixture
-    /// representing the response received from server.
+    /// The XPath or JSONPath expression to be evaluated against the fixture representing
+    /// the response received from server.
     pub fn path(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("path") {
             return Some(string);
@@ -432,7 +431,7 @@ impl TestScript_Assert<'_> {
     }
 
     /// The value to use in a comparison against the request URL path string.
-    pub fn request_u_r_l(&self) -> Option<&str> {
+    pub fn request_url(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("requestURL") {
             return Some(string);
         }
@@ -576,7 +575,7 @@ impl TestScript_Assert<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._request_u_r_l() {
+        if let Some(_val) = self._request_url() {
             if !_val.validate() {
                 return false;
             }
@@ -646,7 +645,7 @@ impl TestScript_Assert<'_> {
         if let Some(_val) = self.operator() {}
         if let Some(_val) = self.path() {}
         if let Some(_val) = self.request_method() {}
-        if let Some(_val) = self.request_u_r_l() {}
+        if let Some(_val) = self.request_url() {}
         if let Some(_val) = self.resource() {}
         if let Some(_val) = self.response() {}
         if let Some(_val) = self.response_code() {}
@@ -761,7 +760,7 @@ impl TestScript_AssertBuilder {
         return self;
     }
 
-    pub fn _request_u_r_l<'a>(&'a mut self, val: Element) -> &'a mut TestScript_AssertBuilder {
+    pub fn _request_url<'a>(&'a mut self, val: Element) -> &'a mut TestScript_AssertBuilder {
         self.value["_requestURL"] = json!(val.value);
         return self;
     }
@@ -901,7 +900,7 @@ impl TestScript_AssertBuilder {
         return self;
     }
 
-    pub fn request_u_r_l<'a>(&'a mut self, val: &str) -> &'a mut TestScript_AssertBuilder {
+    pub fn request_url<'a>(&'a mut self, val: &str) -> &'a mut TestScript_AssertBuilder {
         self.value["requestURL"] = json!(val);
         return self;
     }

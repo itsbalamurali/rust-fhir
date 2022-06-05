@@ -6,9 +6,9 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// A type of a manufactured item that is used in the provision of healthcare
-/// without being substantially changed through that activity. The device may be a
-/// medical or non-medical device.
+/// A type of a manufactured item that is used in the provision of healthcare without
+/// being substantially changed through that activity. The device may be a medical or
+/// non-medical device.
 
 #[derive(Debug)]
 pub struct Device_UdiCarrier<'a> {
@@ -27,7 +27,7 @@ impl Device_UdiCarrier<'_> {
     }
 
     /// Extensions for carrierAIDC
-    pub fn _carrier_a_i_d_c(&self) -> Option<Element> {
+    pub fn _carrier_aidc(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_carrierAIDC") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -37,7 +37,7 @@ impl Device_UdiCarrier<'_> {
     }
 
     /// Extensions for carrierHRF
-    pub fn _carrier_h_r_f(&self) -> Option<Element> {
+    pub fn _carrier_hrf(&self) -> Option<Element> {
         if let Some(val) = self.value.get("_carrierHRF") {
             return Some(Element {
                 value: Cow::Borrowed(val),
@@ -91,7 +91,7 @@ impl Device_UdiCarrier<'_> {
     /// the device - e.g., a barcode or RFID.   Because of limitations on character sets
     /// in XML and the need to round-trip JSON data through XML, AIDC Formats *SHALL* be
     /// base64 encoded.
-    pub fn carrier_a_i_d_c(&self) -> Option<&str> {
+    pub fn carrier_aidc(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("carrierAIDC") {
             return Some(string);
         }
@@ -100,15 +100,15 @@ impl Device_UdiCarrier<'_> {
 
     /// The full UDI carrier as the human readable form (HRF) representation of the
     /// barcode string as printed on the packaging of the device.
-    pub fn carrier_h_r_f(&self) -> Option<&str> {
+    pub fn carrier_hrf(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("carrierHRF") {
             return Some(string);
         }
         return None;
     }
 
-    /// The device identifier (DI) is a mandatory, fixed portion of a UDI that
-    /// identifies the labeler and the specific version or model of a device.
+    /// The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies
+    /// the labeler and the specific version or model of a device.
     pub fn device_identifier(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("deviceIdentifier") {
             return Some(string);
@@ -142,8 +142,8 @@ impl Device_UdiCarrier<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -151,9 +151,9 @@ impl Device_UdiCarrier<'_> {
         return None;
     }
 
-    /// Organization that is charged with issuing UDIs for devices.  For example, the US
-    /// FDA issuers include :  1) GS1:   http://hl7.org/fhir/NamingSystem/gs1-di,   2)
-    /// HIBCC:  http://hl7.org/fhir/NamingSystem/hibcc-dI,   3) ICCBBA for blood
+    /// Organization that is charged with issuing UDIs for devices.  For example,
+    /// the US FDA issuers include :  1) GS1:   http://hl7.org/fhir/NamingSystem/gs1-
+    /// di,   2) HIBCC:  http://hl7.org/fhir/NamingSystem/hibcc-dI,   3) ICCBBA for blood
     /// containers:  http://hl7.org/fhir/NamingSystem/iccbba-blood-di,   4) ICCBA for
     /// other devices:  http://hl7.org/fhir/NamingSystem/iccbba-other-di.
     pub fn issuer(&self) -> Option<&str> {
@@ -175,16 +175,16 @@ impl Device_UdiCarrier<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -199,12 +199,12 @@ impl Device_UdiCarrier<'_> {
     }
 
     pub fn validate(&self) -> bool {
-        if let Some(_val) = self._carrier_a_i_d_c() {
+        if let Some(_val) = self._carrier_aidc() {
             if !_val.validate() {
                 return false;
             }
         }
-        if let Some(_val) = self._carrier_h_r_f() {
+        if let Some(_val) = self._carrier_hrf() {
             if !_val.validate() {
                 return false;
             }
@@ -229,8 +229,8 @@ impl Device_UdiCarrier<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self.carrier_a_i_d_c() {}
-        if let Some(_val) = self.carrier_h_r_f() {}
+        if let Some(_val) = self.carrier_aidc() {}
+        if let Some(_val) = self.carrier_hrf() {}
         if let Some(_val) = self.device_identifier() {}
         if let Some(_val) = self.entry_type() {}
         if let Some(_val) = self.extension() {
@@ -273,12 +273,12 @@ impl Device_UdiCarrierBuilder {
         return Device_UdiCarrierBuilder { value: __value };
     }
 
-    pub fn _carrier_a_i_d_c<'a>(&'a mut self, val: Element) -> &'a mut Device_UdiCarrierBuilder {
+    pub fn _carrier_aidc<'a>(&'a mut self, val: Element) -> &'a mut Device_UdiCarrierBuilder {
         self.value["_carrierAIDC"] = json!(val.value);
         return self;
     }
 
-    pub fn _carrier_h_r_f<'a>(&'a mut self, val: Element) -> &'a mut Device_UdiCarrierBuilder {
+    pub fn _carrier_hrf<'a>(&'a mut self, val: Element) -> &'a mut Device_UdiCarrierBuilder {
         self.value["_carrierHRF"] = json!(val.value);
         return self;
     }
@@ -303,12 +303,12 @@ impl Device_UdiCarrierBuilder {
         return self;
     }
 
-    pub fn carrier_a_i_d_c<'a>(&'a mut self, val: &str) -> &'a mut Device_UdiCarrierBuilder {
+    pub fn carrier_aidc<'a>(&'a mut self, val: &str) -> &'a mut Device_UdiCarrierBuilder {
         self.value["carrierAIDC"] = json!(val);
         return self;
     }
 
-    pub fn carrier_h_r_f<'a>(&'a mut self, val: &str) -> &'a mut Device_UdiCarrierBuilder {
+    pub fn carrier_hrf<'a>(&'a mut self, val: &str) -> &'a mut Device_UdiCarrierBuilder {
         self.value["carrierHRF"] = json!(val);
         return self;
     }

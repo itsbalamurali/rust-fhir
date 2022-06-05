@@ -7,8 +7,8 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// A collection of error, warning, or information messages that result from a
-/// system action.
+/// A collection of error, warning, or information messages that result from a system
+/// action.
 
 #[derive(Debug)]
 pub struct OperationOutcome_Issue<'a> {
@@ -84,9 +84,9 @@ impl OperationOutcome_Issue<'_> {
         return None;
     }
 
-    /// Describes the type of the issue. The system that creates an OperationOutcome
-    /// SHALL choose the most applicable code from the IssueType value set, and may
-    /// additional provide its own code for the error in the details element.
+    /// Describes the type of the issue. The system that creates an OperationOutcome SHALL
+    /// choose the most applicable code from the IssueType value set, and may additional
+    /// provide its own code for the error in the details element.
     pub fn code(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("code") {
             return Some(string);
@@ -94,8 +94,8 @@ impl OperationOutcome_Issue<'_> {
         return None;
     }
 
-    /// Additional details about the error. This may be a text description of the error
-    /// or a system code that identifies the error.
+    /// Additional details about the error. This may be a text description of the error or
+    /// a system code that identifies the error.
     pub fn details(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("details") {
             return Some(CodeableConcept {
@@ -145,8 +145,8 @@ impl OperationOutcome_Issue<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -156,10 +156,10 @@ impl OperationOutcome_Issue<'_> {
 
     /// This element is deprecated because it is XML specific. It is replaced by
     /// issue.expression, which is format independent, and simpler to parse.     For
-    /// resource issues, this will be a simple XPath limited to element names,
-    /// repetition indicators and the default child accessor that identifies one of the
-    /// elements in the resource that caused this issue to be raised.  For HTTP errors,
-    /// will be "http." + the parameter name.
+    /// resource issues, this will be a simple XPath limited to element names, repetition
+    /// indicators and the default child accessor that identifies one of the elements
+    /// in the resource that caused this issue to be raised.  For HTTP errors, will be
+    /// "http." + the parameter name.
     pub fn location(&self) -> Option<Vec<&str>> {
         if let Some(Value::Array(val)) = self.value.get("location") {
             return Some(
@@ -172,16 +172,16 @@ impl OperationOutcome_Issue<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(

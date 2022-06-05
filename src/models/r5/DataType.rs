@@ -5,8 +5,7 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// The base class for all re-useable types defined as part of the FHIR
-/// Specification.
+/// The base class for all re-useable types defined as part of the FHIR Specification.
 
 #[derive(Debug)]
 pub struct DataType<'a> {
@@ -42,8 +41,8 @@ impl DataType<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);

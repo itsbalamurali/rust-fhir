@@ -70,8 +70,8 @@ impl SubscriptionTopic_ResourceTrigger<'_> {
         return None;
     }
 
-    /// The human readable description of this resource trigger for the
-    /// SubscriptionTopic -  for example, "An Encounter enters the 'in-progress' state".
+    /// The human readable description of this resource trigger for the SubscriptionTopic
+    /// -  for example, "An Encounter enters the 'in-progress' state".
     pub fn description(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("description") {
             return Some(string);
@@ -97,8 +97,8 @@ impl SubscriptionTopic_ResourceTrigger<'_> {
         return None;
     }
 
-    /// The FHIRPath based rules that the server should use to determine when to trigger
-    /// a notification for this topic.
+    /// The FHIRPath based rules that the server should use to determine when to trigger a
+    /// notification for this topic.
     pub fn fhir_path_criteria(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("fhirPathCriteria") {
             return Some(string);
@@ -106,8 +106,8 @@ impl SubscriptionTopic_ResourceTrigger<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -116,16 +116,16 @@ impl SubscriptionTopic_ResourceTrigger<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -139,8 +139,8 @@ impl SubscriptionTopic_ResourceTrigger<'_> {
         return None;
     }
 
-    /// The FHIR query based rules that the server should use to determine when to
-    /// trigger a notification for this subscription topic.
+    /// The FHIR query based rules that the server should use to determine when to trigger
+    /// a notification for this subscription topic.
     pub fn query_criteria(&self) -> Option<SubscriptionTopic_QueryCriteria> {
         if let Some(val) = self.value.get("queryCriteria") {
             return Some(SubscriptionTopic_QueryCriteria {
@@ -150,13 +150,12 @@ impl SubscriptionTopic_ResourceTrigger<'_> {
         return None;
     }
 
-    /// URL of the Resource that is the type used in this resource trigger.  Relative
-    /// URLs are relative to the StructureDefinition root of the implemented FHIR
-    /// version (e.g., http://hl7.org/fhir/StructureDefinition). For example, "Patient"
-    /// maps to http://hl7.org/fhir/StructureDefinition/Patient.  For more information,
-    /// see <a href="elementdefinition-
-    /// definitions.html#ElementDefinition.type.code">ElementDef
-    /// inition.type.code</a>.
+    /// URL of the Resource that is the type used in this resource trigger.
+    /// Relative URLs are relative to the StructureDefinition root of the
+    /// implemented FHIR version (e.g., http://hl7.org/fhir/StructureDefinition).
+    /// For example, "Patient" maps to http://hl7.org/fhir/StructureDefinition/
+    /// Patient.  For more information, see <a href="elementdefinition-
+    /// definitions.html#ElementDefinition.type.code">ElementDefinition.type.code</a>.
     pub fn resource(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("resource") {
             return Some(string);
@@ -164,9 +163,9 @@ impl SubscriptionTopic_ResourceTrigger<'_> {
         return None;
     }
 
-    /// The FHIR RESTful interaction which can be used to trigger a notification for the
-    /// SubscriptionTopic. Multiple values are considered OR joined (e.g., CREATE or
-    /// UPDATE).
+    /// The FHIR RESTful interaction which can be used to trigger a notification for
+    /// the SubscriptionTopic. Multiple values are considered OR joined (e.g., CREATE
+    /// or UPDATE).
     pub fn supported_interaction(&self) -> Option<Vec<&str>> {
         if let Some(Value::Array(val)) = self.value.get("supportedInteraction") {
             return Some(

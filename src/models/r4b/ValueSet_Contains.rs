@@ -9,8 +9,8 @@ use std::borrow::Cow;
 
 /// A ValueSet resource instance specifies a set of codes drawn from one or more
 /// code systems, intended for use in a particular context. Value sets link between
-/// [CodeSystem](codesystem.html) definitions and their use in [coded
-/// elements](terminologies.html).
+/// [CodeSystem](codesystem.html) definitions and their use in [coded elements]
+/// (terminologies.html).
 
 #[derive(Debug)]
 pub struct ValueSet_Contains<'a> {
@@ -98,8 +98,8 @@ impl ValueSet_Contains<'_> {
     }
 
     /// The code for this item in the expansion hierarchy. If this code is missing the
-    /// entry in the hierarchy is a place holder (abstract) and does not represent a
-    /// valid code in the value set.
+    /// entry in the hierarchy is a place holder (abstract) and does not represent a valid
+    /// code in the value set.
     pub fn code(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("code") {
             return Some(string);
@@ -163,8 +163,8 @@ impl ValueSet_Contains<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -172,10 +172,10 @@ impl ValueSet_Contains<'_> {
         return None;
     }
 
-    /// If the concept is inactive in the code system that defines it. Inactive codes
-    /// are those that are no longer to be used, but are maintained by the code system
-    /// for understanding legacy data. It might not be known or specified whether an
-    /// concept is inactive (and it may depend on the context of use).
+    /// If the concept is inactive in the code system that defines it. Inactive codes are
+    /// those that are no longer to be used, but are maintained by the code system for
+    /// understanding legacy data. It might not be known or specified whether an concept
+    /// is inactive (and it may depend on the context of use).
     pub fn inactive(&self) -> Option<bool> {
         if let Some(val) = self.value.get("inactive") {
             return Some(val.as_bool().unwrap());
@@ -184,16 +184,16 @@ impl ValueSet_Contains<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -217,10 +217,10 @@ impl ValueSet_Contains<'_> {
     }
 
     /// The version of the code system from this code was taken. Note that a well-
-    /// maintained code system does not need the version reported, because the
-    /// meaning of codes is consistent across versions. However this cannot consistently
-    /// be assured, and when the meaning is not guaranteed to be consistent, the version
-    /// SHOULD be exchanged.
+    /// maintained code system does not need the version reported, because the meaning of
+    /// codes is consistent across versions. However this cannot consistently be assured,
+    /// and when the meaning is not guaranteed to be consistent, the version SHOULD be
+    /// exchanged.
     pub fn version(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("version") {
             return Some(string);

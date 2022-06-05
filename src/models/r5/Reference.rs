@@ -82,8 +82,8 @@ impl Reference<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -93,12 +93,12 @@ impl Reference<'_> {
 
     /// An identifier for the target resource. This is used when there is no way to
     /// reference the other resource directly, either because the entity it represents
-    /// is not available through a FHIR server, or because there is no way for the
-    /// author of the resource to convert a known identifier to an actual location.
-    /// There is no requirement that a Reference.identifier point to something that is
-    /// actually exposed as a FHIR instance, but it SHALL point to a business concept
-    /// that would be expected to be exposed as a FHIR instance, and that instance would
-    /// need to be of a FHIR resource type allowed by the reference.
+    /// is not available through a FHIR server, or because there is no way for the author
+    /// of the resource to convert a known identifier to an actual location. There is
+    /// no requirement that a Reference.identifier point to something that is actually
+    /// exposed as a FHIR instance, but it SHALL point to a business concept that would be
+    /// expected to be exposed as a FHIR instance, and that instance would need to be of a
+    /// FHIR resource type allowed by the reference.
     pub fn identifier(&self) -> Option<Identifier> {
         if let Some(val) = self.value.get("identifier") {
             return Some(Identifier {
@@ -112,8 +112,8 @@ impl Reference<'_> {
     /// may be a relative reference, in which case it is relative to the service base
     /// URL, or an absolute URL that resolves to the location where the resource is
     /// found. The reference may be version specific or not. If the reference is not to
-    /// a FHIR RESTful server, then it should be assumed to be version specific.
-    /// Internal fragment references (start with '#') refer to contained resources.
+    /// a FHIR RESTful server, then it should be assumed to be version specific. Internal
+    /// fragment references (start with '#') refer to contained resources.
     pub fn reference(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("reference") {
             return Some(string);

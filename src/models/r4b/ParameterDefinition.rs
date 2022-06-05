@@ -6,9 +6,9 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// The parameters to the module. This collection specifies both the input and
-/// output parameters. Input parameters are provided by the caller as part of the
-/// $evaluate operation. Output parameters are included in the GuidanceResponse.
+/// The parameters to the module. This collection specifies both the input and output
+/// parameters. Input parameters are provided by the caller as part of the $evaluate
+/// operation. Output parameters are included in the GuidanceResponse.
 
 #[derive(Debug)]
 pub struct ParameterDefinition<'a> {
@@ -86,8 +86,7 @@ impl ParameterDefinition<'_> {
         return None;
     }
 
-    /// A brief discussion of what the parameter is for and how it is used by the
-    /// module.
+    /// A brief discussion of what the parameter is for and how it is used by the module.
     pub fn documentation(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("documentation") {
             return Some(string);
@@ -113,8 +112,8 @@ impl ParameterDefinition<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);

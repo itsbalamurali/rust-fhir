@@ -84,8 +84,8 @@ impl Quantity<'_> {
         return None;
     }
 
-    /// How the value should be understood and represented - whether the actual value is
-    /// greater or less than the stated value due to measurement issues; e.g. if the
+    /// How the value should be understood and represented - whether the actual value
+    /// is greater or less than the stated value due to measurement issues; e.g. if the
     /// comparator is "<" , then the real value is < stated value.
     pub fn comparator(&self) -> Option<QuantityComparator> {
         if let Some(Value::String(val)) = self.value.get("comparator") {
@@ -112,8 +112,8 @@ impl Quantity<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -137,8 +137,8 @@ impl Quantity<'_> {
         return None;
     }
 
-    /// The value of the measured amount. The value includes an implicit precision in
-    /// the presentation of the value.
+    /// The value of the measured amount. The value includes an implicit precision in the
+    /// presentation of the value.
     pub fn value(&self) -> Option<f64> {
         if let Some(val) = self.value.get("value") {
             return Some(val.as_f64().unwrap());

@@ -16,10 +16,10 @@ use serde_json::json;
 use serde_json::value::Value;
 use std::borrow::Cow;
 
-/// A set of rules of how a particular interoperability or standards problem is
-/// solved - typically through the use of FHIR resources. This resource is used to
-/// gather all the parts of an implementation guide into a logical whole and to
-/// publish a computable definition of all the parts.
+/// A set of rules of how a particular interoperability or standards problem is solved
+/// - typically through the use of FHIR resources. This resource is used to gather
+/// all the parts of an implementation guide into a logical whole and to publish a
+/// computable definition of all the parts.
 
 #[derive(Debug)]
 pub struct ImplementationGuide<'a> {
@@ -191,8 +191,7 @@ impl ImplementationGuide<'_> {
         return None;
     }
 
-    /// Contact details to assist a user in finding and communicating with the
-    /// publisher.
+    /// Contact details to assist a user in finding and communicating with the publisher.
     pub fn contact(&self) -> Option<Vec<ContactDetail>> {
         if let Some(Value::Array(val)) = self.value.get("contact") {
             return Some(
@@ -206,9 +205,9 @@ impl ImplementationGuide<'_> {
         return None;
     }
 
-    /// These resources do not have an independent existence apart from the resource
-    /// that contains them - they cannot be identified independently, and nor can they
-    /// have their own independent transaction scope.
+    /// These resources do not have an independent existence apart from the resource that
+    /// contains them - they cannot be identified independently, and nor can they have
+    /// their own independent transaction scope.
     pub fn contained(&self) -> Option<Vec<ResourceList>> {
         if let Some(Value::Array(val)) = self.value.get("contained") {
             return Some(
@@ -223,8 +222,8 @@ impl ImplementationGuide<'_> {
     }
 
     /// A copyright statement relating to the implementation guide and/or its contents.
-    /// Copyright statements are generally legal restrictions on the use and publishing
-    /// of the implementation guide.
+    /// Copyright statements are generally legal restrictions on the use and publishing of
+    /// the implementation guide.
     pub fn copyright(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("copyright") {
             return Some(string);
@@ -232,10 +231,10 @@ impl ImplementationGuide<'_> {
         return None;
     }
 
-    /// The date  (and optionally time) when the implementation guide was published. The
-    /// date must change when the business version changes and it must change if the
-    /// status code changes. In addition, it should change when the substantive content
-    /// of the implementation guide changes.
+    /// The date  (and optionally time) when the implementation guide was published.
+    /// The date must change when the business version changes and it must change if the
+    /// status code changes. In addition, it should change when the substantive content of
+    /// the implementation guide changes.
     pub fn date(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("date") {
             return Some(string);
@@ -243,8 +242,8 @@ impl ImplementationGuide<'_> {
         return None;
     }
 
-    /// The information needed by an IG publisher tool to publish the whole
-    /// implementation guide.
+    /// The information needed by an IG publisher tool to publish the whole implementation
+    /// guide.
     pub fn definition(&self) -> Option<ImplementationGuide_Definition> {
         if let Some(val) = self.value.get("definition") {
             return Some(ImplementationGuide_Definition {
@@ -255,8 +254,8 @@ impl ImplementationGuide<'_> {
     }
 
     /// Another implementation guide that this implementation depends on. Typically, an
-    /// implementation guide uses value sets, profiles etc.defined in other
-    /// implementation guides.
+    /// implementation guide uses value sets, profiles etc.defined in other implementation
+    /// guides.
     pub fn depends_on(&self) -> Option<Vec<ImplementationGuide_DependsOn>> {
         if let Some(Value::Array(val)) = self.value.get("dependsOn") {
             return Some(
@@ -279,9 +278,9 @@ impl ImplementationGuide<'_> {
         return None;
     }
 
-    /// A Boolean value to indicate that this implementation guide is authored for
-    /// testing purposes (or education/evaluation/marketing) and is not intended to be
-    /// used for genuine usage.
+    /// A Boolean value to indicate that this implementation guide is authored for testing
+    /// purposes (or education/evaluation/marketing) and is not intended to be used for
+    /// genuine usage.
     pub fn experimental(&self) -> Option<bool> {
         if let Some(val) = self.value.get("experimental") {
             return Some(val.as_bool().unwrap());
@@ -332,9 +331,9 @@ impl ImplementationGuide<'_> {
     }
 
     /// A reference to a set of rules that were followed when the resource was
-    /// constructed, and which must be understood when processing the content. Often,
-    /// this is a reference to an implementation guide that defines the special rules
-    /// along with other profiles etc.
+    /// constructed, and which must be understood when processing the content. Often, this
+    /// is a reference to an implementation guide that defines the special rules along
+    /// with other profiles etc.
     pub fn implicit_rules(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("implicitRules") {
             return Some(string);
@@ -342,8 +341,8 @@ impl ImplementationGuide<'_> {
         return None;
     }
 
-    /// A legal or geographic region in which the implementation guide is intended to be
-    /// used.
+    /// A legal or geographic region in which the implementation guide is intended to
+    /// be used.
     pub fn jurisdiction(&self) -> Option<Vec<CodeableConcept>> {
         if let Some(Value::Array(val)) = self.value.get("jurisdiction") {
             return Some(
@@ -365,8 +364,8 @@ impl ImplementationGuide<'_> {
         return None;
     }
 
-    /// The license that applies to this Implementation Guide, using an SPDX license
-    /// code, or 'not-open-source'.
+    /// The license that applies to this Implementation Guide, using an SPDX license code,
+    /// or 'not-open-source'.
     pub fn license(&self) -> Option<ImplementationGuideLicense> {
         if let Some(Value::String(val)) = self.value.get("license") {
             return Some(ImplementationGuideLicense::from_string(&val).unwrap());
@@ -386,8 +385,8 @@ impl ImplementationGuide<'_> {
     }
 
     /// The metadata about the resource. This is content that is maintained by the
-    /// infrastructure. Changes to the content might not always be associated with
-    /// version changes to the resource.
+    /// infrastructure. Changes to the content might not always be associated with version
+    /// changes to the resource.
     pub fn meta(&self) -> Option<Meta> {
         if let Some(val) = self.value.get("meta") {
             return Some(Meta {
@@ -399,16 +398,15 @@ impl ImplementationGuide<'_> {
 
     /// May be used to represent additional information that is not part of the basic
     /// definition of the resource and that modifies the understanding of the element
-    /// that contains it and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer is allowed to define an extension, there is a set of requirements
-    /// that SHALL be met as part of the definition of the extension. Applications
-    /// processing a resource are required to check for modifier extensions.    Modifier
-    /// extensions SHALL NOT change the meaning of any elements on Resource or
-    /// DomainResource (including cannot change the meaning of modifierExtension
-    /// itself).
+    /// that contains it and/or the understanding of the containing element's descendants.
+    /// Usually modifier elements provide negation or qualification. To make the use of
+    /// extensions safe and manageable, there is a strict set of governance applied to
+    /// the definition and use of extensions. Though any implementer is allowed to define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -422,9 +420,9 @@ impl ImplementationGuide<'_> {
         return None;
     }
 
-    /// A natural language name identifying the implementation guide. This name should
-    /// be usable as an identifier for the module by machine processing applications
-    /// such as code generation.
+    /// A natural language name identifying the implementation guide. This name should be
+    /// usable as an identifier for the module by machine processing applications such as
+    /// code generation.
     pub fn name(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("name") {
             return Some(string);
@@ -461,12 +459,12 @@ impl ImplementationGuide<'_> {
         return None;
     }
 
-    /// A human-readable narrative that contains a summary of the resource and can be
-    /// used to represent the content of the resource to a human. The narrative need not
-    /// encode all the structured data, but is required to contain sufficient detail to
-    /// make it "clinically safe" for a human to just read the narrative. Resource
-    /// definitions may define what content should be represented in the narrative to
-    /// ensure clinical safety.
+    /// A human-readable narrative that contains a summary of the resource and can be used
+    /// to represent the content of the resource to a human. The narrative need not encode
+    /// all the structured data, but is required to contain sufficient detail to make it
+    /// "clinically safe" for a human to just read the narrative. Resource definitions
+    /// may define what content should be represented in the narrative to ensure clinical
+    /// safety.
     pub fn text(&self) -> Option<Narrative> {
         if let Some(val) = self.value.get("text") {
             return Some(Narrative {
@@ -498,11 +496,10 @@ impl ImplementationGuide<'_> {
         return None;
     }
 
-    /// The content was developed with a focus and intent of supporting the contexts
-    /// that are listed. These contexts may be general categories (gender, age, ...) or
-    /// may be references to specific programs (insurance plans, studies, ...) and may
-    /// be used to assist with indexing and searching for appropriate implementation
-    /// guide instances.
+    /// The content was developed with a focus and intent of supporting the contexts that
+    /// are listed. These contexts may be general categories (gender, age, ...) or may be
+    /// references to specific programs (insurance plans, studies, ...) and may be used to
+    /// assist with indexing and searching for appropriate implementation guide instances.
     pub fn use_context(&self) -> Option<Vec<UsageContext>> {
         if let Some(Value::Array(val)) = self.value.get("useContext") {
             return Some(
@@ -958,12 +955,12 @@ impl ImplementationGuideBuilder {
 #[derive(Debug)]
 pub enum ImplementationGuideLicense {
     NotOpenSource,
-    Fhir0bsd,
-    AAL,
+    Fhir0Bsd,
+    Aal,
     Abstyles,
     Adobe2006,
     AdobeGlyph,
-    ADSL,
+    Adsl,
     Afl11,
     Afl12,
     Afl20,
@@ -975,14 +972,14 @@ pub enum ImplementationGuideLicense {
     Agpl30Only,
     Agpl30OrLater,
     Aladdin,
-    AMDPLPA,
-    AML,
-    AMPAS,
+    Amdplpa,
+    Aml,
+    Ampas,
     AntlrPd,
     Apache10,
     Apache11,
     Apache20,
-    APAFML,
+    Apafml,
     Apl10,
     Apsl10,
     Apsl11,
@@ -995,12 +992,12 @@ pub enum ImplementationGuideLicense {
     Bahyph,
     Barr,
     Beerware,
-    Bittorrent10,
-    Bittorrent11,
+    BitTorrent10,
+    BitTorrent11,
     Borceux,
     Bsd1Clause,
-    Bsd2ClauseFreebsd,
-    Bsd2ClauseNetbsd,
+    Bsd2ClauseFreeBsd,
+    Bsd2ClauseNetBsd,
     Bsd2ClausePatent,
     Bsd2Clause,
     Bsd3ClauseAttribution,
@@ -1075,9 +1072,9 @@ pub enum ImplementationGuideLicense {
     Curl,
     DFsl10,
     Diffmark,
-    DOC,
+    Doc,
     Dotseqn,
-    DSDP,
+    Dsdp,
     Dvipdfm,
     Ecl10,
     Ecl20,
@@ -1087,8 +1084,8 @@ pub enum ImplementationGuideLicense {
     Entessa,
     Epl10,
     Epl20,
-    Erlpl11,
-    EUDatagrid,
+    ErlPl11,
+    EuDatagrid,
     Eupl10,
     Eupl11,
     Eupl12,
@@ -1096,10 +1093,10 @@ pub enum ImplementationGuideLicense {
     Fair,
     Frameworx10,
     FreeImage,
-    FSFAP,
-    FSFUL,
-    FSFULLR,
-    FTL,
+    Fsfap,
+    Fsful,
+    Fsfullr,
+    Ftl,
     Gfdl11Only,
     Gfdl11OrLater,
     Gfdl12Only,
@@ -1107,7 +1104,7 @@ pub enum ImplementationGuideLicense {
     Gfdl13Only,
     Gfdl13OrLater,
     Giftware,
-    GL2PS,
+    Gl2Ps,
     Glide,
     Glulxe,
     Gnuplot,
@@ -1117,12 +1114,12 @@ pub enum ImplementationGuideLicense {
     Gpl20OrLater,
     Gpl30Only,
     Gpl30OrLater,
-    Gsoap13b,
+    GSoap13B,
     HaskellReport,
-    HPND,
+    Hpnd,
     IbmPibs,
-    ICU,
-    IJG,
+    Icu,
+    Ijg,
     ImageMagick,
     IMatix,
     Imlib2,
@@ -1130,14 +1127,14 @@ pub enum ImplementationGuideLicense {
     IntelAcpi,
     Intel,
     Interbase10,
-    IPA,
+    Ipa,
     Ipl10,
-    ISC,
-    Jasper20,
-    JSON,
+    Isc,
+    JasPer20,
+    Json,
     Lal12,
     Lal13,
-    Latex2e,
+    Latex2E,
     Leptonica,
     Lgpl20Only,
     Lgpl20OrLater,
@@ -1145,29 +1142,29 @@ pub enum ImplementationGuideLicense {
     Lgpl21OrLater,
     Lgpl30Only,
     Lgpl30OrLater,
-    LGPLLR,
+    Lgpllr,
     Libpng,
     Libtiff,
-    LiliqP11,
-    LiliqR11,
-    LiliqRplus11,
-    LinuxOpenib,
+    LiLiQP11,
+    LiLiQR11,
+    LiLiQRplus11,
+    LinuxOpenIb,
     Lpl10,
     Lpl102,
     Lppl10,
     Lppl11,
     Lppl12,
-    Lppl13a,
-    Lppl13c,
+    Lppl13A,
+    Lppl13C,
     MakeIndex,
-    MirOS,
+    MirOs,
     Mit0,
     MitAdvertising,
     MitCmu,
     MitEnna,
     MitFeh,
-    MIT,
-    MITNFA,
+    Mit,
+    Mitnfa,
     Motosoto,
     Mpich2,
     Mpl10,
@@ -1176,33 +1173,33 @@ pub enum ImplementationGuideLicense {
     Mpl20,
     MsPl,
     MsRl,
-    MTLL,
+    Mtll,
     Multics,
     Mup,
     Nasa13,
     Naumen,
     Nbpl10,
-    NCSA,
+    Ncsa,
     NetSnmp,
-    NetCDF,
+    NetCdf,
     Newsletr,
-    NGPL,
+    Ngpl,
     Nlod10,
-    NLPL,
+    Nlpl,
     Nokia,
-    NOSL,
+    Nosl,
     Noweb,
     Npl10,
     Npl11,
     Nposl30,
-    NRL,
-    NTP,
+    Nrl,
+    Ntp,
     OcctPl,
     Oclc20,
-    Odbl10,
+    ODbL10,
     Ofl10,
     Ofl11,
-    OGTSL,
+    Ogtsl,
     Oldap11,
     Oldap12,
     Oldap13,
@@ -1219,8 +1216,8 @@ pub enum ImplementationGuideLicense {
     Oldap26,
     Oldap27,
     Oldap28,
-    OML,
-    OpenSSL,
+    Oml,
+    OpenSsl,
     Opl10,
     OsetPl21,
     Osl10,
@@ -1232,62 +1229,62 @@ pub enum ImplementationGuideLicense {
     Php30,
     Php301,
     Plexus,
-    PostgreSQL,
+    PostgreSql,
     Psfrag,
     Psutils,
     Python20,
     Qhull,
     Qpl10,
     Rdisc,
-    Rhecos11,
+    RHeCos11,
     Rpl11,
     Rpl15,
     Rpsl10,
     RsaMd,
-    RSCPL,
+    Rscpl,
     Ruby,
     SaxPd,
     Saxpath,
-    SCEA,
+    Scea,
     Sendmail,
     SgiB10,
     SgiB11,
     SgiB20,
-    Simpl20,
+    SimPl20,
     Sissl12,
-    SISSL,
+    Sissl,
     Sleepycat,
-    SMLNJ,
-    SMPPL,
-    SNIA,
+    Smlnj,
+    Smppl,
+    Snia,
     Spencer86,
     Spencer94,
     Spencer99,
     Spl10,
-    Sugarcrm113,
-    SWL,
-    TCL,
+    SugarCrm113,
+    Swl,
+    Tcl,
     TcpWrappers,
     TMate,
     Torque11,
-    TOSL,
+    Tosl,
     UnicodeDfs2015,
     UnicodeDfs2016,
     UnicodeTou,
     Unlicense,
     Upl10,
     Vim,
-    VOSTROM,
+    Vostrom,
     Vsl10,
-    W3c19980720,
-    W3c20150513,
+    W3C19980720,
+    W3C20150513,
     W3C,
     Watcom10,
     Wsuipa,
-    WTFPL,
+    Wtfpl,
     X11,
     Xerox,
-    Xfree8611,
+    XFree8611,
     Xinetd,
     Xnet,
     Xpp,
@@ -1309,12 +1306,12 @@ impl ImplementationGuideLicense {
     pub fn from_string(string: &str) -> Option<ImplementationGuideLicense> {
         match string {
             "not-open-source" => Some(ImplementationGuideLicense::NotOpenSource),
-            "0BSD" => Some(ImplementationGuideLicense::Fhir0bsd),
-            "AAL" => Some(ImplementationGuideLicense::AAL),
+            "0BSD" => Some(ImplementationGuideLicense::Fhir0Bsd),
+            "AAL" => Some(ImplementationGuideLicense::Aal),
             "Abstyles" => Some(ImplementationGuideLicense::Abstyles),
             "Adobe-2006" => Some(ImplementationGuideLicense::Adobe2006),
             "Adobe-Glyph" => Some(ImplementationGuideLicense::AdobeGlyph),
-            "ADSL" => Some(ImplementationGuideLicense::ADSL),
+            "ADSL" => Some(ImplementationGuideLicense::Adsl),
             "AFL-1.1" => Some(ImplementationGuideLicense::Afl11),
             "AFL-1.2" => Some(ImplementationGuideLicense::Afl12),
             "AFL-2.0" => Some(ImplementationGuideLicense::Afl20),
@@ -1326,14 +1323,14 @@ impl ImplementationGuideLicense {
             "AGPL-3.0-only" => Some(ImplementationGuideLicense::Agpl30Only),
             "AGPL-3.0-or-later" => Some(ImplementationGuideLicense::Agpl30OrLater),
             "Aladdin" => Some(ImplementationGuideLicense::Aladdin),
-            "AMDPLPA" => Some(ImplementationGuideLicense::AMDPLPA),
-            "AML" => Some(ImplementationGuideLicense::AML),
-            "AMPAS" => Some(ImplementationGuideLicense::AMPAS),
+            "AMDPLPA" => Some(ImplementationGuideLicense::Amdplpa),
+            "AML" => Some(ImplementationGuideLicense::Aml),
+            "AMPAS" => Some(ImplementationGuideLicense::Ampas),
             "ANTLR-PD" => Some(ImplementationGuideLicense::AntlrPd),
             "Apache-1.0" => Some(ImplementationGuideLicense::Apache10),
             "Apache-1.1" => Some(ImplementationGuideLicense::Apache11),
             "Apache-2.0" => Some(ImplementationGuideLicense::Apache20),
-            "APAFML" => Some(ImplementationGuideLicense::APAFML),
+            "APAFML" => Some(ImplementationGuideLicense::Apafml),
             "APL-1.0" => Some(ImplementationGuideLicense::Apl10),
             "APSL-1.0" => Some(ImplementationGuideLicense::Apsl10),
             "APSL-1.1" => Some(ImplementationGuideLicense::Apsl11),
@@ -1346,12 +1343,12 @@ impl ImplementationGuideLicense {
             "Bahyph" => Some(ImplementationGuideLicense::Bahyph),
             "Barr" => Some(ImplementationGuideLicense::Barr),
             "Beerware" => Some(ImplementationGuideLicense::Beerware),
-            "BitTorrent-1.0" => Some(ImplementationGuideLicense::Bittorrent10),
-            "BitTorrent-1.1" => Some(ImplementationGuideLicense::Bittorrent11),
+            "BitTorrent-1.0" => Some(ImplementationGuideLicense::BitTorrent10),
+            "BitTorrent-1.1" => Some(ImplementationGuideLicense::BitTorrent11),
             "Borceux" => Some(ImplementationGuideLicense::Borceux),
             "BSD-1-Clause" => Some(ImplementationGuideLicense::Bsd1Clause),
-            "BSD-2-Clause-FreeBSD" => Some(ImplementationGuideLicense::Bsd2ClauseFreebsd),
-            "BSD-2-Clause-NetBSD" => Some(ImplementationGuideLicense::Bsd2ClauseNetbsd),
+            "BSD-2-Clause-FreeBSD" => Some(ImplementationGuideLicense::Bsd2ClauseFreeBsd),
+            "BSD-2-Clause-NetBSD" => Some(ImplementationGuideLicense::Bsd2ClauseNetBsd),
             "BSD-2-Clause-Patent" => Some(ImplementationGuideLicense::Bsd2ClausePatent),
             "BSD-2-Clause" => Some(ImplementationGuideLicense::Bsd2Clause),
             "BSD-3-Clause-Attribution" => Some(ImplementationGuideLicense::Bsd3ClauseAttribution),
@@ -1434,9 +1431,9 @@ impl ImplementationGuideLicense {
             "curl" => Some(ImplementationGuideLicense::Curl),
             "D-FSL-1.0" => Some(ImplementationGuideLicense::DFsl10),
             "diffmark" => Some(ImplementationGuideLicense::Diffmark),
-            "DOC" => Some(ImplementationGuideLicense::DOC),
+            "DOC" => Some(ImplementationGuideLicense::Doc),
             "Dotseqn" => Some(ImplementationGuideLicense::Dotseqn),
-            "DSDP" => Some(ImplementationGuideLicense::DSDP),
+            "DSDP" => Some(ImplementationGuideLicense::Dsdp),
             "dvipdfm" => Some(ImplementationGuideLicense::Dvipdfm),
             "ECL-1.0" => Some(ImplementationGuideLicense::Ecl10),
             "ECL-2.0" => Some(ImplementationGuideLicense::Ecl20),
@@ -1446,8 +1443,8 @@ impl ImplementationGuideLicense {
             "Entessa" => Some(ImplementationGuideLicense::Entessa),
             "EPL-1.0" => Some(ImplementationGuideLicense::Epl10),
             "EPL-2.0" => Some(ImplementationGuideLicense::Epl20),
-            "ErlPL-1.1" => Some(ImplementationGuideLicense::Erlpl11),
-            "EUDatagrid" => Some(ImplementationGuideLicense::EUDatagrid),
+            "ErlPL-1.1" => Some(ImplementationGuideLicense::ErlPl11),
+            "EUDatagrid" => Some(ImplementationGuideLicense::EuDatagrid),
             "EUPL-1.0" => Some(ImplementationGuideLicense::Eupl10),
             "EUPL-1.1" => Some(ImplementationGuideLicense::Eupl11),
             "EUPL-1.2" => Some(ImplementationGuideLicense::Eupl12),
@@ -1455,10 +1452,10 @@ impl ImplementationGuideLicense {
             "Fair" => Some(ImplementationGuideLicense::Fair),
             "Frameworx-1.0" => Some(ImplementationGuideLicense::Frameworx10),
             "FreeImage" => Some(ImplementationGuideLicense::FreeImage),
-            "FSFAP" => Some(ImplementationGuideLicense::FSFAP),
-            "FSFUL" => Some(ImplementationGuideLicense::FSFUL),
-            "FSFULLR" => Some(ImplementationGuideLicense::FSFULLR),
-            "FTL" => Some(ImplementationGuideLicense::FTL),
+            "FSFAP" => Some(ImplementationGuideLicense::Fsfap),
+            "FSFUL" => Some(ImplementationGuideLicense::Fsful),
+            "FSFULLR" => Some(ImplementationGuideLicense::Fsfullr),
+            "FTL" => Some(ImplementationGuideLicense::Ftl),
             "GFDL-1.1-only" => Some(ImplementationGuideLicense::Gfdl11Only),
             "GFDL-1.1-or-later" => Some(ImplementationGuideLicense::Gfdl11OrLater),
             "GFDL-1.2-only" => Some(ImplementationGuideLicense::Gfdl12Only),
@@ -1466,7 +1463,7 @@ impl ImplementationGuideLicense {
             "GFDL-1.3-only" => Some(ImplementationGuideLicense::Gfdl13Only),
             "GFDL-1.3-or-later" => Some(ImplementationGuideLicense::Gfdl13OrLater),
             "Giftware" => Some(ImplementationGuideLicense::Giftware),
-            "GL2PS" => Some(ImplementationGuideLicense::GL2PS),
+            "GL2PS" => Some(ImplementationGuideLicense::Gl2Ps),
             "Glide" => Some(ImplementationGuideLicense::Glide),
             "Glulxe" => Some(ImplementationGuideLicense::Glulxe),
             "gnuplot" => Some(ImplementationGuideLicense::Gnuplot),
@@ -1476,12 +1473,12 @@ impl ImplementationGuideLicense {
             "GPL-2.0-or-later" => Some(ImplementationGuideLicense::Gpl20OrLater),
             "GPL-3.0-only" => Some(ImplementationGuideLicense::Gpl30Only),
             "GPL-3.0-or-later" => Some(ImplementationGuideLicense::Gpl30OrLater),
-            "gSOAP-1.3b" => Some(ImplementationGuideLicense::Gsoap13b),
+            "gSOAP-1.3b" => Some(ImplementationGuideLicense::GSoap13B),
             "HaskellReport" => Some(ImplementationGuideLicense::HaskellReport),
-            "HPND" => Some(ImplementationGuideLicense::HPND),
+            "HPND" => Some(ImplementationGuideLicense::Hpnd),
             "IBM-pibs" => Some(ImplementationGuideLicense::IbmPibs),
-            "ICU" => Some(ImplementationGuideLicense::ICU),
-            "IJG" => Some(ImplementationGuideLicense::IJG),
+            "ICU" => Some(ImplementationGuideLicense::Icu),
+            "IJG" => Some(ImplementationGuideLicense::Ijg),
             "ImageMagick" => Some(ImplementationGuideLicense::ImageMagick),
             "iMatix" => Some(ImplementationGuideLicense::IMatix),
             "Imlib2" => Some(ImplementationGuideLicense::Imlib2),
@@ -1489,14 +1486,14 @@ impl ImplementationGuideLicense {
             "Intel-ACPI" => Some(ImplementationGuideLicense::IntelAcpi),
             "Intel" => Some(ImplementationGuideLicense::Intel),
             "Interbase-1.0" => Some(ImplementationGuideLicense::Interbase10),
-            "IPA" => Some(ImplementationGuideLicense::IPA),
+            "IPA" => Some(ImplementationGuideLicense::Ipa),
             "IPL-1.0" => Some(ImplementationGuideLicense::Ipl10),
-            "ISC" => Some(ImplementationGuideLicense::ISC),
-            "JasPer-2.0" => Some(ImplementationGuideLicense::Jasper20),
-            "JSON" => Some(ImplementationGuideLicense::JSON),
+            "ISC" => Some(ImplementationGuideLicense::Isc),
+            "JasPer-2.0" => Some(ImplementationGuideLicense::JasPer20),
+            "JSON" => Some(ImplementationGuideLicense::Json),
             "LAL-1.2" => Some(ImplementationGuideLicense::Lal12),
             "LAL-1.3" => Some(ImplementationGuideLicense::Lal13),
-            "Latex2e" => Some(ImplementationGuideLicense::Latex2e),
+            "Latex2e" => Some(ImplementationGuideLicense::Latex2E),
             "Leptonica" => Some(ImplementationGuideLicense::Leptonica),
             "LGPL-2.0-only" => Some(ImplementationGuideLicense::Lgpl20Only),
             "LGPL-2.0-or-later" => Some(ImplementationGuideLicense::Lgpl20OrLater),
@@ -1504,29 +1501,29 @@ impl ImplementationGuideLicense {
             "LGPL-2.1-or-later" => Some(ImplementationGuideLicense::Lgpl21OrLater),
             "LGPL-3.0-only" => Some(ImplementationGuideLicense::Lgpl30Only),
             "LGPL-3.0-or-later" => Some(ImplementationGuideLicense::Lgpl30OrLater),
-            "LGPLLR" => Some(ImplementationGuideLicense::LGPLLR),
+            "LGPLLR" => Some(ImplementationGuideLicense::Lgpllr),
             "Libpng" => Some(ImplementationGuideLicense::Libpng),
             "libtiff" => Some(ImplementationGuideLicense::Libtiff),
-            "LiLiQ-P-1.1" => Some(ImplementationGuideLicense::LiliqP11),
-            "LiLiQ-R-1.1" => Some(ImplementationGuideLicense::LiliqR11),
-            "LiLiQ-Rplus-1.1" => Some(ImplementationGuideLicense::LiliqRplus11),
-            "Linux-OpenIB" => Some(ImplementationGuideLicense::LinuxOpenib),
+            "LiLiQ-P-1.1" => Some(ImplementationGuideLicense::LiLiQP11),
+            "LiLiQ-R-1.1" => Some(ImplementationGuideLicense::LiLiQR11),
+            "LiLiQ-Rplus-1.1" => Some(ImplementationGuideLicense::LiLiQRplus11),
+            "Linux-OpenIB" => Some(ImplementationGuideLicense::LinuxOpenIb),
             "LPL-1.0" => Some(ImplementationGuideLicense::Lpl10),
             "LPL-1.02" => Some(ImplementationGuideLicense::Lpl102),
             "LPPL-1.0" => Some(ImplementationGuideLicense::Lppl10),
             "LPPL-1.1" => Some(ImplementationGuideLicense::Lppl11),
             "LPPL-1.2" => Some(ImplementationGuideLicense::Lppl12),
-            "LPPL-1.3a" => Some(ImplementationGuideLicense::Lppl13a),
-            "LPPL-1.3c" => Some(ImplementationGuideLicense::Lppl13c),
+            "LPPL-1.3a" => Some(ImplementationGuideLicense::Lppl13A),
+            "LPPL-1.3c" => Some(ImplementationGuideLicense::Lppl13C),
             "MakeIndex" => Some(ImplementationGuideLicense::MakeIndex),
-            "MirOS" => Some(ImplementationGuideLicense::MirOS),
+            "MirOS" => Some(ImplementationGuideLicense::MirOs),
             "MIT-0" => Some(ImplementationGuideLicense::Mit0),
             "MIT-advertising" => Some(ImplementationGuideLicense::MitAdvertising),
             "MIT-CMU" => Some(ImplementationGuideLicense::MitCmu),
             "MIT-enna" => Some(ImplementationGuideLicense::MitEnna),
             "MIT-feh" => Some(ImplementationGuideLicense::MitFeh),
-            "MIT" => Some(ImplementationGuideLicense::MIT),
-            "MITNFA" => Some(ImplementationGuideLicense::MITNFA),
+            "MIT" => Some(ImplementationGuideLicense::Mit),
+            "MITNFA" => Some(ImplementationGuideLicense::Mitnfa),
             "Motosoto" => Some(ImplementationGuideLicense::Motosoto),
             "mpich2" => Some(ImplementationGuideLicense::Mpich2),
             "MPL-1.0" => Some(ImplementationGuideLicense::Mpl10),
@@ -1537,33 +1534,33 @@ impl ImplementationGuideLicense {
             "MPL-2.0" => Some(ImplementationGuideLicense::Mpl20),
             "MS-PL" => Some(ImplementationGuideLicense::MsPl),
             "MS-RL" => Some(ImplementationGuideLicense::MsRl),
-            "MTLL" => Some(ImplementationGuideLicense::MTLL),
+            "MTLL" => Some(ImplementationGuideLicense::Mtll),
             "Multics" => Some(ImplementationGuideLicense::Multics),
             "Mup" => Some(ImplementationGuideLicense::Mup),
             "NASA-1.3" => Some(ImplementationGuideLicense::Nasa13),
             "Naumen" => Some(ImplementationGuideLicense::Naumen),
             "NBPL-1.0" => Some(ImplementationGuideLicense::Nbpl10),
-            "NCSA" => Some(ImplementationGuideLicense::NCSA),
+            "NCSA" => Some(ImplementationGuideLicense::Ncsa),
             "Net-SNMP" => Some(ImplementationGuideLicense::NetSnmp),
-            "NetCDF" => Some(ImplementationGuideLicense::NetCDF),
+            "NetCDF" => Some(ImplementationGuideLicense::NetCdf),
             "Newsletr" => Some(ImplementationGuideLicense::Newsletr),
-            "NGPL" => Some(ImplementationGuideLicense::NGPL),
+            "NGPL" => Some(ImplementationGuideLicense::Ngpl),
             "NLOD-1.0" => Some(ImplementationGuideLicense::Nlod10),
-            "NLPL" => Some(ImplementationGuideLicense::NLPL),
+            "NLPL" => Some(ImplementationGuideLicense::Nlpl),
             "Nokia" => Some(ImplementationGuideLicense::Nokia),
-            "NOSL" => Some(ImplementationGuideLicense::NOSL),
+            "NOSL" => Some(ImplementationGuideLicense::Nosl),
             "Noweb" => Some(ImplementationGuideLicense::Noweb),
             "NPL-1.0" => Some(ImplementationGuideLicense::Npl10),
             "NPL-1.1" => Some(ImplementationGuideLicense::Npl11),
             "NPOSL-3.0" => Some(ImplementationGuideLicense::Nposl30),
-            "NRL" => Some(ImplementationGuideLicense::NRL),
-            "NTP" => Some(ImplementationGuideLicense::NTP),
+            "NRL" => Some(ImplementationGuideLicense::Nrl),
+            "NTP" => Some(ImplementationGuideLicense::Ntp),
             "OCCT-PL" => Some(ImplementationGuideLicense::OcctPl),
             "OCLC-2.0" => Some(ImplementationGuideLicense::Oclc20),
-            "ODbL-1.0" => Some(ImplementationGuideLicense::Odbl10),
+            "ODbL-1.0" => Some(ImplementationGuideLicense::ODbL10),
             "OFL-1.0" => Some(ImplementationGuideLicense::Ofl10),
             "OFL-1.1" => Some(ImplementationGuideLicense::Ofl11),
-            "OGTSL" => Some(ImplementationGuideLicense::OGTSL),
+            "OGTSL" => Some(ImplementationGuideLicense::Ogtsl),
             "OLDAP-1.1" => Some(ImplementationGuideLicense::Oldap11),
             "OLDAP-1.2" => Some(ImplementationGuideLicense::Oldap12),
             "OLDAP-1.3" => Some(ImplementationGuideLicense::Oldap13),
@@ -1580,8 +1577,8 @@ impl ImplementationGuideLicense {
             "OLDAP-2.6" => Some(ImplementationGuideLicense::Oldap26),
             "OLDAP-2.7" => Some(ImplementationGuideLicense::Oldap27),
             "OLDAP-2.8" => Some(ImplementationGuideLicense::Oldap28),
-            "OML" => Some(ImplementationGuideLicense::OML),
-            "OpenSSL" => Some(ImplementationGuideLicense::OpenSSL),
+            "OML" => Some(ImplementationGuideLicense::Oml),
+            "OpenSSL" => Some(ImplementationGuideLicense::OpenSsl),
             "OPL-1.0" => Some(ImplementationGuideLicense::Opl10),
             "OSET-PL-2.1" => Some(ImplementationGuideLicense::OsetPl21),
             "OSL-1.0" => Some(ImplementationGuideLicense::Osl10),
@@ -1593,62 +1590,62 @@ impl ImplementationGuideLicense {
             "PHP-3.0" => Some(ImplementationGuideLicense::Php30),
             "PHP-3.01" => Some(ImplementationGuideLicense::Php301),
             "Plexus" => Some(ImplementationGuideLicense::Plexus),
-            "PostgreSQL" => Some(ImplementationGuideLicense::PostgreSQL),
+            "PostgreSQL" => Some(ImplementationGuideLicense::PostgreSql),
             "psfrag" => Some(ImplementationGuideLicense::Psfrag),
             "psutils" => Some(ImplementationGuideLicense::Psutils),
             "Python-2.0" => Some(ImplementationGuideLicense::Python20),
             "Qhull" => Some(ImplementationGuideLicense::Qhull),
             "QPL-1.0" => Some(ImplementationGuideLicense::Qpl10),
             "Rdisc" => Some(ImplementationGuideLicense::Rdisc),
-            "RHeCos-1.1" => Some(ImplementationGuideLicense::Rhecos11),
+            "RHeCos-1.1" => Some(ImplementationGuideLicense::RHeCos11),
             "RPL-1.1" => Some(ImplementationGuideLicense::Rpl11),
             "RPL-1.5" => Some(ImplementationGuideLicense::Rpl15),
             "RPSL-1.0" => Some(ImplementationGuideLicense::Rpsl10),
             "RSA-MD" => Some(ImplementationGuideLicense::RsaMd),
-            "RSCPL" => Some(ImplementationGuideLicense::RSCPL),
+            "RSCPL" => Some(ImplementationGuideLicense::Rscpl),
             "Ruby" => Some(ImplementationGuideLicense::Ruby),
             "SAX-PD" => Some(ImplementationGuideLicense::SaxPd),
             "Saxpath" => Some(ImplementationGuideLicense::Saxpath),
-            "SCEA" => Some(ImplementationGuideLicense::SCEA),
+            "SCEA" => Some(ImplementationGuideLicense::Scea),
             "Sendmail" => Some(ImplementationGuideLicense::Sendmail),
             "SGI-B-1.0" => Some(ImplementationGuideLicense::SgiB10),
             "SGI-B-1.1" => Some(ImplementationGuideLicense::SgiB11),
             "SGI-B-2.0" => Some(ImplementationGuideLicense::SgiB20),
-            "SimPL-2.0" => Some(ImplementationGuideLicense::Simpl20),
+            "SimPL-2.0" => Some(ImplementationGuideLicense::SimPl20),
             "SISSL-1.2" => Some(ImplementationGuideLicense::Sissl12),
-            "SISSL" => Some(ImplementationGuideLicense::SISSL),
+            "SISSL" => Some(ImplementationGuideLicense::Sissl),
             "Sleepycat" => Some(ImplementationGuideLicense::Sleepycat),
-            "SMLNJ" => Some(ImplementationGuideLicense::SMLNJ),
-            "SMPPL" => Some(ImplementationGuideLicense::SMPPL),
-            "SNIA" => Some(ImplementationGuideLicense::SNIA),
+            "SMLNJ" => Some(ImplementationGuideLicense::Smlnj),
+            "SMPPL" => Some(ImplementationGuideLicense::Smppl),
+            "SNIA" => Some(ImplementationGuideLicense::Snia),
             "Spencer-86" => Some(ImplementationGuideLicense::Spencer86),
             "Spencer-94" => Some(ImplementationGuideLicense::Spencer94),
             "Spencer-99" => Some(ImplementationGuideLicense::Spencer99),
             "SPL-1.0" => Some(ImplementationGuideLicense::Spl10),
-            "SugarCRM-1.1.3" => Some(ImplementationGuideLicense::Sugarcrm113),
-            "SWL" => Some(ImplementationGuideLicense::SWL),
-            "TCL" => Some(ImplementationGuideLicense::TCL),
+            "SugarCRM-1.1.3" => Some(ImplementationGuideLicense::SugarCrm113),
+            "SWL" => Some(ImplementationGuideLicense::Swl),
+            "TCL" => Some(ImplementationGuideLicense::Tcl),
             "TCP-wrappers" => Some(ImplementationGuideLicense::TcpWrappers),
             "TMate" => Some(ImplementationGuideLicense::TMate),
             "TORQUE-1.1" => Some(ImplementationGuideLicense::Torque11),
-            "TOSL" => Some(ImplementationGuideLicense::TOSL),
+            "TOSL" => Some(ImplementationGuideLicense::Tosl),
             "Unicode-DFS-2015" => Some(ImplementationGuideLicense::UnicodeDfs2015),
             "Unicode-DFS-2016" => Some(ImplementationGuideLicense::UnicodeDfs2016),
             "Unicode-TOU" => Some(ImplementationGuideLicense::UnicodeTou),
             "Unlicense" => Some(ImplementationGuideLicense::Unlicense),
             "UPL-1.0" => Some(ImplementationGuideLicense::Upl10),
             "Vim" => Some(ImplementationGuideLicense::Vim),
-            "VOSTROM" => Some(ImplementationGuideLicense::VOSTROM),
+            "VOSTROM" => Some(ImplementationGuideLicense::Vostrom),
             "VSL-1.0" => Some(ImplementationGuideLicense::Vsl10),
-            "W3C-19980720" => Some(ImplementationGuideLicense::W3c19980720),
-            "W3C-20150513" => Some(ImplementationGuideLicense::W3c20150513),
+            "W3C-19980720" => Some(ImplementationGuideLicense::W3C19980720),
+            "W3C-20150513" => Some(ImplementationGuideLicense::W3C20150513),
             "W3C" => Some(ImplementationGuideLicense::W3C),
             "Watcom-1.0" => Some(ImplementationGuideLicense::Watcom10),
             "Wsuipa" => Some(ImplementationGuideLicense::Wsuipa),
-            "WTFPL" => Some(ImplementationGuideLicense::WTFPL),
+            "WTFPL" => Some(ImplementationGuideLicense::Wtfpl),
             "X11" => Some(ImplementationGuideLicense::X11),
             "Xerox" => Some(ImplementationGuideLicense::Xerox),
-            "XFree86-1.1" => Some(ImplementationGuideLicense::Xfree8611),
+            "XFree86-1.1" => Some(ImplementationGuideLicense::XFree8611),
             "xinetd" => Some(ImplementationGuideLicense::Xinetd),
             "Xnet" => Some(ImplementationGuideLicense::Xnet),
             "xpp" => Some(ImplementationGuideLicense::Xpp),
@@ -1671,12 +1668,12 @@ impl ImplementationGuideLicense {
     pub fn to_string(&self) -> String {
         match self {
             ImplementationGuideLicense::NotOpenSource => "not-open-source".to_string(),
-            ImplementationGuideLicense::Fhir0bsd => "0BSD".to_string(),
-            ImplementationGuideLicense::AAL => "AAL".to_string(),
+            ImplementationGuideLicense::Fhir0Bsd => "0BSD".to_string(),
+            ImplementationGuideLicense::Aal => "AAL".to_string(),
             ImplementationGuideLicense::Abstyles => "Abstyles".to_string(),
             ImplementationGuideLicense::Adobe2006 => "Adobe-2006".to_string(),
             ImplementationGuideLicense::AdobeGlyph => "Adobe-Glyph".to_string(),
-            ImplementationGuideLicense::ADSL => "ADSL".to_string(),
+            ImplementationGuideLicense::Adsl => "ADSL".to_string(),
             ImplementationGuideLicense::Afl11 => "AFL-1.1".to_string(),
             ImplementationGuideLicense::Afl12 => "AFL-1.2".to_string(),
             ImplementationGuideLicense::Afl20 => "AFL-2.0".to_string(),
@@ -1688,14 +1685,14 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Agpl30Only => "AGPL-3.0-only".to_string(),
             ImplementationGuideLicense::Agpl30OrLater => "AGPL-3.0-or-later".to_string(),
             ImplementationGuideLicense::Aladdin => "Aladdin".to_string(),
-            ImplementationGuideLicense::AMDPLPA => "AMDPLPA".to_string(),
-            ImplementationGuideLicense::AML => "AML".to_string(),
-            ImplementationGuideLicense::AMPAS => "AMPAS".to_string(),
+            ImplementationGuideLicense::Amdplpa => "AMDPLPA".to_string(),
+            ImplementationGuideLicense::Aml => "AML".to_string(),
+            ImplementationGuideLicense::Ampas => "AMPAS".to_string(),
             ImplementationGuideLicense::AntlrPd => "ANTLR-PD".to_string(),
             ImplementationGuideLicense::Apache10 => "Apache-1.0".to_string(),
             ImplementationGuideLicense::Apache11 => "Apache-1.1".to_string(),
             ImplementationGuideLicense::Apache20 => "Apache-2.0".to_string(),
-            ImplementationGuideLicense::APAFML => "APAFML".to_string(),
+            ImplementationGuideLicense::Apafml => "APAFML".to_string(),
             ImplementationGuideLicense::Apl10 => "APL-1.0".to_string(),
             ImplementationGuideLicense::Apsl10 => "APSL-1.0".to_string(),
             ImplementationGuideLicense::Apsl11 => "APSL-1.1".to_string(),
@@ -1708,12 +1705,12 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Bahyph => "Bahyph".to_string(),
             ImplementationGuideLicense::Barr => "Barr".to_string(),
             ImplementationGuideLicense::Beerware => "Beerware".to_string(),
-            ImplementationGuideLicense::Bittorrent10 => "BitTorrent-1.0".to_string(),
-            ImplementationGuideLicense::Bittorrent11 => "BitTorrent-1.1".to_string(),
+            ImplementationGuideLicense::BitTorrent10 => "BitTorrent-1.0".to_string(),
+            ImplementationGuideLicense::BitTorrent11 => "BitTorrent-1.1".to_string(),
             ImplementationGuideLicense::Borceux => "Borceux".to_string(),
             ImplementationGuideLicense::Bsd1Clause => "BSD-1-Clause".to_string(),
-            ImplementationGuideLicense::Bsd2ClauseFreebsd => "BSD-2-Clause-FreeBSD".to_string(),
-            ImplementationGuideLicense::Bsd2ClauseNetbsd => "BSD-2-Clause-NetBSD".to_string(),
+            ImplementationGuideLicense::Bsd2ClauseFreeBsd => "BSD-2-Clause-FreeBSD".to_string(),
+            ImplementationGuideLicense::Bsd2ClauseNetBsd => "BSD-2-Clause-NetBSD".to_string(),
             ImplementationGuideLicense::Bsd2ClausePatent => "BSD-2-Clause-Patent".to_string(),
             ImplementationGuideLicense::Bsd2Clause => "BSD-2-Clause".to_string(),
             ImplementationGuideLicense::Bsd3ClauseAttribution => {
@@ -1798,9 +1795,9 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Curl => "curl".to_string(),
             ImplementationGuideLicense::DFsl10 => "D-FSL-1.0".to_string(),
             ImplementationGuideLicense::Diffmark => "diffmark".to_string(),
-            ImplementationGuideLicense::DOC => "DOC".to_string(),
+            ImplementationGuideLicense::Doc => "DOC".to_string(),
             ImplementationGuideLicense::Dotseqn => "Dotseqn".to_string(),
-            ImplementationGuideLicense::DSDP => "DSDP".to_string(),
+            ImplementationGuideLicense::Dsdp => "DSDP".to_string(),
             ImplementationGuideLicense::Dvipdfm => "dvipdfm".to_string(),
             ImplementationGuideLicense::Ecl10 => "ECL-1.0".to_string(),
             ImplementationGuideLicense::Ecl20 => "ECL-2.0".to_string(),
@@ -1810,8 +1807,8 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Entessa => "Entessa".to_string(),
             ImplementationGuideLicense::Epl10 => "EPL-1.0".to_string(),
             ImplementationGuideLicense::Epl20 => "EPL-2.0".to_string(),
-            ImplementationGuideLicense::Erlpl11 => "ErlPL-1.1".to_string(),
-            ImplementationGuideLicense::EUDatagrid => "EUDatagrid".to_string(),
+            ImplementationGuideLicense::ErlPl11 => "ErlPL-1.1".to_string(),
+            ImplementationGuideLicense::EuDatagrid => "EUDatagrid".to_string(),
             ImplementationGuideLicense::Eupl10 => "EUPL-1.0".to_string(),
             ImplementationGuideLicense::Eupl11 => "EUPL-1.1".to_string(),
             ImplementationGuideLicense::Eupl12 => "EUPL-1.2".to_string(),
@@ -1819,10 +1816,10 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Fair => "Fair".to_string(),
             ImplementationGuideLicense::Frameworx10 => "Frameworx-1.0".to_string(),
             ImplementationGuideLicense::FreeImage => "FreeImage".to_string(),
-            ImplementationGuideLicense::FSFAP => "FSFAP".to_string(),
-            ImplementationGuideLicense::FSFUL => "FSFUL".to_string(),
-            ImplementationGuideLicense::FSFULLR => "FSFULLR".to_string(),
-            ImplementationGuideLicense::FTL => "FTL".to_string(),
+            ImplementationGuideLicense::Fsfap => "FSFAP".to_string(),
+            ImplementationGuideLicense::Fsful => "FSFUL".to_string(),
+            ImplementationGuideLicense::Fsfullr => "FSFULLR".to_string(),
+            ImplementationGuideLicense::Ftl => "FTL".to_string(),
             ImplementationGuideLicense::Gfdl11Only => "GFDL-1.1-only".to_string(),
             ImplementationGuideLicense::Gfdl11OrLater => "GFDL-1.1-or-later".to_string(),
             ImplementationGuideLicense::Gfdl12Only => "GFDL-1.2-only".to_string(),
@@ -1830,7 +1827,7 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Gfdl13Only => "GFDL-1.3-only".to_string(),
             ImplementationGuideLicense::Gfdl13OrLater => "GFDL-1.3-or-later".to_string(),
             ImplementationGuideLicense::Giftware => "Giftware".to_string(),
-            ImplementationGuideLicense::GL2PS => "GL2PS".to_string(),
+            ImplementationGuideLicense::Gl2Ps => "GL2PS".to_string(),
             ImplementationGuideLicense::Glide => "Glide".to_string(),
             ImplementationGuideLicense::Glulxe => "Glulxe".to_string(),
             ImplementationGuideLicense::Gnuplot => "gnuplot".to_string(),
@@ -1840,12 +1837,12 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Gpl20OrLater => "GPL-2.0-or-later".to_string(),
             ImplementationGuideLicense::Gpl30Only => "GPL-3.0-only".to_string(),
             ImplementationGuideLicense::Gpl30OrLater => "GPL-3.0-or-later".to_string(),
-            ImplementationGuideLicense::Gsoap13b => "gSOAP-1.3b".to_string(),
+            ImplementationGuideLicense::GSoap13B => "gSOAP-1.3b".to_string(),
             ImplementationGuideLicense::HaskellReport => "HaskellReport".to_string(),
-            ImplementationGuideLicense::HPND => "HPND".to_string(),
+            ImplementationGuideLicense::Hpnd => "HPND".to_string(),
             ImplementationGuideLicense::IbmPibs => "IBM-pibs".to_string(),
-            ImplementationGuideLicense::ICU => "ICU".to_string(),
-            ImplementationGuideLicense::IJG => "IJG".to_string(),
+            ImplementationGuideLicense::Icu => "ICU".to_string(),
+            ImplementationGuideLicense::Ijg => "IJG".to_string(),
             ImplementationGuideLicense::ImageMagick => "ImageMagick".to_string(),
             ImplementationGuideLicense::IMatix => "iMatix".to_string(),
             ImplementationGuideLicense::Imlib2 => "Imlib2".to_string(),
@@ -1853,14 +1850,14 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::IntelAcpi => "Intel-ACPI".to_string(),
             ImplementationGuideLicense::Intel => "Intel".to_string(),
             ImplementationGuideLicense::Interbase10 => "Interbase-1.0".to_string(),
-            ImplementationGuideLicense::IPA => "IPA".to_string(),
+            ImplementationGuideLicense::Ipa => "IPA".to_string(),
             ImplementationGuideLicense::Ipl10 => "IPL-1.0".to_string(),
-            ImplementationGuideLicense::ISC => "ISC".to_string(),
-            ImplementationGuideLicense::Jasper20 => "JasPer-2.0".to_string(),
-            ImplementationGuideLicense::JSON => "JSON".to_string(),
+            ImplementationGuideLicense::Isc => "ISC".to_string(),
+            ImplementationGuideLicense::JasPer20 => "JasPer-2.0".to_string(),
+            ImplementationGuideLicense::Json => "JSON".to_string(),
             ImplementationGuideLicense::Lal12 => "LAL-1.2".to_string(),
             ImplementationGuideLicense::Lal13 => "LAL-1.3".to_string(),
-            ImplementationGuideLicense::Latex2e => "Latex2e".to_string(),
+            ImplementationGuideLicense::Latex2E => "Latex2e".to_string(),
             ImplementationGuideLicense::Leptonica => "Leptonica".to_string(),
             ImplementationGuideLicense::Lgpl20Only => "LGPL-2.0-only".to_string(),
             ImplementationGuideLicense::Lgpl20OrLater => "LGPL-2.0-or-later".to_string(),
@@ -1868,29 +1865,29 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Lgpl21OrLater => "LGPL-2.1-or-later".to_string(),
             ImplementationGuideLicense::Lgpl30Only => "LGPL-3.0-only".to_string(),
             ImplementationGuideLicense::Lgpl30OrLater => "LGPL-3.0-or-later".to_string(),
-            ImplementationGuideLicense::LGPLLR => "LGPLLR".to_string(),
+            ImplementationGuideLicense::Lgpllr => "LGPLLR".to_string(),
             ImplementationGuideLicense::Libpng => "Libpng".to_string(),
             ImplementationGuideLicense::Libtiff => "libtiff".to_string(),
-            ImplementationGuideLicense::LiliqP11 => "LiLiQ-P-1.1".to_string(),
-            ImplementationGuideLicense::LiliqR11 => "LiLiQ-R-1.1".to_string(),
-            ImplementationGuideLicense::LiliqRplus11 => "LiLiQ-Rplus-1.1".to_string(),
-            ImplementationGuideLicense::LinuxOpenib => "Linux-OpenIB".to_string(),
+            ImplementationGuideLicense::LiLiQP11 => "LiLiQ-P-1.1".to_string(),
+            ImplementationGuideLicense::LiLiQR11 => "LiLiQ-R-1.1".to_string(),
+            ImplementationGuideLicense::LiLiQRplus11 => "LiLiQ-Rplus-1.1".to_string(),
+            ImplementationGuideLicense::LinuxOpenIb => "Linux-OpenIB".to_string(),
             ImplementationGuideLicense::Lpl10 => "LPL-1.0".to_string(),
             ImplementationGuideLicense::Lpl102 => "LPL-1.02".to_string(),
             ImplementationGuideLicense::Lppl10 => "LPPL-1.0".to_string(),
             ImplementationGuideLicense::Lppl11 => "LPPL-1.1".to_string(),
             ImplementationGuideLicense::Lppl12 => "LPPL-1.2".to_string(),
-            ImplementationGuideLicense::Lppl13a => "LPPL-1.3a".to_string(),
-            ImplementationGuideLicense::Lppl13c => "LPPL-1.3c".to_string(),
+            ImplementationGuideLicense::Lppl13A => "LPPL-1.3a".to_string(),
+            ImplementationGuideLicense::Lppl13C => "LPPL-1.3c".to_string(),
             ImplementationGuideLicense::MakeIndex => "MakeIndex".to_string(),
-            ImplementationGuideLicense::MirOS => "MirOS".to_string(),
+            ImplementationGuideLicense::MirOs => "MirOS".to_string(),
             ImplementationGuideLicense::Mit0 => "MIT-0".to_string(),
             ImplementationGuideLicense::MitAdvertising => "MIT-advertising".to_string(),
             ImplementationGuideLicense::MitCmu => "MIT-CMU".to_string(),
             ImplementationGuideLicense::MitEnna => "MIT-enna".to_string(),
             ImplementationGuideLicense::MitFeh => "MIT-feh".to_string(),
-            ImplementationGuideLicense::MIT => "MIT".to_string(),
-            ImplementationGuideLicense::MITNFA => "MITNFA".to_string(),
+            ImplementationGuideLicense::Mit => "MIT".to_string(),
+            ImplementationGuideLicense::Mitnfa => "MITNFA".to_string(),
             ImplementationGuideLicense::Motosoto => "Motosoto".to_string(),
             ImplementationGuideLicense::Mpich2 => "mpich2".to_string(),
             ImplementationGuideLicense::Mpl10 => "MPL-1.0".to_string(),
@@ -1901,33 +1898,33 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Mpl20 => "MPL-2.0".to_string(),
             ImplementationGuideLicense::MsPl => "MS-PL".to_string(),
             ImplementationGuideLicense::MsRl => "MS-RL".to_string(),
-            ImplementationGuideLicense::MTLL => "MTLL".to_string(),
+            ImplementationGuideLicense::Mtll => "MTLL".to_string(),
             ImplementationGuideLicense::Multics => "Multics".to_string(),
             ImplementationGuideLicense::Mup => "Mup".to_string(),
             ImplementationGuideLicense::Nasa13 => "NASA-1.3".to_string(),
             ImplementationGuideLicense::Naumen => "Naumen".to_string(),
             ImplementationGuideLicense::Nbpl10 => "NBPL-1.0".to_string(),
-            ImplementationGuideLicense::NCSA => "NCSA".to_string(),
+            ImplementationGuideLicense::Ncsa => "NCSA".to_string(),
             ImplementationGuideLicense::NetSnmp => "Net-SNMP".to_string(),
-            ImplementationGuideLicense::NetCDF => "NetCDF".to_string(),
+            ImplementationGuideLicense::NetCdf => "NetCDF".to_string(),
             ImplementationGuideLicense::Newsletr => "Newsletr".to_string(),
-            ImplementationGuideLicense::NGPL => "NGPL".to_string(),
+            ImplementationGuideLicense::Ngpl => "NGPL".to_string(),
             ImplementationGuideLicense::Nlod10 => "NLOD-1.0".to_string(),
-            ImplementationGuideLicense::NLPL => "NLPL".to_string(),
+            ImplementationGuideLicense::Nlpl => "NLPL".to_string(),
             ImplementationGuideLicense::Nokia => "Nokia".to_string(),
-            ImplementationGuideLicense::NOSL => "NOSL".to_string(),
+            ImplementationGuideLicense::Nosl => "NOSL".to_string(),
             ImplementationGuideLicense::Noweb => "Noweb".to_string(),
             ImplementationGuideLicense::Npl10 => "NPL-1.0".to_string(),
             ImplementationGuideLicense::Npl11 => "NPL-1.1".to_string(),
             ImplementationGuideLicense::Nposl30 => "NPOSL-3.0".to_string(),
-            ImplementationGuideLicense::NRL => "NRL".to_string(),
-            ImplementationGuideLicense::NTP => "NTP".to_string(),
+            ImplementationGuideLicense::Nrl => "NRL".to_string(),
+            ImplementationGuideLicense::Ntp => "NTP".to_string(),
             ImplementationGuideLicense::OcctPl => "OCCT-PL".to_string(),
             ImplementationGuideLicense::Oclc20 => "OCLC-2.0".to_string(),
-            ImplementationGuideLicense::Odbl10 => "ODbL-1.0".to_string(),
+            ImplementationGuideLicense::ODbL10 => "ODbL-1.0".to_string(),
             ImplementationGuideLicense::Ofl10 => "OFL-1.0".to_string(),
             ImplementationGuideLicense::Ofl11 => "OFL-1.1".to_string(),
-            ImplementationGuideLicense::OGTSL => "OGTSL".to_string(),
+            ImplementationGuideLicense::Ogtsl => "OGTSL".to_string(),
             ImplementationGuideLicense::Oldap11 => "OLDAP-1.1".to_string(),
             ImplementationGuideLicense::Oldap12 => "OLDAP-1.2".to_string(),
             ImplementationGuideLicense::Oldap13 => "OLDAP-1.3".to_string(),
@@ -1944,8 +1941,8 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Oldap26 => "OLDAP-2.6".to_string(),
             ImplementationGuideLicense::Oldap27 => "OLDAP-2.7".to_string(),
             ImplementationGuideLicense::Oldap28 => "OLDAP-2.8".to_string(),
-            ImplementationGuideLicense::OML => "OML".to_string(),
-            ImplementationGuideLicense::OpenSSL => "OpenSSL".to_string(),
+            ImplementationGuideLicense::Oml => "OML".to_string(),
+            ImplementationGuideLicense::OpenSsl => "OpenSSL".to_string(),
             ImplementationGuideLicense::Opl10 => "OPL-1.0".to_string(),
             ImplementationGuideLicense::OsetPl21 => "OSET-PL-2.1".to_string(),
             ImplementationGuideLicense::Osl10 => "OSL-1.0".to_string(),
@@ -1957,62 +1954,62 @@ impl ImplementationGuideLicense {
             ImplementationGuideLicense::Php30 => "PHP-3.0".to_string(),
             ImplementationGuideLicense::Php301 => "PHP-3.01".to_string(),
             ImplementationGuideLicense::Plexus => "Plexus".to_string(),
-            ImplementationGuideLicense::PostgreSQL => "PostgreSQL".to_string(),
+            ImplementationGuideLicense::PostgreSql => "PostgreSQL".to_string(),
             ImplementationGuideLicense::Psfrag => "psfrag".to_string(),
             ImplementationGuideLicense::Psutils => "psutils".to_string(),
             ImplementationGuideLicense::Python20 => "Python-2.0".to_string(),
             ImplementationGuideLicense::Qhull => "Qhull".to_string(),
             ImplementationGuideLicense::Qpl10 => "QPL-1.0".to_string(),
             ImplementationGuideLicense::Rdisc => "Rdisc".to_string(),
-            ImplementationGuideLicense::Rhecos11 => "RHeCos-1.1".to_string(),
+            ImplementationGuideLicense::RHeCos11 => "RHeCos-1.1".to_string(),
             ImplementationGuideLicense::Rpl11 => "RPL-1.1".to_string(),
             ImplementationGuideLicense::Rpl15 => "RPL-1.5".to_string(),
             ImplementationGuideLicense::Rpsl10 => "RPSL-1.0".to_string(),
             ImplementationGuideLicense::RsaMd => "RSA-MD".to_string(),
-            ImplementationGuideLicense::RSCPL => "RSCPL".to_string(),
+            ImplementationGuideLicense::Rscpl => "RSCPL".to_string(),
             ImplementationGuideLicense::Ruby => "Ruby".to_string(),
             ImplementationGuideLicense::SaxPd => "SAX-PD".to_string(),
             ImplementationGuideLicense::Saxpath => "Saxpath".to_string(),
-            ImplementationGuideLicense::SCEA => "SCEA".to_string(),
+            ImplementationGuideLicense::Scea => "SCEA".to_string(),
             ImplementationGuideLicense::Sendmail => "Sendmail".to_string(),
             ImplementationGuideLicense::SgiB10 => "SGI-B-1.0".to_string(),
             ImplementationGuideLicense::SgiB11 => "SGI-B-1.1".to_string(),
             ImplementationGuideLicense::SgiB20 => "SGI-B-2.0".to_string(),
-            ImplementationGuideLicense::Simpl20 => "SimPL-2.0".to_string(),
+            ImplementationGuideLicense::SimPl20 => "SimPL-2.0".to_string(),
             ImplementationGuideLicense::Sissl12 => "SISSL-1.2".to_string(),
-            ImplementationGuideLicense::SISSL => "SISSL".to_string(),
+            ImplementationGuideLicense::Sissl => "SISSL".to_string(),
             ImplementationGuideLicense::Sleepycat => "Sleepycat".to_string(),
-            ImplementationGuideLicense::SMLNJ => "SMLNJ".to_string(),
-            ImplementationGuideLicense::SMPPL => "SMPPL".to_string(),
-            ImplementationGuideLicense::SNIA => "SNIA".to_string(),
+            ImplementationGuideLicense::Smlnj => "SMLNJ".to_string(),
+            ImplementationGuideLicense::Smppl => "SMPPL".to_string(),
+            ImplementationGuideLicense::Snia => "SNIA".to_string(),
             ImplementationGuideLicense::Spencer86 => "Spencer-86".to_string(),
             ImplementationGuideLicense::Spencer94 => "Spencer-94".to_string(),
             ImplementationGuideLicense::Spencer99 => "Spencer-99".to_string(),
             ImplementationGuideLicense::Spl10 => "SPL-1.0".to_string(),
-            ImplementationGuideLicense::Sugarcrm113 => "SugarCRM-1.1.3".to_string(),
-            ImplementationGuideLicense::SWL => "SWL".to_string(),
-            ImplementationGuideLicense::TCL => "TCL".to_string(),
+            ImplementationGuideLicense::SugarCrm113 => "SugarCRM-1.1.3".to_string(),
+            ImplementationGuideLicense::Swl => "SWL".to_string(),
+            ImplementationGuideLicense::Tcl => "TCL".to_string(),
             ImplementationGuideLicense::TcpWrappers => "TCP-wrappers".to_string(),
             ImplementationGuideLicense::TMate => "TMate".to_string(),
             ImplementationGuideLicense::Torque11 => "TORQUE-1.1".to_string(),
-            ImplementationGuideLicense::TOSL => "TOSL".to_string(),
+            ImplementationGuideLicense::Tosl => "TOSL".to_string(),
             ImplementationGuideLicense::UnicodeDfs2015 => "Unicode-DFS-2015".to_string(),
             ImplementationGuideLicense::UnicodeDfs2016 => "Unicode-DFS-2016".to_string(),
             ImplementationGuideLicense::UnicodeTou => "Unicode-TOU".to_string(),
             ImplementationGuideLicense::Unlicense => "Unlicense".to_string(),
             ImplementationGuideLicense::Upl10 => "UPL-1.0".to_string(),
             ImplementationGuideLicense::Vim => "Vim".to_string(),
-            ImplementationGuideLicense::VOSTROM => "VOSTROM".to_string(),
+            ImplementationGuideLicense::Vostrom => "VOSTROM".to_string(),
             ImplementationGuideLicense::Vsl10 => "VSL-1.0".to_string(),
-            ImplementationGuideLicense::W3c19980720 => "W3C-19980720".to_string(),
-            ImplementationGuideLicense::W3c20150513 => "W3C-20150513".to_string(),
+            ImplementationGuideLicense::W3C19980720 => "W3C-19980720".to_string(),
+            ImplementationGuideLicense::W3C20150513 => "W3C-20150513".to_string(),
             ImplementationGuideLicense::W3C => "W3C".to_string(),
             ImplementationGuideLicense::Watcom10 => "Watcom-1.0".to_string(),
             ImplementationGuideLicense::Wsuipa => "Wsuipa".to_string(),
-            ImplementationGuideLicense::WTFPL => "WTFPL".to_string(),
+            ImplementationGuideLicense::Wtfpl => "WTFPL".to_string(),
             ImplementationGuideLicense::X11 => "X11".to_string(),
             ImplementationGuideLicense::Xerox => "Xerox".to_string(),
-            ImplementationGuideLicense::Xfree8611 => "XFree86-1.1".to_string(),
+            ImplementationGuideLicense::XFree8611 => "XFree86-1.1".to_string(),
             ImplementationGuideLicense::Xinetd => "xinetd".to_string(),
             ImplementationGuideLicense::Xnet => "Xnet".to_string(),
             ImplementationGuideLicense::Xpp => "xpp".to_string(),

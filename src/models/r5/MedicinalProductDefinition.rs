@@ -168,10 +168,10 @@ impl MedicinalProductDefinition<'_> {
     }
 
     /// A code that this product is known by, usually within some formal terminology.
-    /// Products (types of medications) tend to be known by identifiers during
-    /// development and within regulatory process. However when they are prescribed they
-    /// tend to be identified by codes. The same product may be have multiple codes,
-    /// applied to it by multiple organizations.
+    /// Products (types of medications) tend to be known by identifiers during development
+    /// and within regulatory process. However when they are prescribed they tend to be
+    /// identified by codes. The same product may be have multiple codes, applied to it by
+    /// multiple organizations.
     pub fn code(&self) -> Option<Vec<Coding>> {
         if let Some(Value::Array(val)) = self.value.get("code") {
             return Some(
@@ -210,9 +210,9 @@ impl MedicinalProductDefinition<'_> {
         return None;
     }
 
-    /// These resources do not have an independent existence apart from the resource
-    /// that contains them - they cannot be identified independently, nor can they have
-    /// their own independent transaction scope.
+    /// These resources do not have an independent existence apart from the resource that
+    /// contains them - they cannot be identified independently, nor can they have their
+    /// own independent transaction scope.
     pub fn contained(&self) -> Option<Vec<ResourceList>> {
         if let Some(Value::Array(val)) = self.value.get("contained") {
             return Some(
@@ -301,9 +301,9 @@ impl MedicinalProductDefinition<'_> {
     }
 
     /// A reference to a set of rules that were followed when the resource was
-    /// constructed, and which must be understood when processing the content. Often,
-    /// this is a reference to an implementation guide that defines the special rules
-    /// along with other profiles etc.
+    /// constructed, and which must be understood when processing the content. Often, this
+    /// is a reference to an implementation guide that defines the special rules along
+    /// with other profiles etc.
     pub fn implicit_rules(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("implicitRules") {
             return Some(string);
@@ -311,10 +311,10 @@ impl MedicinalProductDefinition<'_> {
         return None;
     }
 
-    /// Any component of the drug product which is not the chemical entity defined as
-    /// the drug substance or an excipient in the drug product. This includes process-
-    /// related impurities and contaminants, product-related impurities
-    /// including degradation products.
+    /// Any component of the drug product which is not the chemical entity defined as the
+    /// drug substance or an excipient in the drug product. This includes process-related
+    /// impurities and contaminants, product-related impurities including degradation
+    /// products.
     pub fn impurity(&self) -> Option<Vec<CodeableReference>> {
         if let Some(Value::Array(val)) = self.value.get("impurity") {
             return Some(
@@ -340,9 +340,9 @@ impl MedicinalProductDefinition<'_> {
     }
 
     /// The ingredients of this medicinal product - when not detailed in other
-    /// resources. This is only needed if the ingredients are not specified by incoming
-    /// references from the Ingredient resource, or indirectly via incoming
-    /// AdministrableProductDefinition, PackagedProductDefinition or
+    /// resources. This is only needed if the ingredients are not specified
+    /// by incoming references from the Ingredient resource, or indirectly via
+    /// incoming AdministrableProductDefinition, PackagedProductDefinition or
     /// ManufacturedItemDefinition references. In cases where those levels of detail are
     /// not used, the ingredients may be specified directly here as codes.
     pub fn ingredient(&self) -> Option<Vec<CodeableConcept>> {
@@ -377,8 +377,7 @@ impl MedicinalProductDefinition<'_> {
         return None;
     }
 
-    /// Marketing status of the medicinal product, in contrast to marketing
-    /// authorization.
+    /// Marketing status of the medicinal product, in contrast to marketing authorization.
     pub fn marketing_status(&self) -> Option<Vec<MarketingStatus>> {
         if let Some(Value::Array(val)) = self.value.get("marketingStatus") {
             return Some(
@@ -393,10 +392,9 @@ impl MedicinalProductDefinition<'_> {
     }
 
     /// A master file for the medicinal product (e.g. Pharmacovigilance System Master
-    /// File). Drug master files (DMFs) are documents submitted to regulatory agencies
-    /// to provide confidential detailed information about facilities, processes or
-    /// articles used in the manufacturing, processing, packaging and storing of drug
-    /// products.
+    /// File). Drug master files (DMFs) are documents submitted to regulatory agencies to
+    /// provide confidential detailed information about facilities, processes or articles
+    /// used in the manufacturing, processing, packaging and storing of drug products.
     pub fn master_file(&self) -> Option<Vec<Reference>> {
         if let Some(Value::Array(val)) = self.value.get("masterFile") {
             return Some(
@@ -411,8 +409,8 @@ impl MedicinalProductDefinition<'_> {
     }
 
     /// The metadata about the resource. This is content that is maintained by the
-    /// infrastructure. Changes to the content might not always be associated with
-    /// version changes to the resource.
+    /// infrastructure. Changes to the content might not always be associated with version
+    /// changes to the resource.
     pub fn meta(&self) -> Option<Meta> {
         if let Some(val) = self.value.get("meta") {
             return Some(Meta {
@@ -424,16 +422,15 @@ impl MedicinalProductDefinition<'_> {
 
     /// May be used to represent additional information that is not part of the basic
     /// definition of the resource and that modifies the understanding of the element
-    /// that contains it and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer is allowed to define an extension, there is a set of requirements
-    /// that SHALL be met as part of the definition of the extension. Applications
-    /// processing a resource are required to check for modifier extensions.    Modifier
-    /// extensions SHALL NOT change the meaning of any elements on Resource or
-    /// DomainResource (including cannot change the meaning of modifierExtension
-    /// itself).
+    /// that contains it and/or the understanding of the containing element's descendants.
+    /// Usually modifier elements provide negation or qualification. To make the use of
+    /// extensions safe and manageable, there is a strict set of governance applied to
+    /// the definition and use of extensions. Though any implementer is allowed to define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -532,9 +529,9 @@ impl MedicinalProductDefinition<'_> {
         return None;
     }
 
-    /// The status within the lifecycle of this product record. A high-level status,
-    /// this is not intended to duplicate details carried elsewhere such as legal
-    /// status, or authorization status.
+    /// The status within the lifecycle of this product record. A high-level status, this
+    /// is not intended to duplicate details carried elsewhere such as legal status, or
+    /// authorization status.
     pub fn status(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("status") {
             return Some(CodeableConcept {
@@ -552,12 +549,12 @@ impl MedicinalProductDefinition<'_> {
         return None;
     }
 
-    /// A human-readable narrative that contains a summary of the resource and can be
-    /// used to represent the content of the resource to a human. The narrative need not
-    /// encode all the structured data, but is required to contain sufficient detail to
-    /// make it "clinically safe" for a human to just read the narrative. Resource
-    /// definitions may define what content should be represented in the narrative to
-    /// ensure clinical safety.
+    /// A human-readable narrative that contains a summary of the resource and can be used
+    /// to represent the content of the resource to a human. The narrative need not encode
+    /// all the structured data, but is required to contain sufficient detail to make it
+    /// "clinically safe" for a human to just read the narrative. Resource definitions
+    /// may define what content should be represented in the narrative to ensure clinical
+    /// safety.
     pub fn text(&self) -> Option<Narrative> {
         if let Some(val) = self.value.get("text") {
             return Some(Narrative {

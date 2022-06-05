@@ -39,7 +39,7 @@ impl MolecularSequence_Roc<'_> {
     }
 
     /// Extensions for numFN
-    pub fn _num_f_n(&self) -> Option<Vec<Element>> {
+    pub fn _num_fn(&self) -> Option<Vec<Element>> {
         if let Some(Value::Array(val)) = self.value.get("_numFN") {
             return Some(
                 val.into_iter()
@@ -53,7 +53,7 @@ impl MolecularSequence_Roc<'_> {
     }
 
     /// Extensions for numFP
-    pub fn _num_f_p(&self) -> Option<Vec<Element>> {
+    pub fn _num_fp(&self) -> Option<Vec<Element>> {
         if let Some(Value::Array(val)) = self.value.get("_numFP") {
             return Some(
                 val.into_iter()
@@ -67,7 +67,7 @@ impl MolecularSequence_Roc<'_> {
     }
 
     /// Extensions for numTP
-    pub fn _num_t_p(&self) -> Option<Vec<Element>> {
+    pub fn _num_tp(&self) -> Option<Vec<Element>> {
         if let Some(Value::Array(val)) = self.value.get("_numTP") {
             return Some(
                 val.into_iter()
@@ -152,8 +152,8 @@ impl MolecularSequence_Roc<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -162,16 +162,16 @@ impl MolecularSequence_Roc<'_> {
     }
 
     /// May be used to represent additional information that is not part of the basic
-    /// definition of the element and that modifies the understanding of the element in
-    /// which it is contained and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer can define an extension, there is a set of requirements that SHALL
-    /// be met as part of the definition of the extension. Applications processing a
-    /// resource are required to check for modifier extensions.    Modifier extensions
-    /// SHALL NOT change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// definition of the element and that modifies the understanding of the element
+    /// in which it is contained and/or the understanding of the containing element's
+    /// descendants. Usually modifier elements provide negation or qualification. To make
+    /// the use of extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer can define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -187,7 +187,7 @@ impl MolecularSequence_Roc<'_> {
 
     /// The number of false negatives if the GQ score threshold was set to "score" field
     /// value.
-    pub fn num_f_n(&self) -> Option<Vec<i64>> {
+    pub fn num_fn(&self) -> Option<Vec<i64>> {
         if let Some(Value::Array(val)) = self.value.get("numFN") {
             return Some(
                 val.into_iter()
@@ -200,7 +200,7 @@ impl MolecularSequence_Roc<'_> {
 
     /// The number of false positives if the GQ score threshold was set to "score" field
     /// value.
-    pub fn num_f_p(&self) -> Option<Vec<i64>> {
+    pub fn num_fp(&self) -> Option<Vec<i64>> {
         if let Some(Value::Array(val)) = self.value.get("numFP") {
             return Some(
                 val.into_iter()
@@ -213,7 +213,7 @@ impl MolecularSequence_Roc<'_> {
 
     /// The number of true positives if the GQ score threshold was set to "score" field
     /// value.
-    pub fn num_t_p(&self) -> Option<Vec<i64>> {
+    pub fn num_tp(&self) -> Option<Vec<i64>> {
         if let Some(Value::Array(val)) = self.value.get("numTP") {
             return Some(
                 val.into_iter()
@@ -266,17 +266,17 @@ impl MolecularSequence_Roc<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self._num_f_n() {
+        if let Some(_val) = self._num_fn() {
             if !_val.into_iter().map(|e| e.validate()).all(|x| x == true) {
                 return false;
             }
         }
-        if let Some(_val) = self._num_f_p() {
+        if let Some(_val) = self._num_fp() {
             if !_val.into_iter().map(|e| e.validate()).all(|x| x == true) {
                 return false;
             }
         }
-        if let Some(_val) = self._num_t_p() {
+        if let Some(_val) = self._num_tp() {
             if !_val.into_iter().map(|e| e.validate()).all(|x| x == true) {
                 return false;
             }
@@ -310,13 +310,13 @@ impl MolecularSequence_Roc<'_> {
                 return false;
             }
         }
-        if let Some(_val) = self.num_f_n() {
+        if let Some(_val) = self.num_fn() {
             _val.into_iter().for_each(|_e| {});
         }
-        if let Some(_val) = self.num_f_p() {
+        if let Some(_val) = self.num_fp() {
             _val.into_iter().for_each(|_e| {});
         }
-        if let Some(_val) = self.num_t_p() {
+        if let Some(_val) = self.num_tp() {
             _val.into_iter().for_each(|_e| {});
         }
         if let Some(_val) = self.precision() {
@@ -360,17 +360,17 @@ impl MolecularSequence_RocBuilder {
         return self;
     }
 
-    pub fn _num_f_n<'a>(&'a mut self, val: Vec<Element>) -> &'a mut MolecularSequence_RocBuilder {
+    pub fn _num_fn<'a>(&'a mut self, val: Vec<Element>) -> &'a mut MolecularSequence_RocBuilder {
         self.value["_numFN"] = json!(val.into_iter().map(|e| e.value).collect::<Vec<_>>());
         return self;
     }
 
-    pub fn _num_f_p<'a>(&'a mut self, val: Vec<Element>) -> &'a mut MolecularSequence_RocBuilder {
+    pub fn _num_fp<'a>(&'a mut self, val: Vec<Element>) -> &'a mut MolecularSequence_RocBuilder {
         self.value["_numFP"] = json!(val.into_iter().map(|e| e.value).collect::<Vec<_>>());
         return self;
     }
 
-    pub fn _num_t_p<'a>(&'a mut self, val: Vec<Element>) -> &'a mut MolecularSequence_RocBuilder {
+    pub fn _num_tp<'a>(&'a mut self, val: Vec<Element>) -> &'a mut MolecularSequence_RocBuilder {
         self.value["_numTP"] = json!(val.into_iter().map(|e| e.value).collect::<Vec<_>>());
         return self;
     }
@@ -420,17 +420,17 @@ impl MolecularSequence_RocBuilder {
         return self;
     }
 
-    pub fn num_f_n<'a>(&'a mut self, val: Vec<i64>) -> &'a mut MolecularSequence_RocBuilder {
+    pub fn num_fn<'a>(&'a mut self, val: Vec<i64>) -> &'a mut MolecularSequence_RocBuilder {
         self.value["numFN"] = json!(val);
         return self;
     }
 
-    pub fn num_f_p<'a>(&'a mut self, val: Vec<i64>) -> &'a mut MolecularSequence_RocBuilder {
+    pub fn num_fp<'a>(&'a mut self, val: Vec<i64>) -> &'a mut MolecularSequence_RocBuilder {
         self.value["numFP"] = json!(val);
         return self;
     }
 
-    pub fn num_t_p<'a>(&'a mut self, val: Vec<i64>) -> &'a mut MolecularSequence_RocBuilder {
+    pub fn num_tp<'a>(&'a mut self, val: Vec<i64>) -> &'a mut MolecularSequence_RocBuilder {
         self.value["numTP"] = json!(val);
         return self;
     }

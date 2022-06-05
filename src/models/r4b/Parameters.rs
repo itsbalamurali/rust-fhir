@@ -8,8 +8,8 @@ use serde_json::value::Value;
 use std::borrow::Cow;
 
 /// This resource is a non-persisted resource used to pass information into and back
-/// from an [operation](operations.html). It has no other use, and there is no
-/// RESTful endpoint associated with it.
+/// from an [operation](operations.html). It has no other use, and there is no RESTful
+/// endpoint associated with it.
 
 #[derive(Debug)]
 pub struct Parameters<'a> {
@@ -57,9 +57,9 @@ impl Parameters<'_> {
     }
 
     /// A reference to a set of rules that were followed when the resource was
-    /// constructed, and which must be understood when processing the content. Often,
-    /// this is a reference to an implementation guide that defines the special rules
-    /// along with other profiles etc.
+    /// constructed, and which must be understood when processing the content. Often, this
+    /// is a reference to an implementation guide that defines the special rules along
+    /// with other profiles etc.
     pub fn implicit_rules(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("implicitRules") {
             return Some(string);
@@ -76,8 +76,8 @@ impl Parameters<'_> {
     }
 
     /// The metadata about the resource. This is content that is maintained by the
-    /// infrastructure. Changes to the content might not always be associated with
-    /// version changes to the resource.
+    /// infrastructure. Changes to the content might not always be associated with version
+    /// changes to the resource.
     pub fn meta(&self) -> Option<Meta> {
         if let Some(val) = self.value.get("meta") {
             return Some(Meta {

@@ -152,8 +152,8 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// If a CodeableConcept is present, it indicates the pre-condition for performing
-    /// the service.  For example "pain", "on flare-up", etc.
+    /// If a CodeableConcept is present, it indicates the pre-condition for performing the
+    /// service.  For example "pain", "on flare-up", etc.
     pub fn as_needed_boolean(&self) -> Option<bool> {
         if let Some(val) = self.value.get("asNeededBoolean") {
             return Some(val.as_bool().unwrap());
@@ -161,8 +161,8 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// If a CodeableConcept is present, it indicates the pre-condition for performing
-    /// the service.  For example "pain", "on flare-up", etc.
+    /// If a CodeableConcept is present, it indicates the pre-condition for performing the
+    /// service.  For example "pain", "on flare-up", etc.
     pub fn as_needed_codeable_concept(&self) -> Option<CodeableConcept> {
         if let Some(val) = self.value.get("asNeededCodeableConcept") {
             return Some(CodeableConcept {
@@ -235,9 +235,9 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// These resources do not have an independent existence apart from the resource
-    /// that contains them - they cannot be identified independently, nor can they have
-    /// their own independent transaction scope.
+    /// These resources do not have an independent existence apart from the resource that
+    /// contains them - they cannot be identified independently, nor can they have their
+    /// own independent transaction scope.
     pub fn contained(&self) -> Option<Vec<ResourceList>> {
         if let Some(Value::Array(val)) = self.value.get("contained") {
             return Some(
@@ -260,8 +260,8 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// An encounter that provides additional information about the healthcare context
-    /// in which this request is made.
+    /// An encounter that provides additional information about the healthcare context in
+    /// which this request is made.
     pub fn encounter(&self) -> Option<Reference> {
         if let Some(val) = self.value.get("encounter") {
             return Some(Reference {
@@ -314,9 +314,9 @@ impl ServiceRequest<'_> {
     }
 
     /// A reference to a set of rules that were followed when the resource was
-    /// constructed, and which must be understood when processing the content. Often,
-    /// this is a reference to an implementation guide that defines the special rules
-    /// along with other profiles etc.
+    /// constructed, and which must be understood when processing the content. Often, this
+    /// is a reference to an implementation guide that defines the special rules along
+    /// with other profiles etc.
     pub fn implicit_rules(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("implicitRules") {
             return Some(string);
@@ -350,8 +350,8 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// Insurance plans, coverage extensions, pre-authorizations and/or pre-
-    /// determinations that may be needed for delivering the requested service.
+    /// Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations
+    /// that may be needed for delivering the requested service.
     pub fn insurance(&self) -> Option<Vec<Reference>> {
         if let Some(Value::Array(val)) = self.value.get("insurance") {
             return Some(
@@ -397,8 +397,8 @@ impl ServiceRequest<'_> {
     }
 
     /// The metadata about the resource. This is content that is maintained by the
-    /// infrastructure. Changes to the content might not always be associated with
-    /// version changes to the resource.
+    /// infrastructure. Changes to the content might not always be associated with version
+    /// changes to the resource.
     pub fn meta(&self) -> Option<Meta> {
         if let Some(val) = self.value.get("meta") {
             return Some(Meta {
@@ -410,16 +410,15 @@ impl ServiceRequest<'_> {
 
     /// May be used to represent additional information that is not part of the basic
     /// definition of the resource and that modifies the understanding of the element
-    /// that contains it and/or the understanding of the containing element's
-    /// descendants. Usually modifier elements provide negation or qualification. To
-    /// make the use of extensions safe and manageable, there is a strict set of
-    /// governance applied to the definition and use of extensions. Though any
-    /// implementer is allowed to define an extension, there is a set of requirements
-    /// that SHALL be met as part of the definition of the extension. Applications
-    /// processing a resource are required to check for modifier extensions.    Modifier
-    /// extensions SHALL NOT change the meaning of any elements on Resource or
-    /// DomainResource (including cannot change the meaning of modifierExtension
-    /// itself).
+    /// that contains it and/or the understanding of the containing element's descendants.
+    /// Usually modifier elements provide negation or qualification. To make the use of
+    /// extensions safe and manageable, there is a strict set of governance applied to
+    /// the definition and use of extensions. Though any implementer is allowed to define
+    /// an extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are required to
+    /// check for modifier extensions.    Modifier extensions SHALL NOT change the meaning
+    /// of any elements on Resource or DomainResource (including cannot change the meaning
+    /// of modifierExtension itself).
     pub fn modifier_extension(&self) -> Option<Vec<Extension>> {
         if let Some(Value::Array(val)) = self.value.get("modifierExtension") {
             return Some(
@@ -433,8 +432,8 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// Any other notes and comments made about the service request. For example,
-    /// internal billing notes.
+    /// Any other notes and comments made about the service request. For example, internal
+    /// billing notes.
     pub fn note(&self) -> Option<Vec<Annotation>> {
         if let Some(Value::Array(val)) = self.value.get("note") {
             return Some(
@@ -501,8 +500,8 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// The desired performer for doing the requested service.  For example, the
-    /// surgeon, dermatopathologist, endoscopist, etc.
+    /// The desired performer for doing the requested service.  For example, the surgeon,
+    /// dermatopathologist, endoscopist, etc.
     pub fn performer(&self) -> Option<Vec<Reference>> {
         if let Some(Value::Array(val)) = self.value.get("performer") {
             return Some(
@@ -526,8 +525,8 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// Indicates how quickly the ServiceRequest should be addressed with respect to
-    /// other requests.
+    /// Indicates how quickly the ServiceRequest should be addressed with respect to other
+    /// requests.
     pub fn priority(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("priority") {
             return Some(string);
@@ -535,9 +534,9 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// An amount of service being requested which can be a quantity ( for example
-    /// $1,500 home modification), a ratio ( for example, 20 half day visits per month),
-    /// or a range (2.0 to 1.8 Gy per fraction).
+    /// An amount of service being requested which can be a quantity ( for example $1,500
+    /// home modification), a ratio ( for example, 20 half day visits per month), or a
+    /// range (2.0 to 1.8 Gy per fraction).
     pub fn quantity_quantity(&self) -> Option<Quantity> {
         if let Some(val) = self.value.get("quantityQuantity") {
             return Some(Quantity {
@@ -547,9 +546,9 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// An amount of service being requested which can be a quantity ( for example
-    /// $1,500 home modification), a ratio ( for example, 20 half day visits per month),
-    /// or a range (2.0 to 1.8 Gy per fraction).
+    /// An amount of service being requested which can be a quantity ( for example $1,500
+    /// home modification), a ratio ( for example, 20 half day visits per month), or a
+    /// range (2.0 to 1.8 Gy per fraction).
     pub fn quantity_range(&self) -> Option<Range> {
         if let Some(val) = self.value.get("quantityRange") {
             return Some(Range {
@@ -559,9 +558,9 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// An amount of service being requested which can be a quantity ( for example
-    /// $1,500 home modification), a ratio ( for example, 20 half day visits per month),
-    /// or a range (2.0 to 1.8 Gy per fraction).
+    /// An amount of service being requested which can be a quantity ( for example $1,500
+    /// home modification), a ratio ( for example, 20 half day visits per month), or a
+    /// range (2.0 to 1.8 Gy per fraction).
     pub fn quantity_ratio(&self) -> Option<Ratio> {
         if let Some(val) = self.value.get("quantityRatio") {
             return Some(Ratio {
@@ -571,8 +570,8 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// An explanation or justification for why this service is being requested in coded
-    /// or textual form.   This is often for billing purposes.  May relate to the
+    /// An explanation or justification for why this service is being requested in
+    /// coded or textual form.   This is often for billing purposes.  May relate to the
     /// resources referred to in `supportingInfo`.
     pub fn reason(&self) -> Option<Vec<CodeableReference>> {
         if let Some(Value::Array(val)) = self.value.get("reason") {
@@ -601,8 +600,7 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// The request takes the place of the referenced completed or terminated
-    /// request(s).
+    /// The request takes the place of the referenced completed or terminated request(s).
     pub fn replaces(&self) -> Option<Vec<Reference>> {
         if let Some(Value::Array(val)) = self.value.get("replaces") {
             return Some(
@@ -627,8 +625,8 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// A shared identifier common to all service requests that were authorized more or
-    /// less simultaneously by a single author, representing the composite or group
+    /// A shared identifier common to all service requests that were authorized more
+    /// or less simultaneously by a single author, representing the composite or group
     /// identifier.
     pub fn requisition(&self) -> Option<Identifier> {
         if let Some(val) = self.value.get("requisition") {
@@ -662,8 +660,8 @@ impl ServiceRequest<'_> {
     }
 
     /// On whom or what the service is to be performed. This is usually a human patient,
-    /// but can also be requested on animals, groups of humans or animals, devices such
-    /// as dialysis machines, or even locations (typically for environmental scans).
+    /// but can also be requested on animals, groups of humans or animals, devices such as
+    /// dialysis machines, or even locations (typically for environmental scans).
     pub fn subject(&self) -> Reference {
         Reference {
             value: Cow::Borrowed(&self.value["subject"]),
@@ -690,12 +688,12 @@ impl ServiceRequest<'_> {
         return None;
     }
 
-    /// A human-readable narrative that contains a summary of the resource and can be
-    /// used to represent the content of the resource to a human. The narrative need not
-    /// encode all the structured data, but is required to contain sufficient detail to
-    /// make it "clinically safe" for a human to just read the narrative. Resource
-    /// definitions may define what content should be represented in the narrative to
-    /// ensure clinical safety.
+    /// A human-readable narrative that contains a summary of the resource and can be used
+    /// to represent the content of the resource to a human. The narrative need not encode
+    /// all the structured data, but is required to contain sufficient detail to make it
+    /// "clinically safe" for a human to just read the narrative. Resource definitions
+    /// may define what content should be represented in the narrative to ensure clinical
+    /// safety.
     pub fn text(&self) -> Option<Narrative> {
         if let Some(val) = self.value.get("text") {
             return Some(Narrative {

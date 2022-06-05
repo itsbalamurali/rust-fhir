@@ -9,10 +9,10 @@ use serde_json::value::Value;
 use std::borrow::Cow;
 
 /// A signature along with supporting context. The signature may be a digital
-/// signature that is cryptographic in nature, or some other signature acceptable to
-/// the domain. This other signature may be as simple as a graphical image
-/// representing a hand-written signature, or a signature ceremony Different
-/// signature approaches have different utilities.
+/// signature that is cryptographic in nature, or some other signature acceptable
+/// to the domain. This other signature may be as simple as a graphical image
+/// representing a hand-written signature, or a signature ceremony Different signature
+/// approaches have different utilities.
 
 #[derive(Debug)]
 pub struct Signature<'a> {
@@ -97,8 +97,8 @@ impl Signature<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
@@ -118,8 +118,8 @@ impl Signature<'_> {
     }
 
     /// A mime type that indicates the technical format of the signature. Important mime
-    /// types are application/signature+xml for X ML DigSig, application/jose for JWS,
-    /// and image/* for a graphical image of a signature, etc.
+    /// types are application/signature+xml for X ML DigSig, application/jose for JWS, and
+    /// image/* for a graphical image of a signature, etc.
     pub fn sig_format(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("sigFormat") {
             return Some(string);
@@ -127,8 +127,8 @@ impl Signature<'_> {
         return None;
     }
 
-    /// A mime type that indicates the technical format of the target resources signed
-    /// by the signature.
+    /// A mime type that indicates the technical format of the target resources signed by
+    /// the signature.
     pub fn target_format(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("targetFormat") {
             return Some(string);

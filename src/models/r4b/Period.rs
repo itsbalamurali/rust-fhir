@@ -46,8 +46,8 @@ impl Period<'_> {
 
     /// The end of the period. If the end of the period is missing, it means no end was
     /// known or planned at the time the instance was created. The start may be in the
-    /// past, and the end date in the future, which means that period is
-    /// expected/planned to end at that time.
+    /// past, and the end date in the future, which means that period is expected/planned
+    /// to end at that time.
     pub fn end(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("end") {
             return Some(string);
@@ -73,8 +73,8 @@ impl Period<'_> {
         return None;
     }
 
-    /// Unique id for the element within a resource (for internal references). This may
-    /// be any string value that does not contain spaces.
+    /// Unique id for the element within a resource (for internal references). This may be
+    /// any string value that does not contain spaces.
     pub fn id(&self) -> Option<&str> {
         if let Some(Value::String(string)) = self.value.get("id") {
             return Some(string);
