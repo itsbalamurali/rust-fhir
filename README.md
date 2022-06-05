@@ -7,14 +7,14 @@ This library is auto generated from [HL7 FHIR Definitions](https://build.fhir.or
 ## Getting Started
 
 ```rust
-use fhir;
+use fhir::models::r4::Patient::PatientGender;
 
 fn main() {
-    let patient = fhir::models::r4::Patient {
-            ..Default::default()
-        };
-    let patient_json = serde_json::to_string(&patient);
-    println!("{}", patient_json);
+    let mut patient_builder = crate::models::r4::Patient::PatientBuilder::new();
+    patient_builder.active(true);
+    patient_builder.gender(PatientGender::Male);
+    let patient = patient_builder.build();
+    println!("{:?}", patient.to_json().as_str());
 }
 ```
 
