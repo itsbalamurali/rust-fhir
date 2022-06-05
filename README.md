@@ -2,9 +2,7 @@
 
 [![crates.io](https://buildstats.info/crate/fhir)](https://crates.io/crates/fhir) [![build](https://github.com/itsbalamurali/rust-fhir/actions/workflows/generate.yml/badge.svg)](https://github.com/itsbalamurali/rust-fhir/actions/workflows/generate.yml)
 
-This libraries are auto generated from googles fhir protobufs: https://github.com/google/fhir
-
-[HL7 FHIR Definitions](https://build.fhir.org/definitions.json.zip)
+This library is auto generated from [HL7 FHIR Definitions](https://build.fhir.org/definitions.json.zip)
 
 ## Getting Started
 
@@ -12,7 +10,7 @@ This libraries are auto generated from googles fhir protobufs: https://github.co
 use fhir;
 
 fn main() {
-    let patient = fhir::r4::core::Patient {
+    let patient = fhir::models::r4::Patient {
             ..Default::default()
         };
     let patient_json = serde_json::to_string(&patient);
@@ -26,9 +24,9 @@ fn main() {
 
 ## Credits
 
-[Ferdinand de Antoni](https://github.com/fdeantoni/prost-wkt)
+[Oliver Clark Rickard](https://github.com/ocrickard)
 
-[Google](https://github.com/google/fhir)
+[Etienne Prothon](https://github.com/etienneprothon)
 
 ## Contribution
 
