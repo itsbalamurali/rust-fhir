@@ -1,4 +1,5 @@
 pub mod models;
+pub mod client;
 
 #[cfg(test)]
 mod tests {

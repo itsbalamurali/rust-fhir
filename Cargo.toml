@@ -1,7 +1,7 @@
 [package]
 name = "fhir"
 description = "HL7 FHIR data models"
-version = "0.0.4"
+version = "0.0.6"
 edition = "2021"
 authors = ["Balamurali Pandranki <balamurali@live.com>"]
 documentation = "https://docs.rs/fhir"
@@ -12,7 +12,10 @@ license-file = "LICENSE"
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+regex = "1"
 
 [build-dependencies]
 serde = { version = "1.0", features = ["derive"] }
