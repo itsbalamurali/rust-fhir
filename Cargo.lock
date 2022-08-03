@@ -103,7 +103,7 @@ dependencies = [
 
 [[package]]
 name = "fhir"
-version = "0.0.4"
+version = "0.0.6"
 dependencies = [
  "chrono",
  "prost 0.11.0",

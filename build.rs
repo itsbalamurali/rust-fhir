@@ -1,9 +1,7 @@
-use prost_wkt_build::*;
 use std::io::prelude::*;
 use std::{
     env,
     fs::{self, File},
-    path::PathBuf,
     process,
 };
 
