@@ -1,59 +1,56 @@
 name: Generate
 on:
-  push:
-    branches:
-      - main
+    push:
 
 jobs:
-  generate:
-    name: Generate Package
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@master
-    
-    - name: Setup Rust toolchain
-      uses: actions-rs/toolchain@v1
-      with:
-        profile: minimal
-        toolchain: stable
+    generate:
+        name: Generate Package
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@master
 
-    - name: Rust Cache
-      uses: Swatinem/rust-cache@v1
+            - name: Setup Rust toolchain
+              uses: actions-rs/toolchain@v1
+              with:
+                  profile: minimal
+                  toolchain: stable
 
-    - name: Clone Google FHIR Protobufs
-      uses: actions/checkout@v3
-      with:
-        repository: 'google/fhir'
-        path: 'fhir'
+            - name: Rust Cache
+              uses: Swatinem/rust-cache@v1
 
-    - name: Move Protobufs to src
-      run: mv fhir/proto/google src/proto/google
+            - name: Clone Google FHIR Protobufs
+              uses: actions/checkout@v3
+              with:
+                  repository: 'google/fhir'
+                  path: 'fhir'
 
-    - name: Install Protoc
-      uses: arduino/setup-protoc@v1
+            - name: Move Protobufs to src
+              run: mv fhir/proto/google src/proto/google
 
-    - name: Rust Build
-      run: cargo build
-      env:
-        CARGO_INCREMENTAL: 1
+            - name: Install Protoc
+              uses: arduino/setup-protoc@v1
 
-    - name: Cargo fmt
-      run: cargo fmt
+            - name: Rust Build
+              run: cargo build
+              env:
+                  CARGO_INCREMENTAL: 1
 
-    - name: Update Repository
-      uses: EndBug/add-and-commit@v9
-      with:
-          author_name: Balamurali Pandranki
-          author_email: balamurali@live.com
-          default_author: github_actor
-          message: 'Generated code.'
-          push: true
+            - name: Cargo fmt
+              run: cargo fmt
 
-    - name: Publish Crate
-      run: cargo publish
-      env:
-        CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
-        CARGO_INCREMENTAL: 1
-      
-    
+            - name: Update Repository
+              uses: EndBug/add-and-commit@v9
+              with:
+                  author_name: Balamurali Pandranki
+                  author_email: balamurali@live.com
+                  default_author: github_actor
+                  message: 'Generated code.'
+                  push: true
+
+            - name: Publish Crate
+              if: github.ref == 'refs/heads/main'
+              run: cargo publish
+              env:
+                  CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+                  CARGO_INCREMENTAL: 1
