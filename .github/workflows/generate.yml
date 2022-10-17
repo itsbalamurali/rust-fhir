@@ -36,6 +36,11 @@ jobs:
               env:
                   CARGO_INCREMENTAL: 1
 
+            - name: Rust Test
+              run: cargo test
+              env:
+                  CARGO_INCREMENTAL: 1
+
             - name: Cargo fmt
               run: cargo fmt
 
