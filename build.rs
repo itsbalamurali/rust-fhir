@@ -4,6 +4,7 @@ use std::{
     fs::{self, File},
     process,
 };
+use std::path::PathBuf;
 
 fn main() {
     let outdir = match env::var_os("OUT_DIR") {
