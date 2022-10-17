@@ -20,4 +20,4 @@ chrono = { version = "0.4", features = ["serde"] }
 
 [build-dependencies]
 prost-build = { version = "0.11" }
-prost-wkt-build = "0.3.2"
+prost-wkt-build = "0.3.3"
