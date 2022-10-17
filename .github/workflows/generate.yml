@@ -17,7 +17,7 @@ jobs:
                   toolchain: stable
 
             - name: Rust Cache
-              uses: Swatinem/rust-cache@v1
+              uses: Swatinem/rust-cache@v2
 
             - name: Clone Google FHIR Protobufs
               uses: actions/checkout@v3
