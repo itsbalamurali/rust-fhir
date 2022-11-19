@@ -262,9 +262,9 @@ dependencies = [
 
 [[package]]
 name = "prost"
-version = "0.11.0"
+version = "0.11.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "399c3c31cdec40583bb68f0b18403400d01ec4289c383aa047560439952c4dd7"
+checksum = "a0841812012b2d4a6145fae9a6af1534873c32aa67fff26bd09f8fa42c83f95a"
 dependencies = [
  "bytes",
  "prost-derive",
@@ -315,9 +315,9 @@ dependencies = [
 
 [[package]]
 name = "prost-wkt"
-version = "0.3.3"
+version = "0.3.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "802d545f4b172fb75a9c12ecd5278f2e8e02e4fe391da9e93cd5a8bf1aebd120"
+checksum = "a845a23869ef2f75be3e2d25c4ef3820a48e6713aba283e975fed4474dc01c68"
 dependencies = [
  "chrono",
  "inventory",
