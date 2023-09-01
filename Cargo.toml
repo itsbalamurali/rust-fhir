@@ -10,7 +10,7 @@ repository = "https://github.com/itsbalamurali/rust-fhir"
 license-file = "LICENSE"
 
 [dependencies]
-prost = { version = "0.11", features = ["prost-derive"] }
+prost = { version = "0.12", features = ["prost-derive"] }
 prost-types = "0.11"
 prost-wkt = "0.3.4"
 prost-wkt-types = "0.3.3"
