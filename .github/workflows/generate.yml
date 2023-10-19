@@ -20,7 +20,7 @@ jobs:
               uses: Swatinem/rust-cache@v2
 
             - name: Clone Google FHIR Protobufs
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
               with:
                   repository: 'google/fhir'
                   path: 'fhir'
