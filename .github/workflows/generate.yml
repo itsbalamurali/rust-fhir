@@ -29,7 +29,7 @@ jobs:
               run: mv fhir/proto/google src/proto/google
 
             - name: Install Protoc
-              uses: arduino/setup-protoc@v1
+              uses: arduino/setup-protoc@v3.0.0
               
             - name: Install Cargo Bump
               run: cargo install cargo-bump
